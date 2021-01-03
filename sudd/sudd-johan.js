@@ -9,8 +9,8 @@ function pageLoaded() {
 	
 	const product = JSON.parse('{"product": [{"name":"Sudd Johan", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}]}')
 
-	document.querySelector(".productImg").setAttribute("src", window.location.href.split("/").slice(2, -2).toString() + "/" + product.product[0].img);
+	document.querySelector(".productImg").setAttribute("src", "https://" + window.location.href.split("/").slice(2, -2).toString() + "/" + product.product[0].img);
 	document.querySelector(".productHeader").innerHTML = product.product[0].name;
-	document.querySelector(".productMainText").innerHTML = product.product[0].name;
+	document.querySelector(".productDescription").innerHTML = product.product[0].name;
 	document.querySelector(".productPriceText").innerHTML = product.product[0].name;
 }
