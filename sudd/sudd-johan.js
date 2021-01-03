@@ -11,6 +11,6 @@ function pageLoaded() {
 
 	document.querySelector(".productImg").setAttribute("src", window.location.href.split("/").slice(2, -2).toString() + "/" + product.product[0].img);
 	document.querySelector(".productHeader").innerHTML = product.product[0].name;
-	document.querySelector(".productImg").setAttribute("src", product.product[0].img);
-	document.querySelector(".productImg").setAttribute("src", product.product[0].img);
+	document.querySelector(".productMainText").innerHTML = product.product[0].name;
+	document.querySelector(".productPriceText").innerHTML = product.product[0].name;
 }
