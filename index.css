@@ -1,0 +1,269 @@
+body {
+	margin: 0px;
+}
+.background {
+	z-index: 0;
+	width: 100%;
+	height: 85%;
+	background-attachment: scroll;
+	background-image: url("https://johanssudd-ab-com.webnode.se/_files/200000000-76bbc77b74/Johan.jpg?t=1");
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.backgroundAnimation {
+	animation: background .3s;
+}
+@keyframes background {
+	from {background-color: transparent}
+	to {background-color: rgb(47, 47, 47)}
+}
+.backgroundAnimationBack {
+	animation: backgroundBack .3s;
+}
+@keyframes backgroundBack {
+	from {background-color: rgb(47, 47, 47)}
+	to {background-color: transparent}
+}
+.topDiv {
+	position: absolute;
+	top: 30px;
+}
+span {
+	font-family: Lora, Georgia, serif;
+}
+.topLogoTextDiv {
+	z-index: 2;
+	display: inline;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	color: rgba(255, 255, 255, .9);
+	font-weight: 700;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+	padding-top: 10px;
+}
+.topLogoText {
+	font-size: 35px;
+}
+.topTextDiv {
+	z-index: 2;
+	display: inline;
+	position: absolute;
+	top: 6.5%;
+	right: 10%;
+	padding-top: 25px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.topText {
+	z-index: 2;
+	color: rgba(255, 255, 255, .8);
+	font-size: 14.5px;
+	font-family: Raleway;
+	/* font-weight: 700; */
+	letter-spacing: .75px;
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	transition: color .2s ease;
+}
+.topText:hover {
+	color: rgb(255, 255, 255);
+}
+.current {
+	color: rgb(255, 255, 255);
+}
+.verticalLine {
+	background-color: rgba(255, 255, 255, .5);
+	display: inline;
+	height: 30px;
+	position: absolute;
+	margin-top: -5px;
+	width: 1px;
+}
+.jobbText {
+	padding-right: 18px;
+}
+.cartText {
+	padding-left: 25px;
+}
+.cover {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, .3);
+	height: 85%;
+}
+.pageContent {
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 600px;
+}
+.logoAndMotto {
+	padding-bottom: 150px;
+}
+.logoText {
+	display: block;
+	color: rgb(57, 57, 57);
+	font-family: sans-serif;
+	font-size: 55px;
+	font-style: italic;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+.motto {
+	color: rgb(85, 85, 85);
+	font-size: 16px;
+	font-style: italic;
+}
+div.slideshowDiv {
+	position: relative;
+	right: 25%;
+	user-select: none;
+	width: 430px;
+	height: 630px;
+	margin: auto;
+	overflow: hidden;
+}
+img.orderButton {
+	z-index: 2;
+	position: absolute;
+    top: 37%;
+    width: 10%;
+	cursor: pointer;
+}
+div.slideshow {
+	position: relative;
+	display: flex;
+	height: 100%;
+}
+.productDiv {
+	width: 100%;
+}
+img.slideshow {
+	width: 100%;
+}
+.slideshowHeader {
+	position: absolute;
+	top: 450px;
+	display: block;
+	color: rgb(57, 57, 57);
+	font-size: 30px;
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+.slideshowMainText {
+	position: absolute;
+	top: 500px;
+	display: block;
+	color: rgb(57, 57, 57);
+}
+.slideshowPriceText {
+	position: absolute;
+	top: 550px;
+	display: block;
+	color: rgb(80, 80, 80);
+	font-size: 30px;
+	font-family: Bitter;
+}
+.smallParagraph {
+	position: relative;
+	left: 50%;
+	width: 30%;
+	color: rgb(102, 102, 102);
+	text-align: left;
+}
+.parOne {
+	margin-top: -550px;
+	padding-bottom: 200px;
+}
+.paragraphHeader {
+	display: block;
+	color: rgb(57, 57, 57);
+	font-style: normal;
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+.small {
+	font-size: 25px;
+}
+.parTwo {
+	padding-bottom: 500px;
+}
+.paragraph {
+	margin: auto;
+	width: 50%;
+	color: rgb(50, 50, 50);
+}
+.big {
+	font-family: Arial, sans-serif;
+	font-size: 55px;
+	padding-bottom: 30px;
+}
+.hereLink {
+	color: rgb(57, 57, 57);
+	border-color: rgba(57 , 57, 57, .5);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	transition: border-color .4s;
+	padding-bottom: 1px;
+}
+.hereLink:hover {
+	border-color: rgb(0, 0, 0)
+}
+/*
+.footer {
+	height: 150px;
+	background-color: rgba(0, 0, 0, .1);
+}
+.footerLogo {
+	position: relative;
+	top: -20px;
+	height: 150px;
+	display: block;
+	margin: auto;
+}
+.footerContact {
+	position: relative;
+	top: -140px;
+	color: rgb(0, 0, 0);
+	text-align: right;
+	padding-right: 100px;
+}
+.footerContactText {
+	display: block;
+	font-family: "Source Sans Pro";
+	font-size: 16px;
+	font-weight: 700;
+}
+.footerEmail {
+	font-family: "Source Sans Pro";
+	font-size: 16px;
+	font-weight: 700;
+}
+*/
+/*
+.socialMedia {
+	height: 60px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.socialMediaIcon {
+	width: 40px;
+	padding: 10px;
+}
+*/
+.footerLogoText {
+	display: block;
+	text-align: center;
+	color: rgb(110, 110, 110);
+	font-size: 13px;
+	padding-bottom: 10px;
+}
