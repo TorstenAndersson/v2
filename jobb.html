@@ -32,7 +32,7 @@
                     <a href="merchandise.html">
                         <span class="topText">MERCHANDISE</span>
                     </a>
-                    <a href="jobb.html">
+                    <a href="">
                         <span class="topText jobbText current">JOBB</span>
                     </a>
                     <div class="verticalLine"></div>
@@ -44,11 +44,11 @@
             <div class="cover"></div>
         </div>
         <div class="pageContent">
-            <div class="paragraph">
+            <div class="paragraph parOne">
                 <span class="paragraphHeader big">Är du arbetslös?</span>
                 <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
             </div>
-            <div class="paragraph">
+            <div class="paragraph parOne">
                 <span class="paragraphHeader big">Inte övertygad än?</span>
                 <span class="beforeArguments">Såklart har vi förbrett några argument för varför vi erbjuder båda roligare och bättre jobb än andra företag.</span>
                 <span class="arguments">
@@ -63,50 +63,14 @@
                     5.   Och sist men inte minst får du såklart dela din passion för sudd med andra suddfanatiker.
                 </span>
             </div>
-            <div class="paragraph parThree">
+            <div class="paragraph">
                 <span class="paragraphHeader big">Skaffa dig ett jobb</span>
             </div>
-            <form autocomplete="off" method="POST" netlify>
-                <div class="field">
-                    <input class="textInput" type="text" name="name" required>
-                    <label class="textQuery" for="name">
-                        <span class="textLabel">Namn</span>
-                    </label>
-                </div>
-                <div class="field">
-                    <input class="textInput" type="text" name="email" required>
-                    <label class="textQuery" for="email">
-                        <span class="textLabel">E-post</span>
-                    </label>
-                </div>
-                <div class="radio" onchange="radioChanged()">
-                    <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
-                    <div class="radioField">
-                        <input type="radio" name="desire" value="designer">
-                        <label class="radioQuery" for="designer">Designer</label>
-                    </div>
-                    <div class="radioField">
-                        <input type="radio" name="desire" value="försäljare">
-                        <label class="radioQuery" for="försäljare">Försäljare</label>
-                    </div>
-                    <div class="radioField">
-                        <input type="radio" name="desire" value="annat">
-                        <label class="radioQuery" for="annat">Annat</label>
-                    </div>
-                </div>
-                <div class="field reasonOther">
-                    <input class="textInput" type="text" name="reasonOther">
-                    <label class="textQuery" for="reasonOther">
-                        <span class="textLabel labelThree">Vad vill du bli?</span>
-                    </label>
-                </div>
-                <div class="field">
-                    <textarea data-autoresize class="textInput textarea" style="font-family: Raleway; height: 40px;" oninput="textareaChanged()" type="text" name="reason" rows="1" required></textarea>
-                    <label class="textQuery textarea" for="reason">
-                        <span class="textLabel">Varför skulle vi välja dig?</span>
-                    </label>
-                </div>
-                <input class="submitButton" type="submit" value="ANSÖK">
+            <form>
+                <input type="text" name="name" autocomplete="off" required>
+                <label for="name" class="queryOne">
+                    <span class="label">Namn</span>
+                </label>
             </form>
         </div>
         <span class="footerLogoText"></span>
