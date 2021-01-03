@@ -29,6 +29,8 @@ body {
 .topDiv {
 	position: absolute;
 	top: 30px;
+	width: 100%;
+	height: 80px;
 }
 span {
 	font-family: Lora, Georgia, serif;
@@ -68,10 +70,10 @@ a {
 	text-align: left;
 	padding-right: 10px;
 	padding-left: 10px;
-	transition: color .2s ease;
+	transition: text-shadow .3s ease;
 }
 .topText:hover {
-	color: rgb(255, 255, 255);
+	text-shadow: 0 0px 10px rgba(0, 0, 0, .5);
 }
 .current {
 	color: rgb(255, 255, 255);
@@ -154,5 +156,4 @@ a {
 	text-align: center;
 	color: rgb(110, 110, 110);
 	font-size: 13px;
-	padding-bottom: 10px;
 }
