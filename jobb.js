@@ -39,3 +39,29 @@ function pageScrolled() {
 		}
 	}
 }
+
+
+function radioChanged() {
+	if (document.querySelectorAll("input[type='radio'")[2].checked) {
+		document.querySelector(".reasonOther").style.display = "block";
+		document.querySelector(".reasonOther").setAttribute("required", "");
+	} else {
+		document.querySelector(".reasonOther").style.display = "none";
+		document.querySelector(".reasonOther").removeAttribute("required");
+	}
+}
+
+
+function textareaChanged() {
+	/*
+	var ta = document.querySelector("textarea.textarea");
+	var taLineHeight = 20; // This should match the line-height in the CSS
+	var taHeight = ta.scrollHeight; // Get the scroll height of the textarea
+	var numberOfLines = Math.floor(taHeight/taLineHeight);
+	ta.style.height = 20 + numberOfLines * 20 + "px";
+	console.log(numberOfLines);
+	*/
+	var area = document.querySelector("textarea.textarea");
+  	area.style.height = 'auto';	
+    area.style.height = area.scrollHeight + 5 + 'px';
+}

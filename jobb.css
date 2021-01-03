@@ -104,7 +104,7 @@ a {
 .pageContent {
 	text-align: center;
 	padding-top: 50px;
-	padding-bottom: 600px;
+	padding-bottom: 300px;
 }
 .logoAndMotto {
 	padding-bottom: 150px;
@@ -180,10 +180,6 @@ img.slideshow {
 	color: rgb(102, 102, 102);
 	text-align: left;
 }
-.parOne {
-    padding-top: 20px;
-	padding-bottom: 350px;
-}
 .paragraphHeader {
 	display: block;
 	color: rgb(57, 57, 57);
@@ -206,55 +202,101 @@ img.slideshow {
 .small {
 	font-size: 25px;
 }
-.parTwo {
-	padding-bottom: 500px;
-}
 .paragraph {
 	margin: auto;
 	width: 50%;
 	color: rgb(50, 50, 50);
+	padding-top: 20px;
+	padding-bottom: 350px;
 }
 .big {
 	font-family: Arial, sans-serif;
 	font-size: 55px;
 	padding-bottom: 30px;
 }
+.parThree {
+	padding-bottom: 20px;
+}
 form {
     position: relative;
     margin: auto;
-    width: 20%;
-    height: 50px;
+	width: 20%;
     text-align: left;   
 }
-form input {
+.radio {
+	padding-bottom: 25px;
+}
+.field {
+	padding-bottom: 50px;
+}
+.textInput {
     width: 100%;
-    height: 100%;
-    font-size: 16px;
+    height: 40px;
+    font-size: 18px;
     border: none;
-    outline: none;
-    color: rgb(25, 25, 25);
-    padding-top: 20px;
+	outline: none;
+	overflow: hidden;
+	color: rgb(25, 25, 25);
+	font-family: Raleway;
+	line-height: 20px;
+    padding-top: 15px;
 }
-form input:focus + .queryOne .label, form input:valid + .queryOne .label {
-    color:rgb(0, 0, 0);
+.textInput:focus + .textQuery .textLabel, .textInput:valid + .textQuery .textLabel {
     font-size: 14px;
-    transform: translateY(-150%);
+	transform: translateY(-150%);
 }
-form label {
+.textQuery {
     position: absolute;
-    bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: 40px;
     border-bottom: 1px solid black;
-    pointer-events: none;
+	pointer-events: none;
 }
-.label {
+form label span {
     position: absolute;
-    bottom: 3px;
+    bottom: 5px;
     left: 0px;
-    color: rgb(57, 57, 57);
-    transition: all 0.2s ease;
+    color: rgba(47, 47, 47);
+	transition: all 0.2s ease;
+	padding-left: 1px;
+}
+.radioFieldQuery {
+	display: block;
+	color: rgba(47, 47, 47);
+	padding-bottom: 15px;
+}
+.radioQuery {
+	font-family: Raleway;
+	padding-left: 1.5%;
+}
+.radioField {
+	padding-bottom: 10px;
+}
+form input[type="radio"] {
+	margin: 0px;
+}
+.reasonOther {
+	display: none;
+}
+textarea.textarea {
+	border-bottom: 1px solid black;
+	resize: none;
+}
+label.textarea {
+	border-bottom: none;
+}
+.submitButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(60, 60, 60);
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding: 20px 40px 20px 40px;
+}
+.submitButton:hover {
+	background-color: rgb(40, 40, 40);
 }
 /*
 form label::after {
