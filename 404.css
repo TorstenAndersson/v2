@@ -1,0 +1,201 @@
+body {
+	margin: 0px;
+}
+.background {
+	z-index: 0;
+	width: 100%;
+	height: 85%;
+	background-attachment: scroll;
+	background-image: url("https://johanssudd-ab-com.webnode.se/_files/200000000-76bbc77b74/Johan.jpg?t=1");
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.backgroundAnimation {
+	animation: background .3s;
+}
+@keyframes background {
+	from {background-color: transparent}
+	to {background-color: rgb(47, 47, 47)}
+}
+.backgroundAnimationBack {
+	animation: backgroundBack .3s;
+}
+@keyframes backgroundBack {
+	from {background-color: rgb(47, 47, 47)}
+	to {background-color: transparent}
+}
+.topDiv {
+	position: absolute;
+	top: 30px;
+	width: 100%;
+	height: 80px;
+}
+span {
+	font-family: Lora, Georgia, serif;
+}
+.topLogoTextDiv {
+	z-index: 2;
+	display: inline;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	color: rgb(47, 47, 47);
+	font-weight: 700;
+	/* text-shadow: 0 1px 5px rgba(0, 0, 0, .3); */
+	padding-top: 10px;
+}
+.topLogoText {
+	font-size: 35px;
+}
+.topTextDiv {
+	z-index: 2;
+	display: inline;
+	position: absolute;
+	top: 6.5%;
+	right: 10%;
+	padding-top: 25px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.topText {
+	z-index: 2;
+	color: rgb(47, 47, 47);
+	font-size: 14.5px;
+	font-family: Raleway;
+	letter-spacing: .75px;
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	transition: text-shadow .3s ease;
+}
+.topText:hover {
+	text-shadow: 0 0px 10px rgba(0, 0, 0, .5);
+}
+.current {
+	color: rgb(255, 255, 255);
+}
+.verticalLine {
+	background-color: rgb(47, 47, 47);
+	display: inline;
+	height: 30px;
+	position: absolute;
+	margin-top: -5px;
+	width: 1px;
+}
+.jobbText {
+	padding-right: 18px;
+}
+.cartText {
+	padding-left: 25px;
+}
+.cover {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, .3);
+	height: 85%;
+}
+.pageContent {
+	text-align: center;
+	padding-top: 50px;
+}
+.paragraph {
+	margin: auto;
+    width: 50%;
+    color: rgb(50, 50, 50);
+}
+.big {
+	font-size: 55px;
+	padding-bottom: 20px !important;
+}
+.paragraphHeader {
+	display: block;
+    color: rgb(57, 57, 57);
+    font-family: Arial, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+.lost {
+    position: absolute;
+    top: 35%;
+    width: 100%
+}
+.infoHeader {
+    display: block;
+    color: rgb(57, 57, 57);
+    font-family: Arial, sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.infoMainText {
+    font-style: italic;
+}
+.mainFrame {
+    padding-left: 30px;
+    padding-top: 50px;
+}
+.paddingDiv {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.productFrame {
+	position: absolute;
+	left: 25%;
+	top: 30%;
+	width: 50%;
+}
+.imgFrame {
+	position: absolute;
+	left: 0px;
+	display: inline;
+}
+.textFrame {
+	position: absolute;
+	right: 0px;
+	display: inline;
+}
+.productImg {
+	padding-top: 60px;
+}
+.productHeader {
+	display: block;
+	color: rgb(57, 57, 57);
+	font-family: Arial, sans-serif;
+	font-size: 55px;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+.productDescription {
+	display: block;
+	color: rgb(47, 47, 47);
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	padding-bottom: 15px;
+}
+.productPriceText {
+	display: block;
+	color: rgb(57, 57, 57);
+	font-family: Arial, sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+.footerLogoText {
+	position: absolute;
+	bottom: 6px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: rgb(110, 110, 110);
+	font-size: 13px;
+}
