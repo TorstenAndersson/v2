@@ -7,7 +7,7 @@ function pageLoaded() {
 	topDiv.style.height = "80px";
 	*/
     
-	products = JSON.parse('{"products": [{"name":"Sudd Johan", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"vara-sudd/sudd-johan.html"}, {"name":"Johans Hoodie", "description": "fyfan va varmt", "price":"499,99 kr", "img":"imgs/Johans Hoodie/Johans Hoodie White Front.jpg", "link":"merchandise/johans-hoodie.html"}, {"name":"Johans Flip-Flops", "description": "LFIPÅPT FLOP", "price":"249,99 kr", "img":"imgs/Johans Flip-Flops/Johans Flip-Flops Medium Above.png", "link":"merchandise/johans-flip-flops.html"}, {"name":"Johans Mobilskal", "description": "Skydda din mobil!", "price":"249,99 kr", "img":"imgs/Johans Mobilskal/Johans Mobilskal iPhone 12 Pro Max.png", "link":"merchandise/johans-mobilskal.html"}]}')
+	products = JSON.parse('{"products": [{"name":"Sudd Johan", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}, {"name":"Johans Hoodie", "description": "fyfan va varmt", "price":"499,99 kr", "img":"imgs/Johans Hoodie/Johans Hoodie White Front.jpg", "link":"merchandise/johans-hoodie.html"}, {"name":"Johans Flip-Flops", "description": "LFIPÅPT FLOP", "price":"249,99 kr", "img":"imgs/Johans Flip-Flops/Johans Flip-Flops Medium Above.png", "link":"merchandise/johans-flip-flops.html"}, {"name":"Johans Mobilskal", "description": "Skydda din mobil!", "price":"249,99 kr", "img":"imgs/Johans Mobilskal/Johans Mobilskal iPhone 12 Pro Max.png", "link":"merchandise/johans-mobilskal.html"}]}')
 
     for (var i = 0; i < Object.keys(products.products).length; i++) {
 		var myDiv = document.createElement("div");
