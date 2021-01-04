@@ -6,26 +6,24 @@ function pageLoaded() {
 	topDiv.style.width = "100%";
 	topDiv.style.height = "80px";
 	*/
-	var talkForm = document.querySelector("form");
+	var form = document.querySelector("form");
 
-talkForm.addEventListener('submit', e => {
-  e.preventDefault();
+	form.addEventListener("submit", e => {
+  		e.preventDefault();
 
-  const formData = new FormData(talkForm);
-  fetch(null, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-    },
-    body: new URLSearchParams(formData).toString()
-  })
-  .then(res => {
-    if (res) {
-        alert('worked');
-    }
-  });
-});
+ 		fetch(null, {
+    		method: "POST",
+    		headers: {
+      			"Accept": "application/x-www-form-urlencoded;charset=UTF-8",
+     			"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+    		},
+    		body: new URLSearchParams(new FormData(form)).toString()
+  		}).then(res => {
+    		if (res) {
+        alert("worked");
+    		}
+  		});
+	});
 }
 
 
