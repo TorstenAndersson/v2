@@ -70,7 +70,7 @@ function textareaChanged() {
 
 function submitted() {
   	let formData = new FormData(document.querySelector("form"))
-  	fetch('/', {
+  	fetch('index.html', {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString()
