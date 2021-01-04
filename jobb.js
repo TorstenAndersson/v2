@@ -68,6 +68,7 @@ function textareaChanged() {
     area.style.height = area.scrollHeight + 5 + 'px';
 }
 
+/*
 function submitted() {
   	let formData = new FormData(document.querySelector("form"))
   	fetch('/', {
@@ -76,6 +77,7 @@ function submitted() {
     body: new URLSearchParams(formData).toString()
   	}).then(() => console.log('Form successfully submitted')).catch((error) => alert(error))
 }
+*/
 
 function thanks() {
 	console.log("greatly appreciate it!");
