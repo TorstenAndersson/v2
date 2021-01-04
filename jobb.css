@@ -29,6 +29,8 @@ body {
 .topDiv {
 	position: absolute;
 	top: 30px;
+	width: 100%;
+	height: 80px;
 }
 span {
 	font-family: Lora, Georgia, serif;

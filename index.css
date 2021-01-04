@@ -29,6 +29,8 @@ body {
 .topDiv {
 	position: absolute;
 	top: 30px;
+	width: 100%;
+	height: 80px;
 }
 span {
 	font-family: Lora, Georgia, serif;
@@ -144,6 +146,13 @@ div.slideshow {
 	display: flex;
 	height: 100%;
 }
+.discountReason {
+	position: absolute;
+	color: rgb(255, 255, 255);
+	background-color: rgb(57, 57, 57);
+	font-size: 14px;
+    padding: 8px 15px 7px 15px;
+}
 .productDiv {
 	width: 100%;
 }
@@ -168,10 +177,18 @@ img.slideshow {
 .slideshowPriceText {
 	position: absolute;
 	top: 550px;
-	display: block;
 	color: rgb(80, 80, 80);
-	font-size: 30px;
+	font-size: 28px;
+}
+.line {
+	color: rgb(157, 157, 157);
+	text-decoration: line-through;
+	text-decoration-thickness: 2px;
 	font-family: Bitter;
+}
+.dicountedPrice {
+	font-family: Bitter;
+	padding-right: 10px;
 }
 .smallParagraph {
 	position: relative;

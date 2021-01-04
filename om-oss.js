@@ -1,9 +1,11 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	var topDiv = document.querySelector(".topDiv");
+	//var topDiv = document.querySelector(".topDiv");
 	console.log("page loaded!");
+	/*
 	topDiv.style.width = "100%";
 	topDiv.style.height = "80px";
+	*/
 }
 
 

@@ -1,9 +1,11 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	var topDiv = document.querySelector(".topDiv");
+	//var topDiv = document.querySelector(".topDiv");
 	console.log("page loaded!");
+	/*
 	topDiv.style.width = "100%";
 	topDiv.style.height = "80px";
+	*/
 }
 
 
@@ -64,4 +66,8 @@ function textareaChanged() {
 	var area = document.querySelector("textarea.textarea");
   	area.style.height = 'auto';	
     area.style.height = area.scrollHeight + 5 + 'px';
+}
+
+function submitted() {
+	console.log("submitted!");
 }

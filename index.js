@@ -8,12 +8,14 @@ var size;
 
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	var topDiv = document.querySelector(".topDiv");
+	//var topDiv = document.querySelector(".topDiv");
 	console.log("page loaded!");
+	/*
 	topDiv.style.width = "100%";
 	topDiv.style.height = "80px";
+	*/
 
-	var products = "";
+	// var products = "";
 	
 	/*
 	fetch("https://objective-gates-c91be9.netlify.app/json.txt", {
@@ -24,14 +26,17 @@ function pageLoaded() {
 	});
 	*/
 	//products = JSON.parse("{'products': {'name':'Sudd Johan', 'description': 'OG SUDD', 'price':'14,99 kr', 'img':'imgs/Sudd/Sudd Johan.png', 'link':'vara-sudd/sudd-johan.html'}, {'name':'Johans Hoodie', 'description': 'fyfan va varmt', 'price':'499,99 kr', 'img':'imgs/Johans Hoodie/Johans Hoodie White Front.png', 'link':'merchandise/johans-hoodie.html'}, {'name':'Johans Flip-Flops', 'description': 'OG SUDD', 'price':'14,99 kr', 'img':'imgs/Sudd/Sudd Johan.png', 'link':'vara-sudd/sudd-johan.html'}}");
+	
+	
+	/*	'{"employees":[\
+ 	{ "firstName":"John", "lastName":"Doe" },\
+  	{ "firstName":"Anna", "lastName":"Smith" },\
+  	{ "firstName":"Peter", "lastName":"Jones" }\
+	]}')
+	*/
 
-	products = JSON.parse('{"employees":[\
-  { "firstName":"John", "lastName":"Doe" },\
-  { "firstName":"Anna", "lastName":"Smith" },\
-  { "firstName":"Peter", "lastName":"Jones" }\
-]}')
 
-	products = JSON.parse('{"products": [{"name":"Sudd Johan", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"vara-sudd/sudd-johan.html"}, {"name":"Johans Hoodie", "description": "fyfan va varmt", "price":"499,99 kr", "img":"imgs/Johans Hoodie/Johans Hoodie White Front.jpg", "link":"merchandise/johans-hoodie.html"}, {"name":"Johans Flip-Flops", "description": "LFIPÅPT FLOP", "price":"249,99 kr", "img":"imgs/Johans Flip-Flops/Johans Flip-Flops Medium Above.png", "link":"merchandise/johans-flip-flops.html"}, {"name":"Johans Mobilskal", "description": "Skydda din mobil!", "price":"249,99 kr", "img":"imgs/Johans Mobilskal/Johans Mobilskal iPhone 12 Pro Max.png", "link":"merchandise/johans-mobilskal.html"}]}')
+	const products = JSON.parse('{"products": [{"name":"Sudd Johan", "description": "OG SUDD", "price": {"discount": {"price": "10,99 kr", "reason": "Fick vibbarna"}, "original": "14, 99 kr"}, "img":"imgs/Sudd/Sudd Johan.png", "link":"vara-sudd/sudd-johan.html"}, {"name":"Johans Hoodie", "description": "fyfan va varmt", "price": {"discount": {"price": "149,99 kr", "reason": "PÅSKREA"}, "original": "499,99 kr"}, "img":"imgs/Johans Hoodie/Johans Hoodie White Front.jpg", "link":"merchandise/johans-hoodie.html"}, {"name":"Johans Flip-Flops", "description": "LFIPÅPT FLOP", "price": {"discount": {"price": "1000,99 kr", "reason": "PÅSKREA"}, "original": "349, 99 kr"}, "img":"imgs/Johans Flip-Flops/Johans Flip-Flops Medium Above.png", "link":"merchandise/johans-flip-flops.html"}, {"name":"Johans Mobilskal", "description": "Skydda din mobil!", "price": {"original": "149,99 kr"}, "img":"imgs/Johans Mobilskal/Johans Mobilskal iPhone 12 Pro Max.png", "link":"merchandise/johans-mobilskal.html"}]}')
 	console.log(products.products);
 
 		/*
@@ -48,6 +53,12 @@ function pageLoaded() {
 		document.querySelector("div.slideshow").appendChild(myDiv);
 		var myLink = document.createElement("a");
 		myLink.setAttribute("href", products.products[i].link)
+		if (products.products[i].price.discount != undefined) {
+			var myDiscount = document.createElement("span");
+			myDiscount.classList.add("discountReason");
+			myDiscount.appendChild(document.createTextNode(products.products[i].price.discount.reason))
+			myLink.appendChild(myDiscount);
+		}
 		var myImage = document.createElement("img");
 		myImage.setAttribute("src", products.products[i].img);
 		myImage.classList.add("slideshow");
@@ -60,10 +71,19 @@ function pageLoaded() {
 		myMainText.appendChild(document.createTextNode(products.products[i].description));
 		myMainText.classList.add("slideshowMainText");
 		myLink.appendChild(myMainText);
+		var myTextDiv = document.createElement("div");
+		myTextDiv.classList.add("slideshowPriceText");
 		var myPriceText = document.createElement("span");
-		myPriceText.appendChild(document.createTextNode(products.products[i].price));
-		myPriceText.classList.add("slideshowPriceText");
-		myLink.appendChild(myPriceText);
+		myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
+		if (products.products[i].price.discount != undefined) {
+			myPriceText.classList.add("line");
+			var myDiscountedPriceText = document.createElement("span");
+			myDiscountedPriceText.appendChild(document.createTextNode(products.products[i].price.discount.price))
+			myDiscountedPriceText.classList.add("dicountedPrice");
+			myTextDiv.appendChild(myDiscountedPriceText);
+		}
+		myTextDiv.appendChild(myPriceText)
+		myLink.appendChild(myTextDiv);
 		myDiv.appendChild(myLink);
 	}
 	var headers = document.querySelectorAll(".slideshowHeader");
@@ -82,6 +102,7 @@ function pageLoaded() {
 	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
 	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
 	var localCount = 0;
+	/*
 	setInterval(function() { 
 		localCount ++;
 		if (localCount == 1400) {
@@ -92,6 +113,7 @@ function pageLoaded() {
 			localCount = 0;
 		}
 	}, 1)
+	*/
 }
 
 

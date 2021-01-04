@@ -13,14 +13,14 @@ body {
 	background-repeat: no-repeat;
 }
 .backgroundAnimation {
-	animation: "background" .3s;
+	animation: background .3s;
 }
 @keyframes background {
 	from {background-color: transparent}
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: "backgroundBack" .3s;
+	animation: backgroundBack .3s;
 }
 @keyframes backgroundBack {
 	from {background-color: rgb(47, 47, 47)}
@@ -29,6 +29,8 @@ body {
 .topDiv {
 	position: absolute;
 	top: 30px;
+	width: 100%;
+	height: 80px;
 }
 span {
 	font-family: Lora, Georgia, serif;
@@ -125,6 +127,14 @@ a {
     padding-left: 20px;
     padding-right: 20px;
 }
+.discountReason {
+	position: absolute;
+	margin-left: -20px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(57, 57, 57);
+	font-size: 14px;
+    padding: 8px 15px 7px 15px;
+}
 .productFrame {
     display: inline-block;
     width: 300px;
@@ -148,6 +158,16 @@ a {
 .productPriceText {
     font-family: Bitter;
     font-size: 18px;
+}
+.line {
+	color: rgb(157, 157, 157);
+	text-decoration: line-through;
+	text-decoration-thickness: 1px;
+	font-family: Bitter;
+}
+.dicountedPrice {
+	font-family: Bitter;
+	padding-right: 10px;
 }
 .footerLogoText {
 	display: block;

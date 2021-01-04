@@ -29,6 +29,8 @@ body {
 .topDiv {
 	position: absolute;
 	top: 30px;
+	width: 100%;
+	height: 80px;
 }
 span {
 	font-family: Lora, Georgia, serif;
@@ -104,7 +106,7 @@ a {
 .pageContent {
 	text-align: center;
 	padding-top: 50px;
-	padding-bottom: 600px;
+	padding-bottom: 500px;
 }
 .logoAndMotto {
 	padding-bottom: 150px;
@@ -172,7 +174,7 @@ img.slideshow {
 	top: 550px;
 	display: block;
 	color: rgb(80, 80, 80);
-	font-size: 30px;
+	font-size: 28px;
 	font-family: Questrial;
 }
 .paragraph {

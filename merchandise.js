@@ -1,19 +1,27 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	var topDiv = document.querySelector(".topDiv");
+	//var topDiv = document.querySelector(".topDiv");
 	console.log("page loaded!");
+	/*
 	topDiv.style.width = "100%";
-    topDiv.style.height = "80px";
+	topDiv.style.height = "80px";
+	*/
     
 	products = JSON.parse('{"products": [{"name":"Sudd Johan", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"vara-sudd/sudd-johan.html"}, {"name":"Johans Hoodie", "description": "fyfan va varmt", "price":"499,99 kr", "img":"imgs/Johans Hoodie/Johans Hoodie White Front.jpg", "link":"merchandise/johans-hoodie.html"}, {"name":"Johans Flip-Flops", "description": "LFIPÅPT FLOP", "price":"249,99 kr", "img":"imgs/Johans Flip-Flops/Johans Flip-Flops Medium Above.png", "link":"merchandise/johans-flip-flops.html"}, {"name":"Johans Mobilskal", "description": "Skydda din mobil!", "price":"249,99 kr", "img":"imgs/Johans Mobilskal/Johans Mobilskal iPhone 12 Pro Max.png", "link":"merchandise/johans-mobilskal.html"}]}')
 
-    for (var i = 0; i < Object.keys(products.products).length; i ++) {
+    for (var i = 0; i < Object.keys(products.products).length; i++) {
 		var myDiv = document.createElement("div");
         myDiv.classList.add("paddingDiv");
         document.querySelector("div.mainFrame").appendChild(myDiv);
         var myLink = document.createElement("a");
-        myLink.classList.add("productFrame");
+		myLink.classList.add("productFrame");
 		myLink.setAttribute("href", products.products[i].link)
+		if (products.products[i].price.discount != undefined) {
+			var myDiscount = document.createElement("span");
+			myDiscount.classList.add("discountReason");
+			myDiscount.appendChild(document.createTextNode(products.products[i].price.discount.reason))
+			myLink.appendChild(myDiscount);
+		}
 		var myImage = document.createElement("img");
 		myImage.setAttribute("src", products.products[i].img);
 		myImage.classList.add("productImg");
@@ -22,10 +30,20 @@ function pageLoaded() {
 		myHeader.appendChild(document.createTextNode(products.products[i].name));
 		myHeader.classList.add("productHeader");
 		myLink.appendChild(myHeader);
-		var myMainText = document.createElement("span");
-		myMainText.appendChild(document.createTextNode(products.products[i].price));
-		myMainText.classList.add("productPriceText");
-		myLink.appendChild(myMainText);
+		var myTextDiv = document.createElement("div");
+		var myPriceText = document.createElement("span");
+		myPriceText.classList.add("productPriceText");
+		myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
+		if (products.products[i].price.discount != undefined) {
+			myPriceText.classList.add("line");
+			var myDiscountedPriceText = document.createElement("span");
+			myDiscountedPriceText.appendChild(document.createTextNode(products.products[i].price.discount.price))
+			myDiscountedPriceText.classList.add("dicountedPrice");
+			myDiscountedPriceText.classList.add("productPriceText");
+			myTextDiv.appendChild(myDiscountedPriceText);
+		}
+		myTextDiv.appendChild(myPriceText)
+		myLink.appendChild(myTextDiv);
 		myDiv.appendChild(myLink);
 	}
 }
