@@ -69,7 +69,7 @@ function textareaChanged() {
 }
 
 function submitted() {
-  	let formData = new FormData(documnet.querySelector("form"))
+  	let formData = new FormData(document.querySelector("form"))
   	fetch('/', {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
