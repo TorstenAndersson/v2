@@ -80,5 +80,6 @@ function submitted() {
 */
 
 function submitted() {
+	window.location.href = "";
 	console.log("greatly appreciate it!");
 }
