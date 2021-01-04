@@ -79,6 +79,6 @@ function submitted() {
 }
 */
 
-function thanks() {
+function submitted() {
 	console.log("greatly appreciate it!");
 }
