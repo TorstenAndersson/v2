@@ -80,6 +80,15 @@ function submitted() {
 */
 
 function submitted() {
-	window.location.href = "";
-	console.log("greatly appreciate it!");
+	fetch('https://discord.com/api/webhooks/776525431096344576/wbUCiroLMGg4AdZsa5dklLbwrL9h3ytBM2n59', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: {
+			username: "hooker",
+			avatar_url: "",
+			content: "hej"//new FormData(document.querySelector("form")),
+	}
+	}).then(console.log(response.json()))
 }
