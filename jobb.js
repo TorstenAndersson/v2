@@ -69,11 +69,14 @@ function textareaChanged() {
 }
 
 function submitted() {
-  let formData = new FormData(documnet.querySelector("form"))
-  fetch('/', {
+  	let formData = new FormData(documnet.querySelector("form"))
+  	fetch('/', {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
-    alert(error))
+  	}).then(() => console.log('Form successfully submitted')).catch((error) => alert(error))
+}
+
+function thanks() {
+	console.log("greatly appreciate it!");
 }
