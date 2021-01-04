@@ -8,6 +8,7 @@ function pageLoaded() {
 	*/
 	var talkForm = document.querySelector("form");
 
+	/*
 talkForm.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -26,6 +27,7 @@ talkForm.addEventListener('submit', e => {
     }
   });
 });
+*/
 }
 
 
@@ -112,3 +114,20 @@ function submitted() {
 	})
 }
 */
+
+function submitted(talkForm) {
+		const formData = new FormData(talkForm);
+	fetch(talkForm.getAttribute('action'), {
+		method: 'POST',
+		headers: {
+		'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+		'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+		},
+		body: new URLSearchParams(formData).toString()
+	})
+	.then(res => {
+		if (res) {
+			alert('worked');
+		}
+	});
+}
