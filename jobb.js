@@ -25,7 +25,7 @@ function pageLoaded() {
 				setTimeout(function() { 
 					document.querySelector(".notification").classList.remove("fadeIn");
 					document.querySelector(".notification").classList.add("fadeOut");
-				}, 0);
+				}, 3000);
 				form.reset();
     		}
   		});
