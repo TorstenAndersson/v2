@@ -28,7 +28,7 @@ function pageLoaded() {
 					notification.classList.remove("fadeIn");
 					notification.classList.add("fadeOut");
 					notification.style.opacity = "0";
-				}, 3000);
+				}, 5000);
 				form.reset();
     		}
   		});
