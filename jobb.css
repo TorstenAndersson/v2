@@ -318,11 +318,14 @@ label.textarea {
 	font-family: Raleway;
 }
 .fadeIn {
-	animation: "fade" 0.3s;
+	animation: fade 0.3s;
 }
 @keyframes fade {
 	from {opacity: 0}
 	to {opacity: 1}
+}
+.fadeOut {
+	animation: fadeBack 0.3s;
 }
 @keyframes fadeBack {
 	from {opacity: 0}

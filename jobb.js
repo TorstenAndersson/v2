@@ -20,8 +20,12 @@ function pageLoaded() {
     		body: new URLSearchParams(new FormData(form)).toString()
   		}).then(res => {
     		if (res) {
+				document.querySelector(".notification").classList.remove("fadeOut");
 				document.querySelector(".notification").classList.add("fadeIn");
-				setTimeout(function() { document.querySelector(".notification").classList.remove("fadeIn"); }, 0);
+				setTimeout(function() { 
+					document.querySelector(".notification").classList.remove("fadeIn");
+					document.querySelector(".notification").classList.add("fadeOut");
+				}, 0);
 				form.reset();
     		}
   		});
