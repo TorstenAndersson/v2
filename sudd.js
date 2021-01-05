@@ -20,7 +20,7 @@ function pageLoaded() {
   .then(response => response.json())
   .then(data => products = data);
 
-	//console.log(products)
+	console.log(products)
 
 	//https://gallant-yonath-0ed04b.netlify.app/documents/json.txt
 
