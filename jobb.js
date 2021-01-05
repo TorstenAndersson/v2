@@ -29,7 +29,7 @@ function pageLoaded() {
 					notification.classList.add("fadeOut");
 					notification.style.opacity = "0";
 				}, 5000);
-				document.querySelector(".reasonOther").display = "none";
+				document.querySelector(".reasonOther").style.display = "none";
 				form.reset();
     		}
   		});
