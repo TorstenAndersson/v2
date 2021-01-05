@@ -78,10 +78,10 @@ function pageScrolled() {
 function radioChanged() {
 	if (document.querySelectorAll("input[type='radio'")[2].checked) {
 		document.querySelector(".reasonOther").style.display = "block";
-		document.querySelector(".reasonOther").firstChild.required = true;
+		document.querySelector(".reasonOther").firstElementChild.required = true;
 	} else {
 		document.querySelector(".reasonOther").style.display = "none";
-		document.querySelector(".reasonOther").firstChild.required = false;
+		document.querySelector(".reasonOther").firstElementChild.required = false;
 	}
 }
 
