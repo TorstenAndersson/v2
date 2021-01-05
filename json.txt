@@ -1,7 +1,0 @@
-{
-	"products": [
-		{"name":"Sudd Johan", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}, 
-		{"name":"Johans Hoodie", "description": "fyfan va varmt", "price":"499,99 kr", "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png", "link":"merchandise/johans-hoodie.html"}, 
-		{"name":"Johans Flip-Flops", "description": "OG SUDD", "price":"14,99 kr", "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}
-	]
-}
