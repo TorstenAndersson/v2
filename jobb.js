@@ -20,7 +20,9 @@ function pageLoaded() {
     		body: new URLSearchParams(new FormData(form)).toString()
   		}).then(res => {
     		if (res) {
-        alert("worked");
+				document.querySelector("notification").classList.add("fadeIn");
+				setTimeout(function() { document.querySelector("notification").classList.remove("fadeIn"); }, 0);
+				form.reset();
     		}
   		});
 	});
@@ -44,6 +46,8 @@ function pageScrolled() {
 			topDiv.classList.remove("backgroundAnimationBack");
 			topDiv.style.zIndex = "2";
 			isScrolled = true;
+			document.querySelector(".notification").style.position = "fixed";
+			document.querySelector(".notification").style.top = "90px";
 		}
 	} 
 	if (window.pageYOffset < 30) {
@@ -56,6 +60,8 @@ function pageScrolled() {
 			topDiv.classList.remove("backgroundAnimation");
 			topDiv.style.zIndex = "2";
 			isScrolled = false;
+			document.querySelector(".notification").style.position = "absolute";
+			document.querySelector(".notification").style.top = "120px";
 		}
 	}
 }
