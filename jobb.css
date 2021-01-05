@@ -328,8 +328,8 @@ label.textarea {
 	animation: fadeBack 0.3s;
 }
 @keyframes fadeBack {
-	from {opacity: 0}
-	to {opacity: 1}
+	from {opacity: 1}
+	to {opacity: 0}
 }
 /*
 form label::after {
