@@ -18,7 +18,9 @@ function pageLoaded() {
 
 	fetch('documents/json.txt')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => draw(data));
+
+	draw(products) {
 
 	console.log(products)
 
@@ -61,6 +63,7 @@ function pageLoaded() {
 		myLink.appendChild(myTextDiv);
 		myDiv.appendChild(myLink);
 	}
+}
 }
 
 var isScrolled = false;
