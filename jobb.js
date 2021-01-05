@@ -78,7 +78,7 @@ function pageScrolled() {
 function radioChanged() {
 	if (document.querySelectorAll("input[type='radio'")[2].checked) {
 		document.querySelector(".reasonOther").style.display = "block";
-		document.querySelector(".reasonOther").setAttribute("required", "");
+		document.querySelector(".reasonOther").setAttribute("required");
 	} else {
 		document.querySelector(".reasonOther").style.display = "none";
 		document.querySelector(".reasonOther").removeAttribute("required");
