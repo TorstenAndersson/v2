@@ -76,13 +76,12 @@ function pageScrolled() {
 
 
 function radioChanged() {
-	var otherReason = document.querySelector(".reasonOther");
 	if (document.querySelectorAll("input[type='radio'")[2].checked) {
-		otherReason.style.display = "block";
-		otherReason.required = true;
+		document.querySelector(".reasonOther").style.display = "block";
+		document.querySelector(".reasonOther").firstChild.required = true;
 	} else {
 		document.querySelector(".reasonOther").style.display = "none";
-		otherReason.required = false;
+		document.querySelector(".reasonOther").firstChild.required = false;
 	}
 }
 
