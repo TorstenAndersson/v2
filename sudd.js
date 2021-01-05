@@ -17,8 +17,8 @@ function pageLoaded() {
 	*/
 
 	fetch('documents/json.txt')
-  .then(response => draw(response.json()))
-  //.then(data => draw(data));
+  .then(response => response.json())
+  .then(data => draw(data));
 
 	function draw(products) {
 
