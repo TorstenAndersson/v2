@@ -1,18 +1,6 @@
 function pageLoaded() {
     document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-    //var topDiv = document.querySelector(".topDiv");
     console.log("page loaded!");
-    /*
-	topDiv.style.width = "100%";
-	topDiv.style.height = "80px";
-	*/
-
-    //const products = JSON.parse('{"products": [{"name":"Sudd Johan", "description": "OG SUDD", "price": {"discount": {"price": "10,99 kr", "reason": "Fick vibbarna"}, "original": "14, 99 kr"}, "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}, {"name":"Johans Hoodie", "description": "fyfan va varmt", "price": {"discount": {"price": "149,99 kr", "reason": "PÅSKREA"}, "original": "499,99 kr"}, "img":"imgs/Johans Hoodie/Johans Hoodie White Front.jpg", "link":"merchandise/johans-hoodie.html"}, {"name":"Johans Flip-Flops", "description": "LFIPÅPT FLOP", "price": {"discount": {"price": "1000,99 kr", "reason": "PÅSKREA"}, "original": "349, 99 kr"}, "img":"imgs/Johans Flip-Flops/Johans Flip-Flops Medium Above.png", "link":"merchandise/johans-flip-flops.html"}, {"name":"Johans Mobilskal", "description": "Skydda din mobil!", "price": {"original": "149,99 kr"}, "img":"imgs/Johans Mobilskal/Johans Mobilskal iPhone 12 Pro Max.png", "link":"merchandise/johans-mobilskal.html"}]}')
-
-    /*
-	fetch("documents/json.txt")
-	.then(x => draw(x.json())
-	*/
 
     fetch('documents/json.txt').then(response=>response.json()).then(data=>create(data));
 
