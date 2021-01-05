@@ -18,7 +18,7 @@ function pageLoaded() {
 
 	fetch('documents/json.txt')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => products = data);
 
 	//console.log(products)
 
