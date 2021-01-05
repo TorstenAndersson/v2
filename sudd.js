@@ -11,7 +11,9 @@ function pageLoaded() {
 
 	var products;
 
-	fetch("https://gallant-yonath-0ed04b.netlify.app/documents/json.txt").then(response => response.json()).then(json => products = json);
+	fetch("https://gallant-yonath-0ed04b.netlify.app/documents/json.txt")
+	.then(x => x.json())
+	.then(y => products = y);
 
 	console.log(products)
 
