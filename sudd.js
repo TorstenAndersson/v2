@@ -20,7 +20,7 @@ function pageLoaded() {
   .then(response => response.json())
   .then(data => draw(data));
 
-	draw(products) {
+	function draw(products) {
 
 	console.log(products)
 
