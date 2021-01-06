@@ -127,17 +127,19 @@ a {
     padding-right: 20px;
 }
 .productFrame {
+	position: absolute;
+	left: 25%;
+	top: 30%;
 	width: 50%;
-	padding-top: 200px;
 }
 .imgFrame {
 	position: absolute;
-	right: 55%;
+	left: 0px;
 	display: inline;
 }
 .textFrame {
-	position: absolute;
-	right: 20%;
+	position: absolute;  
+	right: 0px;
 	display: inline;
 }
 .productImg {
