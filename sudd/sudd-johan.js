@@ -2,7 +2,7 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	console.log("page loaded!");
 	
-	fetch('documents/sudd-johan.txt	').then(response=>response.json()).then(data=>create(data));
+	fetch('../documents/sudd-johan.txt').then(response=>response.json()).then(data=>create(data));
 	
 	function create(product) {
 		document.querySelector(".productImg").setAttribute("src", "../" + product.product[0].img);
