@@ -33,7 +33,7 @@ body {
 	height: 80px;
 }
 span {
-	font-family: Lora, Georgia, serif;
+	font-family: "Lora", serif;
 }
 .topLogoTextDiv {
 	z-index: 2;
@@ -65,7 +65,7 @@ a {
 	z-index: 2;
 	color: rgba(255, 255, 255, .8);
 	font-size: 14.5px;
-	font-family: Raleway;
+	font-family: "Raleway";
 	/* font-weight: 700; */
 	letter-spacing: .75px;
 	text-align: left;
@@ -181,7 +181,7 @@ img.slideshow {
 	font-size: 28px;
 }
 .price {
-	font-family: Bitter;
+	font-family: font-family: "Open Sans";;
 }
 .line {
 	color: rgb(157, 157, 157);
@@ -219,7 +219,7 @@ img.slideshow {
 	color: rgb(50, 50, 50);
 }
 .big {
-	font-family: Arial, sans-serif;
+	font-family: sans-serif;
 	font-size: 55px;
 	padding-bottom: 30px;
 }
