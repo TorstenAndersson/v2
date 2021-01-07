@@ -157,7 +157,8 @@ div.slideshow {
 	width: 100%;
 }
 img.slideshow {
-	width: 100%;
+	width: 430px;
+	height: 430px;
 }
 .slideshowHeader {
 	position: relative;
