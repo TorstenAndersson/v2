@@ -1,8 +1,8 @@
 BEFORE PUBLISH:
 
-remove .html
+remove 
 change "404.css" to "/404.css"
-change "index.html" to "/"
+change "/" to "/"
 clean up html
 clean up css
 clean up js
