@@ -178,13 +178,16 @@ img.slideshow {
 	position: relative;
 	top: 80px;
 	color: rgb(80, 80, 80);
-	font-family: Bitter!important;
 	font-size: 28px;
+}
+.price {
+	font-family: Bitter;
 }
 .line {
 	color: rgb(157, 157, 157);
 	text-decoration: line-through;
 	text-decoration-thickness: 2px;
+	font-family: Bitter;
 	padding-left: 10px;
 }
 .smallParagraph {
