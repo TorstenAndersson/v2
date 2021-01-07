@@ -172,7 +172,7 @@ a {
 .line {
 	color: rgb(157, 157, 157);
 	text-decoration: line-through;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 2px;
 }
 .footerLogoText {
 	position: absolute;
