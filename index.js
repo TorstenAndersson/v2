@@ -32,23 +32,19 @@ function pageLoaded() {
 			var myHeader = document.createElement("span");
 			myHeader.appendChild(document.createTextNode(products.products[i].name));
 			myHeader.classList.add("slideshowHeader");
-			//myHeader.style.width = 100 / Object.keys(products.products) + "%";
 			myLink.appendChild(myHeader);
 			var myMainText = document.createElement("span");
 			myMainText.appendChild(document.createTextNode(products.products[i].description));
 			myMainText.classList.add("slideshowMainText");
-			//myMainText.style.width = 100 / Object.keys(products.products) + "%";
 			myLink.appendChild(myMainText);
 			var myTextDiv = document.createElement("div");
 			myTextDiv.classList.add("slideshowPriceText");
-			//myTextDiv.style.width = 100 / Object.keys(products.products) + "%";
 			var myPriceText = document.createElement("span");
 			myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
 			if (products.products[i].price.discount != undefined) {
 				myPriceText.classList.add("line");
 				var myDiscountedPriceText = document.createElement("span");
 				myDiscountedPriceText.appendChild(document.createTextNode(products.products[i].price.discount.price))
-				myDiscountedPriceText.classList.add("dicountedPrice");
 				myTextDiv.appendChild(myDiscountedPriceText);
 			}
 			myTextDiv.appendChild(myPriceText)
