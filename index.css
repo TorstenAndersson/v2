@@ -166,17 +166,16 @@ img.slideshow {
 	color: rgb(57, 57, 57);
 	font-size: 30px;
 	font-weight: 700;
-	padding-bottom: 10px;
 }
 .slideshowMainText {
 	position: relative;
-	top: 100px;
+	top: 160px;
 	display: block;
 	color: rgb(57, 57, 57);
 }
 .slideshowPriceText {
 	position: relative;
-	top: 150px;
+	top: 90px;
 	color: rgb(80, 80, 80);
 	font-size: 28px;
 }
