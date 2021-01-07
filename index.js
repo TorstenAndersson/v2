@@ -55,7 +55,6 @@ function pageLoaded() {
 			myLink.appendChild(myTextDiv);
 			myDiv.appendChild(myLink);
 		}
-		/*
 		var headers = document.querySelectorAll(".slideshowHeader");
 		var mainText = document.querySelectorAll(".slideshowMainText");
 		var priceText = document.querySelectorAll(".slideshowPriceText");
@@ -64,7 +63,6 @@ function pageLoaded() {
 			mainText[i].style.width = 100 / mainText.length + "%";
 			priceText[i].style.width = 100 / mainText.length + "%";
 		}
-		*/
 		var slideshowDiv = document.querySelector("div.slideshow");
 		slideshowDiv.style.width = Object.keys(products.products).length * 100 + "%";
 		divs = document.querySelectorAll(".productDiv");
