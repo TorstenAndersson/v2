@@ -43,7 +43,6 @@ function pageLoaded() {
 			myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
 			myPriceText.classList.add("price");
 			if (products.products[i].price.discount != undefined) {
-				myPriceText.classList.remove("price");
 				myPriceText.classList.add("line");
 				var myDiscountedPriceText = document.createElement("span");
 				myDiscountedPriceText.appendChild(document.createTextNode(products.products[i].price.discount.price))
