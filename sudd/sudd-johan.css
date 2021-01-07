@@ -110,7 +110,7 @@ a {
 .infoHeader {
     display: block;
     color: rgb(57, 57, 57);
-    font-family: "Open Sans";
+    font-family: sans-serif;
     font-size: 55px;
     font-weight: 700;
     padding-bottom: 15px;
@@ -148,7 +148,7 @@ a {
 .productHeader {
 	display: block;
 	color: rgb(57, 57, 57);
-	font-family: sans-serif;
+	font-family: "Open Sans";
 	font-size: 55px;
 	font-weight: 700;
 	padding-bottom: 20px;
