@@ -156,17 +156,17 @@ a {
     padding-bottom: 3px;
 }
 .productPriceText {
-    font-family: font-family: "Open Sans";;
+    font-family: "Open Sans";;
     font-size: 18px;
 }
 .line {
 	color: rgb(157, 157, 157);
 	text-decoration: line-through;
 	text-decoration-thickness: 1px;
-	font-family: font-family: "Open Sans";;
+	font-family: "Open Sans";;
 }
 .dicountedPrice {
-	font-family: font-family: "Open Sans";;
+	font-family: "Open Sans";;
 	padding-right: 10px;
 }
 .footerLogoText {
