@@ -178,7 +178,7 @@ img.slideshow {
 	position: relative;
 	top: 80px;
 	color: rgb(80, 80, 80);
-	font-family: Bitter;
+	font-family: Bitter!important;
 	font-size: 28px;
 }
 .line {
