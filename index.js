@@ -32,16 +32,16 @@ function pageLoaded() {
 			var myHeader = document.createElement("span");
 			myHeader.appendChild(document.createTextNode(products.products[i].name));
 			myHeader.classList.add("slideshowHeader");
-			myHeader.style.width = 100 / Object.keys(products.products) + "%";
+			//myHeader.style.width = 100 / Object.keys(products.products) + "%";
 			myLink.appendChild(myHeader);
 			var myMainText = document.createElement("span");
 			myMainText.appendChild(document.createTextNode(products.products[i].description));
 			myMainText.classList.add("slideshowMainText");
-			myMainText.style.width = 100 / Object.keys(products.products) + "%";
+			//myMainText.style.width = 100 / Object.keys(products.products) + "%";
 			myLink.appendChild(myMainText);
 			var myTextDiv = document.createElement("div");
 			myTextDiv.classList.add("slideshowPriceText");
-			myTextDiv.style.width = 100 / Object.keys(products.products) + "%";
+			//myTextDiv.style.width = 100 / Object.keys(products.products) + "%";
 			var myPriceText = document.createElement("span");
 			myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
 			if (products.products[i].price.discount != undefined) {
@@ -54,14 +54,6 @@ function pageLoaded() {
 			myTextDiv.appendChild(myPriceText)
 			myLink.appendChild(myTextDiv);
 			myDiv.appendChild(myLink);
-		}
-		var headers = document.querySelectorAll(".slideshowHeader");
-		var mainText = document.querySelectorAll(".slideshowMainText");
-		var priceText = document.querySelectorAll(".slideshowPriceText");
-		for (var i = 0; i < headers.length; i ++) {
-			headers[i].style.width = 100 / headers.length + "%";
-			mainText[i].style.width = 100 / mainText.length + "%";
-			priceText[i].style.width = 100 / mainText.length + "%";
 		}
 		var slideshowDiv = document.querySelector("div.slideshow");
 		slideshowDiv.style.width = Object.keys(products.products).length * 100 + "%";
