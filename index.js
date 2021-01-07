@@ -7,7 +7,7 @@ var size;
 
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	console.log("page loaded!");
+	console.log("page not really loaded in my opinion!");
 
 	fetch('documents/json.txt').then(response=>response.json()).then(data=>create(data));
 
@@ -32,13 +32,16 @@ function pageLoaded() {
 			var myHeader = document.createElement("span");
 			myHeader.appendChild(document.createTextNode(products.products[i].name));
 			myHeader.classList.add("slideshowHeader");
+			myHeader.style.width = 100 / Object.keys(products.products) + "%";
 			myLink.appendChild(myHeader);
 			var myMainText = document.createElement("span");
 			myMainText.appendChild(document.createTextNode(products.products[i].description));
 			myMainText.classList.add("slideshowMainText");
+			myMainText.style.width = 100 / Object.keys(products.products) + "%";
 			myLink.appendChild(myMainText);
 			var myTextDiv = document.createElement("div");
 			myTextDiv.classList.add("slideshowPriceText");
+			myTextDiv.style.width = 100 / Object.keys(products.products) + "%";
 			var myPriceText = document.createElement("span");
 			myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
 			if (products.products[i].price.discount != undefined) {
@@ -52,6 +55,7 @@ function pageLoaded() {
 			myLink.appendChild(myTextDiv);
 			myDiv.appendChild(myLink);
 		}
+		/*
 		var headers = document.querySelectorAll(".slideshowHeader");
 		var mainText = document.querySelectorAll(".slideshowMainText");
 		var priceText = document.querySelectorAll(".slideshowPriceText");
@@ -60,6 +64,7 @@ function pageLoaded() {
 			mainText[i].style.width = 100 / mainText.length + "%";
 			priceText[i].style.width = 100 / mainText.length + "%";
 		}
+		*/
 		var slideshowDiv = document.querySelector("div.slideshow");
 		slideshowDiv.style.width = Object.keys(products.products).length * 100 + "%";
 		divs = document.querySelectorAll(".productDiv");
