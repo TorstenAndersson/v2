@@ -1,1 +1,1 @@
-{"product": [{"name":"Sudd Johan", "description": "OG SUDD", "price": {"discount": {"price": "10,99 kr", "reason": "Fick vibbarna"}, "original": "14, 99 kr"}, "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}]}
+{"product": [{"name":"Sudd Johan", "description": "Bara gamla goda Johan.", "price": {"discount": {"price": "10,99 kr", "reason": "Fick vibbarna"}, "original": "14, 99 kr"}, "img":"imgs/Sudd/Sudd Johan.png", "link":"sudd/sudd-johan.html"}]}
