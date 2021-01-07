@@ -160,8 +160,8 @@ img.slideshow {
 	width: 100%;
 }
 .slideshowHeader {
-	position: absolute;
-	top: 450px;
+	position: relative;
+	top: 50px;
 	display: block;
 	color: rgb(57, 57, 57);
 	font-size: 30px;
@@ -169,14 +169,14 @@ img.slideshow {
 	padding-bottom: 10px;
 }
 .slideshowMainText {
-	position: absolute;
-	top: 500px;
+	position: relative;
+	top: 100px;
 	display: block;
 	color: rgb(57, 57, 57);
 }
 .slideshowPriceText {
-	position: absolute;
-	top: 550px;
+	position: relative;
+	top: 150px;
 	color: rgb(80, 80, 80);
 	font-size: 28px;
 }
