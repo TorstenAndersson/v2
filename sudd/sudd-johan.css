@@ -175,7 +175,9 @@ a {
 	text-decoration-thickness: 2px;
 }
 .cartAdd {
+	border: none;
 	background-color: rgb(47, 47, 47);
+	padding-top: 20px;
 }
 .cartAddText {
 	padding: 40px 20px 40px 20px;
