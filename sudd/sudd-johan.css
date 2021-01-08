@@ -167,17 +167,18 @@ a {
 	color: rgb(57, 57, 57);
 	font-family: "Open Sans";
 	font-size: 35px;
-	padding-bottom: 20px;
 }
 .line {
 	color: rgb(157, 157, 157);
 	text-decoration: line-through;
 	text-decoration-thickness: 2px;
 }
+.cartAddDiv {
+	padding-top: 20px;
+}
 .cartAdd {
 	border: none;
 	background-color: rgb(47, 47, 47);
-	padding-top: 20px;
 }
 .cartAddText {
 	padding: 40px 20px 40px 20px;
