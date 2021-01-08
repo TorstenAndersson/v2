@@ -167,6 +167,7 @@ a {
 	font-family: "Open Sans";;
 }
 .dicountedPrice {
+	color: rgb(47, 47, 47);
 	font-family: "Open Sans";;
 	padding-right: 10px;
 }
