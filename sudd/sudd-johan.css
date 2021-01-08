@@ -174,15 +174,16 @@ a {
 	text-decoration-thickness: 2px;
 }
 .cartAddDiv {
-	padding-top: 20px;
+	padding-top: 30px;
 }
 .cartAdd {
 	border: none;
 	background-color: rgb(57, 57, 57);
-	padding: 10px 20px 10px 20px;
+	padding: 20px 40px 20px 40px;
 }
 .cartAddText {
 	color: rgb(255, 255, 255);
+	font-family: "Helvetica";
 }
 .footerLogoText {
 	position: absolute;
