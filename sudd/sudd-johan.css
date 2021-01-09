@@ -187,6 +187,15 @@ a {
 	font-family: "Raleway";
 	font-size: 20px;
 }
+.cartAddedDiv {
+	width: 0px;
+	background-color: rgb(255, 255, 255);
+}
+.cartAddedText {
+	color: rgb(0, 0, 0);
+	font-family: "Raleway";
+	font-size: 20px;
+}
 .footerLogoText {
 	position: absolute;
 	bottom: 6px;
