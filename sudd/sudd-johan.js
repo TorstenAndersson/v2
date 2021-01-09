@@ -21,5 +21,9 @@ function pageLoaded() {
 }
 
 function buy() {
-	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
+	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,"); 
+	/*
+	retrive cart items (leaves one empty at end): localStorage["cart"].slice(4).split(","); 
+	retrive cart length: localStorage["cart"].slice(4).split(",").length - 1
+	*/
 }
