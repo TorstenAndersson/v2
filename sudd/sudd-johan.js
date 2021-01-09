@@ -17,5 +17,9 @@ function pageLoaded() {
 			myDiscountedPriceText.classList.add("productPriceText");
 			document.querySelector(".textFrame").insertBefore(myDiscountedPriceText, document.querySelector(".productPriceText"));
 		}
+	}
 }
+
+function buy() {
+	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
 }
