@@ -180,12 +180,12 @@ a {
 	border: none;
 	background-color: rgb(57, 57, 57);
 	padding: 20px 50px 20px 50px;
+	cursor: pointer;
 }
 .cartAddText {
 	color: rgb(255, 255, 255);
 	font-family: "Raleway";
 	font-size: 20px;
-	cursor: pointer;
 }
 .footerLogoText {
 	position: absolute;
