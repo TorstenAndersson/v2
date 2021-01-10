@@ -26,4 +26,13 @@ function buy() {
 	retrive cart items (leaves one empty at end): localStorage["cart"].slice(4).split(","); 
 	retrive cart length: localStorage["cart"].slice(4).split(",").length - 1
 	*/
+	var notification = document.querySelector(".notification");
+	notification.style.opacity = "1";
+	notification.classList.remove("fadeOut");
+	notification.classList.add("fadeIn");
+	setTimeout(function() { 
+		notification.classList.remove("fadeIn");
+		notification.classList.add("fadeOut");
+		notification.style.opacity = "0";
+	}, 5000);
 }
