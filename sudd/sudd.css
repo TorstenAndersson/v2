@@ -107,6 +107,36 @@ a {
 	text-align: center;
 	padding-top: 50px;
 }
+.notification {
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	top: 115px;
+	right: 10px;
+	width: 300px;
+	height: 70px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 10px 10px rgba(150, 150, 150, 0.5);
+}
+.notificationText {
+	position: relative;
+	top: 35%;
+	font-family: "Raleway";
+}
+.fadeIn {
+	animation: fade .8s;
+}
+@keyframes fade {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+.fadeOut {
+	animation: fadeBack .8s;
+}
+@keyframes fadeBack {
+	from {opacity: 1}
+	to {opacity: 0}
+}
 .infoHeader {
     display: block;
     color: rgb(57, 57, 57);
