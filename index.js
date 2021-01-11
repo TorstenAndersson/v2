@@ -7,7 +7,7 @@ var size;
 
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	console.log("MHMMM!");
+	console.log("10 BANDS!");
 
 	fetch('documents/json.txt').then(response=>response.json()).then(data=>create(data));
 
