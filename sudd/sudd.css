@@ -217,6 +217,7 @@ a {
 	font-family: "Raleway";
 	font-size: 20px;
 }
+/*
 .cartAddedDiv {
 	width: 0px;
 	background-color: rgb(255, 255, 255);
@@ -225,6 +226,12 @@ a {
 	color: rgb(0, 0, 0);
 	font-family: "Raleway";
 	font-size: 20px;
+}
+*/
+.cartaddedText {
+	position: relative;
+	left: -100px;
+	width: 100px;
 }
 .footerLogoText {
 	position: absolute;
