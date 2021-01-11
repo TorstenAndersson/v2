@@ -7,7 +7,7 @@ var size;
 
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	console.log("page not really loaded in my opinion!");
+	console.log("You're the loaded one!");
 
 	fetch('documents/json.txt').then(response=>response.json()).then(data=>create(data));
 
