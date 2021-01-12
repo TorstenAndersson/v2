@@ -23,7 +23,7 @@ function pageLoaded() {
 
 function buy() {
 	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
-	document.querySelector(".cartItemsNumber").innerHTML += 1;
+	document.querySelector(".cartItemsNumber").innerHTML = parseInt(document.querySelector(".cartItemsNumber").innerHTML) + 1;
 	/*
 	retrive cart items (leaves one empty at end): localStorage["cart"].slice(4).split(",").slice(0, -1); 
 	retrive cart length: localStorage["cart"].slice(4).split(",").length - 1
