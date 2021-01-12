@@ -93,6 +93,9 @@ a {
 .cartText {
 	padding-left: 25px;
 }
+.cartItemsNumber {
+	border-radius: 9px;
+}
 .cover {
 	position: absolute;
 	top: 0px;
