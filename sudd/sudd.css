@@ -212,24 +212,8 @@ a {
 	padding: 20px 50px 20px 50px;
 	cursor: pointer;
 }
-.cartAdded {
-	animation: cartAddedAnimation 0.5s;
-}
-@keyframes cartAddedAnimation {
-	from {background-color:rgb(57, 57, 57);}
-	to {background-color:rgb(0, 0, 0);}
-}
 .cartAddText {
 	color: rgb(255, 255, 255);
-	font-family: "Raleway";
-	font-size: 20px;
-}
-.cartAddedDiv {
-	width: 0px;
-	background-color: rgb(255, 255, 255);
-}
-.cartAddedText {
-	color: rgb(0, 0, 0);
 	font-family: "Raleway";
 	font-size: 20px;
 }
