@@ -94,6 +94,7 @@ a {
 	padding-left: 25px;
 }
 .cartItemsNumber {
+	background-color: rgb(47, 47, 47);
 	border-radius: 9px;
 }
 .cover {
