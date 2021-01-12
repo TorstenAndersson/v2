@@ -1,7 +1,6 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	console.log("page loaded!");
-	document.querySelector(".cartItemsText").innerHTML = localStorage["cart"].slice(4).split(",").slice(0, -1);
 	
 	fetch('../documents/sudd-johan.txt').then(response=>response.json()).then(data=>create(data));
 	
