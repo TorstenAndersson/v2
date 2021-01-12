@@ -99,6 +99,7 @@ a {
 	color: rgb(255, 255, 255);
 	background-color: rgb(47, 47, 47);
 	border-radius: 9px;
+	font-size: 15px;
 }
 .cover {
 	position: absolute;
