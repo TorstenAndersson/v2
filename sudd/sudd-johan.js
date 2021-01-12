@@ -1,6 +1,7 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	console.log("page loaded!");
+	document.querySelector(".cartItemsText").innerHTML = localStorage["cart"].slice(4).split(",").slice(0, -1);
 	
 	fetch('../documents/sudd-johan.txt').then(response=>response.json()).then(data=>create(data));
 	
@@ -23,7 +24,7 @@ function pageLoaded() {
 function buy() {
 	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,"); 
 	/*
-	retrive cart items (leaves one empty at end): localStorage["cart"].slice(4).split(","); 
+	retrive cart items (leaves one empty at end): localStorage["cart"].slice(4).split(",").slice(0, -1); 
 	retrive cart length: localStorage["cart"].slice(4).split(",").length - 1
 	*/
 	var notification = document.querySelector(".notification");
