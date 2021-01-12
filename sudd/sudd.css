@@ -212,7 +212,7 @@ a {
 	padding: 20px 50px 20px 50px;
 	cursor: pointer;
 }
-.cartAdd:active {
+.cartAdded {
 	background-color:rgb(0, 0, 0);
 }
 .cartAddText {
