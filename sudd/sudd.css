@@ -213,7 +213,11 @@ a {
 	cursor: pointer;
 }
 .cartAdded {
-	background-color:rgb(0, 0, 0);
+	animation: cartAddedAnimation 0.5s;
+}
+@keyframes cartAddedAnimation {
+	from {background-color:rgb(57, 57, 57);}
+	to {background-color:rgb(0, 0, 0);}
 }
 .cartAddText {
 	color: rgb(255, 255, 255);
