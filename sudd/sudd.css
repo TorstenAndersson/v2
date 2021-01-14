@@ -91,6 +91,7 @@ a {
 	padding-right: 18px;
 }
 .cartText {
+	padding-right: 0px;
 	padding-left: 25px;
 }
 .cartItemsNumber {
