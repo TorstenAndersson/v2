@@ -102,7 +102,7 @@ a {
 	background-color: rgb(47, 47, 47);
 	border-radius: 100%;
 	font-size: 15px;
-	padding: 1px 3px 4px 1px;
+	padding: 1px 3px 1px 4px;
 	min-width: 10px;
 }
 .cover {
