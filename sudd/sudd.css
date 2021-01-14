@@ -94,12 +94,15 @@ a {
 	padding-left: 25px;
 }
 .cartItemsNumber {
-	width: 18px;
-	height: 18px;
+	position: relative;
+	top: -7px;
+	left: -3px;
+	display: inline-block;
 	color: rgb(255, 255, 255);
 	background-color: rgb(47, 47, 47);
-	border-radius: 9px;
+	border-radius: 100%;
 	font-size: 15px;
+	padding: 1px 3px 4px 1px;
 }
 .cover {
 	position: absolute;
