@@ -103,6 +103,7 @@ a {
 	border-radius: 100%;
 	font-size: 15px;
 	padding: 1px 3px 4px 1px;
+	min-width: 17px;
 }
 .cover {
 	position: absolute;
