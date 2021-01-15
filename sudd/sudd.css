@@ -96,7 +96,6 @@ a {
 .cartItemsNumber {
 	position: relative;
 	top: -7px;
-	left: -3px;
 	display: inline-block;
 	color: rgb(255, 255, 255);
 	background-color: rgb(47, 47, 47);
