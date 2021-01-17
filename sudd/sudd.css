@@ -43,7 +43,6 @@ span {
 	left: 10%;
 	color: rgb(47, 47, 47);
 	font-weight: 700;
-	/* text-shadow: 0 1px 5px rgba(0, 0, 0, .3); */
 	padding-top: 10px;
 }
 .topLogoText {
@@ -98,13 +97,13 @@ a {
 	top: -7px;
 	display: inline-block;
 	color: rgb(255, 255, 255);
-	background-color: rgb(47, 47, 47);
+	background-color: rgb(470, 70, 70);
 	border-radius: 100%;
 	text-align: center;
 	font-family: "Open Sans";
 	font-size: 12px;
 	padding: 2px 4px 2px 4px;
-	min-width: 11px;
+	min-width: 13px;
 }
 .cover {
 	position: absolute;
