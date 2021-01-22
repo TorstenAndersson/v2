@@ -5,6 +5,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
 	} catch {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
+		document.querySelector(".cartItemsNumber").visibility = "hidden";
 	}
 	
 	fetch('../documents/sudd-johan.txt').then(response=>response.json()).then(data=>create(data));
@@ -28,9 +29,12 @@ function pageLoaded() {
 function buy() {
 	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
 	document.querySelector(".cartItemsNumber").innerHTML = parseInt(document.querySelector(".cartItemsNumber").innerHTML) + 1;
+	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
+		document.querySelector(".cartItemsNumber").visibility = "visible";
+	}
 	/*
-	retrive cart items (leaves one empty at end): localStorage["cart"].slice(4).split(",").slice(0, -1); 
-	retrive cart length: localStorage["cart"].slice(4).split(",").length - 1
+	retrive cart items (leaves one empty at end): localStorage.getItem("cart").slice(4).split(",").slice(0, -1); 
+	retrive cart length: localStorage.getItem("cart").slice(4).split(",").length - 1
 	*/
 	var notification = document.querySelector(".notification");
 	notification.style.opacity = "1";
