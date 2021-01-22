@@ -1,7 +1,11 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	console.log("page loaded!");
-	document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
+	try {
+		document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
+	} catch {
+		document.querySelector(".cartItemsNumber").innerHTML = null;
+	}
 	
 	fetch('../documents/sudd-johan.txt').then(response=>response.json()).then(data=>create(data));
 	
