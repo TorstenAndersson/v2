@@ -10,7 +10,10 @@ function pageLoaded() {
 	
 	fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan', {
 		mode: "no-cors",
-		headers: {"Content-Type": "application/json"}, {"Accept": "application/json"}
+		headers: {
+				"Content-Type": "application/json",
+			  	"Accept": "application/json"
+			 }
 	})
 		.then(response=>response.json()).then(data=>create(data));
 	
