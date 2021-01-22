@@ -5,7 +5,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
 	} catch {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
-		document.querySelector(".cartItemsNumber").class.visibility = "hidden";
+		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
 	
 	fetch('../documents/sudd-johan.txt').then(response=>response.json()).then(data=>create(data));
@@ -30,7 +30,7 @@ function buy() {
 	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
 	document.querySelector(".cartItemsNumber").innerHTML = parseInt(document.querySelector(".cartItemsNumber").innerHTML) + 1;
 	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
-		document.querySelector(".cartItemsNumber").class.visibility = "visible";
+		document.querySelector(".cartItemsNumber").style.visibility = "visible";
 	}
 	/*
 	retrive cart items (leaves one empty at end): localStorage.getItem("cart").slice(4).split(",").slice(0, -1); 
