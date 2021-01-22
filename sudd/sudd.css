@@ -105,6 +105,10 @@ a {
 	padding: 2px 4px 2px 4px;
 	min-width: 13px;
 }
+@keyframes ripple {
+  from {opacity: 1; transform: scale3d(0.75,0.75,1);}
+  to {pacity: 0; transform: scale3d(1.5,1.5,1);}
+}
 .cover {
 	position: absolute;
 	top: 0px;
