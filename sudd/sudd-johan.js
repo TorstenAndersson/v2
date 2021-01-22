@@ -28,7 +28,7 @@ function pageLoaded() {
 
 function buy() {
 	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
-	document.querySelector(".cartItemsNumber").innerHTML = localStorage.getItem("cart").slice(4).split(",").length;
+	document.querySelector(".cartItemsNumber").innerHTML = localStorage.getItem("cart").slice(4).split(",").length - 1;
 	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
 		document.querySelector(".cartItemsNumber").style.visibility = "visible";
 	}
