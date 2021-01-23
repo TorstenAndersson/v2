@@ -9,6 +9,7 @@ function pageLoaded() {
 	}
 	
 	fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan', {
+		mode: "cors",
 		headers: {
 				"Content-Type": "application/json",
 			  	"Accept": "application/json"
