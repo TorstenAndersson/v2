@@ -9,6 +9,7 @@ function pageLoaded() {
 	}
 	
 	fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan', {
+		method: "GET",
 		headers: {
 				"Content-Type": "application/json",
 			 }
