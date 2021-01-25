@@ -9,7 +9,7 @@ function pageLoaded() {
 	}
 	
 	fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan')
-	.then(response=>response.json()).then(data=>function(product) {
+	.then(response=>response.json()).then(product=> {
 		document.querySelector(".productImg").setAttribute("src", "../" + product.product[0].img);
 		document.querySelector(".productHeader").innerHTML = product.product[0].name;
 		document.querySelector(".productDescription").innerHTML = product.product[0].description;
