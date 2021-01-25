@@ -8,11 +8,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
 	
-	fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan', {
-		headers: {
-				"Content-Type": "application/json",
-			 }
-	})
+	fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan')
 	.then(response=>response.json()).then(data=>function() {
 		document.querySelector(".productImg").setAttribute("src", "../" + product.product[0].img);
 		document.querySelector(".productHeader").innerHTML = product.product[0].name;
