@@ -3,7 +3,7 @@ function pageLoaded() {
     console.log("page loaded!");
 
     fetch('https://johanssudd.herokuapp.com/products?wanted=sudd')
-    .then(response=>response.json().then(products=> {
+    .then(response=>response.json()).then(products=> {
         for (var i = 0; i < Object.keys(products.items).length; i++) {
             var myDiv = document.createElement("div");
             myDiv.classList.add("paddingDiv");
