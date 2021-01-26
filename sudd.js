@@ -2,37 +2,37 @@ function pageLoaded() {
     document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
     console.log("page loaded!");
 
-    fetch('documents/json.txt').then(response=>response.json())
-    .then(data=>function(product) {
-        for (var i = 0; i < Object.keys(products.products).length; i++) {
+    fetch('https://johanssudd.herokuapp.com/products?wanted=sudd')
+    .then(response=>response.json().then(products=> {
+        for (var i = 0; i < Object.keys(products.items).length; i++) {
             var myDiv = document.createElement("div");
             myDiv.classList.add("paddingDiv");
             document.querySelector("div.mainFrame").appendChild(myDiv);
             var myLink = document.createElement("a");
             myLink.classList.add("productFrame");
-            myLink.setAttribute("href", products.products[i].link)
-            if (products.products[i].price.discount != undefined) {
+            myLink.setAttribute("href", products.items[i].link)
+            if (products.items[i].price.discount != undefined) {
                 var myDiscount = document.createElement("span");
                 myDiscount.classList.add("discountReason");
-                myDiscount.appendChild(document.createTextNode(products.products[i].price.discount.reason))
+                myDiscount.appendChild(document.createTextNode(products.items[i].price.discount.reason))
                 myLink.appendChild(myDiscount);
             }
             var myImage = document.createElement("img");
-            myImage.setAttribute("src", products.products[i].img);
+            myImage.setAttribute("src", products.items[i].img);
             myImage.classList.add("productImg");
             myLink.appendChild(myImage);
             var myHeader = document.createElement("span");
-            myHeader.appendChild(document.createTextNode(products.products[i].name));
+            myHeader.appendChild(document.createTextNode(products.items[i].name));
             myHeader.classList.add("productHeader");
             myLink.appendChild(myHeader);
             var myTextDiv = document.createElement("div");
             var myPriceText = document.createElement("span");
             myPriceText.classList.add("productPriceText");
-            myPriceText.appendChild(document.createTextNode(products.products[i].price.original));
-            if (products.products[i].price.discount != undefined) {
+            myPriceText.appendChild(document.createTextNode(products.items[i].price.original));
+            if (products.items[i].price.discount != undefined) {
                 myPriceText.classList.add("line");
                 var myDiscountedPriceText = document.createElement("span");
-                myDiscountedPriceText.appendChild(document.createTextNode(products.products[i].price.discount.price))
+                myDiscountedPriceText.appendChild(document.createTextNode(products.items[i].price.discount.price))
                 myDiscountedPriceText.classList.add("dicountedPrice");
                 myDiscountedPriceText.classList.add("productPriceText");
                 myTextDiv.appendChild(myDiscountedPriceText);
