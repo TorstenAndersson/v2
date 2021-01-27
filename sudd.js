@@ -38,17 +38,13 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=sudd')
             myTextDiv.append(myPriceText)
             myLink.append(myTextDiv);
             myDiv.append(myLink);
-            myDivs.push(myDiv);
+            document.querySelector("div.mainFrame").appendChild(myDiv);
         }
     });
 
 function pageLoaded() {
     document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
     console.log("page loaded!");
-
-    for (var i in myDivs) {
-        document.querySelector("div.mainFrame").appendChild(myDivs[i]);
-    }
     /*
     fetch('https://johanssudd.herokuapp.com/products?wanted=sudd')
     .then(response=>response.json()).then(products=> {
