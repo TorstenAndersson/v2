@@ -1,8 +1,0 @@
-BEFORE PUBLISH:
-
-remove 
-change "404.css" to "/404.css"
-change "/" to "/"
-clean up html
-clean up css
-clean up js
