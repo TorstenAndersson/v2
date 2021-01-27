@@ -2,7 +2,6 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=merchandise').then(respo
     for (var i = 0; i < Object.keys(products.items).length; i++) {
        var myDiv = document.createElement("div");
         myDiv.classList.add("paddingDiv");
-        document.querySelector("div.mainFrame").appendChild(myDiv);
         var myLink = document.createElement("a");
         myLink.classList.add("productFrame");
         myLink.setAttribute("href", products.items[i].link)
@@ -35,6 +34,7 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=merchandise').then(respo
         myTextDiv.appendChild(myPriceText)
         myLink.appendChild(myTextDiv);
         myDiv.appendChild(myLink);
+        document.querySelector("div.mainFrame").appendChild(myDiv);
     }
 });
 

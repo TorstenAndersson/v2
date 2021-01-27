@@ -10,7 +10,6 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=onDisplay').then(respons
 		var myDiv = document.createElement("div");
 		myDiv.classList.add("productDiv");
 		myDiv.style.order = i;
-		document.querySelector("div.slideshow").appendChild(myDiv);
 		var myLink = document.createElement("a");
 		myLink.setAttribute("href", products.items[i].link)
 		if (products.items[i].price.discount != undefined) {
@@ -46,6 +45,7 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=onDisplay').then(respons
 		myTextDiv.appendChild(myPriceText)
 		myLink.appendChild(myTextDiv);
 		myDiv.appendChild(myLink);
+		document.querySelector("div.slideshow").appendChild(myDiv);
 	}
 	var slideshowDiv = document.querySelector("div.slideshow");
 	slideshowDiv.style.width = Object.keys(products.items).length * 100 + "%";
