@@ -2,7 +2,7 @@ fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan').then(response
 	//product = JSON.parse(product);
 	localStorage.setItem("productSuddJohan", JSON.stringify(product));
 });
-fetch('https://github.com/repos/TorstenAndersson/server').then(data => localStorage.setItem("lastUpdate", data.json().updated_at))
+fetch('https://api.github.com/repos/TorstenAndersson/server').then(data => localStorage.setItem("lastUpdate", data.json().updated_at))
 
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
