@@ -1,5 +1,18 @@
 fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan').then(response=>response.json()).then(product=> {
 	//product = JSON.parse(product);
+	localStorage.setItem("productSuddJohan", product);
+});
+
+function pageLoaded() {
+	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	console.log("page loaded!");
+	try {
+		document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
+	} catch {
+		document.querySelector(".cartItemsNumber").innerHTML = null;
+		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
+	}
+	product = localStorage.getItem("productSuddJohan");
 	document.querySelector(".productImg").setAttribute("src", "../" + product.img);
 	document.querySelector(".productHeader").innerHTML = product.name;
 	document.querySelector(".productDescription").innerHTML = product.description;
@@ -11,17 +24,6 @@ fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan').then(response
 		myDiscountedPriceText.classList.add("dicountedPrice");
 		myDiscountedPriceText.classList.add("productPriceText");
 		document.querySelector(".textFrame").insertBefore(myDiscountedPriceText, document.querySelector(".productPriceText"));
-	}
-});
-
-function pageLoaded() {
-	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	console.log("page loaded!");
-	try {
-		document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
-	} catch {
-		document.querySelector(".cartItemsNumber").innerHTML = null;
-		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
 }
 
