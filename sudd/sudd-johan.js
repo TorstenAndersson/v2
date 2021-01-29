@@ -1,8 +1,6 @@
-fetch('https://johanssudd.herokuapp.com/product?wanted=SuddJohan').then(response=>response.json()).then(product=> {
-	//product = JSON.parse(product);
-	localStorage.setItem("productSuddJohan", JSON.stringify(product));
+fetch('https://api.github.com/repos/TorstenAndersson/server').then(response=>response.json()).then(data=> {
+	if (new Date(data.updated_at).getTime() > localStorage.getItem("lastUpdate")) localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
 });
-fetch('https://api.github.com/repos/TorstenAndersson/server').then(response=>response.json()).then(data=>localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime()))
 
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
