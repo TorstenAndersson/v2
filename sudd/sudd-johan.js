@@ -15,7 +15,7 @@ async function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
 	if (localStorage.getItem("productInfo") == undefined) {
-		ocalStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
+		localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
 		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
 	}
 	product = JSON.parse(localStorage.getItem("productInfo"));
