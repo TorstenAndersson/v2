@@ -5,7 +5,7 @@ fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(respon
 	}
 });
 
-function pageLoaded() {
+async function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	console.log("page loaded");
 	try {
@@ -13,6 +13,10 @@ function pageLoaded() {
 	} catch {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
+	}
+	if (localStorage.getItem("productInfo") == undefined) {
+		ocalStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
+		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
 	}
 	product = JSON.parse(localStorage.getItem("productInfo"));
 	document.querySelector(".productImg").setAttribute("src", "../" + product.products[1].items.SuddJohan.img);
