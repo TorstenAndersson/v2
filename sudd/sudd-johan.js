@@ -1,4 +1,4 @@
-fetch('https://api.github.com/repos/TorstenAndersson/server').then(response=>response.json()).then(data=> {
+fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(response=>response.json()).then(data=> {
 	if (new Date(data.updated_at).getTime() > localStorage.getItem("lastUpdate")) {
 		localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
 		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
