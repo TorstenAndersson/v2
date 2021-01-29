@@ -15,8 +15,9 @@ async function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
 	if (localStorage.getItem("productInfo") == undefined) {
-		localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
 		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
+		fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(response=>response.json()).then(data=>localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime()));
+
 	}
 	product = JSON.parse(localStorage.getItem("productInfo"));
 	document.querySelector(".productImg").setAttribute("src", "../" + product.products[1].items.SuddJohan.img);
