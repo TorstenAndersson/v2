@@ -1,5 +1,8 @@
 fetch('https://api.github.com/repos/TorstenAndersson/server').then(response=>response.json()).then(data=> {
-	if (new Date(data.updated_at).getTime() > localStorage.getItem("lastUpdate")) localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
+	if (new Date(data.updated_at).getTime() > localStorage.getItem("lastUpdate")) {
+		localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
+		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
+	}
 });
 
 function pageLoaded() {
@@ -11,15 +14,15 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
-	product = JSON.parse(localStorage.getItem("productSuddJohan"));
-	document.querySelector(".productImg").setAttribute("src", "../" + product.img);
-	document.querySelector(".productHeader").innerHTML = product.name;
-	document.querySelector(".productDescription").innerHTML = product.description;
-	document.querySelector(".productPriceText").innerHTML = product.price.original;
-	if (product.price.discount != undefined) {
+	product = JSON.parse(localStorage.getItem("productInfo"));
+	document.querySelector(".productImg").setAttribute("src", "../" + product.products[1].items.SuddJohan.img);
+	document.querySelector(".productHeader").innerHTML = product.products[1].items.SuddJohan.name;
+	document.querySelector(".productDescription").innerHTML = product.products[1].items.SuddJohan.description;
+	document.querySelector(".productPriceText").innerHTML = product.products[1].items.SuddJohan.price.original;
+	if (product.products[1].items.SuddJohan.price.discount != undefined) {
 		document.querySelector(".productPriceText").classList.add("line");
 		var myDiscountedPriceText = document.createElement("span");
-		myDiscountedPriceText.appendChild(document.createTextNode(product.price.discount.price))
+		myDiscountedPriceText.appendChild(document.createTextNode(product.products[1].items.SuddJohan.price.discount.price))
 		myDiscountedPriceText.classList.add("dicountedPrice");
 		myDiscountedPriceText.classList.add("productPriceText");
 		document.querySelector(".textFrame").insertBefore(myDiscountedPriceText, document.querySelector(".productPriceText"));
