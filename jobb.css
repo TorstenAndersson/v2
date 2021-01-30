@@ -26,7 +26,7 @@ body {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }
-.topDiv {
+.navigationBar {
 	position: absolute;
 	top: 30px;
 	width: 100%;
