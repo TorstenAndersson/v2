@@ -7,3 +7,4 @@ Optimize:
   BeforePublish.txt
   Adding all products with correct information
   MAKE REPOSITORY PRIVATE/DELETE IT
+  RUN CHROME DEV LIGHTHOUSE
