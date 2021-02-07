@@ -36,8 +36,8 @@ async function pageLoaded() {
 }
 
 function buy(sender) {
-	console.log(sender)
-	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
+	console.log(sender.parentElement.parentElement.firstElementChild.innerHTML)
+	localStorage.setItem("cart", localStorage.getItem("cart") + sender.parentElement.parentElement.firstElementChild.innerHTML + ",");
 	document.querySelector(".cartItemsNumber").innerHTML = localStorage.getItem("cart").slice(4).split(",").length - 1;
 	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
 		document.querySelector(".cartItemsNumber").style.visibility = "visible";
