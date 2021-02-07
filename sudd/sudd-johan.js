@@ -35,7 +35,7 @@ async function pageLoaded() {
 	}
 }
 
-function buy() {
+function buy(sender) {
 	localStorage.setItem("cart", localStorage.getItem("cart") + "Sudd Johan,");
 	document.querySelector(".cartItemsNumber").innerHTML = localStorage.getItem("cart").slice(4).split(",").length - 1;
 	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
