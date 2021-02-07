@@ -1,6 +1,6 @@
-Johanssudd.se source code
-
-Copyright © 2021 Johanssudd. All Rights Reserved
+# Johanssudd
+The official source code of the website [Johanssudd.se] (https://johanssudd.se).
+###### Copyright © 2021 Johanssudd. All Rights Reserved
 
 #TODO
 Optimize:
