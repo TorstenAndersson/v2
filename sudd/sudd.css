@@ -105,6 +105,7 @@ a {
 	padding-left: 25px;
 }
 .cartItemsNumber {
+	visibility: hidden;
 	position: relative;
 	top: -7px;
 	display: inline-block;

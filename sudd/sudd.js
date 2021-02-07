@@ -3,9 +3,9 @@ function pageLoaded() {
 	console.log("page loaded");
 	try {
 		document.querySelector(".cartItemsNumber").innerHTML = localStorage["cart"].slice(4).split(",").length - 1;
+		document.querySelector(".cartItemsNumber").style.visibility = "visible";
 	} catch {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
-		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
 	}
 }
 
