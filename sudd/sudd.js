@@ -1,11 +1,4 @@
-fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(response=>response.json()).then(data=> {
-	if (new Date(data.updated_at).getTime() > localStorage.getItem("lastUpdate")) {
-		localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
-		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
-	}
-});
-
-async function pageLoaded() {
+function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	console.log("page loaded");
 	try {
@@ -13,25 +6,6 @@ async function pageLoaded() {
 	} catch {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 		document.querySelector(".cartItemsNumber").style.visibility = "hidden";
-	}
-
-	if (localStorage.getItem("productInfo") == undefined) {
-		await fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
-		fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(response=>response.json()).then(data=>localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime()));
-	}
-
-	product = JSON.parse(localStorage.getItem("productInfo"));
-	document.querySelector(".productImg").setAttribute("src", "../" + product.products.items.SuddJohan.img);
-	document.querySelector(".productHeader").innerHTML = product.products.items.SuddJohan.name;
-	document.querySelector(".productDescription").innerHTML = product.products.items.SuddJohan.description;
-	document.querySelector(".productPriceText").innerHTML = product.products.items.SuddJohan.price.original;
-	if (product.products.items.SuddJohan.price.discount != undefined) {
-		document.querySelector(".productPriceText").classList.add("line");
-		var myDiscountedPriceText = document.createElement("span");
-		myDiscountedPriceText.appendChild(document.createTextNode(product.products.items.SuddJohan.price.discount.price))
-		myDiscountedPriceText.classList.add("dicountedPrice");
-		myDiscountedPriceText.classList.add("productPriceText");
-		document.querySelector(".textFrame").insertBefore(myDiscountedPriceText, document.querySelector(".productPriceText"));
 	}
 }
 
