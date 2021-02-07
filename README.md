@@ -4,7 +4,7 @@ The official source code of the website [Johanssudd.se](https://johanssudd.se).
 
 #TODO
 Optimize:
-  BeforePublish.txt
-  Adding all products with correct information
-  MAKE REPOSITORY PRIVATE/DELETE IT
-  RUN CHROME DEV LIGHTHOUSE
+  BeforePublish.txt. 
+  Adding all products with correct information. 
+  MAKE REPOSITORY PRIVATE/DELETE IT. 
+  RUN CHROME DEV LIGHTHOUSE. 
