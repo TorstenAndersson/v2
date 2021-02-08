@@ -12,7 +12,7 @@ body {
 .background {
 	z-index: 0;
 	width: 100%;
-	height: 670px;
+	height: 85%;
 	background-attachment: scroll;
 	background-image: url("imgs/website/johanBackground.png");
 	background-position-x: 50%;
@@ -109,7 +109,7 @@ a {
 	left: 0px;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, .3);
-	height: 670px;
+	height: 85%;
 }
 .pageContent {
 	text-align: center;
