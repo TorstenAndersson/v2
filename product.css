@@ -221,8 +221,9 @@ a {
 	font-size: 18px;
 	padding-bottom: 15px;
 }
-.dicountedPrice {
+.discountedPrice {
 	padding-right: 20px;
+	padding-left: 20px;
 }
 .productPriceText {
 	color: rgb(57, 57, 57);

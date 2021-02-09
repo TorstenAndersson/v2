@@ -27,7 +27,7 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=merchandise').then(respo
             myPriceText.classList.add("line");
             var myDiscountedPriceText = document.createElement("span");
             myDiscountedPriceText.appendChild(document.createTextNode(products.items[i].price.discount.price))
-            myDiscountedPriceText.classList.add("dicountedPrice");
+            myDiscountedPriceText.classList.add("discountedPrice");
             myDiscountedPriceText.classList.add("productPriceText");
             myTextDiv.appendChild(myDiscountedPriceText);
         }
