@@ -1,10 +1,18 @@
+@font-face {
+	font-family: "Lora";
+	src: url(/fonts/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqt8ndeYxZ0.woff);
+}
+@font-face {
+	font-family: "Raleway";
+	src: url(/fonts/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff);
+}
 body {
 	margin: 0px;
 }
 .background {
 	z-index: 0;
 	width: 100%;
-	height: 85%;
+	height: 85vh;
 	background-attachment: scroll;
 	background-image: url("imgs/website/johanBackground.png");
 	background-position-x: 50%;
@@ -26,7 +34,7 @@ body {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }
-.topDiv {
+.navigationBar {
 	position: absolute;
 	top: 30px;
 	width: 100%;
@@ -99,8 +107,8 @@ a {
 	right: 0px;
 	left: 0px;
 	z-index: 1;
+	height: 85vh;
 	background-color: rgba(0, 0, 0, .3);
-	height: 85%;
 }
 .pageContent {
 	text-align: center;
@@ -198,6 +206,7 @@ img.slideshow {
     left: 50%;
     display: block;
     text-align: left;
+	line-height: 24px;
     transform: translate(-50%);
     padding-top: 25px;
 }
