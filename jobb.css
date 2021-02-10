@@ -206,6 +206,7 @@ img.slideshow {
     left: 50%;
     display: block;
     text-align: left;
+	line-height: 24px;
     transform: translate(-50%);
     padding-top: 25px;
 }
