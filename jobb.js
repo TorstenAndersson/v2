@@ -1,6 +1,5 @@
 function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	console.log("page loaded!");
 	var form = document.querySelector("form");
 
 	form.addEventListener("submit", e => {
@@ -39,7 +38,6 @@ function pageScrolled() {
 	var topLogoTextDiv = document.querySelector(".topLogoTextDiv");
 	if (window.pageYOffset > 30) {
 		if (isScrolled == false) {
-			console.log("now");
 			navigationBar.style.position = "fixed";
 			navigationBar.style.top = "0px";
 			navigationBar.classList.add("backgroundAnimation");
@@ -53,7 +51,6 @@ function pageScrolled() {
 	} 
 	if (window.pageYOffset < 30) {
 		if (isScrolled == true) {
-			console.log("back");
 			navigationBar.style.position = "absolute";
 			navigationBar.style.top = "30px";
 			navigationBar.classList.add("backgroundAnimationBack");
