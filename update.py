@@ -354,8 +354,7 @@ for product in sudd:
                             <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''<span>
                         </div>
                     </a>
-                </div>
-    '''
+                </div>'''
     i += 1
 print(suddDiv)
 
