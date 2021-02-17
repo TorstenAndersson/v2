@@ -397,7 +397,7 @@ for file in files:
 # Creating product files
 
 for product in products["products"]:
-    print(product)
+    #print(product)
     path = "./" + product["type"] + "/" + product["name"].lower() + ".html"
     if not os.path.exists(path):
         open(path, "x")
