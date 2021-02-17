@@ -164,10 +164,6 @@ for product in products["items"]:
     path = "./" + products["items"][product]["type"] + "/" + products["items"][product]["name"].lower() + ".html"
     if not os.path.exists(path):
         open(path, "x")
-        print("created " + path)
-
-for product in products["items"]:
-    path = "./" + products["items"][product]["type"] + "/" + products["items"][product]["name"].lower() + ".html"
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
     <head>
