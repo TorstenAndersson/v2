@@ -433,7 +433,7 @@ for product in merchandise:
                 </div>'''
     i += 1
 
-files["sudd"] = '''<!DOCTYPE html>
+files["merchandise"] = '''<!DOCTYPE html>
 <html lang="sv">
     <head>
         <title>Sudd - Johanssudd</title>
