@@ -165,7 +165,7 @@ i = 0
 for product in products["onDisplay"]:
     #print(product)
     onDisplay += '''
-<div class="productDiv" style="order: "''' + str(i) + ''';>
+<div class="productDiv" style="order: ''' + str(i) + '''";>
     <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
     </a>
 </div>'''
