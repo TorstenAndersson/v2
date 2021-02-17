@@ -165,10 +165,14 @@ files = {}
 onDisplay = ""
 i = 0
 for product in products["onDisplay"]:
+    if product["price"]["discount"]["reason"] == "":
+        visibility = "hidden"
+    else:
+        visibility = "visible"
     onDisplay += '''
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
-                            <span class="discountReason">''' + product["price"]["discount"]["reason"] + '''</span>
+                            <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                             <img class="slideshow" src="''' + product["img"] +  '''">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
