@@ -405,8 +405,7 @@ files["sudd"] = '''<!DOCTYPE html>
         <div class="pageContent">
             <span class="infoHeader">Våra Sudd</span>
             <span class="infoMainText">Alla gör fel ibland.</span>
-            <div class="mainFrame"></div>
-        </div>
+            <div class="mainFrame"></div>''' + suddDiv + '''</div>
         <span class="footerLogoText"></span>
     </body>
 </html>'''
