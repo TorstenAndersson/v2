@@ -256,10 +256,11 @@ files["index"] = ('''<!DOCTYPE html>
 </html>''')
 
 for file in files:
-    if not os.path.exists("./" + file):
-        open("./" + file, "x")
+    path = "./" + file + ".html"
+    if not os.path.exists(path):
+        open(path, "x")
     print(file)
-    open("./" + file, "w").write(files[file])
+    open(path, "w").write(files[file])
 
 # Creating product files
 
