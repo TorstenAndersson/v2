@@ -344,7 +344,7 @@ for product in sudd:
         display = "none"
     else:
         visibility = "visibile"
-        display = "inherit"
+        display = "initial"
     suddDiv += '''
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
@@ -422,7 +422,7 @@ for product in merchandise:
         display = "none"
     else:
         visibility = "visibile"
-        display = "inherit"
+        display = "initial"
     merchandiseDiv += '''
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
