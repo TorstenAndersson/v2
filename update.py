@@ -2,7 +2,7 @@ import os
 import json
 import datetime
 
-#Creating a variable for JSON info
+# Creating a variable for JSON info
 
 products = json.loads('''
 {
@@ -158,13 +158,95 @@ products = json.loads('''
 }
 ''')
 
-#Creating basic files
+# Creating basic files
 
-for fileName in os.listdir():
-    if fileName[-5:] == ".html":
-        pass
+onDisplay = ""
+i = 0
+for product in products["onDisplay"]:
+    print(product)
+    onDisplay += '''
+<div class="productDiv" style="order: "''' + str(i) + ''';>
+    <a href="/''' + product["type"] + "/" + product["name"] + '''">
+    </a>
+</div>'''
+    #products["onDisplay"][product]
+    i += 1
 
-#Creating product files
+index = '''<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<title>Johanssudd</title>
+		<meta name="keywords" content="johan, sudd, johanssudd, johansudd">
+		<meta name="description" content="Johanssud. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="imgs/website/johanFavicon.png">
+		<link rel="stylesheet" href="index.css">
+		<script src="index.js"></script>
+	</head>
+
+	<body onload="pageLoaded()" onscroll="pageScrolled()">
+		<div class="background">
+			<nav class="navigationBar">
+				<a class="topLogoTextDiv" href="/">
+					<span class="topLogoText">Johanssudd</span>
+				</a>
+				<div class="topTextDiv">
+					<a href="/">
+						<span class="topText current">HEM</span>
+					</a>
+					<a href="om oss">
+						<span class="topText">OM OSS</span>
+					</a>
+					<a href="sudd">
+						<span class="topText">SUDD</span>
+					</a>
+					<a href="merchandise">
+						<span class="topText">MERCHANDISE</span>
+					</a>
+					<a href="jobb">
+						<span class="topText jobbText">JOBB</span>
+					</a>
+					<div class="verticalLine"></div>
+					<a href="kundvagn">
+						<span class="topText cartText">KUNDVAGN</span>
+					</a>
+				</div>
+			</div>
+			<div class="cover"></div>
+		</nav>
+		<div class="pageContent">
+			<div class="logoAndMotto">
+				<span class="logoText">Johanssudd</span>
+				<span class="motto">Sudda bort dina pengar</span>
+			</div>
+			<div class="slideshowDiv">
+				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
+				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
+				<div class="slideshow" style="left: 0px">''' + '''
+                </div>
+			</div>
+			<div class="smallParagraph parOne">
+				<span class="paragraphHeader small">Sveriges Främsta</span>
+				<span>Vi anses av många som kärnan i ett fungerande samhälle. </span>
+			</div>
+			<div class="smallParagraph parTwo">
+				<span class="paragraphHeader small">Våra Priser</span>
+				<span>Ofta inom suddindustrin ställs frågan: "Hur mycket kan det kosta?"
+				<br>
+				<br>
+				För mycket.</span>
+			</div>
+			<div class="paragraph">
+				<span class="paragraphHeader big">Vill du arbeta med oss?</span>
+				<span>Vi här på Johanssudd söker alltid arbetskraft. Vi erbjuder massvis med olika jobb inom alla områden du kan tänka dig. Om du tror att du har vad som krävs önskar vi att du skulle fylla i vårt formulär <a class="hereLink" href="jobb">här</a>!</span>
+			</div>
+		</div>
+		<span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
+	</body>
+</html>'''
+
+# Creating product files
 
 for product in products["items"]:
     path = "./" + products["items"][product]["type"] + "/" + products["items"][product]["name"].lower() + ".html"
@@ -236,7 +318,7 @@ for product in products["items"]:
     </body>
 </html>''')
 
-#Update git with new changes
+# Update git with new changes
  
 os.system("git add -- . :!./.vscode/* :!.DS_Store")
 os.system("git commit -m 'updated!'")
