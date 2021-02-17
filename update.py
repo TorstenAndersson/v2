@@ -350,8 +350,8 @@ for product in sudd:
                         <img class="productImg" src="''' + product["img"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''</span>
-                            <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''</span>
+                            <span class="productPriceText">''' + product["price"]["original"] + '''</span>
+                            <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + '''</span>
                         </div>
                     </a>
                 </div>'''
@@ -426,8 +426,8 @@ for product in merchandise:
                         <img class="productImg" src="''' + product["img"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''</span>
-                            <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''</span>
+                            <span class="productPriceText">''' + product["price"]["original"] + '''</span>
+                            <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + '''</span>
                         </div>
                     </a>
                 </div>'''
