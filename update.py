@@ -239,7 +239,7 @@ files = {}
 
 itemsOnDisplay = ""
 i = 0
-for product in itemsOnDisplay:
+for product in onDisplay:
     if product["price"]["discount"]["reason"] == "":
         visibility = "hidden"
     else:
