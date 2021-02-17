@@ -2,6 +2,8 @@ import os
 import json
 import datetime
 
+#Creating a variable for JSON info
+
 products = json.loads('''
 {
     "sudd":[{
@@ -156,9 +158,13 @@ products = json.loads('''
 }
 ''')
 
+#Creating basic files
+
 for fileName in os.listdir():
     if fileName[-5:] == ".html":
         pass
+
+#Creating product files
 
 for product in products["items"]:
     path = "./" + products["items"][product]["type"] + "/" + products["items"][product]["name"].lower() + ".html"
@@ -229,6 +235,8 @@ for product in products["items"]:
         <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>''')
+
+#Update git with new changes
  
 os.system("git add -- . :!./.vscode/* :!.DS_Store")
 os.system("git commit -m 'updated!'")
