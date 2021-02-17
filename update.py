@@ -169,6 +169,7 @@ for product in products["onDisplay"]:
     <a href="/''' + product["type"] + "/" + product["name"] + '''">
     </a>
 </div>'''
+    print(onDisplay)
     #products["onDisplay"][product]
     i += 1
 
