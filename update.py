@@ -163,14 +163,20 @@ products = json.loads('''
 onDisplay = ""
 i = 0
 for product in products["onDisplay"]:
-    #print(product)
     onDisplay += '''
 <div class="productDiv" style="order: ''' + str(i) + '''";>
     <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
+        <span class="discountReason">''' + product["price"]["discount"]["reason"] + '''</span>
+        <img class="slideshow" src="''' + product["img"] +  '''">
+        <span class="slideshowHeader">''' + product["name"] + '''</span>
+        <span class="slideshowMainText">''' + product["description"] + '''</span>
+        <div class="slideshowPriceText">
+            <span class="price">''' + product["price"]["original"] + '''</span>
+            <span class="price line">''' + product["price"]["discount"]["price"] + '''</span>
+        </div>
     </a>
 </div>'''
     print(onDisplay)
-    #products["onDisplay"][product]
     i += 1
 
 index = '''<!DOCTYPE html>
