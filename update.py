@@ -256,7 +256,10 @@ files["index"] = ('''<!DOCTYPE html>
 </html>''')
 
 for file in files:
+    if not os.path.exists("./" + file):
+        open("./" + file, "x")
     print(file)
+    open("./" + file, "w").write(files[file])
 
 # Creating product files
 
