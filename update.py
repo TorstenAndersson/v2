@@ -237,14 +237,14 @@ files = {}
 
 # index.html
 
-itemsOnDisplay = ""
+onDisplayDiv = ""
 i = 0
 for product in onDisplay:
     if product["price"]["discount"]["reason"] == "":
         visibility = "hidden"
     else:
         visibility = "visible"
-    itemsOnDisplay += '''
+    onDisplayDiv += '''
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                             <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
@@ -311,7 +311,7 @@ files["index"] = ('''<!DOCTYPE html>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
 				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
-				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + itemsOnDisplay + '''
+				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>
 			<div class="smallParagraph parOne">
@@ -335,6 +335,30 @@ files["index"] = ('''<!DOCTYPE html>
 </html>''')
 
 # sudd.html
+
+suddDiv = ""
+i = 0
+for product in sudd:
+    if product["price"]["discount"]["reason"] == "":
+        visibility = "hidden"
+    else:
+        visibility = "visibile"
+    suddDiv += '''
+    <div class="paddingDiv">
+        <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
+            <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
+            <img class="productImg" src="''' + product["img"] + '''">
+            <span class="productHeader">''' + product["name"] + '''</span>
+            <div>
+                <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''<span>
+                <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''<span>
+            </div>
+        </a>
+    </div>
+    '''
+    i += 1
+print(suddDiv)
+
 files["sudd"] = '''<!DOCTYPE html>
 <html lang="sv">
     <head>
