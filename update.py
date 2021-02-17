@@ -344,17 +344,17 @@ for product in sudd:
     else:
         visibility = "visibile"
     suddDiv += '''
-    <div class="paddingDiv">
-        <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
-            <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-            <img class="productImg" src="''' + product["img"] + '''">
-            <span class="productHeader">''' + product["name"] + '''</span>
-            <div>
-                <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''<span>
-                <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''<span>
-            </div>
-        </a>
-    </div>
+                <div class="paddingDiv">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
+                        <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
+                        <img class="productImg" src="''' + product["img"] + '''">
+                        <span class="productHeader">''' + product["name"] + '''</span>
+                        <div>
+                            <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''<span>
+                            <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''<span>
+                        </div>
+                    </a>
+                </div>
     '''
     i += 1
 print(suddDiv)
