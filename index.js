@@ -128,7 +128,7 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=onDisplay').then(respons
 	}
 	*/
 	var slideshowDiv = document.querySelector("div.slideshow");
-	slideshowDiv.style.width = Object.keys(products.items).length * 100 + "%";
+	//slideshowDiv.style.width = Object.keys(products.items).length * 100 + "%";
 	divs = document.querySelectorAll(".productDiv");
 	divs = [...divs];
 	size = divs[0].clientWidth;
