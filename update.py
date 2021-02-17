@@ -350,7 +350,7 @@ for product in sudd:
                         <img class="productImg" src="''' + product["img"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''<span>
+                            <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''</span>
                             <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''</span>
                         </div>
                     </a>
