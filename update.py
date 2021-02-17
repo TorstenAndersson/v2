@@ -356,7 +356,6 @@ for product in sudd:
                     </a>
                 </div>'''
     i += 1
-print(suddDiv)
 
 files["sudd"] = '''<!DOCTYPE html>
 <html lang="sv">
@@ -405,6 +404,82 @@ files["sudd"] = '''<!DOCTYPE html>
             <span class="infoHeader">Våra Sudd</span>
             <span class="infoMainText">Alla gör fel ibland.</span>
             <div class="mainFrame">''' + suddDiv + '''
+            </div>
+        </div>
+        <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
+    </body>
+</html>'''
+
+# merchandise.html
+
+merchandiseDiv = ""
+i = 0
+for product in merchandise:
+    if product["price"]["discount"]["reason"] == "":
+        visibility = "hidden"
+    else:
+        visibility = "visibile"
+    merchandiseDiv += '''
+                <div class="paddingDiv">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
+                        <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
+                        <img class="productImg" src="''' + product["img"] + '''">
+                        <span class="productHeader">''' + product["name"] + '''</span>
+                        <div>
+                            <span class="productPriceText">''' + product["price"]["discount"]["price"] + '''</span>
+                            <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + '''</span>
+                        </div>
+                    </a>
+                </div>'''
+    i += 1
+
+files["sudd"] = '''<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Sudd - Johanssudd</title>
+        <meta name="keywords" content="sudd, sud, johanssudd, johansudd">
+        <meta name="description" content="Vårt sortiment av sudd här på Johanssudd. Vi erbjuder en stor variation med ett alternativ för alla!">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="stylesheet" href="products.css">
+        <script src="sudd.js"></script>
+    </head>
+
+    <body onload="pageLoaded()" onscroll="pageScrolled()">
+        <div class="background">
+            <nav class="navigationBar">
+                <a class="topLogoTextDiv" href="/">
+                    <span class="topLogoText">Johanssudd</span>
+                </a>
+                <div class="topTextDiv">
+                    <a href="/">
+                        <span class="topText">HEM</span>
+                    </a>
+                    <a href="om oss">
+                        <span class="topText">OM OSS</span>
+                    </a>
+                    <a href="sudd">
+                        <span class="topText current">SUDD</span>
+                    </a>
+                    <a href="merchandise">
+                        <span class="topText">MERCHANDISE</span>
+                    </a>
+                    <a href="jobb">
+                        <span class="topText jobbText">JOBB</span>
+                    </a>
+                    <div class="verticalLine"></div>
+                    <a href="kundvagn">
+                        <span class="topText cartText">KUNDVAGN</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </nav>
+        <div class="pageContent">
+            <span class="infoHeader">Våra Sudd</span>
+            <span class="infoMainText">Alla gör fel ibland.</span>
+            <div class="mainFrame">''' + merchandiseDiv + '''
             </div>
         </div>
         <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
