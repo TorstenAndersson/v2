@@ -407,7 +407,7 @@ files["sudd"] = '''<!DOCTYPE html>
             <div class="mainFrame">''' + suddDiv + '''
             </div>
         </div>
-        <span class="footerLogoText"></span>
+        <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
     </body>
 </html>'''
 
