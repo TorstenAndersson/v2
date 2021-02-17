@@ -1,16 +1,17 @@
-var divs = 0;
+var divs;
 var active = true;
 var count = 1;
 const initalCount = count; 
 var divCount = count;
 var size;
-
+/*
 fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(response=>response.json()).then(data=> {
 	if (new Date(data.updated_at).getTime() > localStorage.getItem("lastUpdate")) {
 		localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime());
 		fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
 	}
 });
+*/
 /*
 fetch('https://johanssudd.herokuapp.com/products?wanted=onDisplay').then(response=>response.json()).then(products=> {
 	for (var i = 0; i < Object.keys(products.items).length; i ++) {
@@ -75,9 +76,9 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=onDisplay').then(respons
 });
 */
 
-async function pageLoaded() {
+/*async */function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-
+/*
 	if (localStorage.getItem("productInfo") == undefined) {
 		await fetch('https://johanssudd.herokuapp.com/all').then(response=>response.json()).then(data=>localStorage.setItem("productInfo", JSON.stringify(data)))
 		fetch('https://api.github.com/repos/TorstenAndersson/productServer').then(response=>response.json()).then(data=>localStorage.setItem("lastUpdate", new Date(data.updated_at).getTime()));
@@ -125,6 +126,7 @@ async function pageLoaded() {
 		myDiv.appendChild(myLink);
 		document.querySelector("div.slideshow").appendChild(myDiv);
 	}
+	*/
 	var slideshowDiv = document.querySelector("div.slideshow");
 	slideshowDiv.style.width = Object.keys(products.items).length * 100 + "%";
 	divs = document.querySelectorAll(".productDiv");
