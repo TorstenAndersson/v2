@@ -341,8 +341,10 @@ i = 0
 for product in sudd:
     if product["price"]["discount"]["reason"] == "":
         visibility = "hidden"
+        display = "none"
     else:
         visibility = "visibile"
+        display = "inherit"
     suddDiv += '''
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
@@ -351,7 +353,7 @@ for product in sudd:
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
-                            <span class="productPriceText discountedPrice line" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["price"] + '''</span>
+                            <span class="productPriceText discountedPrice line" style="display: ''' + display + ''';">''' + product["price"]["discount"]["price"] + '''</span>
                         </div>
                     </a>
                 </div>'''
