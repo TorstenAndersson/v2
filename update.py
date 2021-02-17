@@ -6,6 +6,65 @@ import datetime
 
 products = json.loads('''
 {
+    "products":[
+        {
+            "name":"Sudd Johan",
+            "description":"Bara gamla goda Johan.",
+            "price":{
+                "discount":{
+                    "price":"10,99 kr",
+                    "reason":"Fick vibbarna"
+                },
+                "original":"14,99 kr"
+            },
+            "img":"imgs/Sudd/Sudd Johan.png",
+            "type":"sudd",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Hoodie",
+            "description":"fyfan va varmt",
+            "price":{
+                "discount":{
+                    "price":"149,99 kr",
+                    "reason":"2020 REA"
+                },
+                "original":"499,99 kr"
+            },
+            "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png",
+            "type":"merchandise",
+            "onDisplay":"False"
+        },{
+            "name":"Johans Crocs",
+            "description":"LFIPÅPT FLOP",
+            "price":{
+                "discount":{
+                    "price":"1000,99 kr",
+                    "reason":"PÅSKREA"
+                },
+                "original":"349,99 kr"
+            },
+            "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Skal",
+            "description":"Skydda din mobil!",
+            "price":{
+                "discount":{
+                    "price":"",
+                    "reason":""
+                },
+                "original":"149,99 kr"
+            },
+            "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
+            "type":"merchandise",
+            "onDisplay":"True"
+        }
+    ]
+}''')
+"""
+products = json.loads('''
+{
     "sudd":[{
         "name":"Sudd Johan",
         "description":"Bara gamla goda Johan.",
@@ -17,7 +76,7 @@ products = json.loads('''
             "original":"14,99 kr"
         },
         "img":"imgs/Sudd/Sudd Johan.png",
-        "type":"sudd","onDisplay":"true"
+        "type":"sudd","onDisplay":"True"
     }],
     "merchandise":[{
         "name":"Johans Hoodie",
@@ -30,7 +89,7 @@ products = json.loads('''
             "original":"499,99 kr"
         },
         "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png",
-        "type":"merchandise","onDisplay":"false"
+        "type":"merchandise","onDisplay":"False"
     },{
         "name":"Johans Crocs",
         "description":"LFIPÅPT FLOP",
@@ -43,7 +102,7 @@ products = json.loads('''
         },
         "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
         "type":"merchandise",
-        "onDisplay":"true"
+        "onDisplay":"True"
     },{
         "name":"Johans Skal",
         "description":"Skydda din mobil!",
@@ -56,7 +115,7 @@ products = json.loads('''
         },
         "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
         "type":"merchandise",
-        "onDisplay":"true"
+        "onDisplay":"True"
     }],
     "onDisplay":[{
         "name":"Sudd Johan",
@@ -69,7 +128,7 @@ products = json.loads('''
             "original":"14,99 kr"
         },
         "img":"imgs/Sudd/Sudd Johan.png",
-        "type":"sudd","onDisplay":"true"
+        "type":"sudd","onDisplay":"True"
     },{
         "name":"Johans Crocs",
         "description":"LFIPÅPT FLOP",
@@ -82,7 +141,7 @@ products = json.loads('''
         },
         "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
         "type":"merchandise",
-        "onDisplay":"true"
+        "onDisplay":"True"
     },{
         "name":"Johans Skal",
         "description":"Skydda din mobil!",
@@ -95,7 +154,7 @@ products = json.loads('''
         },
         "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
         "type":"merchandise",
-        "onDisplay":"true"
+        "onDisplay":"True"
     }],
     "items":{
         "SuddJohan":{
@@ -110,7 +169,7 @@ products = json.loads('''
             },
             "img":"imgs/Sudd/Sudd Johan.png",
             "type":"sudd",
-            "onDisplay":"true"
+            "onDisplay":"True"
         },
         "JohansHoodie":{
             "name":"Johans Hoodie",
@@ -124,7 +183,7 @@ products = json.loads('''
             },
             "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png",
             "type":"merchandise",
-            "onDisplay":"false"
+            "onDisplay":"False"
         },
         "JohansCrocs":{
             "name":"Johans Crocs",
@@ -138,7 +197,7 @@ products = json.loads('''
             },
             "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
             "type":"merchandise",
-            "onDisplay":"true"
+            "onDisplay":"True"
         },
         "JohansSkal":{
             "name":"Johans Skal",
@@ -152,24 +211,40 @@ products = json.loads('''
             },
             "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
             "type":"merchandise",
-            "onDisplay":"true"
+            "onDisplay":"True"
         }
     }
 }
 ''')
+"""
+
+sudd = []
+merchandise = []
+onDisplay = []
+
+for product in products["products"]:
+    eval(product["type"]).append(product)
+    if eval(product["onDisplay"]):
+        onDisplay.append(product)
+
+#print(sudd)
+#print(merchandise)
+#print(onDisplay)
 
 # Creating basic files
 
 files = {}
 
-onDisplay = ""
+# index.html
+
+itemsOnDisplay = ""
 i = 0
-for product in products["onDisplay"]:
+for product in itemsOnDisplay:
     if product["price"]["discount"]["reason"] == "":
         visibility = "hidden"
     else:
         visibility = "visible"
-    onDisplay += '''
+    itemsOnDisplay += '''
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                             <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
@@ -236,7 +311,7 @@ files["index"] = ('''<!DOCTYPE html>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
 				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
-				<div class="slideshow" style="left: 0px; width:''' + str(len(products["onDisplay"]) * 100) + "%" + '''";>''' + onDisplay + '''
+				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + itemsOnDisplay + '''
                 </div>
 			</div>
 			<div class="smallParagraph parOne">
@@ -259,25 +334,79 @@ files["index"] = ('''<!DOCTYPE html>
 	</body>
 </html>''')
 
+# sudd.html
+files["sudd"] = '''<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Sudd - Johanssudd</title>
+        <meta name="keywords" content="sudd, sud, johanssudd, johansudd">
+        <meta name="description" content="Vårt sortiment av sudd här på Johanssudd. Vi erbjuder en stor variation med ett alternativ för alla!">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="stylesheet" href="products.css">
+        <script src="sudd.js"></script>
+    </head>
+
+    <body onload="pageLoaded()" onscroll="pageScrolled()">
+        <div class="background">
+            <nav class="navigationBar">
+                <a class="topLogoTextDiv" href="/">
+                    <span class="topLogoText">Johanssudd</span>
+                </a>
+                <div class="topTextDiv">
+                    <a href="/">
+                        <span class="topText">HEM</span>
+                    </a>
+                    <a href="om oss">
+                        <span class="topText">OM OSS</span>
+                    </a>
+                    <a href="sudd">
+                        <span class="topText current">SUDD</span>
+                    </a>
+                    <a href="merchandise">
+                        <span class="topText">MERCHANDISE</span>
+                    </a>
+                    <a href="jobb">
+                        <span class="topText jobbText">JOBB</span>
+                    </a>
+                    <div class="verticalLine"></div>
+                    <a href="kundvagn">
+                        <span class="topText cartText">KUNDVAGN</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </nav>
+        <div class="pageContent">
+            <span class="infoHeader">Våra Sudd</span>
+            <span class="infoMainText">Alla gör fel ibland.</span>
+            <div class="mainFrame"></div>
+        </div>
+        <span class="footerLogoText"></span>
+    </body>
+</html>'''
+
 for file in files:
     path = "./" + file + ".html"
     if not os.path.exists(path):
         open(path, "x")
-    print(file)
+    #print(file)
     open(path, "w").write(files[file])
 
 # Creating product files
 
-for product in products["items"]:
-    path = "./" + products["items"][product]["type"] + "/" + products["items"][product]["name"].lower() + ".html"
+for product in products["products"]:
+    print(product)
+    path = "./" + product["type"] + "/" + product["name"].lower() + ".html"
     if not os.path.exists(path):
         open(path, "x")
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
     <head>
-        <title>''' + products["items"][product]["name"] + ''' - Johanssudd</title>
-        <meta name="keywords" content="''' + products["items"][product]["name"].lower() + ''', johan sudd, johanssudd, johansudd">
-        <meta name="description" content="Köp ''' + products["items"][product]["name"] + ". " + products["items"][product]["description"] +'''">
+        <title>''' + product["name"] + ''' - Johanssudd</title>
+        <meta name="keywords" content="''' + product["name"].lower() + ''', johan sudd, johanssudd, johansudd">
+        <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] +'''">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/johanFavicon.png" type="icon/gif">
@@ -319,13 +448,13 @@ for product in products["items"]:
             </div>
             <div class="productFrame">
                 <div class="imgFrame">
-                    <img class="productImg" src="/''' + products["items"][product]["img"] + '''" alt="''' + products["items"][product]["name"] + '''">
+                    <img class="productImg" src="/''' + product["img"] + '''" alt="''' + product["name"] + '''">
                 </div>
                 <div class="textFrame">
-                    <span class="productHeader">''' + products["items"][product]["name"] + '''</span>
-                    <span class="productDescription">''' + products["items"][product]["description"] + '''</span>
-                    <span class="productPriceText discountedPrice">''' + products["items"][product]["price"]["original"] + '''</span>
-                    <span class="productPriceText line">''' + products["items"][product]["price"]["discount"]["price"] + '''</span>
+                    <span class="productHeader">''' + product["name"] + '''</span>
+                    <span class="productDescription">''' + product["description"] + '''</span>
+                    <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
+                    <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
                     <div class="cartAddDiv">
                         <button class="cartAdd" onclick="buy(this)">
                             <span class="cartAddText">Lägg i kundvagn</span>
