@@ -351,7 +351,7 @@ for product in sudd:
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
-                            <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + '''</span>
+                            <span class="productPriceText discountedPrice line" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["price"] + '''</span>
                         </div>
                     </a>
                 </div>'''
