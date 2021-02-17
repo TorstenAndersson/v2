@@ -419,8 +419,10 @@ i = 0
 for product in merchandise:
     if product["price"]["discount"]["reason"] == "":
         visibility = "hidden"
+        display = "none"
     else:
         visibility = "visibile"
+        display = "inherit"
     merchandiseDiv += '''
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
@@ -429,7 +431,7 @@ for product in merchandise:
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
-                            <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + '''</span>
+                            <span class="productPriceText discountedPrice line" style="display: ''' + display + ''';">''' + product["price"]["discount"]["price"] + '''</span>
                         </div>
                     </a>
                 </div>'''
