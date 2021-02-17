@@ -182,7 +182,8 @@ function slide(where) {
 	const slider = document.querySelector("div.slideshow");
 
 	if (where == "forward") {
-		setTimeout(function() { divs[0].style.order = divs.length - initalCount + count; }, 300); 
+		const div = divs[0];
+		setTimeout(function() { div.style.order = divs.length - initalCount + count; }, 300); 
 		divs.push(divs[0]);
 		divs.shift();
 		
@@ -193,7 +194,8 @@ function slide(where) {
 	}
 
 	if (where == "backward") {
-		setTimeout(function() { divs[divs.length - 1].style.order = count - initalCount - 1; }, 300); 
+		const div = divs[divs.length - 1]
+		setTimeout(function() { div.style.order = count - initalCount - 1; }, 300); 
 		divs.unshift(divs[divs.length - 1]);
 		divs.pop();
 		
