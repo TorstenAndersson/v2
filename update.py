@@ -334,6 +334,83 @@ files["index"] = ('''<!DOCTYPE html>
 	</body>
 </html>''')
 
+# om oss.html
+
+files["om oss"] = '''<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Om Oss - Johanssudd</title>
+        <meta name="keywordsd" content="om oss, om oss, johanssudd, johansudd">
+        <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="stylesheet" href="om oss.css">
+        <script src="om oss.js"></script>
+    </head>
+
+    <body onload="pageLoaded()" onscroll="pageScrolled()">
+        <div class="background">
+            <nav class="navigationBar">
+                <a class="topLogoTextDiv" href="/">
+                    <span class="topLogoText">Johanssudd</span>
+                </a>
+                <div class="topTextDiv">
+                    <a href="/">
+                        <span class="topText">HEM</span>
+                    </a>
+                    <a href="om oss">
+                        <span class="topText current">OM OSS</span>
+                    </a>
+                    <a href="sudd">
+                        <span class="topText">SUDD</span>
+                    </a>
+                    <a href="merchandise">
+                        <span class="topText">MERCHANDISE</span>
+                    </a>
+                    <a href="jobb">
+                        <span class="topText jobbText">JOBB</span>
+                    </a>
+                    <div class="verticalLine"></div>
+                    <a href="kundvagn">
+                        <span class="topText cartText">KUNDVAGN</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </nav>
+        <div class="pageContent">
+            <div class="paragraph parOne">
+                <span class="paragraphHeader big">Om Oss</span>
+                <span>Det som gör oss annorlunda är vår extrema passion för sudd, jag är gift med ett.</span>
+            </div>
+            <div class="paragraph parTwo">
+                <span class="paragraphHeader big">Vilka är vi?</span>
+                <span>Vi är Johanssudd, ett företag grundat på ren kärlek för sudd. Vårt mål är att sprida denna passion med flera människor. Vi började med att bara sälja sudd men efter den framgången bestämde vi oss för att expandera vårt sortiment och vi säljer idag allt från sudd till fiskehattar, allt i den högsta kvaliteten man kan hitta.</span>
+            </div>
+            <div class="paragraph parThree">
+                <span class="paragraphHeader big">Kontakta oss</span>
+                <span class="beforeMediaSection">Vill du komma i kontakt med oss kan du antingen göra det genom sociala medier eller mejla oss.</span>
+                <div class="mediaSection">
+                    <a class="media" href="mailto:torsten.andersson.peppa.pig@gmail.com">
+                        <img class="socialMediaIcon" src="imgs/website/Mail Icon.png" alt="Mail">
+                        <span class="socialMediaText">torsten.andersson.peppa.pig@gmail.com</span>
+                    </a>
+                    <a class="media" href="https://instagram.com/johanssudd">
+                        <img class="socialMediaIcon" src="imgs/website/Instagram Icon.png" alt="Instagram">
+                        <span class="socialMediaText">@johanssudd</span>
+                    </a>
+                    <a class="media" href="https://twitter.com/johanssudd">
+                        <img class="socialMediaIcon" src="imgs/website/Twitter Icon.png" alt="Twitter">
+                        <span class="socialMediaText">@johanssudd</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
+    </body>
+</html>'''
+
 # sudd.html
 
 suddDiv = ""
@@ -484,6 +561,124 @@ files["merchandise"] = '''<!DOCTYPE html>
             <span class="infoHeader">Våra Sudd</span>
             <span class="infoMainText">Alla gör fel ibland.</span>
             <div class="mainFrame">''' + merchandiseDiv + '''
+            </div>
+        </div>
+        <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
+    </body>
+</html>'''
+
+# jobb.html
+
+files["jobb"] = '''<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Jobb - Johanssudd</title>
+        <meta name="keywords" content="jobb, job, johanssudd, johansudd">
+        <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="stylesheet" href="jobb.css">
+        <script src="jobb.js"></script>
+    </head>
+
+    <body onload="pageLoaded()" onscroll="pageScrolled()">
+        <div class="background">
+            <nav class="navigationBar">
+                <a class="topLogoTextDiv" href="/">
+                    <span class="topLogoText">Johanssudd</span>
+                </a>
+                <div class="topTextDiv">
+                    <a href="/">
+                        <span class="topText">HEM</span>
+                    </a>
+                    <a href="om oss">
+                        <span class="topText">OM OSS</span>
+                    </a>
+                    <a href="sudd">
+                        <span class="topText">SUDD</span>
+                    </a>
+                    <a href="merchandise">
+                        <span class="topText">MERCHANDISE</span>
+                    </a>
+                    <a href="jobb">
+                        <span class="topText jobbText current">JOBB</span>
+                    </a>
+                    <div class="verticalLine"></div>
+                    <a href="kundvagn">
+                        <span class="topText cartText">KUNDVAGN</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="cover"></div>
+        </div>
+        <div class="pageContent">
+            <div class="paragraph">
+                <span class="paragraphHeader big">Är du arbetslös?</span>
+                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
+            </div>
+            <div class="paragraph">
+                <span class="paragraphHeader big">Inte övertygad än?</span>
+                <span class="beforeArguments">Såklart har vi förbrett några argument för varför vi erbjuder båda roligare och bättre jobb än andra företag.</span>
+                <span class="arguments">
+                    1.   Såklart får du en alldeles egen jobb-outfit (som du SÅKLART måste betala för själv).
+                    <br>
+                    2.   Som nämnt ovan, får du 10% rabatt på köp över 3000 kr.
+                    <br>
+                    3.   Du får jobba hemma utan att någonsin behöva lämna ditt huss, rena drömmen!
+                    <br>
+                    4.   Vi är inte som någon annan arbetsmiljö, vi är bättre.
+                    <br>
+                    5.   Och sist men inte minst får du såklart dela din passion för sudd med andra suddfanatiker.
+                </span>
+            </div>
+            <div class="paragraph parThree">
+                <span class="paragraphHeader big">Skaffa dig ett jobb</span>
+            </div>
+            <form autocomplete="off" name="jobbformulär" method="POST" data-netlify="true"> 
+                <div class="field">
+                    <input class="textInput" type="text" name="name" required>
+                    <label class="textQuery" for="name">
+                        <span class="textLabel">Namn</span>
+                    </label>
+                </div>
+                <div class="field">
+                    <input class="textInput" type="text" name="email" required>
+                    <label class="textQuery" for="email">
+                        <span class="textLabel">E-post</span>
+                    </label>
+                </div>
+                <div class="radio" onchange="radioChanged()">
+                    <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
+                    <div class="radioField">
+                        <input type="radio" name="desire" value="designer">
+                        <label class="radioQuery" for="designer">Designer</label>
+                    </div>
+                    <div class="radioField">
+                        <input type="radio" name="desire" value="försäljare">
+                        <label class="radioQuery" for="försäljare">Försäljare</label>
+                    </div>
+                    <div class="radioField">
+                        <input type="radio" name="desire" value="annat">
+                        <label class="radioQuery" for="annat">Annat</label>
+                    </div>
+                </div>
+                <div class="field reasonOther">
+                    <input class="textInput" type="text" name="desireOther">
+                    <label class="textQuery" for="desireOther">
+                        <span class="textLabel labelThree">Vad vill du bli?</span>
+                    </label>
+                </div>
+                <div class="field">
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" name="reason" rows="1" data-autoresize required></textarea>
+                    <label class="textQuery textarea" for="reason">
+                        <span class="textLabel">Varför skulle vi välja dig?</span>
+                    </label>
+                </div>
+                <input class="submitButton" type="submit" value="ANSÖK">
+            </form>
+            <div class="notification">
+                <span class="notificationText">Skickat! Vi återkommer snarast.</span>
             </div>
         </div>
         <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
