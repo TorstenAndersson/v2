@@ -1,5 +1,5 @@
 var myDivs = [];
-
+/*
 fetch('https://johanssudd.herokuapp.com/products?wanted=sudd').then(response=>response.json()).then(products=> {
     for (var i = 0; i < Object.keys(products.items).length; i++) {
         var myDiv = document.createElement("div");
@@ -39,6 +39,7 @@ fetch('https://johanssudd.herokuapp.com/products?wanted=sudd').then(response=>re
         document.querySelector("div.mainFrame").appendChild(myDiv);
     }
 });
+*/
 
 function pageLoaded() {
     document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
@@ -48,8 +49,6 @@ var isScrolled = false;
 
 function pageScrolled() {
     var navigationBar = document.querySelector(".navigationBar");
-    var topLogoText = document.querySelector(".topLogoText");
-    var topLogoTextDiv = document.querySelector(".topLogoTextDiv");
     if (window.pageYOffset > 30) {
         if (isScrolled == false) {
             navigationBar.style.position = "fixed";
