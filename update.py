@@ -229,10 +229,10 @@ files["index"] = ('''<!DOCTYPE html>
 				<span class="logoText">Johanssudd</span>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
-			<div class="slideshowDiv" style="width: ''' + str(len(products["onDisplay"]) * 100) + "%" + ''' ;">
+			<div class="slideshowDiv">
 				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
 				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
-				<div class="slideshow" style="left: 0px">''' + onDisplay + '''
+				<div class="slideshow" style="left: 0px; width:''' + str(len(products["onDisplay"]) * 100) + "%" + ''';">''' + onDisplay + '''
                 </div>
 			</div>
 			<div class="smallParagraph parOne">
