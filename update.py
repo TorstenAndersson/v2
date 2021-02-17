@@ -160,6 +160,8 @@ products = json.loads('''
 
 # Creating basic files
 
+files = {}
+
 onDisplay = ""
 i = 0
 for product in products["onDisplay"]:
@@ -176,10 +178,10 @@ for product in products["onDisplay"]:
         </div>
     </a>
 </div>'''
-    print(onDisplay)
+    #print(onDisplay)
     i += 1
 
-index = '''<!DOCTYPE html>
+files["index"] = ('''<!DOCTYPE html>
 <html lang="sv">
 	<head>
 		<title>Johanssudd</title>
@@ -230,7 +232,7 @@ index = '''<!DOCTYPE html>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
 				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
-				<div class="slideshow" style="left: 0px">''' + '''
+				<div class="slideshow" style="left: 0px">''' + onDisplay + '''
                 </div>
 			</div>
 			<div class="smallParagraph parOne">
@@ -251,7 +253,10 @@ index = '''<!DOCTYPE html>
 		</div>
 		<span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
 	</body>
-</html>'''
+</html>''')
+
+for file in files:
+    print(file)
 
 # Creating product files
 
