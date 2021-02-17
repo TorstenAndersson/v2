@@ -232,7 +232,7 @@ files["index"] = ('''<!DOCTYPE html>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
 				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
-				<div class="slideshow" style="left: 0px; width:''' + str(len(products["onDisplay"]) * 100) + "%" + ''';">''' + onDisplay + '''
+				<div class="slideshow" style="left: 0px; width:''' + str(len(products["onDisplay"]) * 100) + "%" + '''";>''' + onDisplay + '''
                 </div>
 			</div>
 			<div class="smallParagraph parOne">
