@@ -247,6 +247,7 @@ form {
 	overflow: hidden;
 	color: rgb(25, 25, 25);
 	font-family: "Raleway";
+	line-height: 20px;
 }
 .textInput:focus + .textQuery .textLabel, .textInput:valid + .textQuery .textLabel {
     font-size: 14px;
@@ -292,7 +293,7 @@ form input[type="radio"] {
 }
 textarea.textarea {
 	height: 40px;
-	line-height: 20px;
+	/* line-height: 20px; */
 	border-bottom: 1px solid black;
 	resize: none;
 }
