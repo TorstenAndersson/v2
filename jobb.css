@@ -291,6 +291,7 @@ form input[type="radio"] {
 	display: none;
 }
 textarea.textarea {
+	height: 40px;
 	line-height: 20px;
 	border-bottom: 1px solid black;
 	resize: none;
