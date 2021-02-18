@@ -292,11 +292,10 @@ form input[type="radio"] {
 	display: none;
 }
 textarea.textarea {
-	height: 25px;
+	height: 40px;
 	/* line-height: 20px; */
 	border-bottom: 1px solid black;
 	resize: none;
-	padding-top: 15px
 }
 label.textarea {
 	border-bottom: none;
