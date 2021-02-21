@@ -17,7 +17,7 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"imgs/Sudd/Sudd Johan.png",
+            "img":"imgs/Sudd/Sudd johanFavicon.png",
             "type":"sudd",
             "onDisplay":"True"
         },{
@@ -75,7 +75,7 @@ products = json.loads('''
             },
             "original":"14,99 kr"
         },
-        "img":"imgs/Sudd/Sudd Johan.png",
+        "img":"imgs/Sudd/Sudd johanFavicon.png",
         "type":"sudd","onDisplay":"True"
     }],
     "merchandise":[{
@@ -127,7 +127,7 @@ products = json.loads('''
             },
             "original":"14,99 kr"
         },
-        "img":"imgs/Sudd/Sudd Johan.png",
+        "img":"imgs/Sudd/Sudd johanFavicon.png",
         "type":"sudd","onDisplay":"True"
     },{
         "name":"Johans Crocs",
@@ -167,7 +167,7 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"imgs/Sudd/Sudd Johan.png",
+            "img":"imgs/Sudd/Sudd johanFavicon.png",
             "type":"sudd",
             "onDisplay":"True"
         },
@@ -344,7 +344,7 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="om oss.css">
         <script src="om oss.js"></script>
     </head>
@@ -444,7 +444,7 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av sudd här på Johanssudd. Vi erbjuder en stor variation med ett alternativ för alla!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="products.css">
         <script src="products.js"></script>
     </head>
@@ -522,7 +522,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av merchandise. Vi erbjuder många olika produkter för alla olika.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="products.css">
         <script src="products.js"></script>
     </head>
@@ -577,7 +577,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johan.png">
+        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="jobb.css">
         <script src="jobb.js"></script>
     </head>
