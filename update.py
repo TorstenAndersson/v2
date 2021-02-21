@@ -17,7 +17,7 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"imgs/Sudd/Sudd johanFavicon.png",
+            "img":"/imgs/Sudd/Sudd johanFavicon.png",
             "type":"sudd",
             "onDisplay":"True"
         },{
@@ -30,7 +30,7 @@ products = json.loads('''
                 },
                 "original":"499,99 kr"
             },
-            "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png",
+            "img":"/imgs/Johans Hoodie/Johans Hoodie White Front.png",
             "type":"merchandise",
             "onDisplay":"False"
         },{
@@ -43,7 +43,7 @@ products = json.loads('''
                 },
                 "original":"349,99 kr"
             },
-            "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
+            "img":"/imgs/Johans Crocs/Johans Crocs Medium Above.png",
             "type":"merchandise",
             "onDisplay":"True"
         },{
@@ -56,7 +56,7 @@ products = json.loads('''
                 },
                 "original":"149,99 kr"
             },
-            "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
+            "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
             "type":"merchandise",
             "onDisplay":"True"
         }
@@ -75,7 +75,7 @@ products = json.loads('''
             },
             "original":"14,99 kr"
         },
-        "img":"imgs/Sudd/Sudd johanFavicon.png",
+        "img":"/imgs/Sudd/Sudd johanFavicon.png",
         "type":"sudd","onDisplay":"True"
     }],
     "merchandise":[{
@@ -88,7 +88,7 @@ products = json.loads('''
             },
             "original":"499,99 kr"
         },
-        "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png",
+        "img":"/imgs/Johans Hoodie/Johans Hoodie White Front.png",
         "type":"merchandise","onDisplay":"False"
     },{
         "name":"Johans Crocs",
@@ -100,7 +100,7 @@ products = json.loads('''
             },
             "original":"349,99 kr"
         },
-        "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
+        "img":"/imgs/Johans Crocs/Johans Crocs Medium Above.png",
         "type":"merchandise",
         "onDisplay":"True"
     },{
@@ -113,7 +113,7 @@ products = json.loads('''
             },
             "original":"149,99 kr"
         },
-        "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
+        "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
         "type":"merchandise",
         "onDisplay":"True"
     }],
@@ -127,7 +127,7 @@ products = json.loads('''
             },
             "original":"14,99 kr"
         },
-        "img":"imgs/Sudd/Sudd johanFavicon.png",
+        "img":"/imgs/Sudd/Sudd johanFavicon.png",
         "type":"sudd","onDisplay":"True"
     },{
         "name":"Johans Crocs",
@@ -139,7 +139,7 @@ products = json.loads('''
             },
             "original":"349,99 kr"
         },
-        "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
+        "img":"/imgs/Johans Crocs/Johans Crocs Medium Above.png",
         "type":"merchandise",
         "onDisplay":"True"
     },{
@@ -152,7 +152,7 @@ products = json.loads('''
             },
             "original":"149,99 kr"
         },
-        "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
+        "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
         "type":"merchandise",
         "onDisplay":"True"
     }],
@@ -167,7 +167,7 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"imgs/Sudd/Sudd johanFavicon.png",
+            "img":"/imgs/Sudd/Sudd johanFavicon.png",
             "type":"sudd",
             "onDisplay":"True"
         },
@@ -181,7 +181,7 @@ products = json.loads('''
                 },
                 "original":"499,99 kr"
             },
-            "img":"imgs/Johans Hoodie/Johans Hoodie White Front.png",
+            "img":"/imgs/Johans Hoodie/Johans Hoodie White Front.png",
             "type":"merchandise",
             "onDisplay":"False"
         },
@@ -195,7 +195,7 @@ products = json.loads('''
                 },
                 "original":"349,99 kr"
             },
-            "img":"imgs/Johans Crocs/Johans Crocs Medium Above.png",
+            "img":"/imgs/Johans Crocs/Johans Crocs Medium Above.png",
             "type":"merchandise",
             "onDisplay":"True"
         },
@@ -209,7 +209,7 @@ products = json.loads('''
                 },
                 "original":"149,99 kr"
             },
-            "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
+            "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.png",
             "type":"merchandise",
             "onDisplay":"True"
         }
@@ -268,7 +268,7 @@ files["index"] = ('''<!DOCTYPE html>
 		<meta name="description" content="Johanssud. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="imgs/website/johanFavicon.png">
+		<link rel="shortcut icon" href="/imgs/website/johanFavicon.png">
 		<link rel="stylesheet" href="index.css">
 		<script src="index.js"></script>
 	</head>
@@ -309,8 +309,8 @@ files["index"] = ('''<!DOCTYPE html>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
 			<div class="slideshowDiv">
-				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
-				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
+				<img class="orderButton" src="/imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
+				<img class="orderButton" src="/imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
 				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>
@@ -344,7 +344,7 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
+        <link rel="shortcut icon" href="/imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="om oss.css">
         <script src="om oss.js"></script>
     </head>
@@ -393,15 +393,15 @@ files["om oss"] = '''<!DOCTYPE html>
                 <span class="beforeMediaSection">Vill du komma i kontakt med oss kan du antingen göra det genom sociala medier eller mejla oss.</span>
                 <div class="mediaSection">
                     <a class="media" href="mailto:torsten.andersson.peppa.pig@gmail.com">
-                        <img class="socialMediaIcon" src="imgs/website/Mail Icon.png" alt="Mail">
+                        <img class="socialMediaIcon" src="/imgs/website/Mail Icon.png" alt="Mail">
                         <span class="socialMediaText">torsten.andersson.peppa.pig@gmail.com</span>
                     </a>
                     <a class="media" href="https://instagram.com/johanssudd">
-                        <img class="socialMediaIcon" src="imgs/website/Instagram Icon.png" alt="Instagram">
+                        <img class="socialMediaIcon" src="/imgs/website/Instagram Icon.png" alt="Instagram">
                         <span class="socialMediaText">@johanssudd</span>
                     </a>
                     <a class="media" href="https://twitter.com/johanssudd">
-                        <img class="socialMediaIcon" src="imgs/website/Twitter Icon.png" alt="Twitter">
+                        <img class="socialMediaIcon" src="/imgs/website/Twitter Icon.png" alt="Twitter">
                         <span class="socialMediaText">@johanssudd</span>
                     </a>
                 </div>
@@ -444,7 +444,7 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av sudd här på Johanssudd. Vi erbjuder en stor variation med ett alternativ för alla!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
+        <link rel="shortcut icon" href="/imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="products.css">
         <script src="products.js"></script>
     </head>
@@ -522,7 +522,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av merchandise. Vi erbjuder många olika produkter för alla olika.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
+        <link rel="shortcut icon" href="/imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="products.css">
         <script src="products.js"></script>
     </head>
@@ -577,7 +577,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="imgs/website/johanFavicon.png">
+        <link rel="shortcut icon" href="/imgs/website/johanFavicon.png">
         <link rel="stylesheet" href="jobb.css">
         <script src="jobb.js"></script>
     </head>
@@ -707,7 +707,7 @@ for product in products["products"]:
         <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] +'''">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/johanFavicon.png" type="icon/gif">
+        <link rel="shortcut icon" href="//imgs/website/johanFavicon.png" type="icon/gif">
         <link rel="stylesheet" href="/product.css">
         <script src="/product.js"></script>
     </head>
