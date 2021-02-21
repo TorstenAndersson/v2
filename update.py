@@ -541,10 +541,10 @@ files["merchandise"] = '''<!DOCTYPE html>
                         <span class="topText">OM OSS</span>
                     </a>
                     <a href="sudd">
-                        <span class="topText current">SUDD</span>
+                        <span class="topText">SUDD</span>
                     </a>
                     <a href="merchandise">
-                        <span class="topText">MERCHANDISE</span>
+                        <span class="topText current">MERCHANDISE</span>
                     </a>
                     <a href="jobb">
                         <span class="topText jobbText">JOBB</span>
@@ -558,8 +558,8 @@ files["merchandise"] = '''<!DOCTYPE html>
             <div class="cover"></div>
         </nav>
         <div class="pageContent">
-            <span class="infoHeader">Våra Sudd</span>
-            <span class="infoMainText">Alla gör fel ibland.</span>
+            <span class="infoHeader">Vår Merchandise</span>
+            <span class="infoMainText">Märklesläderna för alla.</span>
             <div class="mainFrame">''' + merchandiseDiv + '''
             </div>
         </div>
