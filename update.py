@@ -707,7 +707,7 @@ for product in products["products"]:
         <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] +'''">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="//imgs/website/johanfavicon.png" type="icon/gif">
+        <link rel="shortcut icon" href="/imgs/website/johanfavicon.png" type="icon/gif">
         <link rel="stylesheet" href="/product.css">
         <script src="/product.js"></script>
     </head>
