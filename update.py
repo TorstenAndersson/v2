@@ -17,7 +17,7 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"imgs/Sudd/Sudd johanFavicon.png",
+            "img":"imgs/Sudd/Sudd Johan.png",
             "type":"sudd",
             "onDisplay":"True"
         },{
