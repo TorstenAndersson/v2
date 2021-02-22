@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "Lora";
+	font-family: "Open Sans";
 	src: url(/fonts/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqt8ndeYxZ0.woff);
 }
 @font-face {
@@ -41,7 +41,7 @@ body {
 	height: 80px;
 }
 span {
-	font-family: "Lora", serif;
+	font-family: "Open Sans", serif;
 }
 .topLogoTextDiv {
 	z-index: 2;
