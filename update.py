@@ -420,7 +420,7 @@ for product in sudd:
         visibility = "hidden"
         display = "none"
     else:
-        visibility = "visibile"
+        visibility = "visible"
         display = "initial"
     suddDiv += '''
                 <div class="paddingDiv">
@@ -498,7 +498,7 @@ for product in merchandise:
         visibility = "hidden"
         display = "none"
     else:
-        visibility = "visibile"
+        visibility = "visible"
         display = "initial"
     merchandiseDiv += '''
                 <div class="paddingDiv">
