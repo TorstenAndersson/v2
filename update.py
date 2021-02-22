@@ -393,15 +393,15 @@ files["om oss"] = '''<!DOCTYPE html>
                 <span class="beforeMediaSection">Vill du komma i kontakt med oss kan du antingen göra det genom sociala medier eller mejla oss.</span>
                 <div class="mediaSection">
                     <a class="media" href="mailto:torsten.andersson.peppa.pig@gmail.com">
-                        <img class="socialMediaIcon" src="imgs/website/Mail Icon.png" alt="Mail">
+                        <img class="socialMediaIcon" src="imgs/website/Mail Icon.png" width="25px" height="25px" alt="Mail">
                         <span class="socialMediaText">torsten.andersson.peppa.pig@gmail.com</span>
                     </a>
                     <a class="media" href="https://instagram.com/johanssudd">
-                        <img class="socialMediaIcon" src="imgs/website/Instagram Icon.png" alt="Instagram">
+                        <img class="socialMediaIcon" src="imgs/website/Instagram Icon.png" width="25px" height="25px" alt="Instagram">
                         <span class="socialMediaText">@johanssudd</span>
                     </a>
                     <a class="media" href="https://twitter.com/johanssudd">
-                        <img class="socialMediaIcon" src="imgs/website/Twitter Icon.png" alt="Twitter">
+                        <img class="socialMediaIcon" src="imgs/website/Twitter Icon.png" width="25px" height="25px" alt="Twitter">
                         <span class="socialMediaText">@johanssudd</span>
                     </a>
                 </div>
