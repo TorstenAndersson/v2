@@ -235,7 +235,7 @@ form {
     text-align: left;   
 }
 .field {
-	padding-bottom: 60px;
+	padding-bottom: 100px;
 }
 .textInput {
 	position: absolute;
@@ -271,7 +271,7 @@ form label span {
 }
 .radio {
 	padding-top: 10px;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 }
 .radioFieldQuery {
 	display: block;
