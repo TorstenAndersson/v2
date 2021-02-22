@@ -303,7 +303,7 @@ files["index"] = ('''<!DOCTYPE html>
 			</div>
 			<div class="cover"></div>
 		</nav>
-		<div class="pageContent">
+		<main class="pageContent">
 			<div class="logoAndMotto">
 				<span class="logoText">Johanssudd</span>
 				<span class="motto">Sudda bort dina pengar</span>
@@ -329,7 +329,7 @@ files["index"] = ('''<!DOCTYPE html>
 				<span class="paragraphHeader big">Vill du arbeta med oss?</span>
 				<span>Vi här på Johanssudd söker alltid arbetskraft. Vi erbjuder massvis med olika jobb inom alla områden du kan tänka dig. Om du tror att du har vad som krävs önskar vi att du skulle fylla i vårt formulär <a class="hereLink" href="jobb">här</a>!</span>
 			</div>
-		</div>
+		</main>
 		<span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
 	</body>
 </html>''')
@@ -379,7 +379,7 @@ files["om oss"] = '''<!DOCTYPE html>
             </div>
             <div class="cover"></div>
         </nav>
-        <div class="pageContent">
+        <main class="pageContent">
             <div class="paragraph parOne">
                 <span class="paragraphHeader big">Om Oss</span>
                 <span>Det som gör oss annorlunda är vår extrema passion för sudd, jag är gift med ett.</span>
@@ -406,7 +406,7 @@ files["om oss"] = '''<!DOCTYPE html>
                     </a>
                 </div>
             </div>
-        </div>
+        </main>
         <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
     </body>
 </html>'''
@@ -479,12 +479,12 @@ files["sudd"] = '''<!DOCTYPE html>
             </div>
             <div class="cover"></div>
         </nav>
-        <div class="pageContent">
+        <main class="pageContent">
             <span class="infoHeader">Våra Sudd</span>
             <span class="infoMainText">Alla gör fel ibland.</span>
             <div class="mainFrame">''' + suddDiv + '''
             </div>
-        </div>
+        </main>
         <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
     </body>
 </html>'''
@@ -557,12 +557,12 @@ files["merchandise"] = '''<!DOCTYPE html>
             </div>
             <div class="cover"></div>
         </nav>
-        <div class="pageContent">
+        <main class="pageContent">
             <span class="infoHeader">Vår Merchandise</span>
             <span class="infoMainText">Märklesläderna för alla.</span>
             <div class="mainFrame">''' + merchandiseDiv + '''
             </div>
-        </div>
+        </main>
         <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
     </body>
 </html>'''
@@ -612,7 +612,7 @@ files["jobb"] = '''<!DOCTYPE html>
             </nav>
             <div class="cover"></div>
         </div>
-        <div class="pageContent">
+        <main class="pageContent">
             <div class="paragraph">
                 <span class="paragraphHeader big">Är du arbetslös?</span>
                 <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
@@ -680,7 +680,7 @@ files["jobb"] = '''<!DOCTYPE html>
             <div class="notification">
                 <span class="notificationText">Skickat! Vi återkommer snarast.</span>
             </div>
-        </div>
+        </main>
         <span class="footerLogoText">''' + str(datetime.datetime.now().year) + '''</span>
     </body>
 </html>'''
@@ -740,7 +740,7 @@ for product in products["products"]:
                 </a>
             </div>
         </nav>
-        <div class="pageContent">
+        <main class="pageContent">
             <div class="notification">
                 <span class="notificationText">Tillagd i kundvagnen!</span>
             </div>
@@ -760,7 +760,7 @@ for product in products["products"]:
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
         <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>''')
