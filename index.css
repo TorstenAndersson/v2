@@ -1,18 +1,20 @@
 @font-face {
 	font-family: "Lora";
 	src: url(/fonts/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqt8ndeYxZ0.woff);
+	font-display: swap;
 }
 @font-face {
 	font-family: "Raleway";
 	src: url(/fonts/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff);
+	font-display: swap;
 }
 @font-face {
 	font-family: "Open Sans";
 	src: url(/fonts/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2);
+	font-display: swap;
 }
 body {
 	margin: 0px;
-	font-display: auto;
 }
 .background {
 	z-index: 0;
