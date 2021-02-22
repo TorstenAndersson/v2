@@ -10,9 +10,12 @@ function pageLoaded() {
 
 function buy(sender) {
 	localStorage.setItem("cart", localStorage.getItem("cart") + sender.parentElement.parentElement.firstElementChild.innerHTML + ",");
-	document.querySelector(".cartItemsNumber").innerHTML = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
+	var cartItems = document.querySelector(".cartItemsNumber");
+	cartItems.innerHTML = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
+	cartItems.classList.add("shakeAnimation");
+	setTimeout(function() {cartItems.classList.remove("shakeAnimation")}, 500)
 	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
-		document.querySelector(".cartItemsNumber").style.visibility = "visible";
+		cartItems.style.visibility = "visible";
 	}
 	/*
 	retrive cart items (leaves one empty at end): localStorage.getItem("cart").slice(4).split(",").slice(0, -1); 
