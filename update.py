@@ -736,7 +736,7 @@ for product in products["products"]:
                 <div class="verticalLine"></div>
                 <a href="/kundvagn">
                     <span class="topText cartText">KUNDVAGN</span>
-                    <span class="topText cartItemsNumber">(0)</span>
+                    <span class="topText cartItemsNumber"></span>
                 </a>
             </div>
         </nav>
@@ -767,6 +767,6 @@ for product in products["products"]:
 
 # Update git with new changes
  
-os.system("git add -- . :!./.vscode/* :!.DS_Store")
+os.system("git add -- . :!./.vscode/* :!*DS_Store")
 os.system("git commit -m 'updated!'")
 os.system("git push")
