@@ -504,7 +504,7 @@ for product in merchandise:
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px" alt="''' + product["name"] + '''>
+                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
