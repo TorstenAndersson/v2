@@ -248,7 +248,7 @@ for product in onDisplay:
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                             <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                            <img class="slideshow" src="''' + product["img"] +  '''" width="430px" height="430px">
+                            <img src="''' + product["img"] +  '''" width="430px" height="430px">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
@@ -309,8 +309,8 @@ files["index"] = ('''<!DOCTYPE html>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
 			<div class="slideshowDiv">
-				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" alt="Next Slide">
-				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" alt="Previous Slide">
+				<img class="orderButton" src="imgs/website/backward.png" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
+				<img class="orderButton" src="imgs/website/forward.png" onclick="slide('forward')" style="right: 0px;" width="10%" alt="Previous Slide">
 				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>

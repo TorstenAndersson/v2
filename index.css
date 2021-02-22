@@ -150,11 +150,10 @@ div.slideshowDiv {
 img.orderButton {
 	z-index: 1;
 	position: absolute;
-    	top: 37%;
-    	width: 10%;
+    top: 37%;
 	cursor: pointer;
 }
-div.slideshow {
+.slideshow {
 	position: relative;
 	display: flex;
 	height: 100%;
@@ -168,10 +167,6 @@ div.slideshow {
 }
 .productDiv {
 	width: 100%;
-}
-img.slideshow {
-	width: 430px;
-	height: 430px;
 }
 .slideshowHeader {
 	position: relative;

@@ -158,8 +158,6 @@ a {
     box-shadow: 0 0 6px rgb(150, 150, 150);
 }
 .productImg {
-	width: 300px;
-	height: 300px;
     padding-bottom: 15px;
 }
 .productHeader {
