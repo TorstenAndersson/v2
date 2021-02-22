@@ -248,7 +248,7 @@ for product in onDisplay:
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                             <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                            <img src="''' + product["img"] +  '''" width="430px" height="430px">
+                            <img src="''' + product["img"] +  '''" width="430px" height="430px" alt="''' + product["name"] + '''">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
@@ -426,7 +426,7 @@ for product in sudd:
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px">
+                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
@@ -504,7 +504,7 @@ for product in merchandise:
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px">
+                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px" alt="''' + product["name"] + '''>
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
