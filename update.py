@@ -560,17 +560,17 @@ for product in products["products"]:
         for variant in product["variants"]:
             options = ""
             for option in product["variants"][variant]:
-                options += '<option class="variantOption">' + option + '</option>'
+                options += '    <option class="variantOption">' + option + '''</option>
+                '''
             print(product["variants"][variant])
             
             variantDiv += '''
-            <div class="variant">
-                <label class="variantName">''' + variant + '''</label>
-                <select class="variantSelect" required>
-                ''' + options + '''
-                </select>
-            </div>
-            '''
+                            <div class="variant">
+                                <label class="variantName">''' + variant + '''</label>
+                                <select class="variantSelect" required>
+                                ''' + options + '''
+                                </select>
+                            </div>'''
     except KeyError:
         pass
     open(path, "w").write('''<!DOCTYPE html>
@@ -628,8 +628,7 @@ for product in products["products"]:
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
                     <form>
-                        <div class="variants">
-                        ''' + variantDiv + '''
+                        <div class="variants">''' + variantDiv + '''
                         </div>
                         <div class="cartAddDiv">
                             <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
