@@ -764,17 +764,17 @@ for product in products["products"]:
                     <span class="productDescription">''' + product["description"] + '''</span>
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
-                    <div>
-                        <div>
-                            <label>Färg</label>
-                            <select>
-                                <option>Vit</option>
+                    <div class="variants">
+                        <div class="variant">
+                            <label class="variantName">Färg</label>
+                            <select class="variantSelect">
+                                <option class="variantOption">Vit</option>
                             </select>
                         </div>
-                        <div>
-                            <label>Storlek</label>
-                            <select>
-                                <option>L</option>
+                        <div class="variant">
+                            <label class="variantName">Storlek</label>
+                            <select class="variantSelect">
+                                <option class="variantOption">L</option>
                             </select>
                         </div>
                     </div>
