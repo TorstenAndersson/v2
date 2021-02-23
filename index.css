@@ -28,8 +28,7 @@ body {
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: backgroundKeyframe .3s;
-	animation-direction: reverse;
+	animation: backgroundBackKeyframe .3s;
 }
 @keyframes backgroundBackKeyframe {
 	from {background-color: rgb(47, 47, 47)}
