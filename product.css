@@ -102,7 +102,7 @@ a {
 }
 .cartItemsNumber {
 	visibility: hidden;
-	font-family: 'Open Sans';
+	font-family: "Open Sans";
 	padding-left: 0px;
 }
 .cover {
@@ -227,6 +227,7 @@ a {
 }
 .variantName {
 	display: block;
+	font-family: "Raleway";
 	text-align: left;
 	padding-bottom: 10px;
 }
