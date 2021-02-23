@@ -780,10 +780,7 @@ for product in products["products"]:
                             </div>
                         </div>
                         <div class="cartAddDiv">
-                            <input type="submit">
-                                <button class="cartAdd" onclick="buy(this)">
-                                    <span class="cartAddText">Lägg i kundvagn</span>
-                                </button>
+                            <input class="cartAdd" onclick="buy(this)">
                             </input>
                         </div>
                     </form>
