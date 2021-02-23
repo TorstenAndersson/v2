@@ -21,16 +21,16 @@ body {
 	background-repeat: no-repeat;
 }
 .backgroundAnimation {
-	animation: background .3s;
+	animation: backgroundKeyframe .3s;
 }
-@keyframes background {
+@keyframes backgroundKeyframe {
 	from {background-color: transparent}
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: backgroundBack .3s;
+	animation: backgroundKeyframe .3s reverse;
 }
-@keyframes backgroundBack {
+@keyframes backgroundBackKeyframe {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }
@@ -238,48 +238,6 @@ img.orderButton {
 .hereLink:hover {
 	border-color: rgb(0, 0, 0)
 }
-/*
-.footer {
-	height: 150px;
-	background-color: rgba(0, 0, 0, .1);
-}
-.footerLogo {
-	position: relative;
-	top: -20px;
-	height: 150px;
-	display: block;
-	margin: auto;
-}
-.footerContact {
-	position: relative;
-	top: -140px;
-	color: rgb(0, 0, 0);
-	text-align: right;
-	padding-right: 100px;
-}
-.footerContactText {
-	display: block;
-	font-family: "Source Sans Pro";
-	font-size: 16px;
-	font-weight: 700;
-}
-.footerEmail {
-	font-family: "Source Sans Pro";
-	font-size: 16px;
-	font-weight: 700;
-}
-*/
-/*
-.socialMedia {
-	height: 60px;
-	text-align: center;
-	padding-bottom: 10px;
-}
-.socialMediaIcon {
-	width: 40px;
-	padding: 10px;
-}
-*/
 .footerLogoText {
 	display: block;
 	text-align: center;

@@ -21,16 +21,16 @@ body {
 	background-repeat: no-repeat;
 }
 .backgroundAnimation {
-	animation: background .3s;
+	animation: backgroundKeyframe .3s;
 }
-@keyframes background {
+@keyframes backgroundKeyframe {
 	from {background-color: transparent}
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: backgroundBack .3s;
+	animation: backgroundBackKeyframe .3s;
 }
-@keyframes backgroundBack {
+@keyframes backgroundBackKeyframesKeyframe {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }
@@ -74,7 +74,6 @@ a {
 	color: rgba(255, 255, 255, .8);
 	font-size: 14.5px;
 	font-family: "Raleway";
-	/* font-weight: 700; */
 	letter-spacing: .75px;
 	text-align: left;
 	padding-right: 10px;
@@ -115,75 +114,6 @@ a {
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 500px;
-}
-.logoAndMotto {
-	padding-bottom: 150px;
-}
-.logoText {
-	display: block;
-	color: rgb(57, 57, 57);
-	font-family: sans-serif;
-	font-size: 55px;
-	font-style: italic;
-	font-weight: 700;
-	padding-bottom: 20px;
-}
-.motto {
-	color: rgb(85, 85, 85);
-	font-size: 16px;
-	font-style: italic;
-}
-div.slideshowDiv {
-	position: relative;
-	right: 25%;
-	user-select: none;
-	width: 430px;
-	height: 630px;
-	margin: auto;
-	overflow: hidden;
-}
-img.orderButton {
-	z-index: 2;
-	position: absolute;
-    top: 37%;
-    width: 10%;
-	cursor: pointer;
-}
-div.slideshow {
-	position: relative;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	/* padding-bottom: 400px; */
-}
-.productDiv {
-	width: 100%;
-}
-img.slideshow {
-	width: 100%;
-}
-.slideshowHeader {
-	position: absolute;
-	top: 450px;
-	display: block;
-	color: rgb(57, 57, 57);
-	font-size: 30px;
-	font-weight: 700;
-	padding-bottom: 10px;
-}
-.slideshowMainText {
-	position: absolute;
-	top: 500px;
-	display: block;
-	color: rgb(57, 57, 57);
-}
-.slideshowPriceText {
-	position: absolute;
-	top: 550px;
-	display: block;
-	color: rgb(80, 80, 80);
-	font-size: 28px;
-	font-family: Questrial;
 }
 .paragraph {
 	margin: auto;
@@ -231,17 +161,6 @@ img.slideshow {
 	font-size: 20px;
 	vertical-align: super;
 	font-family: "Raleway";
-}
-.hereLink {
-	color: #393939;
-	border-color: rgba(57,57,57,.5);
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	transition: border-color .4s;
-	padding-bottom: 1px;
-}
-.hereLink:hover {
-	border-color: rgb(0, 0, 0)
 }
 .footerLogoText {
 	display: block;

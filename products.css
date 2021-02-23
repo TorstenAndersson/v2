@@ -21,16 +21,16 @@ body {
 	background-repeat: no-repeat;
 }
 .backgroundAnimation {
-	animation: background .3s;
+	animation: backgroundKeyframe .3s;
 }
-@keyframes background {
+@keyframes backgroundKeyframe {
 	from {background-color: transparent}
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: backgroundBack .3s;
+	animation: backgroundBackKeyframe .3s;
 }
-@keyframes backgroundBack {
+@keyframes backgroundBackKeyframe {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }

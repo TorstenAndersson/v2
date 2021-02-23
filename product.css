@@ -21,16 +21,16 @@ body {
 	background-repeat: no-repeat;
 }
 .backgroundAnimation {
-	animation: background .3s;
+	animation: backgroundKeyframe .3s;
 }
-@keyframes background {
+@keyframes backgroundKeyframe {
 	from {background-color: transparent}
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: backgroundBack .3s;
+	animation: backgroundBackKeyframe .3s;
 }
-@keyframes backgroundBack {
+@keyframes backgroundBackKeyframe {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }
@@ -105,17 +105,6 @@ a {
 	font-family: 'Open Sans';
 	padding-left: 0px;
 }
-.shakeAnimation {
-	animation: shake .5s;
-}
-@keyframes shake {
-	0% { transform: skewX(-15deg); }
-	5% { transform: skewX(15deg); }
-	10% { transform: skewX(-15deg); }
-	15% { transform: skewX(15deg); }
-	20% { transform: skewX(0deg); }
-	100% { transform: skewX(0deg); }  
-  }
 .cover {
 	position: absolute;
 	top: 0px;
@@ -147,16 +136,16 @@ a {
 	font-family: "Raleway";
 }
 .fadeIn {
-	animation: fade .8s;
+	animation: fadeKeyframe .8s;
 }
-@keyframes fade {
+@keyframes fadeKeyframe {
 	from {opacity: 0}
 	to {opacity: 1}
 }
 .fadeOut {
-	animation: fadeBack .8s;
+	animation: fadeBackKeyframe .8s;
 }
-@keyframes fadeBack {
+@keyframes fadeBackKeyframe {
 	from {opacity: 1}
 	to {opacity: 0}
 }

@@ -21,16 +21,16 @@ body {
 	background-repeat: no-repeat;
 }
 .backgroundAnimation {
-	animation: background .3s;
+	animation: backgroundKeyframe .3s;
 }
-@keyframes background {
+@keyframes backgroundKeyframe {
 	from {background-color: transparent}
 	to {background-color: rgb(47, 47, 47)}
 }
 .backgroundAnimationBack {
-	animation: backgroundBack .3s;
+	animation: backgroundBackKeyframe .3s;
 }
-@keyframes backgroundBack {
+@keyframes backgroundBackKeyframe {
 	from {background-color: rgb(47, 47, 47)}
 	to {background-color: transparent}
 }
@@ -115,81 +115,6 @@ a {
 	padding-top: 50px;
 	padding-bottom: 300px;
 }
-.logoAndMotto {
-	padding-bottom: 150px;
-}
-.logoText {
-	display: block;
-	color: rgb(57, 57, 57);
-	font-family: sans-serif;
-	font-size: 55px;
-	font-style: italic;
-	font-weight: 700;
-	letter-spacing: 1px;
-	padding-bottom: 20px;
-}
-.motto {
-	color: rgb(85, 85, 85);
-	font-size: 16px;
-	font-style: italic;
-}
-div.slideshowDiv {
-	position: relative;
-	right: 25%;
-	user-select: none;
-	width: 430px;
-	height: 630px;
-	margin: auto;
-	overflow: hidden;
-}
-img.orderButton {
-	z-index: 2;
-	position: absolute;
-    top: 37%;
-    width: 10%;
-	cursor: pointer;
-}
-div.slideshow {
-	position: relative;
-	display: flex;
-	height: 100%;
-}
-.productDiv {
-	width: 100%;
-}
-img.slideshow {
-	width: 100%;
-}
-.slideshowHeader {
-	position: absolute;
-	top: 450px;
-	display: block;
-	color: rgb(57, 57, 57);
-	font-size: 30px;
-	font-weight: 700;
-	padding-bottom: 10px;
-}
-.slideshowMainText {
-	position: absolute;
-	top: 500px;
-	display: block;
-	color: rgb(57, 57, 57);
-}
-.slideshowPriceText {
-	position: absolute;
-	top: 550px;
-	display: block;
-	color: rgb(80, 80, 80);
-	font-size: 30px;
-	font-family: "Open Sans";;
-}
-.smallParagraph {
-	position: relative;
-	left: 50%;
-	width: 30%;
-	color: rgb(102, 102, 102);
-	text-align: left;
-}
 .paragraphHeader {
 	display: block;
 	color: rgb(57, 57, 57);
@@ -209,9 +134,6 @@ img.slideshow {
 	line-height: 24px;
     transform: translate(-50%);
     padding-top: 25px;
-}
-.small {
-	font-size: 25px;
 }
 .paragraph {
 	margin: auto;
@@ -293,7 +215,6 @@ form input[type="radio"] {
 }
 textarea.textarea {
 	height: 28px;
-	/* line-height: 20px; */
 	border-bottom: 1px solid black;
 	padding-top: 11px;
 	resize: none;
@@ -330,78 +251,19 @@ label.textarea {
 	font-family: "Raleway";
 }
 .fadeIn {
-	animation: fade .8s;
+	animation: fadeKeyframe .8s;
 }
-@keyframes fade {
+@keyframes fadeKeyframe {
 	from {opacity: 0}
 	to {opacity: 1}
 }
 .fadeOut {
-	animation: fadeBack .8s;
+	animation: fadeBackKeyframe .8s;
 }
-@keyframes fadeBack {
+@keyframes fadeBackKeyframe {
 	from {opacity: 1}
 	to {opacity: 0}
 }
-/*
-form label::after {
-    bottom: -1px;
-    transform: translateX(-100%);
-}
-*/
-.hereLink {
-	color: rgb(57, 57, 57);
-	border-color: rgba(57, 57, 57, .5);
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	transition: border-color .4s;
-	padding-bottom: 1px;
-}
-.hereLink:hover {
-	border-color: rgb(0, 0, 0)
-}
-/*
-.footer {
-	height: 150px;
-	background-color: rgba(0, 0, 0, .1);
-}
-.footerLogo {
-	position: relative;
-	top: -20px;
-	height: 150px;
-	display: block;
-	margin: auto;
-}
-.footerContact {
-	position: relative;
-	top: -140px;
-	color: rgb(0, 0, 0);
-	text-align: right;
-	padding-right: 100px;
-}
-.footerContactText {
-	display: block;
-	font-family: "Source Sans Pro";
-	font-size: 16px;
-	font-weight: 700;
-}
-.footerEmail {
-	font-family: "Source Sans Pro";
-	font-size: 16px;
-	font-weight: 700;
-}
-*/
-/*
-.socialMedia {
-	height: 60px;
-	text-align: center;
-	padding-bottom: 10px;
-}
-.socialMediaIcon {
-	width: 40px;
-	padding: 10px;
-}
-*/
 .footerLogoText {
 	display: block;
 	text-align: center;
