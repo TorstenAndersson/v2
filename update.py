@@ -765,10 +765,18 @@ for product in products["products"]:
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
                     <div>
-                        <label>Färg</label>
-                        <select>
-                            <option>Vit</option>
-                        </select>
+                        <div>
+                            <label>Färg</label>
+                            <select>
+                                <option>Vit</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Storlek</label>
+                            <select>
+                                <option>L</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="cartAddDiv">
                         <button class="cartAdd" onclick="buy(this)">
