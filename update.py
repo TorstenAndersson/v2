@@ -555,9 +555,22 @@ for product in products["products"]:
     if not os.path.exists(path):
         open(path, "x")
 
+    variantDiv = ""
     try:
         for variant in product["variants"]:
+            options = ""
+            for option in product["variants"][variant]:
+                options += '<option class="variantOption">' + option + '</option>'
             print(product["variants"][variant])
+            
+            variantDiv += '''
+            <div class="variant">
+                <label class="variantName">''' + variant + '''</label>
+                <select class="variantSelect" required>
+                ''' + options + '''
+                </select>
+            </div>
+            '''
     except KeyError:
         pass
     open(path, "w").write('''<!DOCTYPE html>
@@ -616,18 +629,7 @@ for product in products["products"]:
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
                     <form>
                         <div class="variants">
-                            <div class="variant">
-                                <label class="variantName">Färg</label>
-                                <select class="variantSelect" required>
-                                    <option class="variantOption">Vit</option>
-                                </select>
-                            </div>
-                            <div class="variant">
-                                <label class="variantName">Storlek</label>
-                                <select class="variantSelect" required>
-                                    <option class="variantOption">L</option>
-                                </select>
-                            </div>
+                        ''' + variantDiv + '''
                         </div>
                         <div class="cartAddDiv">
                             <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
