@@ -196,6 +196,17 @@ products = json.loads('''
                 "original":"349,99 kr"
             },
             "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
+            "variants":{
+                "Färg":[
+                    "Röd",
+                    "Vit"
+                ]
+                "Storlek":[
+                    "S",
+                    "M",
+                    "L"
+                ]
+            }
             "type":"merchandise",
             "onDisplay":"True"
         },
@@ -753,6 +764,12 @@ for product in products["products"]:
                     <span class="productDescription">''' + product["description"] + '''</span>
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
+                    <div>
+                        <label>Färg</label>
+                        <select>
+                            <option>Vit</option>
+                        </select>
+                    </div>
                     <div class="cartAddDiv">
                         <button class="cartAdd" onclick="buy(this)">
                             <span class="cartAddText">Lägg i kundvagn</span>
