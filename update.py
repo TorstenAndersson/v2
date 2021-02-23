@@ -568,7 +568,7 @@ for product in products["products"]:
                             <div class="variant">
                                 <label class="variantName">''' + variant + '''</label>
                                 <select class="variantSelect" required>
-                                    ''' + options + '''</select>
+            ''' + options + '''</select>
                             </div>'''
     except KeyError:
         pass
