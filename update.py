@@ -559,7 +559,7 @@ for product in products["products"]:
     try:
         for variant in product["variants"]:
             print(variant)
-    except:
+    except KeyError:
         pass
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
