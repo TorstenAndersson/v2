@@ -131,17 +131,28 @@ products = json.loads('''
         "type":"sudd","onDisplay":"True"
     },{
         "name":"Johans Crocs",
-        "description":"LFIPÅPT FLOP",
-        "price":{
-            "discount":{
-                "price":"1000,99 kr",
-                "reason":"PÅSKREA"
+            "description":"LFIPÅPT FLOP",
+            "price":{
+                "discount":{
+                    "price":"1000,99 kr",
+                    "reason":"PÅSKREA"
+                },
+                "original":"349,99 kr"
             },
-            "original":"349,99 kr"
-        },
-        "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
-        "type":"merchandise",
-        "onDisplay":"True"
+            "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
+            "variants":{
+                "Färg":[
+                    "Röd",
+                    "Vit"
+                ],
+                "Storlek":[
+                    "S",
+                    "M",
+                    "L"
+                ]
+            },
+            "type":"merchandise",
+            "onDisplay":"True"
     },{
         "name":"Johans Skal",
         "description":"Skydda din mobil!",
