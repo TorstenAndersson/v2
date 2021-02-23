@@ -560,7 +560,7 @@ for product in products["products"]:
         for variant in product["variants"]:
             options = ""
             for option in product["variants"][variant]:
-                options += '                                <option class="variantOption">' + option + '''</option>
+                options += '                                    <option class="variantOption">' + option + '''</option>
 '''
             print(product["variants"][variant])
             
@@ -568,7 +568,7 @@ for product in products["products"]:
                             <div class="variant">
                                 <label class="variantName">''' + variant + '''</label>
                                 <select class="variantSelect" required>
-''' + options + '''                             </select>
+''' + options + '''                                </select>
                             </div>'''
     except KeyError:
         pass
