@@ -200,13 +200,13 @@ products = json.loads('''
                 "Färg":[
                     "Röd",
                     "Vit"
-                ]
+                ],
                 "Storlek":[
                     "S",
                     "M",
                     "L"
                 ]
-            }
+            },
             "type":"merchandise",
             "onDisplay":"True"
         },
@@ -710,6 +710,12 @@ for product in products["products"]:
     path = "./" + product["type"] + "/" + product["name"].lower() + ".html"
     if not os.path.exists(path):
         open(path, "x")
+
+    try:
+        for variant in product["variants"]:
+            print(variant)
+    except:
+        pass
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
     <head>
