@@ -722,7 +722,7 @@ for product in products["products"]:
     if not os.path.exists(path):
         open(path, "x")
 
-    print("trying now")
+    print(product["name"])
     try:
         for variant in product["variants"]:
             print(variant)
