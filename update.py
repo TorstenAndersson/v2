@@ -555,10 +555,9 @@ for product in products["products"]:
     if not os.path.exists(path):
         open(path, "x")
 
-    print(product)
     try:
         for variant in product["variants"]:
-            print(variant)
+            print(product["variants"][variant])
     except KeyError:
         pass
     open(path, "w").write('''<!DOCTYPE html>
