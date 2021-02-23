@@ -15,7 +15,6 @@ function pageScrolled() {
 			navigationBar.classList.add("backgroundAnimation");
 			navigationBar.style.backgroundColor = "rgb(39, 39, 39)";
 			navigationBar.classList.remove("backgroundAnimationBack");
-			navigationBar.style.zIndex = "2";
 			isScrolled = true;
 		}
 	} 
@@ -26,7 +25,6 @@ function pageScrolled() {
 			navigationBar.classList.add("backgroundAnimationBack");
 			navigationBar.style.backgroundColor = "transparent";
 			navigationBar.classList.remove("backgroundAnimation");
-			navigationBar.style.zIndex = "2";
 			isScrolled = false;
 		}
 	}
