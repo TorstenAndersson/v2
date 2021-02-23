@@ -44,6 +44,17 @@ products = json.loads('''
                 "original":"349,99 kr"
             },
             "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
+            "variants":{
+                "Färg":[
+                    "Röd",
+                    "Vit"
+                ],
+                "Storlek":[
+                    "S",
+                    "M",
+                    "L"
+                ]
+            },
             "type":"merchandise",
             "onDisplay":"True"
         },{
@@ -62,183 +73,6 @@ products = json.loads('''
         }
     ]
 }''')
-"""
-products = json.loads('''
-{
-    "sudd":[{
-        "name":"Sudd Johan",
-        "description":"Bara gamla goda Johan.",
-        "price":{
-            "discount":{
-                "price":"10,99 kr",
-                "reason":"Fick vibbarna"
-            },
-            "original":"14,99 kr"
-        },
-        "img":"imgs/Sudd/Sudd Johan Favicon.webp",
-        "type":"sudd","onDisplay":"True"
-    }],
-    "merchandise":[{
-        "name":"Johans Hoodie",
-        "description":"fyfan va varmt",
-        "price":{
-            "discount":{
-                "price":"149,99 kr",
-                "reason":"2020 REA"
-            },
-            "original":"499,99 kr"
-        },
-        "img":"imgs/Johans Hoodie/Johans Hoodie White Front.webp",
-        "type":"merchandise","onDisplay":"False"
-    },{
-        "name":"Johans Crocs",
-        "description":"LFIPÅPT FLOP",
-        "price":{
-            "discount":{
-                "price":"1000,99 kr",
-                "reason":"PÅSKREA"
-            },
-            "original":"349,99 kr"
-        },
-        "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
-        "type":"merchandise",
-        "onDisplay":"True"
-    },{
-        "name":"Johans Skal",
-        "description":"Skydda din mobil!",
-        "price":{
-            "discount":{
-                "price":"",
-                "reason":""
-            },
-            "original":"149,99 kr"
-        },
-        "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
-        "type":"merchandise",
-        "onDisplay":"True"
-    }],
-    "onDisplay":[{
-        "name":"Sudd Johan",
-        "description":"Bara gamla goda Johan.",
-        "price":{
-            "discount":{
-                "price":"10,99 kr",
-                "reason":"Fick vibbarna"
-            },
-            "original":"14,99 kr"
-        },
-        "img":"imgs/Sudd/Sudd Johan Favicon.webp",
-        "type":"sudd","onDisplay":"True"
-    },{
-        "name":"Johans Crocs",
-            "description":"LFIPÅPT FLOP",
-            "price":{
-                "discount":{
-                    "price":"1000,99 kr",
-                    "reason":"PÅSKREA"
-                },
-                "original":"349,99 kr"
-            },
-            "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
-            "variants":{
-                "Färg":[
-                    "Röd",
-                    "Vit"
-                ],
-                "Storlek":[
-                    "S",
-                    "M",
-                    "L"
-                ]
-            },
-            "type":"merchandise",
-            "onDisplay":"True"
-    },{
-        "name":"Johans Skal",
-        "description":"Skydda din mobil!",
-        "price":{
-            "discount":{
-                "price":"",
-                "reason":""
-            },
-            "original":"149,99 kr"
-        },
-        "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
-        "type":"merchandise",
-        "onDisplay":"True"
-    }],
-    "items":{
-        "SuddJohan":{
-            "name":"Sudd Johan",
-            "description":"Bara gamla goda Johan.",
-            "price":{
-                "discount":{
-                    "price":"10,99 kr",
-                    "reason":"Fick vibbarna"
-                },
-                "original":"14,99 kr"
-            },
-            "img":"imgs/Sudd/Sudd Johan Favicon.webp",
-            "type":"sudd",
-            "onDisplay":"True"
-        },
-        "JohansHoodie":{
-            "name":"Johans Hoodie",
-            "description":"fyfan va varmt",
-            "price":{
-                "discount":{
-                    "price":"149,99 kr",
-                    "reason":"2020 REA"
-                },
-                "original":"499,99 kr"
-            },
-            "img":"imgs/Johans Hoodie/Johans Hoodie White Front.webp",
-            "type":"merchandise",
-            "onDisplay":"False"
-        },
-        "JohansCrocs":{
-            "name":"Johans Crocs",
-            "description":"LFIPÅPT FLOP",
-            "price":{
-                "discount":{
-                    "price":"1000,99 kr",
-                    "reason":"PÅSKREA"
-                },
-                "original":"349,99 kr"
-            },
-            "img":"imgs/Johans Crocs/Johans Crocs Medium Above.webp",
-            "variants":{
-                "Färg":[
-                    "Röd",
-                    "Vit"
-                ],
-                "Storlek":[
-                    "S",
-                    "M",
-                    "L"
-                ]
-            },
-            "type":"merchandise",
-            "onDisplay":"True"
-        },
-        "JohansSkal":{
-            "name":"Johans Skal",
-            "description":"Skydda din mobil!",
-            "price":{
-                "discount":{
-                    "price":"",
-                    "reason":""
-                },
-                "original":"149,99 kr"
-            },
-            "img":"imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
-            "type":"merchandise",
-            "onDisplay":"True"
-        }
-    }
-}
-''')
-"""
 
 sudd = []
 merchandise = []
