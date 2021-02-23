@@ -35,6 +35,7 @@ body {
 	to {background-color: transparent}
 }
 .navigationBar {
+	z-index: 2;
 	position: absolute;
 	top: 30px;
 	width: 100%;
