@@ -12,10 +12,10 @@ function pageLoaded() {
 	var localCount = 0;
 	setInterval(function() { 
 		localCount ++;
-		if (localCount == 1400) {
+		if (localCount === 1400) {
 			slide("forward");
 		}
-		if (active == false) {
+		if (active === false) {
 			active = true;
 			localCount = 0;
 		}
@@ -33,7 +33,7 @@ function pageScrolled() {
 	var topLogoText = document.querySelector(".topLogoText");
 	var topLogoTextDiv = document.querySelector(".topLogoTextDiv");
 	if (window.pageYOffset > 30) {
-		if (isScrolled == false) {
+		if (isScrolled === false) {
 			navigationBar.style.position = "fixed";
 			navigationBar.style.top = "0px";
 			navigationBar.classList.add("backgroundAnimation");
@@ -43,7 +43,7 @@ function pageScrolled() {
 		}
 	} 
 	if (window.pageYOffset < 30) {
-		if (isScrolled == true) {
+		if (isScrolled === true) {
 			navigationBar.style.position = "absolute";
 			navigationBar.style.top = "30px";
 			navigationBar.classList.add("backgroundAnimationBack");
@@ -58,7 +58,7 @@ function slide(where) {
 	active = false;
 	const slider = document.querySelector("div.slideshow");
 
-	if (where == "forward") {
+	if (where === "forward") {
 		divs[0].style.order = divs.length - initalCount + count;
 		divs.push(divs[0]);
 		divs.shift();
@@ -69,7 +69,7 @@ function slide(where) {
 		slider.style.transform = "translateX(" + (-size * count) + "px)";
 	}
 
-	if (where == "backward") {
+	if (where === "backward") {
 		divs[divs.length - 1].style.order = count - initalCount - 1;
 		divs.unshift(divs[divs.length - 1]);
 		divs.pop();

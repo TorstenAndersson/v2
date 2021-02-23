@@ -14,7 +14,7 @@ function buy(sender) {
 	cartItems.innerHTML = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
 	cartItems.classList.add("shakeAnimation");
 	setTimeout(function() {cartItems.classList.remove("shakeAnimation")}, 500)
-	if (localStorage.getItem("cart").slice(4).split(",").length - 1 == 1) {
+	if (localStorage.getItem("cart").slice(4).split(",").length - 1 === 1) {
 		cartItems.style.visibility = "visible";
 	}
 	/*

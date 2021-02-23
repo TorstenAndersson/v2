@@ -7,7 +7,7 @@ var isScrolled = false;
 function pageScrolled() {
     var navigationBar = document.querySelector(".navigationBar");
     if (window.pageYOffset > 30) {
-        if (isScrolled == false) {
+        if (isScrolled === false) {
             navigationBar.style.position = "fixed";
             navigationBar.style.top = "0px";
             navigationBar.classList.add("backgroundAnimation");
@@ -18,7 +18,7 @@ function pageScrolled() {
         }
     }
     if (window.pageYOffset < 30) {
-        if (isScrolled == true) {
+        if (isScrolled === true) {
             navigationBar.style.position = "absolute";
             navigationBar.style.top = "30px";
             navigationBar.classList.add("backgroundAnimationBack");
