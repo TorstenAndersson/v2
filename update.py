@@ -560,7 +560,7 @@ for product in products["products"]:
         for variant in product["variants"]:
             options = ""
             for option in product["variants"][variant]:
-                options += '                                    <option class="variantOption">' + option + '''</option>
+                options += '                                    <option>' + option + '''</option>
 '''
             print(product["variants"][variant])
             
