@@ -236,6 +236,9 @@ a {
 	height: 40px;
 	font-family: "Raleway";
 }
+.placeholderVariantOption {
+	display: none;
+}
 .cartAddDiv {
 	padding-top: 30px;
 }
