@@ -130,6 +130,7 @@ files["index"] = ('''<!DOCTYPE html>
 	</head>
 
 	<body onload="pageLoaded()" onscroll="pageScrolled()">
+        <div style="background-image: url(imgs/website/backgroundJohan.png)"></div>
 		<div class="background">
 			<nav class="navigationBar">
 				<a class="topLogoTextDiv" href="/">
