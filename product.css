@@ -222,12 +222,12 @@ a {
 }
 .variant {
 	display: inline-block;
+	font-family: "Raleway";
 	padding-right: 20px;
 	padding-left: 20px;
 }
 .variantName {
 	display: block;
-	font-family: "Raleway";
 	text-align: left;
 	padding-bottom: 10px;
 }
