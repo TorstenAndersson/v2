@@ -192,8 +192,6 @@ a {
 	display: flex;
 }
 .imgFrame {
-	position: absolute;
-	display: inline;
 }
 .productImg {
 	padding-top: 30px;
