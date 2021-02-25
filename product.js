@@ -1,5 +1,5 @@
 var divs;
-var count = 0;
+var count = 1;
 const initalCount = count; 
 var divCount = count;
 var size;
