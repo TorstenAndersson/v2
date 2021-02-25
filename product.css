@@ -173,11 +173,6 @@ a {
 	width: 50%;
 	padding-top: 200px;
 }
-.imgFrame {
-	position: absolute;
-	right: 55%;
-	display: inline;
-}
 div.slideshowDiv {
 	position: relative;
 	right: 25%;
@@ -196,10 +191,13 @@ img.orderButton {
 .slideshow {
 	position: relative;
 	display: flex;
-	height: 100%;
+	width: 100%;
+}
+.imgFrame {
+	position: absolute;
+	display: inline;
 }
 .productImg {
-	width: 100%;
 	padding-top: 30px;
 }
 .textFrame {
