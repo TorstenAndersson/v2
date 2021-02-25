@@ -16,7 +16,7 @@ function pageLoaded() {
 	var slideshowDiv = document.querySelector("div.slideshow");
 	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
 	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
-	divs = document.querySelectorAll(".productImg");
+	divs = document.querySelectorAll(".imgFrame");
 	divs = [...divs];
 	size = divs[0].clientWidth;
 }
