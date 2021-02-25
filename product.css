@@ -173,16 +173,15 @@ a {
 	width: 50%;
 	padding-top: 200px;
 }
-div.slideshowDiv {
+.slideshowDiv {
 	position: relative;
-	right: 25%;
 	user-select: none;
 	width: 430px;
 	height: 630px;
 	margin: auto;
 	overflow: hidden;
 }
-img.orderButton {
+.orderButton {
 	z-index: 1;
 	position: absolute;
     top: 37%;
