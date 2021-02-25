@@ -632,7 +632,7 @@ for product in products["products"]:
                             <img class="productImg" src="/imgs/website/Johan Favicon.webp" width="350px" height="350px" alt="''' + product["name"] + '''">
                         </div>
                     </div>
-                    <div class="slideshow" style="left: 0px;">
+                    <div class="slideshow small" style="left: 0px;">
                         <div class="imgFrame" style="order: 0">
                             <img class="productImg" src="''' + product["img"] + '''" width="50px" height="50px" alt="''' + product["name"] + '''">
                         </div>

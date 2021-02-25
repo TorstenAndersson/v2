@@ -197,6 +197,10 @@ a {
 .productImg {
 	padding-top: 30px;
 }
+.small {
+	width: 50%;
+	margin: auto;
+}
 .textFrame {
 	position: absolute;
 	right: 15%;
