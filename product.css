@@ -192,6 +192,7 @@ a {
 	display: flex;
 }
 .imgFrame {
+	width: 100%;
 }
 .productImg {
 	padding-top: 30px;
