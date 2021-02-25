@@ -628,6 +628,9 @@ for product in products["products"]:
                         <div class="imgFrame" style="order: 1">
                             <img class="productImg" src="/imgs/website/Johan Background.webp" width="350px" height="350px" alt="''' + product["name"] + '''">
                         </div>
+                        <div class="imgFrame" style="order: 2">
+                            <img class="productImg" src="/imgs/website/Johan Favicon.webp" width="350px" height="350px" alt="''' + product["name"] + '''">
+                        </div>
                     </div>
                 </div>
                 <div class="textFrame">
