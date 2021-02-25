@@ -178,14 +178,35 @@ a {
 	right: 55%;
 	display: inline;
 }
+div.slideshowDiv {
+	position: relative;
+	right: 25%;
+	user-select: none;
+	width: 430px;
+	height: 630px;
+	margin: auto;
+	overflow: hidden;
+}
+img.orderButton {
+	z-index: 1;
+	position: absolute;
+    top: 37%;
+	cursor: pointer;
+}
+.slideshow {
+	position: relative;
+	display: flex;
+	height: 100%;
+}
+.productImg {
+	width: 100%;
+	padding-top: 30px;
+}
 .textFrame {
 	position: absolute;
 	right: 15%;
 	display: inline;
 	width: 405px;
-}
-.productImg {
-	padding-top: 30px;
 }
 .productHeader {
 	display: block;
