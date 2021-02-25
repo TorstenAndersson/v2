@@ -619,8 +619,6 @@ for product in products["products"]:
             </div>
             <div class="productFrame">
                 <div class="slideshowDiv">
-                    <img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
-                    <img class="orderButton" src="/imgs/website/Forward.webp" onclick="slide('forward')" style="right: 0px;" width="10%" alt="Previous Slide">
                     <div class="slideshow" style="left: 0px; width: 300%">
                         <div class="imgFrame" style="order: 0">
                             <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">
