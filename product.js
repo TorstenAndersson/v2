@@ -26,9 +26,9 @@ function slide(where) {
 	const slider = document.querySelector("div.slideshow");
 
 	if (where === "forward") {
-		divs[0].style.order = divs.length - initalCount + count;
-		divs.push(divs[0]);
-		divs.shift();
+		//divs[0].style.order = divs.length - initalCount + count;
+		//divs.push(divs[0]);
+		//divs.shift();
 		
 		slider.style.left = parseInt(slider.style.left.slice(0, -2)) + size + "px";
 		divCount ++;
@@ -37,9 +37,9 @@ function slide(where) {
 	}
 
 	if (where === "backward") {
-		divs[divs.length - 1].style.order = count - initalCount - 1;
-		divs.unshift(divs[divs.length - 1]);
-		divs.pop();
+		//divs[divs.length - 1].style.order = count - initalCount - 1;
+		//divs.unshift(divs[divs.length - 1]);
+		//divs.pop();
 		
 		slider.style.left = parseInt(slider.style.left.slice(0, -2)) - size + "px";
 		divCount ++;
