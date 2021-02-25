@@ -5,8 +5,6 @@ var divCount = count;
 var size;
 
 function pageLoaded() {
-	slide("forward")
-	slide("forward")
 	try {
 		document.querySelector(".cartItemsNumber").innerHTML = "(" + (localStorage["cart"].slice(4).split(",").length - 1) + ")";
 		document.querySelector(".cartItemsNumber").style.visibility = "visible";
@@ -20,6 +18,8 @@ function pageLoaded() {
 	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
 	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
 	divs = [...divs];
+	slide("forward")
+	slide("forward")
 }
 
 function slide(where) {
