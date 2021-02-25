@@ -626,7 +626,7 @@ for product in products["products"]:
                             <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">
                         </div>
                         <div class="imgFrame" style="order: 1">
-                            <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">
+                            <img class="productImg" src="/imgs/website/Johan Background.webp" width="350px" height="350px" alt="''' + product["name"] + '''">
                         </div>
                     </div>
                 </div>
