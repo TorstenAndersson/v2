@@ -18,9 +18,6 @@ function pageLoaded() {
 	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
 	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
 	divs = [...divs];
-	setTimeout(function() { slide("forward")
-	slide("forward")
-	}, 2000)
 }
 
 function slide(where) {

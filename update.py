@@ -632,13 +632,13 @@ for product in products["products"]:
                     </div>
                     <div class="slideshow small" style="left: 0px;">
                         <div class="imgFrame" style="order: 0">
-                            <img class="productImg" src="''' + product["img"] + '''" width="50px" height="50px" alt="''' + product["name"] + '''">
+                            <img class="smallProductImg selected" src="''' + product["img"] + '''" width="50px" height="50px" alt="''' + product["name"] + '''">
                         </div>
                         <div class="imgFrame" style="order: 1">
-                            <img class="productImg" src="/imgs/website/Johan Background.webp" width="50px" height="50px" alt="''' + product["name"] + '''">
+                            <img class="smallProductImg" src="/imgs/website/Johan Background.webp" width="50px" height="50px" alt="''' + product["name"] + '''">
                         </div>
                         <div class="imgFrame" style="order: 2">
-                            <img class="productImg" src="/imgs/website/Johan Favicon.webp" width="50px" height="50px" alt="''' + product["name"] + '''">
+                            <img class="smallProductImg" src="/imgs/website/Johan Favicon.webp" width="50px" height="50px" alt="''' + product["name"] + '''">
                         </div>
                     </div>
                 </div>

@@ -201,6 +201,12 @@ a {
 	width: 60%;
 	margin: auto;
 }
+.smallProductImg {
+	border: 1px solid rgb(140, 140, 140);
+}
+.selected {
+
+}
 .textFrame {
 	position: absolute;
 	right: 15%;
