@@ -124,7 +124,7 @@ files["index"] = ('''<!DOCTYPE html>
 		<meta name="description" content="Johanssud. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="//imgs/website/Johan Favicon.webp">
+		<link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
 		<link rel="stylesheet" href="index.css">
 		<script src="index.js"></script>
 	</head>
@@ -200,7 +200,7 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="//imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
         <link rel="stylesheet" href="om oss.css">
         <script src="om oss.js"></script>
     </head>
@@ -300,7 +300,7 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av sudd här på Johanssudd. Vi erbjuder en stor variation med ett alternativ för alla!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="//imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
         <link rel="stylesheet" href="products.css">
         <script src="products.js"></script>
     </head>
@@ -378,7 +378,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av merchandise. Vi erbjuder många olika produkter för alla olika.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="//imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
         <link rel="stylesheet" href="products.css">
         <script src="products.js"></script>
     </head>
@@ -433,7 +433,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="//imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
         <link rel="stylesheet" href="jobb.css">
         <script src="jobb.js"></script>
     </head>
@@ -580,7 +580,7 @@ for product in products["products"]:
         <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] +'''">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="//imgs/website/Johan Favicon.webp" type="icon/gif">
+        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
         <link rel="stylesheet" href="/product.css">
         <script src="/product.js"></script>
     </head>
