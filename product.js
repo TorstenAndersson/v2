@@ -12,12 +12,6 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 	}
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	var slideshowDiv = document.querySelector("div.slideshow");
-	divs = document.querySelectorAll(".imgFrame");
-	size = divs[0].clientWidth;
-	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
-	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
-	divs = [...divs];
 }
 
 function buy(sender) {
