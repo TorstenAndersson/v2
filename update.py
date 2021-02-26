@@ -583,7 +583,8 @@ for product in products["products"]:
     try:
         perspectives = ""
         for i in range(len(product["perspectives"])):
-            perspectives += '<img class="smallProductImg" src="/imgs/' + product["name"] + "/" + product["name"] + product["perspectives"][i] + '.webp">'
+            perspectives += '<img class="smallProductImg" src="/imgs/' + product["name"] + "/" + product["name"] + product["perspectives"][i] + '''.webp">
+            '''
     except KeyError:
         pass
 
