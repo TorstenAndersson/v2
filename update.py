@@ -43,7 +43,7 @@ products = json.loads('''
                 },
                 "original":"349,99 kr"
             },
-            "img":"/imgs/Johans Crocs/Johans Crocs Medium Above.webp",
+            "img":"/imgs/Johans Crocs/Johans Crocs M Above.webp",
             "perspectives":[
                 "Above",
                 "Close",
