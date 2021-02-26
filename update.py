@@ -44,11 +44,12 @@ products = json.loads('''
                 "original":"349,99 kr"
             },
             "img":"/imgs/Johans Crocs/Johans Crocs Medium Above.webp",
+            "perspectives":[
+                "Above",
+                "Close",
+                "AboveBelow"
+            ],
             "variants":{
-                "Färg":[
-                    "Röd",
-                    "Vit"
-                ],
                 "Storlek":[
                     "S",
                     "M",
@@ -68,6 +69,13 @@ products = json.loads('''
                 "original":"149,99 kr"
             },
             "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
+            "variants":{
+                "Modell": [
+                    "iPhone 12 Pro",
+                    "Samsung Galaxy S20 Ultra",
+                    "idk"
+                ]
+            },
             "type":"merchandise",
             "onDisplay":"True"
         }
@@ -415,7 +423,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         </nav>
         <main class="pageContent">
             <span class="infoHeader">Vår Merchandise</span>
-            <span class="infoMainText">Märklesläderna för alla.</span>
+            <span class="infoMainText">Märkeskläderna för alla.</span>
             <div class="mainFrame">''' + merchandiseDiv + '''
             </div>
         </main>

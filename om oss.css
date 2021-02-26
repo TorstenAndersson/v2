@@ -1,10 +1,10 @@
 @font-face {
-	font-family: "Open Sans";
-	src: url(/fonts/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqt8ndeYxZ0.woff);
-}
-@font-face {
 	font-family: "Raleway";
 	src: url(/fonts/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff);
+}
+@font-face {
+	font-family: "Open Sans";
+	src: url(/fonts/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2);
 }
 body {
 	margin: 0px;
