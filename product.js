@@ -20,32 +20,6 @@ function pageLoaded() {
 	divs = [...divs];
 }
 
-function slide(where) {
-	const slider = document.querySelector("div.slideshow");
-
-	if (where === "forward") {
-		divs[0].style.order = divs.length - initalCount + count;
-		divs.push(divs[0]);
-		divs.shift();
-		
-		slider.style.left = parseInt(slider.style.left.slice(0, -2)) + size + "px";
-		divCount ++;
-		count ++;
-		slider.style.transform = "translateX(" + (-size * count) + "px)";
-	}
-
-	if (where === "backward") {
-		divs[divs.length - 1].style.order = count - initalCount - 1;
-		divs.unshift(divs[divs.length - 1]);
-		divs.pop();
-		
-		slider.style.left = parseInt(slider.style.left.slice(0, -2)) - size + "px";
-		divCount ++;
-		count --;
-		slider.style.transform = "translateX(" + (-size * count) + "px)";
-	}
-}
-
 function buy(sender) {
 	localStorage.setItem("cart", localStorage.getItem("cart") + sender.parentElement.parentElement.firstElementChild.innerHTML + ",");
 	var cartItems = document.querySelector(".cartItemsNumber");

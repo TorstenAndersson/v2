@@ -173,24 +173,6 @@ a {
 	width: 50%;
 	padding-top: 200px;
 }
-.slideshowDiv {
-	position: relative;
-	user-select: none;
-	width: 430px;
-	height: 630px;
-	margin: auto;
-	overflow: hidden;
-}
-.orderButton {
-	z-index: 1;
-	position: absolute;
-    top: 37%;
-	cursor: pointer;
-}
-.slideshow {
-	position: relative;
-	display: flex;
-}
 .imgFrame {
 	width: 100%;
 }
