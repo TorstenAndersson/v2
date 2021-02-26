@@ -174,7 +174,9 @@ a {
 	padding-top: 200px;
 }
 .imgFrame {
-	width: 100%;
+	position: absolute;
+	right: 55%;
+	display: inline;
 }
 .productImg {
 	padding-top: 30px;
