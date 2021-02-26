@@ -626,7 +626,7 @@ for product in products["products"]:
                 <span class="notificationText">Tillagd i kundvagnen!</span>
             </div>
             <div class="productFrame">
-                <div class="imgFrame" style="order: 0">
+                <div class="imgFrame">
                     <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">
                 </div>
                 <div class="textFrame">
