@@ -570,7 +570,6 @@ for product in products["products"]:
             for option in product["variants"][variant]:
                 options += '                                    <option>' + option + '''</option>
 '''
-            print(product["variants"][variant])
             
             variantDiv += '''
                             <div class="variant">
@@ -580,6 +579,17 @@ for product in products["products"]:
                             </div>'''
     except KeyError:
         pass
+    
+    try:
+        perspectives = ""
+        for i in range(len(product["perspectives"])):
+            perspectives += '<img class="smallProductImg" src="/imgs/' + product["name"] + "/" + product["name"] + product["perspectives"][i] + '.webp">'
+    except KeyError:
+        pass
+
+    print(product["name"])
+    print(perspectives)
+
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
     <head>

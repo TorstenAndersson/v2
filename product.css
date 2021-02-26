@@ -186,8 +186,8 @@ a {
 	margin: auto;
 }
 .smallProductImg {
-	border: 1px solid rgb(204, 204, 204);
-	margin-top: 30px;
+	position: absolute;
+	left: -50px;
 }
 .selected {
 
