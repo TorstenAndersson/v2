@@ -12,12 +12,13 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 	}
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	for (const smallImg in document.querySelectorAll(".smallProductFrame")) {
-		smallImg.addEventListener("hover", e => {
-			for (const smallImg2 in document.querySelectorAll(".smallProductFrame")) {
-				smallImg2.classList.remove("selected");
+	smallImgs = document.querySelectorAll(".smallProductFrame");
+	for (const i in document.querySelectorAll(".smallProductFrame")) {
+		smallImgs[i].addEventListener("hover", e => {
+			for (const i2 in document.querySelectorAll(".smallProductFrame")) {
+				smallImgs[i2].classList.remove("selected");
 			}
-			smallImg.classList.add("selected");
+			smallImgs[i].classList.add("selected");
 		})
 	}
 }
