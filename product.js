@@ -13,8 +13,8 @@ function pageLoaded() {
 	}
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	smallImgs = document.querySelectorAll(".smallProductFrame");
-	for (const i in document.querySelectorAll(".smallProductFrame")) {
-		smallImgs[i].addEventListener("hover", e => {
+	for (const i in smallImgs) {
+		smallImgs[i].addEventListener("hover", () => {
 			for (const i2 in document.querySelectorAll(".smallProductFrame")) {
 				smallImgs[i2].classList.remove("selected");
 			}
