@@ -14,7 +14,7 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductFrame"));
 	for (const i in smallImgs) {
-		smallImgs[i].addEventListener("hover", () => {
+		smallImgs[i].addEventListener("onmouseover", () => {
 			for (const i2 in document.querySelectorAll(".smallProductFrame")) {
 				smallImgs[i2].classList.remove("selected");
 			}

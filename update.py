@@ -593,9 +593,6 @@ for product in products["products"]:
     except KeyError:
         pass
 
-    print(product["name"])
-    print(perspectives)
-
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
     <head>
