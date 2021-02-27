@@ -184,10 +184,10 @@ a {
 .smallProductDiv {
 	position: absolute;
 	left: -110px;
-	margin-top: -350px;
+	margin-top: -365px;
 }
 .smallProductFrame {
-	padding-bottom: 15px;
+	padding-bottom: 16px;
 }
 .smallProductImg {
 	display: block;
