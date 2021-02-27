@@ -587,7 +587,7 @@ for product in products["products"]:
             if i == 0:
                 select = " selected"
             perspectives += '''
-                    <div class="smallProductFrame">
+                    <div class="smallProductFrame" onmouseover="smallImgHovered(this)">
                         <img class="smallProductImg''' + select + '''" src="/imgs/''' + product["name"] + "/" + product["name"] + " " + product["variants"]["Storlek"][0] + " " + product["perspectives"][i] + '.webp" width="100" height="100" alt="' + product["name"] + '''">
                     </div>'''
     except KeyError:

@@ -12,15 +12,24 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 	}
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	/*
 	smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductFrame"));
 	for (const i in smallImgs) {
-		smallImgs[i].addEventListener("onmouseover", () => {
+		smallImgs[i].addEventListener("mouseover", () => {
 			for (const i2 in document.querySelectorAll(".smallProductFrame")) {
 				smallImgs[i2].classList.remove("selected");
 			}
 			smallImgs[i].classList.add("selected");
 		})
 	}
+	*/
+}
+
+function smallImgHovered(sender) {
+	for (const i2 in Array.prototype.slice.call(document.querySelectorAll(".smallProductFrame"))) {
+		Array.prototype.slice.call(document.querySelectorAll(".smallProductFrame"))[i2].classList.remove("selected");
+	}
+	sender.classList.add("selected");
 }
 
 function buy(sender) {
