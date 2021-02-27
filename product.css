@@ -185,9 +185,13 @@ a {
 	width: 60%;
 	margin: auto;
 }
-.smallProductImg {
+.smallProductDiv {
 	position: absolute;
-	left: -50px;
+	left: -100px;
+}
+.smallProductImg {
+	display: block;
+	padding-bottom: 15px;
 }
 .selected {
 
