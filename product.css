@@ -188,6 +188,7 @@ a {
 .smallProductDiv {
 	position: absolute;
 	left: -100px;
+	margin-top: -350px;
 }
 .smallProductImg {
 	display: block;
