@@ -584,7 +584,7 @@ for product in products["products"]:
         perspectives = ""
         for i in range(len(product["perspectives"])):
             select = ""
-            if i == 1:
+            if i == 0:
                 select = " selected"
             perspectives += '''
                     <div class="smallProductFrame">
