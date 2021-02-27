@@ -181,21 +181,19 @@ a {
 .productImg {
 	padding-top: 30px;
 }
-.small {
-	width: 60%;
-	margin: auto;
-}
 .smallProductDiv {
 	position: absolute;
-	left: -100px;
+	left: -110px;
 	margin-top: -350px;
+}
+.smallProductFrame {
+	padding-bottom: 15px;
 }
 .smallProductImg {
 	display: block;
-	padding-bottom: 15px;
 }
 .selected {
-
+	border: 1px solid rgb(200, 200, 200);
 }
 .textFrame {
 	position: absolute;
