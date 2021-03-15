@@ -1,14 +1,19 @@
 import os
 import json
 import datetime
+import requests
+
+#session = requests.session
 
 # Creating a variable for JSON info
 
 phoneVariants = ""
 
-print(sorted(os.listdir("imgs/Johans Skal/"), reverse=True))
+#print(sorted(os.listdir("imgs/Johans Skal/"), reverse=True))
 
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
+    response = requests.get("https://www.google.com/search?q=" + phone + "release+date")
+    print(response)
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
