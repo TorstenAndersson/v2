@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import requests
+from bs4 import BeautifulSoup
 
 #session = requests.session
 
@@ -13,7 +14,7 @@ phoneVariants = ""
 
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     response = requests.get("https://www.google.com/search?q=" + phone + "release+date")
-    print(response)
+    print(BeautifulSoup(response.text).find(".Z0LcW XcVN5d"))
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
