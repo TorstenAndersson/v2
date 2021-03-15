@@ -6,7 +6,7 @@ import datetime
 
 phoneVariants = ""
 
-for phone in os.listdir("imgs/Johans Skal/"):
+for phone in sorted(os.listdir("imgs/Johans Skal/")):
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
