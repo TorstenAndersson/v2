@@ -579,7 +579,7 @@ for product in products["products"]:
                                     <option class="placeholderVariantOption" selected></option>''' + options + ''' 
                                 </select>
                             </div>
-                            '''
+                        '''
         variantDiv += "</div>"
     except KeyError:
         pass
