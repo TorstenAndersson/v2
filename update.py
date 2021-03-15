@@ -566,7 +566,7 @@ for product in products["products"]:
     variantDiv = ""
     try:
         for variant in product["variants"]:
-            options = ""
+            options = '<div class="variants">'
             for option in product["variants"][variant]:
                 options += '                                    <option>' + option + '''</option>
 '''
@@ -576,7 +576,9 @@ for product in products["products"]:
                                 <label class="variantName">''' + variant + '''</label>
                                 <select class="variantSelect" required>
                                     <option class="placeholderVariantOption" selected></option>''' + options + '''                                </select>
-                            </div>'''
+                            </div>
+                            '''
+        options += "</div>"
     except KeyError:
         pass
     
@@ -651,8 +653,7 @@ for product in products["products"]:
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
                     <form>
-                        <div class="variants">''' + variantDiv + '''
-                        </div>
+                        ''' + variantDiv + '''
                         <div class="cartAddDiv">
                             <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
                         </div>
