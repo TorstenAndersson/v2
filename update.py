@@ -8,7 +8,7 @@ phoneVariants = ""
 
 print(sorted(os.listdir("imgs/Johans Skal/")))
 
-for phone in sorted(os.listdir("imgs/Johans Skal/")):
+for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
