@@ -6,7 +6,7 @@ import datetime
 
 phoneVariants = ""
 
-print(os.listdir("imgs/Johans Skal/"))
+print(sorted(os.listdir("imgs/Johans Skal/")))
 
 for phone in sorted(os.listdir("imgs/Johans Skal/")):
     phoneVariants += '''
