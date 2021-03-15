@@ -4,6 +4,9 @@ import datetime
 
 # Creating a variable for JSON info
 
+for phone in os.listdir("imgs/Johans Skal/"):
+    print(phone)
+
 products = json.loads('''
 {
     "products":[
@@ -70,11 +73,11 @@ products = json.loads('''
             },
             "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
             "variants":{
-                "Modell": [
+                "Modell": [''' + '''
                     "iPhone 12 Pro",
                     "Samsung Galaxy S20 Ultra",
                     "idk"
-                ]
+                ''' + ''']
             },
             "type":"merchandise",
             "onDisplay":"True"
