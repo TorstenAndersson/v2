@@ -6,11 +6,11 @@ import datetime
 
 phoneVariants = ""
 
+print(os.listdir("imgs/Johans Skal/"))
+
 for phone in sorted(os.listdir("imgs/Johans Skal/")):
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
-
-print(phoneVariants)
 
 products = json.loads('''
 {
