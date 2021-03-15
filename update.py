@@ -14,7 +14,7 @@ phoneVariants = ""
 
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     response = requests.get("https://www.google.com/search?q=" + phone + "release+date")
-    print(BeautifulSoup(response.text, features="html.parser").find("div.Z0LcW XcVN5d"))
+    print(BeautifulSoup(response.text, features="html.parser").prettify)
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
