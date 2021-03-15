@@ -5,7 +5,7 @@ import datetime
 # Creating a variable for JSON info
 
 for phone in os.listdir("imgs/Johans Skal/"):
-    print(phone)
+    print(phone[15:-5])
 
 products = json.loads('''
 {
