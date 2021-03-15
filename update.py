@@ -566,7 +566,8 @@ for product in products["products"]:
     variantDiv = ""
     try:
         for variant in product["variants"]:
-            variantDiv += '''    <div class="variants">
+            variantDiv += '''    
+            <div class="variants">
             '''
             options = ""
             for option in product["variants"][variant]:
@@ -654,8 +655,7 @@ for product in products["products"]:
                     <span class="productDescription">''' + product["description"] + '''</span>
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
-                    <form>
-                    ''' + variantDiv + '''
+                    <form>''' + variantDiv + '''
                         <div class="cartAddDiv">
                             <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
                         </div>
