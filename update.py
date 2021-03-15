@@ -10,6 +10,8 @@ for phone in os.listdir("imgs/Johans Skal/"):
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
+print(phoneVariants)
+
 products = json.loads('''
 {
     "products":[
