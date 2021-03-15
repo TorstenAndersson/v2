@@ -85,8 +85,6 @@ products = json.loads('''
     ]
 }''')
 
-print(products)
-
 sudd = []
 merchandise = []
 onDisplay = []
