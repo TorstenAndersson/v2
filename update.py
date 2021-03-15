@@ -566,7 +566,8 @@ for product in products["products"]:
     variantDiv = ""
     try:
         for variant in product["variants"]:
-            options = '<div class="variants">'
+            variantDiv += '<div class="variants">'
+            options = ""
             for option in product["variants"][variant]:
                 options += '''
                 <option>''' + option + '''</option>'''
@@ -576,7 +577,7 @@ for product in products["products"]:
                                 <select class="variantSelect" required>
                                     <option class="placeholderVariantOption" selected></option>''' + options + '''                                </select>
                             </div>'''
-        options += "</div>"
+        variantDiv += "</div>"
     except KeyError:
         pass
     
