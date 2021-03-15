@@ -654,12 +654,10 @@ for product in products["products"]:
                     <span class="productHeader">''' + product["name"] + '''</span>
                     <span class="productDescription">''' + product["description"] + '''</span>
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
-                    <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>
-                    <form>''' + variantDiv + '''
-                        <div class="cartAddDiv">
-                            <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
-                        </div>
-                    </form>
+                    <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>''' + variantDiv + '''
+                    <div class="cartAddDiv">
+                        <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
+                    </div>
                 </div>
             </div>
         </main>
