@@ -566,11 +566,11 @@ for product in products["products"]:
     variantDiv = ""
     try:
         for variant in product["variants"]:
-            options = '<div class="variants">'
+            options = '''
+            <div class="variants">'''
             for option in product["variants"][variant]:
                 options += '''
-                <option>''' + option + '''</option>
-'''
+                <option>''' + option + '''</option>'''
             
             variantDiv += '''<div class="variant">
                                 <label class="variantName">''' + variant + '''</label>
