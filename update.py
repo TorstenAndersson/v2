@@ -10,16 +10,29 @@ from bs4 import BeautifulSoup
 
 phoneVariants = ""
 
-#print(sorted(os.listdir("imgs/Johans Skal/"), reverse=True))
+#document.querySelector("img[src*='iphone-12-pro--.jpg']")
 
+#document.querySelector(".specs-brief-accent").textContent
+"""
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
-    #response = requests.get("https://www.google.com/search?q=" + phone[12:-5] + " release+date")
-    #print("https://www.google.com/search?q=" + phone[12:-5] + " release+date")
-    #print(BeautifulSoup(response.text, features="html.parser").prettify)
+    company = ""
+    if phone[6:] == "iPhone":
+        company = "apple-phones-48.php"
+    if phone[7:] == "Samsung":
+        company = "samsung-phones-9.php"
+    #print(response.text)
+    response = requests.get(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser"))
+    if response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None:
+        pass
+    else:
+        pass
+    #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
+"""
+print(requests.get("https://www.gsmarena.com/apple-phones-48.php"))
 
-print(phoneVariants[1:-1])
+#print(phoneVariants[1:-1])
 
 products = json.loads('''
 {
@@ -87,7 +100,7 @@ products = json.loads('''
             },
             "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
             "variants":{
-                "Modell": [''' + phoneVariants[:-1] + '''
+                "Modell": [''' + phoneVariants[1:-1] + '''
                 ]
             },
             "type":"merchandise",
