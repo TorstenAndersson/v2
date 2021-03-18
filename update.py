@@ -30,7 +30,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 """
-print(requests.get("https://www.gsmarena.com/apple-phones-48.php"))
+print(requests.get("https://www.gsmarena.com/apple-phones-48.php").text)
 
 #print(phoneVariants[1:-1])
 
