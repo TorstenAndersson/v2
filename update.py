@@ -13,10 +13,13 @@ phoneVariants = ""
 #print(sorted(os.listdir("imgs/Johans Skal/"), reverse=True))
 
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
-    response = requests.get("https://www.google.com/search?q=" + phone + "release+date")
-    print(BeautifulSoup(response.text, features="html.parser").prettify)
+    #response = requests.get("https://www.google.com/search?q=" + phone[12:-5] + " release+date")
+    #print("https://www.google.com/search?q=" + phone[12:-5] + " release+date")
+    #print(BeautifulSoup(response.text, features="html.parser").prettify)
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
+
+print(phoneVariants[1:-1])
 
 products = json.loads('''
 {
@@ -667,7 +670,7 @@ for product in products["products"]:
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>''' + variantDiv + '''
                     <div class="cartAddDiv">
-                        <input class="cartAdd" value="Lägg I Kundvagn" onclick="buy(this)" readonly>
+                        <button class="cartAdd" onclick="buy(this)" readonly>Lägg I Kundvagn</button>
                     </div>
                 </div>
             </div>
