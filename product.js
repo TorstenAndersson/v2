@@ -26,9 +26,9 @@ function pageLoaded() {
 }
 
 function smallImgHovered(sender) {
-	for (const i2 in Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))) {
-		Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))[i2].classList.remove("selected");
-	}
+	//for (const i2 in Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))) {
+	//	Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))[i2].classList.remove("selected");
+	//}
 	//sender.classList.add("selected");
 }
 

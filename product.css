@@ -198,6 +198,9 @@ a {
 .smallProductImg:hover {
 	border: 1px solid rgb(80, 80, 80)
 }
+.smallProductImg:not(:hover) {
+	border: none;
+}
 .selected {
 	border: 1px solid rgb(65, 65, 65);
 }
