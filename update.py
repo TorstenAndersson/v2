@@ -13,24 +13,68 @@ phoneVariants = ""
 #document.querySelector("img[src*='iphone-12-pro--.jpg']")
 
 #document.querySelector(".specs-brief-accent").textContent
-"""
+
+
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     company = ""
+    #phone = "iPhone 12 Pro Max"
     if phone[6:] == "iPhone":
         company = "apple-phones-48.php"
     if phone[7:] == "Samsung":
         company = "samsung-phones-9.php"
-    #print(response.text)
-    response = requests.get(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser"))
+
+    #First page only
+    """
+    print(phone)
+    #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
+
+    response = requests.get("https://gsmarena.com/" + company).text
+    print("getting " + response)
+
+    html = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
+    #print("got " + html.prettify())
+
+    findings = html.find_all("img[src*='" + phone.replace(" ", "-") + "]")
+    print("imgs " + findings)
+
+    finding = min(findings, key=len)
+    print("img " + finding)
+    
+    parent = finding.previousSibling
+    print("parent " + parent)
+    """
+
+
+    """ SAFE OPTION
+    while response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None & response.find("img[src*='" + phone.replace(" ", "-") + ".jpg']") is None:
+        response = requests.get(BeautifulSoup(response.find(".pages-next").href))
+
     if response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None:
-        pass
-    else:
-        pass
+    """
+
+    """ SAFE ALTENATIVE
+    response = requests.get(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser"))
+    response = requests.get(min(response.find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).href)
+    releaseDate = BeautifulSoup(requests.get(response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']").href)).find(".specs-brief-accent").text
+    """
+
+    """
+    print(phone)
+    print(releaseDate)
+
+    year = releaseDate[:-4]
+    month = releaseDate[:3]
+    day = releaseDate[-6:-8].replace(" ", "")
+
+    releaseDate = releaseDate.slice(4, -9).slice(-5, -6)
+    print(releaseDate)
+    print("or is it")
+    print(month + day + year)
+    """
+
     #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
-"""
-print(requests.get("https://www.gsmarena.com/apple-phones-48.php").text)
 
 #print(phoneVariants[1:-1])
 

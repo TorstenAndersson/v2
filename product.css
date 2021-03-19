@@ -193,6 +193,10 @@ a {
 }
 .smallProductImg {
 	display: block;
+	transition: border .5s
+}
+.smallProductImg:hover {
+	border: 1px solid rgb(80, 80, 80)
 }
 .selected {
 	border: 1px solid rgb(65, 65, 65);
