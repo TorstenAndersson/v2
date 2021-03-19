@@ -188,16 +188,16 @@ a {
 	left: -110px;
 	margin-top: -355px;
 }
+.smallProductDiv:first-child:first-child {
+	border: 1px solid rgb(80, 80, 80);
+	width: 98px;
+	height: 98px;
+}
 .smallProductFrame {
 	padding-bottom: 16px;
 }
 .smallProductImg {
 	display: block;
-}
-.smallProductImg:first-child {
-	border: 1px solid rgb(80, 80, 80);
-	width: 98px;
-	height: 98px;
 }
 .smallProductImg:hover {
 	border: 1px solid rgb(80, 80, 80);
