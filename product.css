@@ -199,11 +199,18 @@ a {
 	width: 98px;
 	height: 98px;
 }
-.smallProductImg:past { /* not(:hover):not(.first) { */
+.smallProductImg:hover ~ .smallProductImg:not(this) {
 	border: none;
 	width: 100px;
 	height: 100px;
 }
+/*
+.smallProductImg:past { /* not(:hover):not(.first) {
+	border: none;
+	width: 100px;
+	height: 100px;
+}
+*/
 .first {
 	border: 1px solid rgb(65, 65, 65);
 }
