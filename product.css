@@ -194,12 +194,17 @@ a {
 .smallProductImg {
 	display: block;
 }
+.smallProductImg:first-child {
+	border: 1px solid rgb(80, 80, 80);
+	width: 98px;
+	height: 98px;
+}
 .smallProductImg:hover {
 	border: 1px solid rgb(80, 80, 80);
 	width: 98px;
 	height: 98px;
 }
-.smallProductImg:hover ~ .smallProductImg:not(this) {
+.smallProductImg:hover ~ .smallProductImg:not(:hover) {
 	border: none;
 	width: 100px;
 	height: 100px;
