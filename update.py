@@ -659,12 +659,12 @@ for product in products["products"]:
     try:
         perspectives = ""
         for i in range(len(product["perspectives"])):
-            select = ""
+            first = ""
             if i == 0:
-                select = " selected"
+                first = " first"
             perspectives += '''
                     <div class="smallProductFrame">
-                        <img class="smallProductImg''' + select + '''" src="/imgs/''' + product["name"] + "/" + product["name"] + " " + product["variants"]["Storlek"][0] + " " + product["perspectives"][i] + '.webp" width="100" height="100" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                        <img class="smallProductImg''' + first + '''" src="/imgs/''' + product["name"] + "/" + product["name"] + " " + product["variants"]["Storlek"][0] + " " + product["perspectives"][i] + '.webp" width="100" height="100" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                     </div>'''
     except KeyError:
         pass

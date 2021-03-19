@@ -193,19 +193,18 @@ a {
 }
 .smallProductImg {
 	display: block;
-	transition: border 1s
 }
 .smallProductImg:hover {
 	border: 1px solid rgb(80, 80, 80);
 	width: 98px;
 	height: 98px;
 }
-.smallProductImg:not(:hover) {
+.smallProductImg:not(:hover):not(.first) {
 	border: none;
 	width: 100px;
 	height: 100px;
 }
-.selected {
+.first {
 	border: 1px solid rgb(65, 65, 65);
 }
 .textFrame {
