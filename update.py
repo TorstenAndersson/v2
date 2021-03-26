@@ -17,32 +17,40 @@ phoneVariants = ""
 
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     company = ""
-    #phone = "iPhone 12 Pro Max"
+    phone = "iPhone 12 Pro Max"
     if phone[6:] == "iPhone":
+        print("It's an iPhone!")
         company = "apple-phones-48.php"
     if phone[7:] == "Samsung":
+        print("Yuck! Samsung")
         company = "samsung-phones-9.php"
 
     #First page only
-    """
+
+    break
+
     print(phone)
+    print("https://gsmarena.com/" + company)
+    print("getting img[src*='" + phone.replace(" ", "-") + "']")
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
     response = requests.get("https://gsmarena.com/" + company).text
     print("getting " + response)
 
-    html = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
-    #print("got " + html.prettify())
+    html = BeautifulSoup(response, features="html.parser")
+    if not os.path.exists("log.txt"):
+        open("log.txt", "x")
+    open("log.txt", "w").write(html.prettify())
 
-    findings = html.find_all("img[src*='" + phone.replace(" ", "-") + "]")
-    print("imgs " + findings)
+    findings = html.find_all("img[src*='" + phone.replace(" ", "-") + "']")
+    print("imgs " + str(findings))
 
     finding = min(findings, key=len)
     print("img " + finding)
     
     parent = finding.previousSibling
     print("parent " + parent)
-    """
+
 
 
     """ SAFE OPTION
