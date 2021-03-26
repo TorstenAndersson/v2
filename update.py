@@ -27,11 +27,11 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
 
     #First page only
 
-    break
-
     print(phone)
     print("https://gsmarena.com/" + company)
     print("getting img[src*='" + phone.replace(" ", "-") + "']")
+
+    break
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
     response = requests.get("https://gsmarena.com/" + company).text
