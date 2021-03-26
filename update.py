@@ -27,7 +27,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
 
     #First page only
 
-    print(phone[6:] == "iPhone")
+    print(phone[6:])
     print("https://gsmarena.com/" + company)
     print("getting img[src*='" + phone.replace(" ", "-") + "']")
 
