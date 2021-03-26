@@ -18,10 +18,10 @@ phoneVariants = ""
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     company = ""
     phone = "iPhone 12 Pro Max"
-    if phone[6:] == "iPhone":
+    if phone[:6] == "iPhone":
         print("It's an iPhone!")
         company = "apple-phones-48.php"
-    if phone[7:] == "Samsung":
+    if phone[:6] == "Samsung":
         print("Yuck! Samsung")
         company = "samsung-phones-9.php"
 
