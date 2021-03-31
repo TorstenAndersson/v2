@@ -29,24 +29,23 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
 
     print(phone[:6])
     print("https://gsmarena.com/" + company)
-    print("getting img[src*='" + phone.replace(" ", "-") + "']")
+    print("getting img[src*='" + phone.replace(" ", "-").lower() + "']")
 
-    break
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
-    response = requests.get("https://gsmarena.com/" + company).text
-    print("getting " + response)
+    response = open("log.txt", "r").read() #requests.get("https://gsmarena.com/" + company).text
+    print("file now in log.txt!")
 
     html = BeautifulSoup(response, features="html.parser")
     if not os.path.exists("log.txt"):
         open("log.txt", "x")
     open("log.txt", "w").write(html.prettify())
 
-    findings = html.find_all("img[src*='" + phone.replace(" ", "-") + "']")
-    print("imgs " + str(findings))
+    findings = html.select("img[src*='" + phone.replace(" ", "-").lower() + "']")
+    print("found" + str(findings))
 
     finding = min(findings, key=len)
-    print("img " + finding)
+    print("img " + str(finding))
     
     parent = finding.previousSibling
     print("parent " + parent)
@@ -568,7 +567,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     <br>
                     2.   Som nämnt ovan, får du 10% rabatt på köp över 3000 kr.
                     <br>
-                    3.   Du får jobba hemma utan att någonsin behöva lämna ditt huss, rena drömmen!
+                    3.   Du får jobba hemma utan att någonsin behöva lämna ditt hus, rena drömmen!
                     <br>
                     4.   Vi är inte som någon annan arbetsmiljö, vi är bättre.
                     <br>
