@@ -44,6 +44,11 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     finding = html.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
     print("found " + finding)
 
+    response = requests.get("https://gsmarena.com/" + finding)
+
+    if not os.path.exists("log2.txt"):
+        open("log2.txt", "x")
+    open("log2.txt", "w").write(BeautifulSoup(response.text).prettify())
 
 
 
