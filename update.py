@@ -53,7 +53,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     time = str(response.find("span", {"data-spec": "released-hl"}).text.replace(" ", ""))
 
     time = time.replace(time[9:13], "").replace("Released,", "")
-    day = ':'.join(str(time.index(x)) for x in time if x.isdigit())
+    day = ':'.join(str(time.index(x)) for x in time if x.isdigit()).split(":")
     print(day)
 
 
