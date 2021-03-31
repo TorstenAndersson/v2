@@ -33,7 +33,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
-    response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text) #BeautifulSoup(open("log.txt", "r").read(), features="html.parser") #requests.get("https://gsmarena.com/" + company).text
+    response = BeautifulSoup(open("log.txt", "r").read(), features="html.parser") #BeautifulSoup(open("log.txt", "r").read(), features="html.parser") #requests.get("https://gsmarena.com/" + company).text
     print("file now in log.txt!")
 
     if not os.path.exists("log.txt"):

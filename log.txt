@@ -1100,8 +1100,7 @@ Order by:
    <!-- id outer -->
    <div id="footer">
     <div class="footer-logo">
-     <img alt="" src="https://fdn2.gsmarena.com/w/css/logo-gsmarena-com.png">
-     </img>
+     <img alt="" src="https://fdn2.gsmarena.com/w/css/logo-gsmarena-com.png"/>
     </div>
     <div id="footmenu">
      <p>
