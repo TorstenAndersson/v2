@@ -55,7 +55,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     time = time.replace(time[9:13], "").replace("Released,", "")
     day = ':'.join(str(time.index(x)) for x in time if x.isdigit()).split(":")
     print(time)
-    print(time[int(day[0])], time[int(day[1])])
+    print(time[int(day[0]):int(day[1])])
 
 
 #[9:13]
