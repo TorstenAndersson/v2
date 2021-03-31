@@ -29,7 +29,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
 
     print(phone[:6])
     print("https://gsmarena.com/" + company)
-    print("getting img[src*='" + phone.replace(" ", "-").lower() + "']")
+    print("getting a[href*='" + phone.replace(" ", "_").lower() + "']")
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
@@ -41,7 +41,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
         open("log.txt", "x")
     open("log.txt", "w").write(html.prettify())
 
-    findings = html.select("img[src*='" + phone.replace(" ", "-").lower() + "']")
+    findings = html.select("a[href*='" + phone.replace(" ", "_").lower() + "']")
     print("found" + str(findings))
 
     finding = min(findings, key=len)
