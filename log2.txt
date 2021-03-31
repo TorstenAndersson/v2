@@ -522,8 +522,7 @@ MORE PICTURES" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-
             Opinions
            </a>
           </li>
-          <br style="clear:both;">
-          </br>
+          <br style="clear:both;"/>
          </ul>
         </div>
        </div>
@@ -719,9 +718,8 @@ window.open( 'help.php3?term=' + strURL, '_blank', 'toolbar=no,location=no,direc
          </td>
          <td class="nfo" data-spec="bodyother">
           IP68 dust/water resistant (up to 6m for 30 mins)
-          <br>
-           Apple Pay (Visa, MasterCard, AMEX certified)
-          </br>
+          <br/>
+          Apple Pay (Visa, MasterCard, AMEX certified)
          </td>
         </tr>
        </table>
@@ -778,12 +776,10 @@ window.open( 'help.php3?term=' + strURL, '_blank', 'toolbar=no,location=no,direc
          </td>
          <td class="nfo" data-spec="displayother">
           Dolby Vision
-          <br>
-           Wide color gamut
-           <br>
-            True-tone
-           </br>
-          </br>
+          <br/>
+          Wide color gamut
+          <br/>
+          True-tone
          </td>
         </tr>
        </table>
@@ -876,15 +872,12 @@ window.open( 'help.php3?term=' + strURL, '_blank', 'toolbar=no,location=no,direc
          </td>
          <td class="nfo" data-spec="cam1modules">
           12 MP, f/1.6, 26mm (wide), 1.7µm, dual pixel PDAF, sensor-shift stabilization (IBIS)
-          <br>
-           12 MP, f/2.2, 65mm (telephoto), 1/3.4", 1.0µm, PDAF, OIS, 2.5x optical zoom
-           <br>
-            12 MP, f/2.4, 120˚, 13mm (ultrawide), 1/3.6"
-            <br>
-             TOF 3D LiDAR scanner (depth)
-            </br>
-           </br>
-          </br>
+          <br/>
+          12 MP, f/2.2, 65mm (telephoto), 1/3.4", 1.0µm, PDAF, OIS, 2.5x optical zoom
+          <br/>
+          12 MP, f/2.4, 120˚, 13mm (ultrawide), 1/3.6"
+          <br/>
+          TOF 3D LiDAR scanner (depth)
          </td>
         </tr>
         <tr>
@@ -920,9 +913,8 @@ window.open( 'help.php3?term=' + strURL, '_blank', 'toolbar=no,location=no,direc
          </td>
          <td class="nfo" data-spec="cam2modules">
           12 MP, f/2.2, 23mm (wide), 1/3.6"
-          <br>
-           SL 3D, (depth/biometrics sensor)
-          </br>
+          <br/>
+          SL 3D, (depth/biometrics sensor)
          </td>
         </tr>
         <tr>
@@ -1055,9 +1047,8 @@ window.open( 'help.php3?term=' + strURL, '_blank', 'toolbar=no,location=no,direc
          </td>
          <td class="nfo" data-spec="featuresother">
           Siri natural language commands and dictation
-          <br>
-           Ultra Wideband (UWB) support
-          </br>
+          <br/>
+          Ultra Wideband (UWB) support
          </td>
         </tr>
        </table>
@@ -1536,8 +1527,7 @@ I do not have such issue, thus i feel your comment is either trolling or somethi
           1838
          </b>
         </div>
-        <br class="clear">
-        </br>
+        <br class="clear"/>
        </div>
        <div class="module module-vid-review">
         <iframe allowfullscreen="" frameborder="0" height="410" src="https://www.youtube.com/embed/TfRtC5cQCpA" width="728">
@@ -2084,50 +2074,44 @@ I do not have such issue, thus i feel your comment is either trolling or somethi
        <ul class="clearfix">
         <li>
          <a class="module-phones-link" href="samsung_galaxy_s21_ultra_5g-10596.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-ultra-5g-.jpg">
-           <br/>
-           Samsung Galaxy S21 Ultra 5G
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-ultra-5g-.jpg"/>
+          <br/>
+          Samsung Galaxy S21 Ultra 5G
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_11_pro_max-9846.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg">
-           <br/>
-           Apple iPhone 11 Pro Max
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg"/>
+          <br/>
+          Apple iPhone 11 Pro Max
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_12_pro-10508.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg">
-           <br/>
-           Apple iPhone 12 Pro
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg"/>
+          <br/>
+          Apple iPhone 12 Pro
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="samsung_galaxy_note20_ultra_5g-10261.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note20-ultra-.jpg">
-           <br/>
-           Samsung Galaxy Note20 Ultra 5G
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note20-ultra-.jpg"/>
+          <br/>
+          Samsung Galaxy Note20 Ultra 5G
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_12-10509.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg">
-           <br/>
-           Apple iPhone 12
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg"/>
+          <br/>
+          Apple iPhone 12
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_xs_max-9319.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg">
-           <br/>
-           Apple iPhone XS Max
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg"/>
+          <br/>
+          Apple iPhone XS Max
          </a>
         </li>
        </ul>
@@ -2156,50 +2140,44 @@ I do not have such issue, thus i feel your comment is either trolling or somethi
        <ul class="clearfix">
         <li>
          <a class="module-phones-link" href="apple_iphone_12_pro_max-10237.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg">
-           <br/>
-           Apple iPhone 12 Pro Max
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg"/>
+          <br/>
+          Apple iPhone 12 Pro Max
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_7-8064.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7r4.jpg">
-           <br/>
-           Apple iPhone 7
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7r4.jpg"/>
+          <br/>
+          Apple iPhone 7
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_12-10509.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg">
-           <br/>
-           Apple iPhone 12
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg"/>
+          <br/>
+          Apple iPhone 12
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_11-9848.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg">
-           <br/>
-           Apple iPhone 11
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg"/>
+          <br/>
+          Apple iPhone 11
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_7_plus-8065.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7-plus-r2.jpg">
-           <br/>
-           Apple iPhone 7 Plus
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7-plus-r2.jpg"/>
+          <br/>
+          Apple iPhone 7 Plus
          </a>
         </li>
         <li>
          <a class="module-phones-link" href="apple_iphone_8_plus-8131.php">
-          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-plus-new.jpg">
-           <br/>
-           Apple iPhone 8 Plus
-          </img>
+          <img alt="Phone" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-plus-new.jpg"/>
+          <br/>
+          Apple iPhone 8 Plus
          </a>
         </li>
        </ul>
@@ -2218,8 +2196,7 @@ I do not have such issue, thus i feel your comment is either trolling or somethi
    </script>
    <div id="footer">
     <div class="footer-logo">
-     <img alt="" src="https://fdn2.gsmarena.com/w/css/logo-gsmarena-com.png">
-     </img>
+     <img alt="" src="https://fdn2.gsmarena.com/w/css/logo-gsmarena-com.png"/>
     </div>
     <div id="footmenu">
      <p>

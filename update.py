@@ -33,24 +33,23 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
-    response = open("log.txt", "r").read() #requests.get("https://gsmarena.com/" + company).text
+    response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text) #BeautifulSoup(open("log.txt", "r").read(), features="html.parser") #requests.get("https://gsmarena.com/" + company).text
     print("file now in log.txt!")
 
-    html = BeautifulSoup(response, features="html.parser")
     if not os.path.exists("log.txt"):
         open("log.txt", "x")
-    open("log.txt", "w").write(html.prettify())
+    open("log.txt", "w").write(response.prettify())
 
-    finding = html.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
+    finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
     print("found " + finding)
 
-    response = open("log2.txt", "r").read() #BeautifulSoup(requests.get("https://gsmarena.com/" + finding, features="html.parser")).prettify()
+    response = BeautifulSoup(open("log2.txt", "r").read(), features="html.parser") #BeautifulSoup(requests.get("https://gsmarena.com/" + finding, features="html.parser")).prettify()
 
     if not os.path.exists("log2.txt"):
         open("log2.txt", "x")
-    open("log2.txt", "w").write(response)
+    open("log2.txt", "w").write(response.prettify())
 
-
+    print(str(response.select(".specs-brief-accent")))
 
 
     """ SAFE OPTION
