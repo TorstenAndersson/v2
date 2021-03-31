@@ -41,8 +41,8 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
         open("log.txt", "x")
     open("log.txt", "w").write(html.prettify())
 
-    findings = html.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']")
-    print("found " + findings.get("href"))
+    finding = html.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
+    print("found " + finding)
 
 
 
