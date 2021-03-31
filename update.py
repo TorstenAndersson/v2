@@ -52,7 +52,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     #print(str(response.select_one(".specs-brief-accent")))
     time = str(response.find("span", {"data-spec": "released-hl"}).text.replace(" ", ""))
 
-    time = time.replace(time[9:13], "").replace("Released", "")
+    time = time.replace(time[9:13], "").replace("Released,", "")
     print(time)
 
 
