@@ -50,7 +50,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     open("log2.txt", "w").write(response.prettify())
 
     #print(str(response.select_one(".specs-brief-accent")))
-    print(str(response.find("span", {"data-spec": "released-hl"}).text))
+    print(str(response.find("span", {"data-spec": "released-hl"}).text[9:13]))
 
 
     """ SAFE OPTION
