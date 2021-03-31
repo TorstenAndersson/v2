@@ -50,8 +50,13 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     open("log2.txt", "w").write(response.prettify())
 
     #print(str(response.select_one(".specs-brief-accent")))
-    print(str(response.find("span", {"data-spec": "released-hl"}).text.replace(" ", "")[9:13]))#[9:13]))
+    time = str(response.find("span", {"data-spec": "released-hl"}).text.replace(" ", ""))
 
+    time = time.replace(time[9:13], "").replace("Released", "")
+    print(time)
+
+
+#[9:13]
 
     """ SAFE OPTION
     while response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None & response.find("img[src*='" + phone.replace(" ", "-") + ".jpg']") is None:
