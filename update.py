@@ -49,7 +49,7 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
         open("log2.txt", "x")
     open("log2.txt", "w").write(response.prettify())
 
-    print(str(response.select(".specs-brief-accent")))
+    print(str(response.select_one(".specs-brief-accent")))
 
 
     """ SAFE OPTION
