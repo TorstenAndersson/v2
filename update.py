@@ -33,13 +33,12 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
 
-    #response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text)
+    #response = BeautifulSoup(requests.get("https://gsmarena.com/" + company, features="html.parser").text)
     response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
 
     if not os.path.exists("log.html"):
         open("log.html", "x")
     open("log.html", "w").write(response.prettify())
-    print("file now in log.html!")
 
     finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
     print("found " + finding)
@@ -54,13 +53,22 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     #print(str(response.select_one(".specs-brief-accent")))
     time = str(response.find("span", {"data-spec": "released-hl"}).text)
 
-    time = time.replace("Released", "")
-    day = ':'.join(str(time.index(x)) for x in time if x.isdigit()).split(":")
-    print(time)
-    print(time[int(day[0]):int(day[1]) + 1])
+    monthNumbers = {
+        "January": "1",
+        "February": "2",
+        "March": "3",
+        "April": "4",
+        "May": "5",
+        "June": "6",
+        "July": "7",
+        "August": "8",
+        "September": "9",
+        "October": "10",
+        "November": "11",
+        "December": "12"
+    }
 
-
-#[9:13]
+    print(int(time[23:27]) * 10000 + int(monthNumbers[time[29:-16]]) * 100 + int(time[-15:]))
 
     """ SAFE OPTION
     while response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None & response.find("img[src*='" + phone.replace(" ", "-") + ".jpg']") is None:
