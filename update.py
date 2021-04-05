@@ -95,7 +95,7 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"/imgs/Sudd/Sudd Johan.webp",
+            "img":"/imgs/Sudd/Sudd%20Johan.webp",
             "type":"sudd",
             "onDisplay":"True"
         },{
@@ -108,7 +108,7 @@ products = json.loads('''
                 },
                 "original":"499,99 kr"
             },
-            "img":"/imgs/Johans Hoodie/Johans Hoodie White Front.webp",
+            "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20White%20Front.webp",
             "type":"merchandise",
             "onDisplay":"False"
         },{
@@ -121,7 +121,7 @@ products = json.loads('''
                 },
                 "original":"349,99 kr"
             },
-            "img":"/imgs/Johans Crocs/Johans Crocs M Above.webp",
+            "img":"/imgs/Johans%20Crocs/Johans%20Crocs%20M%20Above.webp",
             "perspectives":[
                 "Above",
                 "Close",
@@ -146,7 +146,7 @@ products = json.loads('''
                 },
                 "original":"149,99 kr"
             },
-            "img":"/imgs/Johans Skal/Johans Skal iPhone 12 Pro Max.webp",
+            "img":"/imgs/Johans Skal/Johans%20Skal%20iPhone%2012%20Pro%20Max.webp",
             "variants":{
                 "Modell": [''' + phoneVariants[1:-1] + '''
                 ]
