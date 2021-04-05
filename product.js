@@ -26,8 +26,12 @@ function pageLoaded() {
 }
 
 function smallImgHovered(sender) {
+	for (const i2 in Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))) {
+		Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))[i2].classList.remove("selected");
+	}
+	sender.classList.add("selected");
+
 	document.querySelector(".productImg").src = sender.src.slice(51);
-	//document.querySelector(".smallProductImg:not(" + sender + ")").style.visibility = "hidden";
 }
 
 function buy(sender) {

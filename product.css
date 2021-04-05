@@ -200,16 +200,10 @@ a {
 	display: block;
 	border-radius: 5px;
 }
-.smallProductImg:hover {
+.selected {
 	border: 1px solid rgb(80, 80, 80);
 	width: 98px;
 	height: 98px;
-}
-.smallProductImg:hover .smallProductImg {
-	border: 2px solid rgb(255, 0, 0);
-	width: 100px;
-	height: 100px;
-	border-radius: 15px;
 }
 /*
 .smallProductImg:past { /* not(:hover):not(.first) {
