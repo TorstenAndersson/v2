@@ -26,7 +26,7 @@ function pageLoaded() {
 }
 
 function smallImgHovered(sender) {
-	document.querySelector("productImg").src = sender.src;
+	document.querySelector(".productImg").src = sender.src;
 	//document.querySelector(".smallProductImg:not(" + sender + ")").style.visibility = "hidden";
 }
 
