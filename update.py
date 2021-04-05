@@ -663,6 +663,7 @@ for product in products["products"]:
     try:
         perspectives = ""
         for i in range(len(product["perspectives"])):
+            first = ""
             if i == 0:
                 first = " selected"
             perspectives += '''
