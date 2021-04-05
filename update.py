@@ -10,14 +10,19 @@ from bs4 import BeautifulSoup
 
 phoneVariants = ""
 
+for phone in sorted(os.listdir("imgs/Johans Skal/")):
+    phoneVariants += '''
+                    "''' + phone[12:-5] + '",'
+"""
 #document.querySelector("img[src*='iphone-12-pro--.jpg']")
 
 #document.querySelector(".specs-brief-accent").textContent
 
+phoneReleases = {}
 
-for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
+for phone in sorted(os.listdir("imgs/Johans Skal/")):
     company = ""    
-    phone = "Samsung Galaxy M62"
+
     if phone[:6] == "iPhone":
         print("It's an iPhone!")
         company = "apple-phones-48.php"
@@ -25,16 +30,14 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
         print("Yuck! Samsung")
         company = "samsung-phones-9.php"
 
-    #First page only
-
     print("https://gsmarena.com/" + company)
     print("getting a[href*='" + phone.replace(" ", "_").lower() + "']")
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
 
-    #response = BeautifulSoup(requests.get("https://gsmarena.com/" + company, features="html.parser").text)
-    response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
+    response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
+    #response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
 
     if not os.path.exists("log.html"):
         open("log.html", "x")
@@ -43,8 +46,8 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
     print("found " + finding)
 
-    #response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding).text, features="html.parser")
-    response = BeautifulSoup(open("log2.html", "r").read(), features="html.parser")
+    response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding).text, features="html.parser")
+    #response = BeautifulSoup(open("log2.html", "r").read(), features="html.parser")
 
     if not os.path.exists("log2.html"):
         open("log2.html", "x")
@@ -68,40 +71,16 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
         "December": "12"
     }
 
-    print(int(time[23:27]) * 10000 + int(monthNumbers[time[29:-16]]) * 100 + int(time[-15:]))
-
-    """ SAFE OPTION
-    while response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None & response.find("img[src*='" + phone.replace(" ", "-") + ".jpg']") is None:
-        response = requests.get(BeautifulSoup(response.find(".pages-next").href))
-
-    if response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']") is None:
-    """
-
-    """ SAFE ALTENATIVE
-    response = requests.get(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser"))
-    response = requests.get(min(response.find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).href)
-    releaseDate = BeautifulSoup(requests.get(response.find("img[src*='" + phone.replace(" ", "-") + "--.jpg']").href)).find(".specs-brief-accent").text
-    """
-
-    """
-    print(phone)
-    print(releaseDate)
-
-    year = releaseDate[:-4]
-    month = releaseDate[:3]
-    day = releaseDate[-6:-8].replace(" ", "")
-
-    releaseDate = releaseDate.slice(4, -9).slice(-5, -6)
-    print(releaseDate)
-    print("or is it")
-    print(month + day + year)
-    """
+    phoneReleases[phone] = time[23:27] + monthNumbers[time[29:-16]] + time[-15:]
+    #print(time[23:27] + monthNumbers[time[29:-16]] + time[-15:])
 
     #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
 
+print(phoneReleases)
 #print(phoneVariants[1:-1])
+"""
 
 products = json.loads('''
 {
