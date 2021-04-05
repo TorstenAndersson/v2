@@ -26,7 +26,8 @@ function pageLoaded() {
 }
 
 function smallImgHovered(sender) {
-	document.querySelector(".smallProductImg:not(" + sender + ")").style.visibility = "hidden";
+	document.querySelector("productImg").src = sender.src;
+	//document.querySelector(".smallProductImg:not(" + sender + ")").style.visibility = "hidden";
 }
 
 function buy(sender) {
