@@ -198,6 +198,7 @@ a {
 }
 .smallProductImg {
 	display: block;
+	border-radius: 5px;
 }
 .smallProductImg:hover {
 	border: 1px solid rgb(80, 80, 80);
@@ -208,6 +209,7 @@ a {
 	border: 2px solid rgb(255, 0, 0);
 	width: 100px;
 	height: 100px;
+	border-radius: 15px;
 }
 /*
 .smallProductImg:past { /* not(:hover):not(.first) {
