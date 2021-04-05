@@ -665,7 +665,7 @@ for product in products["products"]:
         for i in range(len(product["perspectives"])):
             perspectives += '''
                         <div class="smallProductFrame">
-                            <img class="smallProductImg" src="/imgs/''' + product["name"] + "/" + product["name"] + " " + product["variants"]["Storlek"][0] + " " + product["perspectives"][i] + '.webp" width="100" height="100" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                            <img class="smallProductImg" src="/imgs/''' + product["name"] + "/" + product["name"] + " " + product["variants"]["Storlek"][0] + " " + product["perspectives"][i] + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
     except KeyError:
         pass
