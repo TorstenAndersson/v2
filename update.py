@@ -54,9 +54,9 @@ for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
     #print(str(response.select_one(".specs-brief-accent")))
     time = str(response.find("span", {"data-spec": "released-hl"}).text.replace(" ", ""))
 
-    print(time)
+    print(time[9:13])
 
-    time = time.replace(time[9:13], "").replace("Released", "")
+    time = time.replace(time[9:13], "").replace("Released,", "")
     day = ':'.join(str(time.index(x)) for x in time if x.isdigit()).split(":")
     print(time)
     print(time[int(day[0]):int(day[1]) + 1])
