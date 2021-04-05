@@ -121,7 +121,7 @@ products = json.loads('''
                 },
                 "original":"349,99 kr"
             },
-            "img":"/imgs/Johans%20Crocs/Johans%20Crocs%20M%20Above.webp",
+            "img":"/imgs/Johans%20Crocs/Johans%20Crocs%20Above.webp",
             "perspectives":[
                 "Above",
                 "Close",
