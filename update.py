@@ -16,38 +16,40 @@ phoneVariants = ""
 
 
 for phone in sorted(os.listdir("imgs/Johans Skal/"), reverse=True):
-    company = ""
-    phone = "iPhone 12 Pro Max"
+    company = ""    
+    phone = "Samsung Galaxy M62"
     if phone[:6] == "iPhone":
         print("It's an iPhone!")
         company = "apple-phones-48.php"
-    if phone[:6] == "Samsung":
+    if phone[:7] == "Samsung":
         print("Yuck! Samsung")
         company = "samsung-phones-9.php"
 
     #First page only
 
-    print(phone[:6])
     print("https://gsmarena.com/" + company)
     print("getting a[href*='" + phone.replace(" ", "_").lower() + "']")
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
-    response = BeautifulSoup(open("log.txt", "r").read(), features="html.parser") #BeautifulSoup(open("log.txt", "r").read(), features="html.parser") #requests.get("https://gsmarena.com/" + company).text
-    print("file now in log.txt!")
 
-    if not os.path.exists("log.txt"):
-        open("log.txt", "x")
-    open("log.txt", "w").write(response.prettify())
+    #response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text)
+    response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
+
+    if not os.path.exists("log.html"):
+        open("log.html", "x")
+    open("log.html", "w").write(response.prettify())
+    print("file now in log.html!")
 
     finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
     print("found " + finding)
 
-    response = BeautifulSoup(open("log2.txt", "r").read(), features="html.parser") #BeautifulSoup(requests.get("https://gsmarena.com/" + finding, features="html.parser")).prettify()
+    #response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding).text, features="html.parser")
+    response = BeautifulSoup(open("log2.html", "r").read(), features="html.parser")
 
-    if not os.path.exists("log2.txt"):
-        open("log2.txt", "x")
-    open("log2.txt", "w").write(response.prettify())
+    if not os.path.exists("log2.html"):
+        open("log2.html", "x")
+    open("log2.html", "w").write(response.prettify())
 
     #print(str(response.select_one(".specs-brief-accent")))
     time = str(response.find("span", {"data-spec": "released-hl"}).text.replace(" ", ""))
