@@ -129,7 +129,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
 
 for phone in phoneReleases.keys():
     phoneVariants += '''
-                    "''' + phone[12:-5] + '",'
+                    "''' + phone + '",'
 #print(phoneVariants[1:-1])
 
 products = json.loads('''
