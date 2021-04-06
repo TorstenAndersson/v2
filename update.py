@@ -23,7 +23,7 @@ phoneReleases = {}
 
 for phone in os.listdir("imgs/Johans Skal/"):
     company = ""
-    phone = phone[12:-4]
+    phone = phone[12:-5]
     print(phone)
 
     if phone[:6] == "iPhone":
