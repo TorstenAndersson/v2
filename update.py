@@ -19,7 +19,8 @@ for phone in sorted(os.listdir("imgs/Johans Skal/")):
 
 #document.querySelector(".specs-brief-accent").textContent
 
-phoneReleases = {}
+apple = {}
+samsu = {}
 
 for phone in os.listdir("imgs/Johans Skal/"):
     company = ""
@@ -68,6 +69,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
                 response = BeautifulSoup(requests.get("https://gsmarena.com/" + company2Path[10:-4]).text, features="html.parser")
                 open(company2Path, "x")
                 open(company2Path, "w").write(str(response))
+
     """
     try:
         finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
@@ -120,17 +122,20 @@ for phone in os.listdir("imgs/Johans Skal/"):
 
     print("this released " + time[9:13] + monthNumbers[time[15:-3]] + time[-2:])
 
-    phoneReleases[phone] = time[9:13] + monthNumbers[time[15:-3]] + str(int(time[-2:]) + len(phone))
+    eval(company[0:5])[phone] = time[9:13] + monthNumbers[time[15:-3]] + str(int(time[-2:]) + len(phone))
 
-    open("phoneInfo/releaseDates.txt", "w").write(str(dict(sorted(phoneReleases.items(), key=lambda item: item[1]))))
+    open("phoneInfo/releaseDates.txt", "w").write(str(dict(sorted(eval(company[0:5]).items(), key=lambda item: item[1]))))
     #print(time[23:27] + monthNumbers[time[29:-16]] + time[-15:])
 
     #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
 
-for phone in dict(sorted(phoneReleases.items(), key=lambda item: item[1], reverse=True)).keys():
+for phone in dict(sorted(apple.items(), key=lambda item: item[1], reverse=True)).keys():
     phoneVariants += '''
                     "''' + phone + '",'
-
+for phone in dict(sorted(samsu.items(), key=lambda item: item[1], reverse=True)).keys():
+    phoneVariants += '''
+                    "''' + phone + '",'
+                    
 #print(phoneVariants[1:-1])
 
 products = json.loads('''
