@@ -35,7 +35,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
         phone = phone.replace(" Plus", "+")
 
     print("https://gsmarena.com/" + company)
-    print("getting a[href*='" + phone.replace(" ", "_").lower() + "']")
+    print("getting a[href*='" + phone.replace(" ", "_").lower() + "-']")
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
@@ -59,7 +59,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
     """
     finding = None
     while finding is None:
-        finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']")
+        finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "-']")
         if finding is None:
             company2Path = "phoneInfo/" + response.find("a", {"class": "pages-next"}).get("href") + ".txt"
             if os.path.exists(company2Path):
