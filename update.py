@@ -117,6 +117,9 @@ for phone in os.listdir("imgs/Johans Skal/"):
         "November": "11",
         "December": "12"
     }
+
+    print("this released " + time[9:13] + monthNumbers[time[15:-3]] + time[-2:])
+
     phoneReleases[phone] = time[9:13] + monthNumbers[time[15:-3]] + time[-2:]
 
     open("phoneInfo/releaseDates.txt", "w").write(str(dict(sorted(phoneReleases.items(), key=lambda item: item[1]))))
