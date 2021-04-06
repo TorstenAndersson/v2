@@ -119,15 +119,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
     }
     phoneReleases[phone] = time[9:13] + monthNumbers[time[15:-3]] + time[-2:]
 
-    def pretty(d, indent=0):
-        for key, value in d.items():
-            print('\t' * indent + str(key))
-            if isinstance(value, dict):
-                pretty(value, indent+1)
-            else:
-                print('\t' * (indent+1) + str(value))
-
-    open("phoneInfo/releaseDates.txt", "w").write(str(pretty(phoneReleases)))
+    open("phoneInfo/releaseDates.txt", "w").write(str(json.dumps(phoneReleases)))
     #print(time[23:27] + monthNumbers[time[29:-16]] + time[-15:])
 
     #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
