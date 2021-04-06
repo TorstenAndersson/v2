@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 phoneVariants = ""
 
+"""
 for phone in sorted(os.listdir("imgs/Johans Skal/")):
     phoneVariants += '''
                     "''' + phone[12:-5] + '",'
@@ -21,7 +22,8 @@ for phone in sorted(os.listdir("imgs/Johans Skal/")):
 phoneReleases = {}
 
 for phone in sorted(os.listdir("imgs/Johans Skal/")):
-    company = ""    
+    company = ""
+    print(phone)
 
     if phone[:6] == "iPhone":
         print("It's an iPhone!")
@@ -35,23 +37,44 @@ for phone in sorted(os.listdir("imgs/Johans Skal/")):
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
+    companyPath = "/phoneInfo/" + company + ".txt"
 
-    response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
+    print(companyPath)
+    break
+
+    if os.path.exists(companyPath):
+        response = BeautifulSoup(open(companyPath, "r").read(), features="html.parser")
+    else: 
+        response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
+        open(companyPath, "x")
+        open(companyPath, "w").write(response)
+
     #response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
 
+    """
     if not os.path.exists("log.html"):
         open("log.html", "x")
     open("log.html", "w").write(response.prettify())
+    """
 
     finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
     print("found " + finding)
 
-    response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding).text, features="html.parser")
+    phonePath = "/phoneInfo/" + phone + ".txt"
+    if os.path.exists(phonePath):
+        response = BeautifulSoup(open(phonePath, "r").read(), features="html.parser")
+    else:
+        response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding).text, features="html.parser")
+        open(phonePath, "x")
+        open(phonePath, "w").write(response)
+
     #response = BeautifulSoup(open("log2.html", "r").read(), features="html.parser")
 
+    """
     if not os.path.exists("log2.html"):
         open("log2.html", "x")
     open("log2.html", "w").write(response.prettify())
+    """
 
     #print(str(response.select_one(".specs-brief-accent")))
     time = str(response.find("span", {"data-spec": "released-hl"}).text)
@@ -80,7 +103,6 @@ for phone in sorted(os.listdir("imgs/Johans Skal/")):
 
 print(phoneReleases)
 #print(phoneVariants[1:-1])
-"""
 
 products = json.loads('''
 {
