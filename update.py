@@ -127,9 +127,10 @@ for phone in os.listdir("imgs/Johans Skal/"):
 
     #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
 
-for phone in phoneReleases.keys():
+for phone in dict(sorted(phoneReleases.items(), key=lambda item: item[1])).keys():
     phoneVariants += '''
                     "''' + phone + '",'
+
 #print(phoneVariants[1:-1])
 
 products = json.loads('''
