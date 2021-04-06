@@ -32,23 +32,23 @@ for phone in os.listdir("imgs/Johans Skal/"):
     if phone[:7] == "Samsung":
         print("Yuck! Samsung")
         company = "samsung-phones-9.php"
+        phone = phone.replace(" Plus", "+")
 
     print("https://gsmarena.com/" + company)
     print("getting a[href*='" + phone.replace(" ", "_").lower() + "']")
 
     #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
 
-    companyPath = "/phoneInfo/" + company + ".txt"
+    companyPath = "phoneInfo/" + company + ".txt"
 
     print(companyPath)
-    break
 
     if os.path.exists(companyPath):
         response = BeautifulSoup(open(companyPath, "r").read(), features="html.parser")
     else: 
         response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
         open(companyPath, "x")
-        open(companyPath, "w").write(response)
+        open(companyPath, "w").write(str(response))
 
     #response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
 
@@ -57,17 +57,40 @@ for phone in os.listdir("imgs/Johans Skal/"):
         open("log.html", "x")
     open("log.html", "w").write(response.prettify())
     """
+    finding = None
+    while finding is None:
+        finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']")
+        if finding is None:
+            company2Path = "phoneInfo/" + response.find("a", {"class": "pages-next"}).get("href") + ".txt"
+            if os.path.exists(company2Path):
+                response = BeautifulSoup(open(company2Path, "r").read(), features="html.parser")
+            else: 
+                response = BeautifulSoup(requests.get("https://gsmarena.com/" + company2Path[10:-4]).text, features="html.parser")
+                open(company2Path, "x")
+                open(company2Path, "w").write(str(response))
+    """
+    try:
+        finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
+    except AttributeError:
+        company2Path = response.find("a", {"class": "pages-next"}).href
+        if os.path.exists(companyPath):
+            response = BeautifulSoup(open(companyPath, "r").read(), features="html.parser")
+        else: 
+            response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
+            open(companyPath, "x")
+            open(companyPath, "w").write(str(response))
 
-    finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
-    print("found " + finding)
+    """
 
-    phonePath = "/phoneInfo/" + phone + ".txt"
+    print("found " + finding.get("href"))
+
+    phonePath = "phoneInfo/" + phone + ".txt"
     if os.path.exists(phonePath):
         response = BeautifulSoup(open(phonePath, "r").read(), features="html.parser")
     else:
-        response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding).text, features="html.parser")
+        response = BeautifulSoup(requests.get("https://gsmarena.com/" + finding.get("href")).text, features="html.parser")
         open(phonePath, "x")
-        open(phonePath, "w").write(response)
+        open(phonePath, "w").write(str(response))
 
     #response = BeautifulSoup(open("log2.html", "r").read(), features="html.parser")
 
@@ -94,8 +117,8 @@ for phone in os.listdir("imgs/Johans Skal/"):
         "November": "11",
         "December": "12"
     }
-
-    phoneReleases[phone] = time[23:27] + monthNumbers[time[29:-16]] + time[-15:]
+    phoneReleases[phone] = time[9:13] + monthNumbers[time[15:-3]] + time[-2:]
+    open("phoneInfo/releaseDates.txt", "w").write(str(phoneReleases))
     #print(time[23:27] + monthNumbers[time[29:-16]] + time[-15:])
 
     #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
@@ -764,6 +787,6 @@ for product in products["products"]:
 
 # Update git with new changes
  
-os.system("git add -- . :!./.vscode/* :!*DS_Store")
+os.system("git add -- . :!./.vscode/* :!*DS_Store :!./phoneInfo/*")
 os.system("git commit -m 'updated!'")
 os.system("git push")
