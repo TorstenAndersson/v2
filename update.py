@@ -21,8 +21,9 @@ for phone in sorted(os.listdir("imgs/Johans Skal/")):
 
 phoneReleases = {}
 
-for phone in sorted(os.listdir("imgs/Johans Skal/")):
+for phone in os.listdir("imgs/Johans Skal/"):
     company = ""
+    phone = phone[12:]
     print(phone)
 
     if phone[:6] == "iPhone":
