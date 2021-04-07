@@ -102,10 +102,6 @@ products = json.loads('''
                 "original":"499,99 kr"
             },
             "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20White%20Front.webp",
-            "perspectives":[
-                "Front",
-                "Back"
-            ],
             "variants":{
                 "Färg":[
                     "White",
@@ -121,6 +117,10 @@ products = json.loads('''
                     "Red"
                 ]
             },
+            "perspectives":[
+                "Front",
+                "Back"
+            ],
             "type":"merchandise",
             "onDisplay":"False"
         },{
@@ -134,11 +134,6 @@ products = json.loads('''
                 "original":"349,99 kr"
             },
             "img":"/imgs/Johans%20Crocs/Johans%20Crocs%20S%20Above.webp",
-            "perspectives":[
-                "Above",
-                "AboveBelow",
-                "Close"
-            ],
             "variants":{
                 "Storlek":[
                     "S",
@@ -146,6 +141,11 @@ products = json.loads('''
                     "L"
                 ]
             },
+            "perspectives":[
+                "Above",
+                "AboveBelow",
+                "Close"
+            ],
             "type":"merchandise",
             "onDisplay":"True"
         },{
@@ -678,9 +678,10 @@ for product in products["products"]:
             first = ""
             if i == 0:
                 first = " selected"
+            print(list(product["variants"]))
             perspectives += '''
                         <div class="smallProductFrame">
-                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + " " + list(product["variants"])[0][0] + " " + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + list(product["variants"])[0][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
     except KeyError:
         pass
