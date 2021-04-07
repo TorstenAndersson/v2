@@ -34,6 +34,13 @@ function smallImgHovered(sender) {
 	document.querySelector(".productImg").src = sender.src.slice(51);
 }
 
+function variantChanged() {
+	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))
+	for (const i2 in smallImgs) {
+		smallImgs[i2].href = smallImgs.href.replace(smallImgs.src[90], document.querySelector(".variantSelect").value)
+	}
+}
+
 function buy(sender) {
 	localStorage.setItem("cart", localStorage.getItem("cart") + sender.parentElement.parentElement.firstElementChild.innerHTML + ",");
 	var cartItems = document.querySelector(".cartItemsNumber");

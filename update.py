@@ -644,7 +644,7 @@ for product in products["products"]:
             
             variantDiv += '''            <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
-                            <select class="variantSelect" required>
+                            <select class="variantSelect" onchange="variantChanged()" required>
                                 <option class="placeholderVariantOption" selected></option>''' + options + ''' 
                             </select>
                         </div>
