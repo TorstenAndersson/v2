@@ -4,46 +4,23 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
-#session = requests.session
-
-# Creating a variable for JSON info
+# Sorting phones by release dates!
 
 phoneVariants = ""
-
-"""
-for phone in sorted(os.listdir("imgs/Johans Skal/")):
-    phoneVariants += '''
-                    "''' + phone[12:-5] + '",'
-"""
-#document.querySelector("img[src*='iphone-12-pro--.jpg']")
-
-#document.querySelector(".specs-brief-accent").textContent
-
 apple = {}
 samsu = {}
 
 for phone in os.listdir("imgs/Johans Skal/"):
     company = ""
     phone = phone[12:-5]
-    print(phone)
 
     if phone[:6] == "iPhone":
-        print("It's an iPhone!")
         company = "apple-phones-48.php"
     if phone[:7] == "Samsung":
-        print("Yuck! Samsung")
         company = "samsung-phones-9.php"
         phone = phone.replace(" Plus", "+")
 
-    print("https://gsmarena.com/" + company)
-    print("getting a[href*='" + phone.replace(" ", "_").lower() + "-']")
-
-    #releaseDate = BeautifulSoup(requests.get(min(BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser").find_all("img[src*='" + phone.replace(" ", "-") + "]"), key=len).previousSibling.href)).find(".specs-brief-accent").strip()
-
     companyPath = "phoneInfo/" + company + ".txt"
-
-    print(companyPath)
-
     if os.path.exists(companyPath):
         response = BeautifulSoup(open(companyPath, "r").read(), features="html.parser")
     else: 
@@ -51,13 +28,6 @@ for phone in os.listdir("imgs/Johans Skal/"):
         open(companyPath, "x")
         open(companyPath, "w").write(str(response))
 
-    #response = BeautifulSoup(open("log.html", "r").read(), features="html.parser")
-
-    """
-    if not os.path.exists("log.html"):
-        open("log.html", "x")
-    open("log.html", "w").write(response.prettify())
-    """
     finding = None
     while finding is None:
         finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "-']")
@@ -70,22 +40,6 @@ for phone in os.listdir("imgs/Johans Skal/"):
                 open(company2Path, "x")
                 open(company2Path, "w").write(str(response))
 
-    """
-    try:
-        finding = response.select_one("a[href*='" + phone.replace(" ", "_").lower() + "']").get("href")
-    except AttributeError:
-        company2Path = response.find("a", {"class": "pages-next"}).href
-        if os.path.exists(companyPath):
-            response = BeautifulSoup(open(companyPath, "r").read(), features="html.parser")
-        else: 
-            response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
-            open(companyPath, "x")
-            open(companyPath, "w").write(str(response))
-
-    """
-
-    print("found " + finding.get("href"))
-
     phonePath = "phoneInfo/" + phone + ".txt"
     if os.path.exists(phonePath):
         response = BeautifulSoup(open(phonePath, "r").read(), features="html.parser")
@@ -94,17 +48,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
         open(phonePath, "x")
         open(phonePath, "w").write(str(response))
 
-    #response = BeautifulSoup(open("log2.html", "r").read(), features="html.parser")
-
-    """
-    if not os.path.exists("log2.html"):
-        open("log2.html", "x")
-    open("log2.html", "w").write(response.prettify())
-    """
-
-    #print(str(response.select_one(".specs-brief-accent")))
     time = str(response.find("span", {"data-spec": "released-hl"}).text)
-
     monthNumbers = {
         "January": "01",
         "February": "02",
@@ -120,14 +64,7 @@ for phone in os.listdir("imgs/Johans Skal/"):
         "December": "12"
     }
 
-    print("this released " + time[9:13] + monthNumbers[time[15:-3]] + time[-2:])
-
     eval(company[0:5])[phone] = time[9:13] + monthNumbers[time[15:-3]] + str(int(time[-2:]) + len(phone))
-
-    open("phoneInfo/releaseDates.txt", "w").write(str(dict(sorted(eval(company[0:5]).items(), key=lambda item: item[1]))))
-    #print(time[23:27] + monthNumbers[time[29:-16]] + time[-15:])
-
-    #print(BeautifulSoup(.find("img[src*='iphone-12-pro--.jpg']").parent.href)).find(".specs-brief-accent").textContent)
 
 for phone in dict(sorted(apple.items(), key=lambda item: item[1], reverse=True)).keys():
     phoneVariants += '''
@@ -135,9 +72,9 @@ for phone in dict(sorted(apple.items(), key=lambda item: item[1], reverse=True))
 for phone in dict(sorted(samsu.items(), key=lambda item: item[1], reverse=True)).keys():
     phoneVariants += '''
                     "''' + phone + '",'
-                    
-#print(phoneVariants[1:-1])
 
+# Creating a variable for JSON info
+                    
 products = json.loads('''
 {
     "products":[

@@ -177,15 +177,16 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	right: 55%;
+	right: 45%;
 	display: inline;
+	width: 45%;
 }
 .productImg {
 	padding-top: 30px;
+	padding-left: 70px;
 }
 .smallProductDiv {
 	position: absolute;
-	left: -110px;
 	margin-top: -355px;
 }
 .smallProductDiv:first-child {
