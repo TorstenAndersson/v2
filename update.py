@@ -678,7 +678,7 @@ for product in products["products"]:
             first = ""
             if i == 0:
                 first = " selected"
-            print(product["variants"][0][1])
+            print(product["variants"][1])
             perspectives += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["variants"].items()[0][1][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
