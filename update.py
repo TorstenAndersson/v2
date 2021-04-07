@@ -699,7 +699,9 @@ for product in products["products"]:
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
         <link rel="preload" href="/product.css" as="style">
-        <link rel="preload" href="/product.js" as="script">''' + preloadImgs + '''
+        <link rel="preload" href="/product.js" as="script">
+        <link rel="stylesheet" href="/product.css">''' + preloadImgs + '''
+        <script src="/product.js"></script>
     </head>
 
     <body onload="pageLoaded()">
