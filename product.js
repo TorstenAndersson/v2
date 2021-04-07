@@ -36,7 +36,7 @@ function smallImgHovered(sender) {
 
 function variantChanged() {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
-	if (smallImgs != null) {
+	if (smallImgs.length != 0) {
 		for (const i2 in smallImgs) {
 			smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), document.querySelector(".variantSelect").value); //.join("%20") if color is multiple words
 		}
