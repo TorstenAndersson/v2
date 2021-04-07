@@ -34,13 +34,16 @@ function smallImgHovered(sender) {
 	document.querySelector(".productImg").src = sender.src.slice(51);
 }
 
-function variantChanged() {
+function variantChanged(sender) {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length != 0) {
 		for (const i2 in smallImgs) {
-			smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), document.querySelector(".variantSelect").value); //.join("%20") if color is multiple words
+			smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value); //.join("%20") if color is multiple words
 		}
 		smallImgHovered(document.querySelector(".selected"));
+	} else {
+		const productImg = document.querySelector(".productImg").src;
+		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), "Johans%20Skal%20" + sender.value.replace(" ", "%20") + ".webp");
 	}
 }
 
