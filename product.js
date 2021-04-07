@@ -35,10 +35,11 @@ function smallImgHovered(sender) {
 }
 
 function variantChanged() {
-	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))
+	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	for (const i2 in smallImgs) {
-		smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.slice(51)[38], document.querySelector(".variantSelect").value)
+		smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.slice(51)[38], document.querySelector(".variantSelect").value);
 	}
+	smallImgHovered(document.querySelector(".selected"));
 }
 
 function buy(sender) {
