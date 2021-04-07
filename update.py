@@ -102,6 +102,25 @@ products = json.loads('''
                 "original":"499,99 kr"
             },
             "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20White%20Front.webp",
+            "perspectives":[
+                "Front",
+                "Back"
+            ],
+            "variants":{
+                "Färg":[
+                    "White",
+                    "Black",
+                    "Blue",
+                    "DarkHeather",
+                    "Green",
+                    "Grey",
+                    "LightBlue",
+                    "Maroon",
+                    "Navy",
+                    "Pink",
+                    "Red"
+                ]
+            },
             "type":"merchandise",
             "onDisplay":"False"
         },{
