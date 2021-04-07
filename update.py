@@ -673,8 +673,8 @@ for product in products["products"]:
                         </div>
                     '''
         variantDiv += "</div>"
-    except KeyError:
-        pass
+    except Exception as error:
+        print(error)
     
     try:
         perspectives = ""
