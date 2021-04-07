@@ -42,7 +42,7 @@ function variantChanged(sender) {
 		}
 		smallImgHovered(document.querySelector(".selected"));
 	} else {
-		const productImg = document.querySelector(".productImg").src;
+		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), "Johans%20Skal%20" + sender.value.replace(" ", "%20") + ".webp");
 	}
 }
