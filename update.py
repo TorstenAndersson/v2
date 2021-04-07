@@ -691,7 +691,7 @@ for product in products["products"]:
     <head>
         <title>''' + product["name"] + ''' - Johanssudd</title>
         <meta name="keywords" content="''' + product["name"].lower() + ''', johan sudd, johanssudd, johansudd">
-        <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] +'''">
+        <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] + '''">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
