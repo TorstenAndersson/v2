@@ -36,10 +36,12 @@ function smallImgHovered(sender) {
 
 function variantChanged() {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
-	for (const i2 in smallImgs) {
-		smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), document.querySelector(".variantSelect").value); //.join("%20") if color is multiple words
+	if (smallImgs != null) {
+		for (const i2 in smallImgs) {
+			smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), document.querySelector(".variantSelect").value); //.join("%20") if color is multiple words
+		}
+		smallImgHovered(document.querySelector(".selected"));
 	}
-	smallImgHovered(document.querySelector(".selected"));
 }
 
 function buy(sender) {
