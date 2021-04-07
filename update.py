@@ -674,7 +674,7 @@ for product in products["products"]:
         try:
             for perspective in product["perspectives"]:
                     preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
     
@@ -689,7 +689,13 @@ for product in products["products"]:
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + list(product["variants"].items())[0][1][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
     except KeyError:
-        pass
+        try:
+            for variant in product["variants"]:
+                for option in variant:
+                    preloadImgs += '''
+        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        except KeyError:
+            pass
 
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
