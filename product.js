@@ -37,6 +37,7 @@ function smallImgHovered(sender) {
 function variantChanged() {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	for (const i2 in smallImgs) {
+		console.log(smallImgs[i2].src.split("%20"[3]));
 		smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20"[3]), document.querySelector(".variantSelect").value);
 	}
 	smallImgHovered(document.querySelector(".selected"));
