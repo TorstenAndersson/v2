@@ -699,7 +699,7 @@ for product in products["products"]:
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/product.css">
+        <link rel="stylesheet" href="/product.css">''' + preloadImgs + '''
         <script src="/product.js"></script>
     </head>
 
