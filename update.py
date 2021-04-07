@@ -674,6 +674,7 @@ for product in products["products"]:
                     '''
         variantDiv += "</div>"
     except Exception as error:
+        print("HERER COMES AN ERROR")
         print(error)
     
     try:
