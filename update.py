@@ -651,6 +651,7 @@ for product in products["products"]:
         open(path, "x")
 
     variantDiv = ""
+    preloadImgs = ""
     try:
         for variant in product["variants"]:
             variantDiv += '''    
@@ -660,7 +661,11 @@ for product in products["products"]:
             for option in product["variants"][variant]:
                 options += '''
                                 <option>''' + option + '''</option>'''
-            
+                for perspective in product["perspectives"]:
+                    preloadImgs += '''
+                        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">
+                        '''
+
             variantDiv += '''            <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
                             <select class="variantSelect" onchange="variantChanged()" required>
