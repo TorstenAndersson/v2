@@ -36,8 +36,8 @@
             <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20S%20Back.webp" as="image">
             <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20M%20Front.webp" as="image">
             <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20M%20Back.webp" as="image">
-            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20l%20Front.webp" as="image">
-            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20l%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20L%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20L%20Back.webp" as="image">
         <script src="/product.js"></script>
     </head>
 
@@ -92,12 +92,29 @@
                     <span class="productPriceText line">149,99 kr</span>    
                     <div class="variants">
                         <div class="variant">
+                            <label class="variantName">Färg</label>
+                            <select class="variantSelect" onchange="variantChanged(this)" required>
+                                <option class="placeholderVariantOption" selected></option>
+                                <option>Vit</option>
+                                <option>Svart</option>
+                                <option>Blå</option>
+                                <option>Mörkgrå</option>
+                                <option>Grön</option>
+                                <option>Grå</option>
+                                <option>Ljusblå</option>
+                                <option>Rödbrun</option>
+                                <option>Marinblå</option>
+                                <option>Rosa</option>
+                                <option>Röd</option> 
+                            </select>
+                        </div>
+                                <div class="variant">
                             <label class="variantName">Storlek</label>
                             <select class="variantSelect" onchange="variantChanged(this)" required>
                                 <option class="placeholderVariantOption" selected></option>
                                 <option>S</option>
                                 <option>M</option>
-                                <option>l</option> 
+                                <option>L</option> 
                             </select>
                         </div>
                     </div>
