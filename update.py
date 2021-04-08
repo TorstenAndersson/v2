@@ -673,14 +673,14 @@ for product in products["products"]:
                 except:
                     pass
 
-            variantDiv += '''            <div class="variant">
+        variantDiv += '''            <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
                             <select class="variantSelect" onchange="variantChanged(this)" required>
                                 <option class="placeholderVariantOption" selected></option>''' + options + ''' 
                             </select>
                         </div>
                     '''
-            variantDiv += "</div>"
+        variantDiv += "</div>"
     except KeyError:
         try:
             for perspective in product["perspectives"]:
