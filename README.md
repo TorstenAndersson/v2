@@ -1,5 +1,5 @@
 # Johanssudd
-The official open source code of the website [Johanssudd.se](https://johanssudd.se).
+The official open source code of the website [johanssudd.se](https://johanssudd.se).
 ###### Copyright © 2021 Johanssudd. All Rights Reserved
 
 #TODO
