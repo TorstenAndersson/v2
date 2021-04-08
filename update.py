@@ -666,12 +666,9 @@ for product in products["products"]:
             for option in product["variants"][variant]:
                 options += '''
                                 <option>''' + option + '''</option>'''
-                try:
-                    for perspective in product["perspectives"]:
-                        preloadImgs += '''
+                for perspective in product["perspectives"]:
+                    preloadImgs += '''
             <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
-                except:
-                    pass
 
         variantDiv += '''            <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
