@@ -115,6 +115,11 @@ products = json.loads('''
                     "Marinblå",
                     "Rosa",
                     "Röd"
+                ],
+                "Storlek":[
+                    "S",
+                    "M",
+                    "l"
                 ]
             },
             "perspectives":[
@@ -667,6 +672,7 @@ for product in products["products"]:
             <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
                 except:
                     pass
+
             variantDiv += '''            <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
                             <select class="variantSelect" onchange="variantChanged(this)" required>
