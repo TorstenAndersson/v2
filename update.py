@@ -658,10 +658,11 @@ for product in products["products"]:
     variantDiv = ""
     preloadImgs = ""
     try:
-        for variant in product["variants"]:
-            variantDiv += '''    
+        product["variants"]
+        variantDiv += '''    
                     <div class="variants">
             '''
+        for variant in product["variants"]:
             options = ""
             for option in product["variants"][variant]:
                 options += '''
@@ -677,6 +678,7 @@ for product in products["products"]:
                             </select>
                         </div>
                     '''
+
         variantDiv += "</div>"
     except KeyError:
         try:
