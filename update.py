@@ -761,8 +761,7 @@ for product in products["products"]:
             </div>
             <div class="productFrame">
                 <div class="imgFrame">
-                    <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">
-                    ''' + perspectiveDiv + '''
+                    <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
                     </div>
                 </div>
                 <div class="textFrame">
