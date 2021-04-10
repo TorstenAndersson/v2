@@ -703,7 +703,7 @@ for product in products["products"]:
                         </div>'''
 
         perspectiveDiv += '''
-        </div>'''
+                    </div>'''
     except KeyError:
         try:
             for variant in product["variants"]:
