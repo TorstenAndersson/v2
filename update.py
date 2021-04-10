@@ -103,28 +103,24 @@ products = json.loads('''
             },
             "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20Vit%20Front.webp",
             "variants":{
-                "imgImpacting":{
-                    "Färg":[
-                        "Vit",
-                        "Svart",
-                        "Blå",
-                        "Mörkgrå",
-                        "Grön",
-                        "Grå",
-                        "Ljusblå",
-                        "Rödbrun",
-                        "Marinblå",
-                        "Rosa",
-                        "Röd"
-                    ]
-                },
-                "nonImgImpacting":{
-                    "Storlek":[
-                        "S",
-                        "M",
-                        "L"
-                    ]
-                }
+                "Färg":[
+                    "Vit",
+                    "Svart",
+                    "Blå",
+                    "Mörkgrå",
+                    "Grön",
+                    "Grå",
+                    "Ljusblå",
+                    "Rödbrun",
+                    "Marinblå",
+                    "Rosa",
+                    "Röd"
+                ],
+                "Storlek":[
+                    "S",
+                    "M",
+                    "L"
+                ]
             },
             "perspectives":[
                 "Front",
@@ -659,26 +655,21 @@ for product in products["products"]:
     if not os.path.exists(path):
         open(path, "x")
 
-    variantDiv = ""
     preloadImgs = ""
+    variantDiv = ""
     try:
         product["variants"]
         variantDiv += '''    
                     <div class="variants">
                     '''
-        for variant in product["variants"]["imgImpacting"]:
+        for variant in product["variants"]:
             options = ""
-            for option in product["variants"]["imgImpacting"][variant]:
+            for option in product["variants"][variant]:
                 options += '''
                                 <option>''' + option + '''</option>'''
                 for perspective in product["perspectives"]:
                     preloadImgs += '''
             <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
-        for variant in product["variants"]["nonImgImpacting"]:
-            options = ""
-            for option in product["variants"]["nonImgImpacting"][variant]:
-                options += '''
-                                <option>''' + option + '''</option>'''
         
             variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
@@ -697,16 +688,19 @@ for product in products["products"]:
         except KeyError:
             pass
     
+    perspectiveDiv = ""
     try:
-        perspectives = ""
+        product["perspectives"]
+        perspectiveDiv = '<div class="smallProductDiv">'
         for i in range(len(product["perspectives"])):
             first = ""
             if i == 0:
                 first = " selected"
-            perspectives += '''
+            perspectiveDiv += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + list(product["variants"].items())[0][1][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
+            perspectiveDiv += '</div>'
     except KeyError:
         try:
             for variant in product["variants"]:
@@ -766,7 +760,7 @@ for product in products["products"]:
             <div class="productFrame">
                 <div class="imgFrame">
                     <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">
-                    <div class="smallProductDiv">''' + perspectives + '''
+                    ''' + perspectiveDiv + '''
                     </div>
                 </div>
                 <div class="textFrame">
