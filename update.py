@@ -103,24 +103,28 @@ products = json.loads('''
             },
             "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20Vit%20Front.webp",
             "variants":{
-                "Färg":[
-                    "Vit",
-                    "Svart",
-                    "Blå",
-                    "Mörkgrå",
-                    "Grön",
-                    "Grå",
-                    "Ljusblå",
-                    "Rödbrun",
-                    "Marinblå",
-                    "Rosa",
-                    "Röd"
-                ],
-                "Storlek":[
-                    "S",
-                    "M",
-                    "L"
-                ]
+                "imgImpacting":{
+                    "Färg":[
+                        "Vit",
+                        "Svart",
+                        "Blå",
+                        "Mörkgrå",
+                        "Grön",
+                        "Grå",
+                        "Ljusblå",
+                        "Rödbrun",
+                        "Marinblå",
+                        "Rosa",
+                        "Röd"
+                    ]
+                },
+                "nonImgImpacting":{
+                    "Storlek":[
+                        "S",
+                        "M",
+                        "L"
+                    ]
+                }
             },
             "perspectives":[
                 "Front",
@@ -163,7 +167,7 @@ products = json.loads('''
                 },
                 "original":"149,99 kr"
             },
-            "img":"/imgs/Johans Skal/Johans%20Skal%20iPhone%2012%20Pro%20Max.webp",
+            "img":"/imgs/Johans%20Skal/Johans%20Skal%20iPhone%2012%20Pro%20Max.webp",
             "variants":{
                 "Modell": [''' + phoneVariants[1:-1] + '''
                 ]
@@ -662,7 +666,7 @@ for product in products["products"]:
         variantDiv += '''    
                     <div class="variants">
                     '''
-        for variant in product["variants"]:
+        for variant in product["variants"]["imgImpacting"]:
             options = ""
             for option in product["variants"][variant]:
                 options += '''
@@ -670,11 +674,16 @@ for product in products["products"]:
                 for perspective in product["perspectives"]:
                     preloadImgs += '''
             <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        for variant in product["variants"]["nonImgImpacting"]:
+            options = ""
+            for option in product["variants"][variant]:
+                options += '''
+                                <option>''' + option + '''</option>'''
         
             variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
                             <select class="variantSelect" onchange="variantChanged(this)" required>
-                                <option class="placeholderVariantOption" selected></option>''' + options + ''' 
+                                <option class="placeholderVariantOption" selected></option>''' + options + '''
                             </select>
                         </div>
                     '''
@@ -780,3 +789,9 @@ for product in products["products"]:
 os.system("git add -- . :!./.vscode/* :!*DS_Store :!./phoneInfo/*")
 os.system("git commit -m 'updated!'")
 os.system("git push")
+
+# NOTES
+
+"""
+1050px- big screen
+"""
