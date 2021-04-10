@@ -10,8 +10,28 @@
         <link rel="preload" href="/product.css" as="style">
         <link rel="preload" href="/product.js" as="script">
         <link rel="stylesheet" href="/product.css">
-        <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Front.webp" as="image">
-        <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Vit%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Vit%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Svart%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Svart%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Blå%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Blå%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Mörkgrå%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Mörkgrå%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Grön%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Grön%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Grå%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Grå%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Ljusblå%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Ljusblå%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Rödbrun%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Rödbrun%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Marinblå%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Marinblå%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Rosa%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Rosa%20Back.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Röd%20Front.webp" as="image">
+            <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Röd%20Back.webp" as="image">
         <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Färg.webp" as="image">
         <link rel="preload" href="/imgs/Johans%20Hoodie/Johans%20Hoodie%20Storlek.webp" as="image">
         <script src="/product.js"></script>
@@ -61,7 +81,16 @@
                     <span class="productPriceText discountedPrice">499,99 kr</span>
                     <span class="productPriceText line">149,99 kr</span>    
                     <div class="variants">
-                    
+                        <div class="variant">
+                            <label class="variantName">Storlek</label>
+                            <select class="variantSelect" onchange="variantChanged(this)" required>
+                                <option class="placeholderVariantOption" selected></option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="cartAddDiv">
                         <button class="cartAdd" onclick="buy(this)" readonly>Lägg I Kundvagn</button>
                     </div>

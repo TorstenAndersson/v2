@@ -668,7 +668,7 @@ for product in products["products"]:
                     '''
         for variant in product["variants"]["imgImpacting"]:
             options = ""
-            for option in product["variants"][variant]:
+            for option in product["variants"]["imgImpacting"][variant]:
                 options += '''
                                 <option>''' + option + '''</option>'''
                 for perspective in product["perspectives"]:
@@ -676,7 +676,7 @@ for product in products["products"]:
             <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         for variant in product["variants"]["nonImgImpacting"]:
             options = ""
-            for option in product["variants"][variant]:
+            for option in product["variants"]["nonImgImpacting"][variant]:
                 options += '''
                                 <option>''' + option + '''</option>'''
         
