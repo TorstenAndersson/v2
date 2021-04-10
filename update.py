@@ -691,9 +691,8 @@ for product in products["products"]:
     perspectiveDiv = ""
     try:
         product["perspectives"]
-        perspectiveDiv = '''
-            <div class="smallProductDiv">
-            '''
+        perspectiveDiv =        '''
+                    <div class="smallProductDiv">'''
         for i in range(len(product["perspectives"])):
             first = ""
             if i == 0:
