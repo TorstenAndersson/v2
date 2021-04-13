@@ -86,14 +86,31 @@
                     <span class="productPriceText line">149,99 kr</span>    
                     <div class="variants">
                         <div class="variant">
-                            <label class="variantName">Färg</label>
-                            <select class="variantSelect" onchange="variantChanged(this)" required>
-                                <option class="placeholderVariantOption" selected></option>
+                                <label class="variantName">Färg</label>
+                                <select class="variantSelect" onchange="variantChanged(this)" required>
+                                    <option class="placeholderVariantOption" selected></option>
+                                    <option>Vit</option>
+                                    <option>Svart</option>
+                                    <option>Blå</option>
+                                    <option>Mörkgrå</option>
+                                    <option>Grön</option>
+                                    <option>Grå</option>
+                                    <option>Ljusblå</option>
+                                    <option>Rödbrun</option>
+                                    <option>Marinblå</option>
+                                    <option>Rosa</option>
+                                    <option>Röd</option>
+                                </select>
+                            </div>
+                        <div class="variant">
+                                <label class="variantName">Storlek</label>
+                                <select class="variantSelect" onchange="variantChanged(this)" required>
+                                    <option class="placeholderVariantOption" selected></option>
                                     <option>S</option>
                                     <option>M</option>
                                     <option>L</option>
-                            </select>
-                        </div>
+                                </select>
+                            </div>
                     </div>
                     <div class="cartAddDiv">
                         <button class="cartAdd" onclick="buy(this)" readonly>Lägg I Kundvagn</button>

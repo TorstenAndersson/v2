@@ -672,6 +672,15 @@ for product in products["products"]:
                 for option in product["variants"][category][variant]:
                     options += '''
                                     <option>''' + option + '''</option>'''
+
+            variantDiv += '''    <div class="variant">
+                                <label class="variantName">''' + variant + '''</label>
+                                <select class="variantSelect" onchange="variantChanged(this)" required>
+                                    <option class="placeholderVariantOption" selected></option>''' + options + '''
+                                </select>
+                            </div>
+                    '''
+
         try:
             for variant in product["variants"]["imgAffecting"]:
                 for option in product["variants"]["imgAffecting"][variant]:
@@ -681,15 +690,6 @@ for product in products["products"]:
         except KeyError:
             pass
         
-        print(options)
-        variantDiv += '''    <div class="variant">
-                            <label class="variantName">''' + variant + '''</label>
-                            <select class="variantSelect" onchange="variantChanged(this)" required>
-                                <option class="placeholderVariantOption" selected></option>''' + options + '''
-                            </select>
-                        </div>
-                    '''
-
         variantDiv += "</div>"
     except KeyError:
         try:
