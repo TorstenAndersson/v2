@@ -705,7 +705,6 @@ for product in products["products"]:
             first = ""
             if i == 0:
                 first = " selected"
-            print(list(product["variants"].items())[0][1]["Färg"][0])
             try:
                 for variant in products["variants"]["imgAffecting"]:
                     perspectiveDiv += '''
@@ -713,6 +712,7 @@ for product in products["products"]:
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + list(product["variants"].items())[0][0][variant][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
             except KeyError:
+                print("i got an error mate")
                 perspectiveDiv += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
