@@ -103,24 +103,28 @@ products = json.loads('''
             },
             "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20Vit%20Front.webp",
             "variants":{
-                "Färg":[
-                    "Vit",
-                    "Svart",
-                    "Blå",
-                    "Mörkgrå",
-                    "Grön",
-                    "Grå",
-                    "Ljusblå",
-                    "Rödbrun",
-                    "Marinblå",
-                    "Rosa",
-                    "Röd"
-                ],
-                "Storlek":[
-                    "S",
-                    "M",
-                    "L"
-                ]
+                "imgAffecting":{
+                    "Färg":[
+                        "Vit",
+                        "Svart",
+                        "Blå",
+                        "Mörkgrå",
+                        "Grön",
+                        "Grå",
+                        "Ljusblå",
+                        "Rödbrun",
+                        "Marinblå",
+                        "Rosa",
+                        "Röd"
+                    ]
+                },
+                "notImgAffecting":{
+                    "Storlek":[
+                        "S",
+                        "M",
+                        "L"
+                    ]
+                } 
             },
             "perspectives":[
                 "Front",
@@ -140,11 +144,13 @@ products = json.loads('''
             },
             "img":"/imgs/Johans%20Crocs/Johans%20Crocs%20S%20Above.webp",
             "variants":{
-                "Storlek":[
-                    "S",
-                    "M",
-                    "L"
-                ]
+                "notImgAffecting":{
+                    "Storlek":[
+                        "S",
+                        "M",
+                        "L"
+                    ]
+                }
             },
             "perspectives":[
                 "Above",
@@ -165,8 +171,10 @@ products = json.loads('''
             },
             "img":"/imgs/Johans%20Skal/Johans%20Skal%20iPhone%2012%20Pro%20Max.webp",
             "variants":{
-                "Modell": [''' + phoneVariants[1:-1] + '''
-                ]
+                "imgAffecting":{
+                    "Modell": [''' + phoneVariants[1:-1] + '''
+                    ]
+                }
             },
             "type":"merchandise",
             "onDisplay":"True"
@@ -182,10 +190,6 @@ for product in products["products"]:
     eval(product["type"]).append(product)
     if eval(product["onDisplay"]):
         onDisplay.append(product)
-
-#print(sudd)
-#print(merchandise)
-#print(onDisplay)
 
 # Creating basic files
 
