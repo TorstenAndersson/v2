@@ -38,7 +38,8 @@ function variantChanged(sender) {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length != 0) {
 		for (const i2 in smallImgs) {
-			smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value); //.join("%20") if color is multiple words
+			if (sender.innerText.includes(smallImgs[i2].src.split("%20").slice(3, -1)))
+				smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value); //.join("%20") if color is multiple words
 		}
 		smallImgHovered(document.querySelector(".selected"));
 	} else {

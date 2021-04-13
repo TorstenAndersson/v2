@@ -689,8 +689,6 @@ for product in products["products"]:
         except KeyError:
             pass
         
-        print(options)
-
         variantDiv += "</div>"
     except KeyError:
         try:
