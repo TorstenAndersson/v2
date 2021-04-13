@@ -667,6 +667,7 @@ for product in products["products"]:
                     <div class="variants">
                     '''
         for category in product["variants"]:
+            print(category)
             for variant in product["variants"][category]:
                 options = ""
                 for option in product["variants"][category][variant]:
