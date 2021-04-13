@@ -185,6 +185,35 @@ products = json.loads('''
 sudd = []
 merchandise = []
 onDisplay = []
+imgs = {}
+
+"""
+for product in products["products"]:
+    imgs[product["name"]] = (product["name"] + "/" + product["name"]).replace(" ", "%20")
+    if product["variants"]["imgAffecting"] is not None:
+        if product["perspectives"] is not None:
+            imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20")
+        else:
+            imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20")
+    if product["perspectives"] is not None:
+        imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20")
+"""
+
+for product in products["products"]:
+    imgs[product["name"]] = (product["name"] + "/" + product["name"]).replace(" ", "%20")
+    try:
+        product["variants"]
+        try:
+            product["perspectives"]
+            imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20")
+        except:
+            mgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20")
+    except:
+        try:
+            product["perspectives"]
+            imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20")
+        except KeyError:
+            pass
 
 for product in products["products"]:
     eval(product["type"]).append(product)
@@ -208,7 +237,7 @@ for product in onDisplay:
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                             <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                            <img src="''' + product["img"] +  '''" width="430px" height="430px" alt="''' + product["name"] + '''">
+                            <img src="''' + imgs[product["name"]] +  '''" width="430px" height="430px" alt="''' + product["name"] + '''">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
@@ -386,7 +415,7 @@ for product in sudd:
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
+                        <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
@@ -464,7 +493,7 @@ for product in merchandise:
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
-                        <img class="productImg" src="''' + product["img"] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
+                        <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
                             <span class="productPriceText">''' + product["price"]["original"] + '''</span>
@@ -779,7 +808,7 @@ for product in products["products"]:
             </div>
             <div class="productFrame">
                 <div class="imgFrame">
-                    <img class="productImg" src="''' + product["img"] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
+                    <img class="productImg" src="/imgs/''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
                 </div>
                 <div class="textFrame">
                     <span class="productHeader">''' + product["name"] + '''</span>
