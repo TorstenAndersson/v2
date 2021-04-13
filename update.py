@@ -708,7 +708,7 @@ for product in products["products"]:
             #try:
             print("hi hello")
             if True:
-                print(products["variants"]["imgAffecting"])
+                print("hi hello")
                 for variant in products["variants"]["imgAffecting"]:
                     print(list(product["variants"].items())[0][0])
                     perspectiveDiv += '''
