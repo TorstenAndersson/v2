@@ -681,6 +681,7 @@ for product in products["products"]:
         except KeyError:
             pass
         
+        print(options)
         variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
                             <select class="variantSelect" onchange="variantChanged(this)" required>
