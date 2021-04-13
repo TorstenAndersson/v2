@@ -705,19 +705,17 @@ for product in products["products"]:
             first = ""
             if i == 0:
                 first = " selected"
-            #try:
-            if True:
+            try:
                 for variant in product["variants"]["imgAffecting"]:
-                    print(product["variants"]["imgAffecting"][variant][0])
                     perspectiveDiv += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][variant][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
-            #except KeyError:
-            #    perspectiveDiv += '''
-            #            <div class="smallProductFrame">
-            #                <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
-            #            </div>'''
+            except KeyError:
+                perspectiveDiv += '''
+                        <div class="smallProductFrame">
+                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                        </div>'''
 
         perspectiveDiv += '''
                     </div>'''
