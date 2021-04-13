@@ -672,12 +672,14 @@ for product in products["products"]:
                 for option in product["variants"][category][variant]:
                     options += '''
                                     <option>''' + option + '''</option>'''
-
-        for variant in product["variants"]["imgAffecting"]:
-            for option in product["variants"]["imgAffecting"][variant]:
-                for perspective in product["perspectives"]:
-                    preloadImgs += '''
+        try:
+            for variant in product["variants"]["imgAffecting"]:
+                for option in product["variants"]["imgAffecting"][variant]:
+                    for perspective in product["perspectives"]:
+                        preloadImgs += '''
         <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        except KeyError:
+            pass
         
             variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
