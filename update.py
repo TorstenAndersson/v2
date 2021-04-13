@@ -706,6 +706,7 @@ for product in products["products"]:
             if i == 0:
                 first = " selected"
             #try:
+            print("hi hello")
             if True:
                 print(products["variants"]["imgAffecting"])
                 for variant in products["variants"]["imgAffecting"]:
