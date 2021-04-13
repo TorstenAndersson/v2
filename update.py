@@ -667,7 +667,6 @@ for product in products["products"]:
                     <div class="variants">
                     '''
         for category in product["variants"]:
-            print(category)
             for variant in product["variants"][category]:
                 options = ""
                 for option in product["variants"][category][variant]:
@@ -682,7 +681,7 @@ for product in products["products"]:
         except KeyError:
             pass
         
-            variantDiv += '''    <div class="variant">
+        variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
                             <select class="variantSelect" onchange="variantChanged(this)" required>
                                 <option class="placeholderVariantOption" selected></option>''' + options + '''
