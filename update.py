@@ -177,6 +177,10 @@ products = json.loads('''
             "variants":{
                 "imgAffecting":{
                     "Modell": [''' + phoneVariants[1:-1] + '''
+                    ],
+                    "Yta":[
+                        "Glossy",
+                        "Matte"
                     ]
                 }
             },
@@ -763,11 +767,10 @@ for product in products["products"]:
                     </div>'''
     except KeyError:
         try:
-            product = products["products"][1]
             variants = []
             for i in range(len(product["variants"]["imgAffecting"])):
                 variants.append([])
-                for option in product["variants"]["imgAffecting"][variant]:
+                for option in product["variants"]["imgAffecting"][i]:
                     variants[i].append(option)
 
             print(variants)
