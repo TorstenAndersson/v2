@@ -224,8 +224,6 @@ for product in products["products"]:
         except KeyError:
             pass
 
-print(imgs)
-
 for product in products["products"]:
     eval(product["type"]).append(product)
     if eval(product["onDisplay"]):
@@ -765,11 +763,15 @@ for product in products["products"]:
                     </div>'''
     except KeyError:
         try:
-            for variant in product["variants"]["imgAffecting"]:
-                variants = ""
+            product = products["products"][1]
+            variants = []
+            for i in range(len(product["variants"]["imgAffecting"])):
+                variants.append([])
                 for option in product["variants"]["imgAffecting"][variant]:
-                    variants += "%20" + option
-                preloadImgs += '''
+                    variants[i].append(option)
+
+            print(variants)
+            preloadImgs += '''
         <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variants).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
