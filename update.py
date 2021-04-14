@@ -200,18 +200,18 @@ for product in products["products"]:
 """
 
 for product in products["products"]:
-    imgs[product["name"]] = "/" + (product["name"] + "/" + product["name"]).replace(" ", "%20") + ".webp"
+    imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"]).replace(" ", "%20") + ".webp"
     try:
         product["variants"]
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
         except:
-            mgs[product["name"]] = "/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20") + ".webp"
+            mgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20") + ".webp"
     except:
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/" + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
         except KeyError:
             pass
 
