@@ -819,7 +819,7 @@ for product in products["products"]:
             </div>
             <div class="productFrame">
                 <div class="imgFrame">
-                    <img class="productImg" src="/imgs/''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
+                    <img class="productImg" src="''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
                 </div>
                 <div class="textFrame">
                     <span class="productHeader">''' + product["name"] + '''</span>
