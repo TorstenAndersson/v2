@@ -209,16 +209,16 @@ for product in products["products"]:
         variants = ""
         for variant in product["variants"]["imgAffecting"]:
             for i in range(len(product["variants"]["imgAffecting"][variant])):
-                variants += product["variants"]["imgAffecting"][variant][0] + "%20"
+                variants += "%20" + product["variants"]["imgAffecting"][variant][0]
                 if i == 0:
                     break
         print(variants)
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + variants + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
             print(product["name"] + " has both")
         except:
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + variants).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants).replace(" ", "%20") + ".webp"
             print(product["name"] + " has only variants")
     except:
         try:
