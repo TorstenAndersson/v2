@@ -202,21 +202,29 @@ for product in products["products"]:
 for product in products["products"]:
     imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"]).replace(" ", "%20") + ".webp"
     try:
-        product["variants"]["imgAffecting"]
+        variants = ""
+        for variant in product["variants"]["imgAffecting"]:
+            for i in range(len(product["variants"]["imgAffecting"][variant])):
+                variants += product["variants"]["imgAffecting"][variant][0]
+                if i == 0:
+                    break
+        print(variants)
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
-            print(product["name"] + "has both")
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + variants + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            print(product["name"] + " has both")
         except:
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20") + ".webp"
-            print(product["name"] + "has no perspectives")
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + variants).replace(" ", "%20") + ".webp"
+            print(product["name"] + " has only variants")
     except:
         try:
             product["perspectives"]
             imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
-            print(product["name"] + "has only perspectives")
+            print(product["name"] + " has only perspectives")
         except KeyError:
             pass
+
+print(imgs)
 
 for product in products["products"]:
     eval(product["type"]).append(product)
