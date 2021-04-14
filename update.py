@@ -202,16 +202,19 @@ for product in products["products"]:
 for product in products["products"]:
     imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"]).replace(" ", "%20") + ".webp"
     try:
-        product["variants"]
+        product["variants"]["imgAffecting"]
         try:
             product["perspectives"]
             imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            print(product["name"] + "has both")
         except:
-            mgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20") + ".webp"
+            print(product["name"] + "has no perspectives")
     except:
         try:
             product["perspectives"]
             imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            print(product["name"] + "has only perspectives")
         except KeyError:
             pass
 
