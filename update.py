@@ -424,7 +424,7 @@ for product in sudd:
         display = "initial"
     suddDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower() + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
@@ -502,7 +502,7 @@ for product in merchandise:
         display = "initial"
     merchandiseDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"] + '''">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower() + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
