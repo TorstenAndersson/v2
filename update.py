@@ -212,19 +212,15 @@ for product in products["products"]:
                 variants += "%20" + product["variants"]["imgAffecting"][variant][0]
                 if i == 0:
                     break
-        print(variants)
         try:
             product["perspectives"]
             imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
-            print(product["name"] + " has both")
         except:
             imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants).replace(" ", "%20") + ".webp"
-            print(product["name"] + " has only variants")
     except:
         try:
             product["perspectives"]
             imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
-            print(product["name"] + " has only perspectives")
         except KeyError:
             pass
 
@@ -726,10 +722,12 @@ for product in products["products"]:
                     '''
         try:
             for variant in product["variants"]["imgAffecting"]:
-                for option in product["variants"]["imgAffecting"][variant]:
-                    for perspective in product["perspectives"]:
-                        preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+                for perspective in product["perspectives"]:
+                    variants = ""
+                    for option in product["variants"]["imgAffecting"][variant]:
+                        variants += "%20" + option
+                    preloadImgs += '''
+        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variants + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -768,9 +766,11 @@ for product in products["products"]:
     except KeyError:
         try:
             for variant in product["variants"]["imgAffecting"]:
+                variants = ""
                 for option in product["variants"]["imgAffecting"][variant]:
-                    preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + option).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+                    variants += "%20" + option
+                preloadImgs += '''
+        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variants).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
