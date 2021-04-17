@@ -728,13 +728,13 @@ for product in products["products"]:
                     options += '''
                                 <option>''' + option + '''</option>'''
 
-            variantDiv += '''    <div class="variant">
-                            <label class="variantName">''' + variant + '''</label>
-                            <select class="variantSelect" onchange="variantChanged(this)" required>
-                                <option class="placeholderVariantOption" selected></option>''' + options + '''
-                            </select>
-                        </div>
-                    '''
+                variantDiv += '''    <div class="variant">
+                                <label class="variantName">''' + variant + '''</label>
+                                <select class="variantSelect" onchange="variantChanged(this)" required>
+                                    <option class="placeholderVariantOption" selected></option>''' + options + '''
+                                </select>
+                            </div>
+                        '''
         try:
             for perspective in product["perspectives"]:
                 result = ""
