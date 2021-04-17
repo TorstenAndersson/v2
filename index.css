@@ -200,10 +200,6 @@ img.orderButton {
 	margin-top: -550px;
 	padding-bottom: 200px;
 }
-.big {
-	font: 55px sans-serif;
-	padding-bottom: 30px;
-}
 .paragraphHeader {
 	display: block;
 	color: rgb(57, 57, 57);
@@ -220,6 +216,10 @@ img.orderButton {
 	margin: auto;
 	width: 50%;
 	color: rgb(50, 50, 50);
+}
+.big {
+	font: 700 55px sans-serif;
+	padding-bottom: 30px;
 }
 .hereLink {
 	color: rgb(57, 57, 57);
