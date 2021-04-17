@@ -121,7 +121,7 @@ products = json.loads('''
                         "Läder",
                         "Polyester"
                     ],
-                    "Färg":[
+                    "Yta":[
                         "Gloss",
                         "Matte"
                     ]
@@ -764,6 +764,7 @@ for product in products["products"]:
             pass
 
     perspectiveDiv = ""
+    product = products["products"][1]
     try:
         product["perspectives"]
         perspectiveDiv =        '''
@@ -773,9 +774,12 @@ for product in products["products"]:
             if i == 0:
                 first = " selected"
             try:
+                variants = []
                 for variant in product["variants"]["imgAffecting"]:
-                    print(product["variants"]["imgAffecting"][variant][0] + "%20" + product["variants"]["imgAffecting"][variant][0] + "%20" + product["variants"]["imgAffecting"][variant][0])
-                    perspectiveDiv += '''
+                    variants.append(variant)
+                print(variants)
+                print(product["variants"]["imgAffecting"][variants[0]][0] + "%20" + product["variants"]["imgAffecting"][variants[1]][0] + "%20" + product["variants"]["imgAffecting"][variants[2]][0])
+                perspectiveDiv += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["variants"]["imgAffecting"][1][0] + "%20" + product["variants"]["imgAffecting"][2][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
