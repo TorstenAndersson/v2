@@ -107,9 +107,6 @@ a {
 	font-family: "Open Sans";
 	padding-left: 0px;
 }
-.cartItemsNumber:hover .cartText {
-	color:rgb(0, 0, 0)
-}
 .cover {
 	position: absolute;
 	top: 0px;
