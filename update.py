@@ -720,6 +720,7 @@ for product in products["products"]:
                     '''
         for category in product["variants"]:
             for variant in product["variants"][category]:
+                print(product)
                 print(variant)
                 options = ""
                 for option in product["variants"][category][variant]:
