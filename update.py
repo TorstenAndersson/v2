@@ -772,6 +772,7 @@ for product in products["products"]:
             first = ""
             if i == 0:
                 first = " selected"
+            print(product["variants"]["imgAffecting"][0][0] + "%20" + product["variants"]["imgAffecting"][1][0] + "%20" + product["variants"]["imgAffecting"][2][0])
             try:
                 for variant in product["variants"]["imgAffecting"]:
                     perspectiveDiv += '''
