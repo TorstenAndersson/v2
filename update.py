@@ -723,7 +723,7 @@ for product in products["products"]:
                 options = ""
                 for option in product["variants"][category][variant]:
                     options += '''
-                                    <option>''' + option + '''</option>'''
+                                <option>''' + option + '''</option>'''
 
             variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
@@ -744,7 +744,6 @@ for product in products["products"]:
                         for i2 in range(i + 1):
                             options += "'%20' + option" + str(i2) + " + "
                         last += options + "';'"
-                        #last = "\t" * (i + 1) + "variantCombination += option" + str(i - 1) + " + ' '\n" + "\t" * (i + 1) + "variantCombination += option" + str(i) + " + ';'\n"
 
                     result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
                     i += 1
@@ -801,7 +800,6 @@ for product in products["products"]:
                     for i2 in range(i + 1):
                         options += "'%20' + option" + str(i2) + " + "
                     last += options + "';'"
-                    #last = "\t" * (i + 1) + "variantCombination += option" + str(i - 1) + " + ' '\n" + "\t" * (i + 1) + "variantCombination += option" + str(i) + " + ';'\n"
 
                 result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
                 i += 1
