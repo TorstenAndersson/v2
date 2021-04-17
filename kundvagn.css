@@ -125,12 +125,15 @@ a {
 	display: block;
     color: rgb(57, 57, 57);
 	font: 700 55px sans-serif;
-	padding-bottom: 200px
+	padding-bottom: 150px
+}
+.emptyHeader {
+	display: block;
+	font: 700 18px;
+	padding-bottom: 5px;
 }
 .emptyText {
-	display: block;
-	font-weight: 700;
-	padding-bottom: 10px;
+	color:rgb(110, 110, 110);
 }
 .footerLogoText {
 	position: absolute;
