@@ -116,14 +116,6 @@ products = json.loads('''
                         "Marinblå",
                         "Rosa",
                         "Röd"
-                    ],
-                    "Material":[
-                        "Läder",
-                        "Polyester"
-                    ],
-                    "Yta":[
-                        "Glossy",
-                        "Matte"
                     ]
                 },
                 "notImgAffecting":{
