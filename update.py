@@ -724,6 +724,7 @@ for product in products["products"]:
                 print(variant)
                 options = ""
                 for option in product["variants"][category][variant]:
+                    print(option)
                     options += '''
                                 <option>''' + option + '''</option>'''
 
