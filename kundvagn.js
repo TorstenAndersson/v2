@@ -7,7 +7,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 	}
 	for (const item in items) {
-		console.log(item);
+		console.log(items[item]);
 	}
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
