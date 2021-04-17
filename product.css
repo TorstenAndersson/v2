@@ -274,10 +274,10 @@ a {
 .placeholderVariantOption {
 	display: none;
 }
-.cartAddDiv {
+.buttonDiv {
 	padding-top: 30px;
 }
-.cartAdd {
+.button {
 	border: none;
 	color: rgb(255, 255, 255);
 	background-color: rgb(57, 57, 57);

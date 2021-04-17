@@ -125,7 +125,7 @@ a {
 	display: block;
     color: rgb(57, 57, 57);
 	font: 700 55px sans-serif;
-	padding-bottom: 150px
+	padding-bottom: 110px
 }
 .emptyHeader {
 	display: block;
@@ -135,6 +135,18 @@ a {
 }
 .emptyText {
 	color:rgb(110, 110, 110);
+}
+.button {
+	border: none;
+	color: rgb(255, 255, 255);
+	background-color: rgb(57, 57, 57);
+	font-family: "Raleway";
+	font-size: 20px;
+	padding: 20px 50px 20px 50px;
+	cursor: pointer;
+}
+.buttonDiv {
+	padding-top: 30px;
 }
 .footerLogoText {
 	position: absolute;
