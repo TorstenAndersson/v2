@@ -129,7 +129,8 @@ a {
 }
 .emptyHeader {
 	display: block;
-	font: 700 18px;
+	color: rgb(50, 50, 50);
+	font: 700 18px "Open Sans";
 	padding-bottom: 5px;
 }
 .emptyText {
