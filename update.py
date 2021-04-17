@@ -762,7 +762,7 @@ for product in products["products"]:
         <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
-    
+
     perspectiveDiv = ""
     try:
         product["perspectives"]
@@ -772,9 +772,9 @@ for product in products["products"]:
             first = ""
             if i == 0:
                 first = " selected"
-            print(product["variants"]["imgAffecting"][0][0] + "%20" + product["variants"]["imgAffecting"][1][0] + "%20" + product["variants"]["imgAffecting"][2][0])
             try:
                 for variant in product["variants"]["imgAffecting"]:
+                    print(product["variants"]["imgAffecting"][variant][0] + "%20" + product["variants"]["imgAffecting"][variant][0] + "%20" + product["variants"]["imgAffecting"][variant][0])
                     perspectiveDiv += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["variants"]["imgAffecting"][1][0] + "%20" + product["variants"]["imgAffecting"][2][0] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
