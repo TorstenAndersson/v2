@@ -126,10 +126,6 @@ products = json.loads('''
                     ]
                 } 
             },
-            "perspectives":[
-                "Front",
-                "Back"
-            ],
             "type":"merchandise",
             "onDisplay":"False"
         },{
