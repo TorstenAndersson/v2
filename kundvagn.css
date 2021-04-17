@@ -119,13 +119,17 @@ a {
 }
 .pageContent {
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 175px;
 }
 .pageHeader {
 	display: block;
     color: rgb(57, 57, 57);
 	font: 700 55px sans-serif;
-	padding-bottom: 20px
+	padding-bottom: 200px
+}
+.emptyText {
+	font-weight: 700;
+	padding-bottom: 10px;
 }
 .footerLogoText {
 	position: absolute;
