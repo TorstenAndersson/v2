@@ -117,31 +117,13 @@ products = json.loads('''
                         "Rosa",
                         "Röd"
                     ],
-                    "Färg":[
-                        "Vit",
-                        "Svart",
-                        "Blå",
-                        "Mörkgrå",
-                        "Grön",
-                        "Grå",
-                        "Ljusblå",
-                        "Rödbrun",
-                        "Marinblå",
-                        "Rosa",
-                        "Röd"
+                    "Material":[
+                        "Läder",
+                        "Polyester"
                     ],
                     "Färg":[
-                        "Vit",
-                        "Svart",
-                        "Blå",
-                        "Mörkgrå",
-                        "Grön",
-                        "Grå",
-                        "Ljusblå",
-                        "Rödbrun",
-                        "Marinblå",
-                        "Rosa",
-                        "Röd"
+                        "Gloss",
+                        "Matte"
                     ]
                 },
                 "notImgAffecting":{
