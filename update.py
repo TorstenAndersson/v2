@@ -116,6 +116,32 @@ products = json.loads('''
                         "Marinblå",
                         "Rosa",
                         "Röd"
+                    ],
+                    "Färg":[
+                        "Vit",
+                        "Svart",
+                        "Blå",
+                        "Mörkgrå",
+                        "Grön",
+                        "Grå",
+                        "Ljusblå",
+                        "Rödbrun",
+                        "Marinblå",
+                        "Rosa",
+                        "Röd"
+                    ],
+                    "Färg":[
+                        "Vit",
+                        "Svart",
+                        "Blå",
+                        "Mörkgrå",
+                        "Grön",
+                        "Grå",
+                        "Ljusblå",
+                        "Rödbrun",
+                        "Marinblå",
+                        "Rosa",
+                        "Röd"
                     ]
                 },
                 "notImgAffecting":{
@@ -724,6 +750,7 @@ for product in products["products"]:
             for perspective in product["perspectives"]:
                 result = ""
                 i = 0
+
                 for variant in product["variants"]["imgAffecting"]:
                     last = ""
                     if i == len(product["variants"]["imgAffecting"]) - 1:
@@ -738,6 +765,7 @@ for product in products["products"]:
 
                 variantCombination = ""
                 exec(result)
+
                 for variant in variantCombination.split(";")[:-1]:
                     preloadImgs += '''
         <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
@@ -780,6 +808,7 @@ for product in products["products"]:
         try:
             result = ""
             i = 0
+
             for variant in product["variants"]["imgAffecting"]:
                 last = ""
                 if i == len(product["variants"]["imgAffecting"]) - 1:
@@ -791,8 +820,10 @@ for product in products["products"]:
 
                 result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
                 i += 1
+
             variantCombination = ""
             exec(result)
+
             for variant in variantCombination.split(";")[:-1]:
                 preloadImgs += '''
         <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant).replace(" ", "%20") + '.webp"' + ''' as="image">'''
