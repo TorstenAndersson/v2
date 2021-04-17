@@ -5,7 +5,7 @@ function pageLoaded() {
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerHTML = null;
 	}
-	for (const item in localStorage["cart"].slice(4).split(",")) {
+	for (const item in localStorage["cart"].slice(4).split(",").slice(0, -1)) {
 		console.log(item);
 	}
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
