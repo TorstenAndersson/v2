@@ -181,6 +181,10 @@ products = json.loads('''
                     "Yta":[
                         "Glossy",
                         "Matte"
+                    ],
+                    "Storlek":[
+                        "S",
+                        "M"
                     ]
                 }
             },
@@ -259,7 +263,6 @@ for product in onDisplay:
                             </div>
                         </a>
                     </div>'''
-    #print(onDisplay)
     i += 1
 
 files["index"] = ('''<!DOCTYPE html>
@@ -691,10 +694,17 @@ for file in files:
     path = "./" + file + ".html"
     if not os.path.exists(path):
         open(path, "x")
-    #print(file)
     open(path, "w").write(files[file])
 
 # Creating product files
+
+
+"""
+for option in variant:
+    for option2 in variant2:
+        for option3 in variant3:
+            pass
+"""
 
 for product in products["products"]:
     path = "./" + product["type"] + "/" + product["name"].lower() + ".html"
@@ -723,13 +733,27 @@ for product in products["products"]:
                         </div>
                     '''
         try:
-            for variant in product["variants"]["imgAffecting"]:
-                for perspective in product["perspectives"]:
-                    variants = ""
-                    for option in product["variants"]["imgAffecting"][variant]:
-                        variants += "%20" + option
+            for perspective in product["perspectives"]:
+                result = ""
+                i = 0
+                for variant in product["variants"]["imgAffecting"]:
+                    last = ""
+                    if i == len(product["variants"]["imgAffecting"]) - 1:
+                        last = "\t" * (i + 1) + "variantCombination += "
+                        options = ""
+                        for i2 in range(i + 1):
+                            options += "'%20' + option" + str(i2) + " + "
+                        last += options + "';'"
+                        #last = "\t" * (i + 1) + "variantCombination += option" + str(i - 1) + " + ' '\n" + "\t" * (i + 1) + "variantCombination += option" + str(i) + " + ';'\n"
+
+                    result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
+                    i += 1
+
+                variantCombination = ""
+                exec(result)
+                for variant in variantCombination.split(";")[:-1]:
                     preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variants + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -767,15 +791,25 @@ for product in products["products"]:
                     </div>'''
     except KeyError:
         try:
-            variants = []
-            for i in range(len(product["variants"]["imgAffecting"])):
-                variants.append([])
-                for option in product["variants"]["imgAffecting"][i]:
-                    variants[i].append(option)
+            result = ""
+            i = 0
+            for variant in product["variants"]["imgAffecting"]:
+                last = ""
+                if i == len(product["variants"]["imgAffecting"]) - 1:
+                    last = "\t" * (i + 1) + "variantCombination += "
+                    options = ""
+                    for i2 in range(i + 1):
+                        options += "'%20' + option" + str(i2) + " + "
+                    last += options + "';'"
+                    #last = "\t" * (i + 1) + "variantCombination += option" + str(i - 1) + " + ' '\n" + "\t" * (i + 1) + "variantCombination += option" + str(i) + " + ';'\n"
 
-            print(variants)
-            preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variants).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+                result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
+                i += 1
+            variantCombination = ""
+            exec(result)
+            for variant in variantCombination.split(";")[:-1]:
+                preloadImgs += '''
+        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
