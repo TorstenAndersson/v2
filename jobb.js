@@ -1,5 +1,5 @@
 function pageLoaded() {
-	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 	var form = document.querySelector("form");
 
 	form.addEventListener("submit", e => {

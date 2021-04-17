@@ -6,11 +6,11 @@ var size;
 
 function pageLoaded() {
 	try {
-		document.querySelector(".cartItemsNumber").innerHTML = "(" + (localStorage["cart"].slice(4).split(",").length - 1) + ")";
+		document.querySelector(".cartItemsNumber").innerText = "(" + (localStorage["cart"].slice(4).split(",").length - 1) + ")";
 	} catch (TypeError) {
-		document.querySelector(".cartItemsNumber").innerHTML = null;
+		document.querySelector(".cartItemsNumber").innerText = null;
 	}
-	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
 function smallImgHovered(sender) {
@@ -37,9 +37,9 @@ function variantChanged(sender) {
 }
 
 function buy(sender) {
-	localStorage.setItem("cart", localStorage.getItem("cart") + sender.parentElement.parentElement.firstElementChild.innerHTML + ",");
+	localStorage.setItem("cart", localStorage.getItem("cart") + sender.parentElement.parentElement.firstElementChild.innerText + ",");
 	var cartItems = document.querySelector(".cartItemsNumber");
-	cartItems.innerHTML = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
+	cartItems.innerText = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
 	cartItems.classList.add("shakeAnimation");
 	setTimeout(function() {cartItems.classList.remove("shakeAnimation")}, 500)
 	/*
