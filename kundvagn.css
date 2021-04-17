@@ -128,6 +128,7 @@ a {
 	padding-bottom: 200px
 }
 .emptyText {
+	display: block;
 	font-weight: 700;
 	padding-bottom: 10px;
 }
