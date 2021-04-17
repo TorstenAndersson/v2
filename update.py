@@ -764,7 +764,6 @@ for product in products["products"]:
             pass
 
     perspectiveDiv = ""
-    product = products["products"][1]
     try:
         product["perspectives"]
         perspectiveDiv =        '''
