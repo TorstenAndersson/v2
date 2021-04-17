@@ -116,10 +116,6 @@ products = json.loads('''
                         "Marinblå",
                         "Rosa",
                         "Röd"
-                    ],
-                    "Material":[
-                        "Polyester",
-                        "Läder"
                     ]
                 },
                 "notImgAffecting":{
@@ -177,14 +173,6 @@ products = json.loads('''
             "variants":{
                 "imgAffecting":{
                     "Modell": [''' + phoneVariants[1:-1] + '''
-                    ],
-                    "Yta":[
-                        "Glossy",
-                        "Matte"
-                    ],
-                    "Storlek":[
-                        "S",
-                        "M"
                     ]
                 }
             },
@@ -720,13 +708,10 @@ for product in products["products"]:
                     '''
         for category in product["variants"]:
             for variant in product["variants"][category]:
-                print(product["name"])
-                print(variant)
                 options = ""
                 for option in product["variants"][category][variant]:
-                    print(option)
                     options += '''
-                                <option>''' + option + '''</option>'''
+                                    <option>''' + option + '''</option>'''
 
                 variantDiv += '''    <div class="variant">
                                 <label class="variantName">''' + variant + '''</label>
