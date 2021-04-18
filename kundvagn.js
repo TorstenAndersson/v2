@@ -3,19 +3,19 @@ function pageLoaded() {
 	try {
 		document.querySelector(".cartItemsNumber").innerText = "(" + (items.length) + ")";
 		document.querySelector(".emptyDiv").remove();
+
+		var cartDiv = document.createElement("div");
+		for (const item of ["Produkt", "Pris", "Antal", "Totalt"].values()) {
+			console.log(item)
+			var span = document.createElement("span");
+			span.innerText = item;
+			span.classList.add("columnText", item.toLowerCase() + "Column");
+			cartDiv.appendChild(span);
+		}
+		document.querySelector(".pageContent").appendChild(cartDiv);
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}
-
-	var cartDiv = document.createElement("div");
-	for (const item of ["Produkt", "Pris", "Antal", "Totalt"].values()) {
-		console.log(item)
-		var span = document.createElement("span");
-		span.innerText = item;
-		span.classList.add("columnText", item.toLowerCase() + "Column");
-		cartDiv.appendChild(span);
-	}
-	document.querySelector(".pageContent").appendChild(cartDiv);
 	/*
 	var cartDiv = document.createElement("div");
 	var productSpan = document.createElement("span");
