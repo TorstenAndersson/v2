@@ -103,6 +103,7 @@ a {
 	padding-left: 25px;
 }
 .cartItemsNumber {
+	position: absolute;
 	font-family: "Open Sans";
 	padding-left: 0px;
 }
