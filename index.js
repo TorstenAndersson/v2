@@ -63,8 +63,8 @@ function slide(where) {
 		
 		slider.style.left = parseInt(slider.style.left.slice(0, -2)) + size + "px";
 		divCount ++;
-		count ++;
 		slider.style.transform = "translateX(" + (-size * count) + "px)";
+		count ++;
 	}
 
 	if (where === "backward") {
