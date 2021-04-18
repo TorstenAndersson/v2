@@ -153,6 +153,9 @@ a {
 .buttonDiv {
 	padding-top: 30px;
 }
+.columnDiv {
+	padding-bottom: 60px;
+}
 .columnText {
 	position: absolute;
 	color: rgb(100, 100, 100);

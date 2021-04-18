@@ -5,8 +5,9 @@ function pageLoaded() {
 		document.querySelector(".emptyDiv").remove();
 
 		var cartDiv = document.createElement("div");
+		cartDiv.classList.add("columnDiv");
 		for (const item of ["Produkt", "Pris", "Antal", "Totalt"].values()) {
-			console.log(item)
+			console.log(item);
 			var span = document.createElement("span");
 			span.innerText = item;
 			span.classList.add("columnText", item.toLowerCase() + "Column");
