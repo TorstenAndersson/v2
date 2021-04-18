@@ -6,7 +6,7 @@ function pageLoaded() {
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}
-	
+
 	var cartDiv = document.createElement("div");
 	for (const item of ["Produkt", "Pris", "Antal", "Totalt"].values()) {
 		console.log(item)
@@ -15,6 +15,7 @@ function pageLoaded() {
 		span.classList.add(item.toLowerCase() + "Column");
 		cartDiv.appendChild(span);
 	}
+	document.querySelector(".pageContent").appendChild(cartDiv);
 	/*
 	var cartDiv = document.createElement("div");
 	var productSpan = document.createElement("span");
