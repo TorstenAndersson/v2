@@ -148,6 +148,21 @@ a {
 .buttonDiv {
 	padding-top: 30px;
 }
+.columnText {
+	position: absolute;
+}
+.produktColumn {
+	left: 20%;
+}
+.prisColumn {
+	right: 50%;
+}
+.antalColumn {
+	right: 65%;
+}
+.totaltColumn {
+	right: 80%;
+}
 .footerLogoText {
 	position: absolute;
 	bottom: 8px;
