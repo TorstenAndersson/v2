@@ -105,6 +105,7 @@ a {
 .cartItemsNumber {
 	position: absolute;
 	font-family: "Open Sans";
+	line-height: 16px;
 	padding-left: 0px;
 }
 .cover {
@@ -153,6 +154,7 @@ a {
 }
 .columnText {
 	position: absolute;
+	color: rgb(100, 100, 100);
 }
 .produktColumn {
 	left: 20%;
