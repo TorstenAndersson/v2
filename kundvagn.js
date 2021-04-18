@@ -6,8 +6,8 @@ function pageLoaded() {
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}
-	for (item in ["Produkt", "Pris", "Antal", "Totalt"]) {
-		console.log(["Produkt", "Pris", "Antal", "Totalt"][item])
+	for (item in ["Produkt", "Pris", "Antal", "Totalt"].values) {
+		console.log(item)
 	}
 	/*
 	var cartDiv = document.createElement("div");
