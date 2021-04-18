@@ -1,6 +1,6 @@
 var divs;
 var active = true;
-var count = 1;
+var count = 2;
 const initalCount = count; 
 var divCount = count;
 var size;
