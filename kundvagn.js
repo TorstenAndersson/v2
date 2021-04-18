@@ -33,8 +33,13 @@ function pageLoaded() {
 
 	*/
 	console.log("Current cart!")
-	for (const item in items) {
-		console.log(items[item]);
+	var cartDiv = document.createElement("div");
+	for (const item of items.values()) {
+		console.log(item);
+		var span = document.createElement("span");
+		span.innerText = item;
+		span.classList.add(item.toLowerCase() + "Column");
+		cartDiv.appendChild(span);
 	}
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
