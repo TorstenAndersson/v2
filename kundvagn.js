@@ -7,7 +7,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}
 	for (item in ["Produkt", "Pris", "Antal", "Totalt"]) {
-		print(item)
+		console.log(item)
 	}
 	/*
 	var cartDiv = document.createElement("div");
