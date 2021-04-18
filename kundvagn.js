@@ -12,7 +12,7 @@ function pageLoaded() {
 		console.log(item)
 		var span = document.createElement("span");
 		span.innerText = item;
-		span.classList.add(item.toLowerCase() + "Column");
+		span.classList.add("columnText", item.toLowerCase() + "Column");
 		cartDiv.appendChild(span);
 	}
 	document.querySelector(".pageContent").appendChild(cartDiv);
