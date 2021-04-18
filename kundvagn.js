@@ -6,7 +6,7 @@ function pageLoaded() {
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}
-	for (item in ["Produkt", "Pris", "Antal", "Totalt"].values()) {
+	for (const item of ["Produkt", "Pris", "Antal", "Totalt"].values()) {
 		console.log(item)
 	}
 	/*
