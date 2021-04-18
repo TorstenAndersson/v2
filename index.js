@@ -7,6 +7,9 @@ var size;
 
 function pageLoaded() {
 	var slideshowDiv = document.querySelector("div.slideshow");
+	divs = document.querySelectorAll(".productDiv");
+	divs = [...divs];
+	size = divs[0].clientWidth;
 	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
 	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
 	var localCount = 0;
@@ -21,9 +24,6 @@ function pageLoaded() {
 		}
 	}, 1)
 	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	divs = document.querySelectorAll(".productDiv");
-	divs = [...divs];
-	size = divs[0].clientWidth;
 }
 
 var isScrolled = false;
