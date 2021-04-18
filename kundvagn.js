@@ -13,8 +13,14 @@ function pageLoaded() {
 			cartDiv.appendChild(span);
 		}
 		document.querySelector(".pageContent").appendChild(cartDiv);
+
+		console.log("Current cart!")
+		for (const item of items.values()) {
+			console.log(item);
+		}
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
+		document.querySelector(".emptyDiv").style.display = "block";
 	}
 	/*
 	var cartDiv = document.createElement("div");
@@ -39,9 +45,5 @@ function pageLoaded() {
 	</div>
 
 	*/
-	console.log("Current cart!")
-	for (const item of items.values()) {
-		console.log(item);
-	}
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }

@@ -127,6 +127,9 @@ a {
 	font: 700 55px sans-serif;
 	padding-bottom: 130px
 }
+.emptyDiv {
+	display: none;
+}
 .emptyHeader {
 	display: block;
 	color: rgb(50, 50, 50);
