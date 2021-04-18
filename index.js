@@ -1,6 +1,6 @@
 var divs;
 var active = true;
-var count = 2;
+var count = 1;
 const initalCount = count; 
 var divCount = count;
 var size;
@@ -63,8 +63,8 @@ function slide(where) {
 		
 		slider.style.left = parseInt(slider.style.left.slice(0, -2)) + size + "px";
 		divCount ++;
-		slider.style.transform = "translateX(" + (-size * count) + "px)";
 		count ++;
+		slider.style.transform = "translateX(" + (-size * count) + "px)";
 	}
 
 	if (where === "backward") {
