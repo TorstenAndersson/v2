@@ -1,6 +1,6 @@
 var divs;
 var active = true;
-var count = 0;
+var count = 1;
 const initalCount = count; 
 var divCount = count;
 var size;
@@ -30,8 +30,6 @@ var isScrolled = false;
 
 function pageScrolled() {
 	var navigationBar = document.querySelector(".navigationBar");
-	var topLogoText = document.querySelector(".topLogoText");
-	var topLogoTextDiv = document.querySelector(".topLogoTextDiv");
 	if (window.pageYOffset > 30) {
 		if (isScrolled === false) {
 			navigationBar.style.position = "fixed";
