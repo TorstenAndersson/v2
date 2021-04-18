@@ -845,7 +845,7 @@ for product in products["products"]:
                 <div class="verticalLine"></div>
                 <a href="/kundvagn">
                     <span class="topText cartText">KUNDVAGN</span>
-                    <span class="topText cartItemsNumber">(0)</span>
+                    <span class="topText cartItemsNumber"></span>
                 </a>
             </div>
         </nav>
