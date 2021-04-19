@@ -156,14 +156,17 @@ a {
 }
 .columnDiv {
 	display: none;
-	padding-bottom: 60px;
+	width: 80%;
+	margin: auto;
+	padding-bottom: 40px;
 }
 .columnText {
 	position: absolute;
 	color: rgb(100, 100, 100);
 }
 .produktColumn {
-	left: 20%;
+	left: 10%;
+	margin-left: 20px;
 }
 .prisColumn {
 	right: 50%;
@@ -173,6 +176,12 @@ a {
 }
 .totaltColumn {
 	right: 20%;
+}
+.productFrame {
+	width: 80%;
+	height: 100px;
+	box-shadow: 0 0.3125rem 0.9375rem 0 rgb(0 0 0 / 7%);
+	margin: auto;
 }
 .footerLogoText {
 	position: absolute;
