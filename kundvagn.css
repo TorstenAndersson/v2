@@ -193,9 +193,11 @@ a {
 }
 .textDiv {
 	position: absolute;
+	top: 50%;
 	display: inline-block;
 	text-align: left;
-	padding-top: 20px;
+	transform: translateY(-55%);
+	padding-left: 20px;
 }
 .productName {
 	font: 700 16px "Open Sans";
