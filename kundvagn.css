@@ -183,6 +183,24 @@ a {
 	box-shadow: 0 0.3125rem 0.9375rem 0 rgb(0 0 0 / 7%);
 	margin: auto;
 }
+.productLink {
+	position: absolute;
+	left: 10%;
+	padding: 10px;
+}
+.productImg {
+	height: 80px;
+}
+.textDiv {
+	position: absolute;
+	display: inline-block;
+	text-align: left;
+	padding-top: 20px;
+}
+.productName {
+	font: 700 16px "Open Sans";
+	display: block;
+}
 .footerLogoText {
 	position: absolute;
 	bottom: 8px;
