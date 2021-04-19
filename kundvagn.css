@@ -155,6 +155,7 @@ a {
 	padding-top: 30px;
 }
 .columnDiv {
+	display: none;
 	padding-bottom: 60px;
 }
 .columnText {
