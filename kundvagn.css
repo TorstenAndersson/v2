@@ -131,6 +131,7 @@ a {
 }
 .emptyDiv {
 	display: none;
+	padding-top: 50px;
 }
 .emptyHeader {
 	display: block;
