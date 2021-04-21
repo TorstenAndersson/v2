@@ -1,6 +1,6 @@
 function pageLoaded() {
 	try {
-		items = localStorage["cart"].slice(4).split(",").slice(0, -1);
+		items = localStorage["cart"].slice(4).split(";").slice(0, -1);
 		document.querySelector(".cartItemsNumber").innerText = "(" + (items.length) + ")";
 		document.querySelector(".columnDiv").style.display = "block";
 		document.querySelector(".emptyDiv").remove();
