@@ -39,9 +39,9 @@ function variantChanged(sender) {
 function buy(sender) {
 	var variant = "";
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
-		variant += variantSelect.parentElement.firstElementChild.innerText + ":	 " + variantSelect.value + ",";
+		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
-	localStorage.setItem("cart", localStorage.getItem("cart") + ";" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -1));
+	localStorage.setItem("cart", localStorage.getItem("cart") + ";" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2));
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
 	cartItems.classList.add("shakeAnimation");
