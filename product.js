@@ -41,10 +41,7 @@ function buy(sender) {
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += '"' + variantSelect.parentElement.firstElementChild.innerText + '":"' + variantSelect.value + '",';
 	}
-	variant = variant.split("");
-	variant.pop();
-	variant.join("");
-	localStorage.setItem("cart", localStorage.getItem("cart") + '; {"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":{' + variant + "}}");
+	localStorage.setItem("cart", localStorage.getItem("cart") + '; {"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":{' + variant.slice(0, -1) + "}}");
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
 	cartItems.classList.add("shakeAnimation");
