@@ -39,7 +39,7 @@ function variantChanged(sender) {
 function buy(sender) {
 	var variant = "";
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
-		variant += '"' + variantSelect.parentElement.firstElementChild.innerText + '":"' + variantSelect.value + '"';
+		variant += '"' + variantSelect.parentElement.firstElementChild.innerText + '":"' + variantSelect.value + '",';
 	}
 	localStorage.setItem("cart", localStorage.getItem("cart") + '; {"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":{' + variant + "}");
 	var cartItems = document.querySelector(".cartItemsNumber");
