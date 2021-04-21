@@ -6,7 +6,7 @@ var size;
 
 function pageLoaded() {
 	try {
-		document.querySelector(".cartItemsNumber").innerText = "(" + (localStorage["cart"].slice(4).split(",").length - 1) + ")";
+		document.querySelector(".cartItemsNumber").innerText = "(" + (localStorage["cart"].split(";").length - 1) + ")";
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}
@@ -41,7 +41,7 @@ function buy(sender) {
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += '"' + variantSelect.parentElement.firstElementChild.innerText + '":"' + variantSelect.value + '",';
 	}
-	localStorage.setItem("cart", localStorage.getItem("cart") + '; {"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":{' + variant.slice(0, -1) + "}}");
+	localStorage.setItem("cart", localStorage.getItem("cart") + ';{"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":{' + variant.slice(0, -1) + "}}");
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
 	cartItems.classList.add("shakeAnimation");
