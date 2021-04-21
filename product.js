@@ -38,7 +38,7 @@ function variantChanged(sender) {
 
 function buy(sender) {
 	var variant = "";
-	for (const variantSelect in document.querySelectorAll(".variantSelect")) {
+	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.value;
 	}
 	localStorage.setItem("cart", localStorage.getItem("cart") + '; {"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":"' + variant + '"');
