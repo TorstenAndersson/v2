@@ -42,7 +42,7 @@ function buy(sender) {
 		variant += '"' + variantSelect.parentElement.firstElementChild.innerText + '":"' + variantSelect.value + '",';
 	}
 	variant = variant.split("");
-	variant[-3] = "";
+	variant[-1] = "";
 	variant.join("");
 	localStorage.setItem("cart", localStorage.getItem("cart") + '; {"name":"' + sender.parentElement.parentElement.firstElementChild.innerText + '","variant":{' + variant + "}}");
 	var cartItems = document.querySelector(".cartItemsNumber");
