@@ -711,7 +711,7 @@ for product in products["products"]:
                 options = ""
                 for option in product["variants"][category][variant]:
                     options += '''
-                                <option>''' + option + '''</option>'''
+                                <option>''' + option + "</option>"
 
                 variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
@@ -719,7 +719,7 @@ for product in products["products"]:
                                 <option class="placeholderVariantOption" selected></option>''' + options + '''
                             </select>
                         </div>
-                        '''
+                    '''
         try:
             for perspective in product["perspectives"]:
                 result = ""
