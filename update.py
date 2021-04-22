@@ -718,13 +718,12 @@ for product in products["products"]:
                                         <option>''' + option + '''</option>'''
 
                 variantDiv += '''       <div class="variant">
-                                    <label class="variantName">''' + variant + '''</label>
-                                    <select class="variantSelect" onchange="variantChanged(this)"''' + required + '''>
-                                        <option class="placeholderVariantOption" selected></option>''' + options + '''
-                                    </select>
-                                </div>
+                                <label class="variantName">''' + variant + '''</label>
+                                <select class="variantSelect" onchange="variantChanged(this)"''' + required + '''>
+                                    <option class="placeholderVariantOption" selected></option>''' + options + '''
+                                </select>
+                            </div>
                         '''
-        variantDiv += "</form>"
 
         try:
             for perspective in product["perspectives"]:
@@ -752,7 +751,8 @@ for product in products["products"]:
         except KeyError:
             pass
         
-        variantDiv += "</div>"
+        variantDiv += '''</div>
+                    </form>'''
     except KeyError:
         try:
             for perspective in product["perspectives"]:
