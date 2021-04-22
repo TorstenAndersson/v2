@@ -708,6 +708,9 @@ for product in products["products"]:
                     '''
         for category in product["variants"]:
             for variant in product["variants"][category]:
+                required = ""
+                if category == "notImgAffecting":
+                    required = " required"
                 options = ""
                 for option in product["variants"][category][variant]:
                     options += '''
@@ -715,7 +718,7 @@ for product in products["products"]:
 
                 variantDiv += '''    <div class="variant">
                                 <label class="variantName">''' + variant + '''</label>
-                                <select class="variantSelect" onchange="variantChanged(this)" required>
+                                <select class="variantSelect" onchange="variantChanged(this)"''' + required + '''>
                                     <option class="placeholderVariantOption" selected></option>''' + options + '''
                                 </select>
                             </div>
