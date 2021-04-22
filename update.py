@@ -715,8 +715,7 @@ for product in products["products"]:
 
                 variantDiv += '''    <div class="variant">
                             <label class="variantName">''' + variant + '''</label>
-                            <select class="variantSelect" onchange="variantChanged(this)">
-                                ''' + options + '''
+                            <select class="variantSelect" onchange="variantChanged(this)">''' + options + '''
                             </select>
                         </div>
                     '''
