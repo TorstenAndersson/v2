@@ -703,8 +703,9 @@ for product in products["products"]:
     variantDiv = ""
     try:
         product["variants"]
-        variantDiv += '''    
-                    <div class="variants">
+        variantDiv += '''
+                    <form>
+                        <div class="variants">
                     '''
         for category in product["variants"]:
             for variant in product["variants"][category]:
@@ -714,15 +715,17 @@ for product in products["products"]:
                 options = ""
                 for option in product["variants"][category][variant]:
                     options += '''
-                                    <option>''' + option + '''</option>'''
+                                        <option>''' + option + '''</option>'''
 
-                variantDiv += '''    <div class="variant">
-                                <label class="variantName">''' + variant + '''</label>
-                                <select class="variantSelect" onchange="variantChanged(this)"''' + required + '''>
-                                    <option class="placeholderVariantOption" selected></option>''' + options + '''
-                                </select>
-                            </div>
+                variantDiv += '''       <div class="variant">
+                                    <label class="variantName">''' + variant + '''</label>
+                                    <select class="variantSelect" onchange="variantChanged(this)"''' + required + '''>
+                                        <option class="placeholderVariantOption" selected></option>''' + options + '''
+                                    </select>
+                                </div>
                         '''
+        variantDiv += "</form>"
+
         try:
             for perspective in product["perspectives"]:
                 result = ""
@@ -866,7 +869,7 @@ for product in products["products"]:
                     <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
                     <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>''' + variantDiv + '''
                     <div class="buttonDiv">
-                        <button class="button" onclick="buy(this)" readonly>Lägg I Kundvagn</button>
+                        <button class="button" type="submit" onclick="buy(this)" readonly>Lägg I Kundvagn</button>
                     </div>
                 </div>
             </div>

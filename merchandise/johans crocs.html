@@ -64,20 +64,21 @@
                     <span class="productHeader">Johans Crocs</span>
                     <span class="productDescription">LFIPÅPT FLOP</span>
                     <span class="productPriceText discountedPrice">349,99 kr</span>
-                    <span class="productPriceText line">1000,99 kr</span>    
-                    <div class="variants">
-                        <div class="variant">
-                                <label class="variantName">Storlek</label>
-                                <select class="variantSelect" onchange="variantChanged(this)" required>
-                                    <option class="placeholderVariantOption" selected></option>
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                </select>
-                            </div>
-                        </div>
+                    <span class="productPriceText line">1000,99 kr</span>
+                    <form>
+                        <div class="variants">
+                           <div class="variant">
+                                    <label class="variantName">Storlek</label>
+                                    <select class="variantSelect" onchange="variantChanged(this)" required>
+                                        <option class="placeholderVariantOption" selected></option>
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                    </select>
+                                </div>
+                        </form></div>
                     <div class="buttonDiv">
-                        <button class="button" onclick="buy(this)" readonly>Lägg I Kundvagn</button>
+                        <button class="button" type="submit" onclick="buy(this)" readonly>Lägg I Kundvagn</button>
                     </div>
                 </div>
             </div>
