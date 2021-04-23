@@ -116,7 +116,8 @@ a {
 	color: rgb(255, 255, 255);
 	border-radius: 100%;
 	padding: 2px 5px;
-	min-width: 11px;
+	min-width: 10px;
+	text-align: center;
 }
 .cover {
 	position: absolute;
