@@ -111,13 +111,14 @@ a {
 	font-size: 11px;
 	font-family: "Open Sans";
 	line-height: 16px;
-	margin-left: 18px;
+	margin-left: 12px;
 	background-color: rgb(70, 70, 70);
 	color: rgb(255, 255, 255);
 	border-radius: 100%;
 	padding: 2px 5px;
 	min-width: 10px;
 	text-align: center;
+	margin-top: 6px;
 }
 .cover {
 	position: absolute;
