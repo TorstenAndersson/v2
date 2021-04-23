@@ -109,6 +109,7 @@ a {
 .cartItemsNumber {
 	position: absolute;
 	font-size: 11px;
+	display: none;
 	font-family: "Open Sans";
 	line-height: 16px;
 	margin-left: 12px;
