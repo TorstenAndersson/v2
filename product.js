@@ -43,7 +43,7 @@ function buy(sender) {
 	}
 	localStorage.setItem("cart", localStorage.getItem("cart") + ";" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2));
 	var cartItems = document.querySelector(".cartItemsNumber");
-	cartItems.innerText = "(" + (localStorage.getItem("cart").slice(4).split(",").length - 1) + ")";
+	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
 	cartItems.classList.add("shakeAnimation");
 	setTimeout(function() {cartItems.classList.remove("shakeAnimation")}, 500)
 	/*
