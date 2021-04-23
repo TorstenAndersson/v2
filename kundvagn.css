@@ -216,6 +216,15 @@ a {
 	font: 700 16px "Open Sans";
 	display: block;
 }
+.productVariant {
+	color: rgb(120, 120, 120);
+}
+.priceText {
+	position: absolute;
+	left: 49%;
+	transform: translateX(-49%);
+	padding-top: 35px;
+}
 .footerLogoText {
 	position: absolute;
 	bottom: 8px;
