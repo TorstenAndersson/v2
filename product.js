@@ -6,7 +6,7 @@ var size;
 
 function pageLoaded() {
 	try {
-		document.querySelector(".cartItemsNumber").innerText = "(" + (localStorage["cart"].split(";").length - 1) + ")";
+		document.querySelector(".cartItemsNumber").innerText = localStorage["cart"].split(";").length - 1;
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").innerText = null;
 	}

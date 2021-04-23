@@ -844,7 +844,8 @@ for product in products["products"]:
                 <div class="verticalLine"></div>
                 <a href="/kundvagn">
                     <span class="topText cartText">KUNDVAGN</span>
-                    <span class="topText cartItemsNumber"></span>
+                    <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                    <span class="cartItemsNumber"></span>
                 </a>
             </div>
         </nav>

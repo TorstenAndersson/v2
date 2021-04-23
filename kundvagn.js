@@ -1,7 +1,7 @@
 function pageLoaded() {
 	try {
 		items = localStorage.getItem("cart").split(";").slice(1);
-		document.querySelector(".cartItemsNumber").innerText = "(" + (items.length) + ")";
+		document.querySelector(".cartItemsNumber").innerText = items.length;
 		document.querySelector(".columnDiv").style.display = "block";
 		document.querySelector(".emptyDiv").remove();
 
