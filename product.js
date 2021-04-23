@@ -45,8 +45,7 @@ function buy(sender) {
 	localStorage.setItem("cart", localStorage.getItem("cart") + ";" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2));
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
-	cartItems.classList.add("shakeAnimation");
-	setTimeout(function() {cartItems.classList.remove("shakeAnimation")}, 500)
+	cartItems.style.display = "inline-block";
 	/*
 	retrive cart items (leaves one empty at end): localStorage.getItem("cart").slice(4).split(",").slice(0, -1); 
 	retrive cart length: localStorage.getItem("cart").slice(4).split(",").length - 1
