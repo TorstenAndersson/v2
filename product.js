@@ -42,7 +42,12 @@ function buy(sender) {
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
-	localStorage.setItem("cart", localStorage.getItem("cart") + ";" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2));
+	try {
+		localStorage.setItem("cart", localStorage.getItem("cart").slice(0, -1) + ",{" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)) + '":' + JSON.parse(localStorage.getItem["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + 1] + "}]";
+	} catch {
+		localStorage.setItem("cart", "[{" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)) + '":1}]';
+	}
+
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
 	cartItems.style.display = "inline-block";
