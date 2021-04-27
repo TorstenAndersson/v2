@@ -45,13 +45,14 @@ function buy(sender) {
 	}
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		localStorage["cart"] = localStorage["cart"].slice(0, -(2 + Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b)).toString().length)) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0)) + 1) + '"}';
+		const product = sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2);
+		localStorage["cart"] = localStorage["cart"].slice(0, -(2 + JSON.parse(localStorage["cart"])[product].length)) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[product].slice(0)) + 1) + '"}';
 	} catch {
 		localStorage["cart"] = localStorage["cart"].slice(0, -1);
 		if (localStorage["cart"] !== "{") {
 			localStorage["cart"] += ",";
 		}
-		localStorage["cart"] += '"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":"1"}';
+		localStorage["cart"] += '"' + product + '":"1"}';
 	}
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
