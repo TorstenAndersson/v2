@@ -47,7 +47,7 @@ function buy(sender) {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
 		localStorage["cart"] = localStorage["cart"].slice(0, -2) + JSON.stringify(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0) + 1) + "}";
 	} catch {
-		if (localStorage["cart"] != undefined) {
+		if (localStorage["cart"] !== "") {
 			localStorage["cart"] += ",";
 		}
 		localStorage["cart"] += '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":1}';
