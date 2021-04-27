@@ -54,7 +54,7 @@ function buy(sender) {
 		localStorage["cart"] += '"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":"1"}';
 	}
 	var cartItems = document.querySelector(".cartItemsNumber");
-	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
+	cartItems.innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
 	cartItems.style.display = "inline-block";
 	/*
 	retrive cart items (leaves one empty at end): localStorage.getItem("cart").slice(4).split(",").slice(0, -1); 
