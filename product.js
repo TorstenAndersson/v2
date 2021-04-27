@@ -45,7 +45,7 @@ function buy(sender) {
 	}
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		localStorage["cart"] = localStorage["cart"].slice(0, -3) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0)) + 1) + '"}';
+		localStorage["cart"] = localStorage["cart"].slice(0, -4) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0)) + 1) + '"}';
 	} catch {
 		if (localStorage["cart"] !== "{") {
 			localStorage["cart"] += ",";
