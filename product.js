@@ -10,7 +10,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";
-		localStorage["cart"] = "{";
+		localStorage["cart"] = "{ ";
 	}
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
@@ -47,10 +47,11 @@ function buy(sender) {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
 		localStorage["cart"] = localStorage["cart"].slice(0, -3) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0)) + 1) + '"}';
 	} catch {
+		localStorage["cart"] = localStorage["cart"].slice(0, -1);
 		if (localStorage["cart"] !== "{") {
 			localStorage["cart"] += ",";
 		}
-		localStorage["cart"] += '"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":"1"}';
+		localStorage["cart"] += + '"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":"1"}';
 	}
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
