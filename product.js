@@ -45,7 +45,7 @@ function buy(sender) {
 	}
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		localStorage["cart"] = localStorage["cart"].slice(0, -(2 + Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b))/10)) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0)) + 1) + '"}';
+		localStorage["cart"] = localStorage["cart"].slice(0, -(3 + Math.round(Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b))/10))) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0)) + 1) + '"}';
 	} catch {
 		localStorage["cart"] = localStorage["cart"].slice(0, -1);
 		if (localStorage["cart"] !== "{") {
