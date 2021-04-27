@@ -43,7 +43,7 @@ function buy(sender) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
 	try {
-		localStorage.setItem("cart", JSON.stringify(JSON.parse(localStorage.getItem("cart")[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)])));
+		localStorage.setItem("cart", JSON.stringify(JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)]));
 	} catch {
 		localStorage.setItem("cart", '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":1}');
 	}
