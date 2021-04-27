@@ -6,7 +6,7 @@ var size;
 
 function pageLoaded() {
 	try {
-		document.querySelector(".cartItemsNumber").innerText = localStorage["cart"].split(";").length - 1;
+		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";

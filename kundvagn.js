@@ -1,14 +1,15 @@
 function pageLoaded() {
 	try {
-		items = localStorage.getItem("cart").split(";").slice(1);
-		document.querySelector(".cartItemsNumber").innerText = items.length;
+		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
+		/*
 		console.log("Current cart!")
 		for (const item of items.values()) {
 			console.log(item);
 		}
+		*/
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 		document.querySelector(".emptyDiv").style.display = "block";
