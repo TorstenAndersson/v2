@@ -26,7 +26,7 @@ function smallImgHovered(sender) {
 
 function variantChanged(sender) {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
-	if (smallImgs.length != 0) {
+	if (smallImgs.length !== 0) {
 		for (const i2 in smallImgs) {
 			if (smallImgs[i2].src.split("%20").length > 4 && sender.innerText.includes(decodeURI(smallImgs[i2].src.split("%20").slice(3, -1))))
 				smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value); //.join("%20") if color is multiple words
@@ -45,12 +45,12 @@ function buy(sender) {
 	}
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		localStorage["cart"] = localStorage["cart"].slice(0, -2) + JSON.stringify(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0) + 1) + "}";
+		localStorage["cart"] = localStorage["cart"].slice(0, -3) + JSON.stringify(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0) + 1) + '"}';
 	} catch {
 		if (localStorage["cart"] !== "") {
 			localStorage["cart"] += ",";
 		}
-		localStorage["cart"] += '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":1}';
+		localStorage["cart"] += '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":"1"}';
 	}
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
