@@ -43,11 +43,11 @@ function buy(sender) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
 	try {
-		localStorage.setItem("cart", JSON.stringify(JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)]));
+		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
+		localStorage["cart"] = localStorage["cart"].slice(0, -2) + JSON.stringify(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1) + "}"
 	} catch {
 		localStorage.setItem("cart", '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":1}');
 	}
-
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
 	cartItems.style.display = "inline-block";
