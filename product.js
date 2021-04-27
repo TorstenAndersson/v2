@@ -44,9 +44,9 @@ function buy(sender) {
 	}
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		localStorage["cart"] = localStorage["cart"].slice(0, -2) + JSON.stringify(JSON.parse(localStorage["cart"])[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1) + "}"
+		localStorage["cart"] = localStorage["cart"].slice(0, -3) + JSON.stringify(JSON.parse(localStorage["cart"].slice(0, -1))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)].slice(0, -0) + 1) + "},"
 	} catch {
-		localStorage.setItem("cart", '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":1}');
+		localStorage.setItem("cart", '{"' + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2) + '":1},');
 	}
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = (localStorage.getItem("cart").slice(4).split(",").length - 1);
