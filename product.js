@@ -43,9 +43,9 @@ function buy(sender) {
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
+	const product = sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2);
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		const product = sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2);
 		localStorage["cart"] = localStorage["cart"].slice(0, -(2 + JSON.parse(localStorage["cart"])[product].length)) + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[product].slice(0)) + 1) + '"}';
 	} catch {
 		localStorage["cart"] = localStorage["cart"].slice(0, -1);
