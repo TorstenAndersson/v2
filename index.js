@@ -18,7 +18,7 @@ function pageLoaded() {
 		if (localCount === 1400) {
 			slide("forward");
 		}
-		if (active === false) {
+		if (!active) {
 			active = true;
 			localCount = 0;
 		}
@@ -31,7 +31,7 @@ var isScrolled = false;
 function pageScrolled() {
 	var navigationBar = document.querySelector(".navigationBar");
 	if (window.pageYOffset > 30) {
-		if (isScrolled === false) {
+		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
 			navigationBar.style.top = "0px";
 			navigationBar.classList.add("backgroundAnimation");
@@ -41,7 +41,7 @@ function pageScrolled() {
 		}
 	} 
 	if (window.pageYOffset < 30) {
-		if (isScrolled === true) {
+		if (isScrolled) {
 			navigationBar.style.position = "absolute";
 			navigationBar.style.top = "30px";
 			navigationBar.classList.add("backgroundAnimationBack");

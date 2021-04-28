@@ -64,14 +64,25 @@ function buy(sender) {
 	notification.classList.remove("fadeOut");
 	notification.classList.add("fadeIn");
 	
-	setTimeout(() => {
-		if (active === false) {
-			active = true;
+	/*
+	if (!active) {
+		setTimeout(() => {
 			notification.classList.remove("fadeIn");
 			notification.classList.add("fadeOut");
 			notification.style.opacity = "0";
-		} else {
+			active = false;
+		}, 5000);
+	}
+	*/
+	
+	setTimeout(() => {
+		if (!active) {
+			notification.classList.remove("fadeIn");
+			notification.classList.add("fadeOut");
+			notification.style.opacity = "0";
 			active = false;
 		}
 	}, 5000);
+
+	active = true;
 }
