@@ -4,12 +4,11 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
-		/*
 		console.log("Current cart!")
-		for (const item of items.values()) {
+		for (const item of Object.keys(JSON.parse(localStorage["cart"]))) {
 			console.log(item);
 		}
-		*/
+
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 		document.querySelector(".emptyDiv").style.display = "block";
