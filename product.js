@@ -63,11 +63,7 @@ function buy(sender) {
 	notification.classList.remove("fadeOut");
 	notification.classList.add("fadeIn");
 
-	try {
-		clearTimeout(timer)
-	} catch {
-		console.log("couldn't clear")
-	}
+	if (timer) clearTimeout(timer);
 
 	const timer = setTimeout(() => {
 		notification.classList.remove("fadeIn");
