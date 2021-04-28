@@ -63,11 +63,10 @@ function buy(sender) {
 	notification.classList.remove("fadeOut");
 	notification.classList.add("fadeIn");
 
-	if (timer) clearTimeout(timer);
-
-	const timer = setTimeout(() => {
+	const timeout = setTimeout(() => {
 		notification.classList.remove("fadeIn");
 		notification.classList.add("fadeOut");
 		notification.style.opacity = "0";
 	}, 5000);
+	if (document.querySelector.classList.includes("fadeOut")) clearTimeout(timeout);
 }
