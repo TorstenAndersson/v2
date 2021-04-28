@@ -207,7 +207,7 @@ a {
 	position: absolute;
 	top: 50%;
 	display: inline-block;
-	width: 500px;
+	width: max-content;
 	text-align: left;
 	transform: translateY(-60%);
 	padding-left: 20px;
@@ -222,7 +222,13 @@ a {
 .priceText {
 	position: absolute;
 	left: 49%;
+	color: rgb(47, 47, 47);
 	transform: translateX(-49%);
+	padding-top: 36px;
+}
+.quantityText {
+	position: absolute;
+	color: rgb(47, 47, 47);
 	padding-top: 36px;
 }
 .footerLogoText {
