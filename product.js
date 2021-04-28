@@ -76,7 +76,7 @@ function buy(sender) {
 	*/
 	
 	setTimeout(() => {
-		if (!active) {
+		if (active) {
 			notification.classList.remove("fadeIn");
 			notification.classList.add("fadeOut");
 			notification.style.opacity = "0";
