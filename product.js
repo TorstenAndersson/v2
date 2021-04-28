@@ -57,15 +57,19 @@ function buy(sender) {
 	var cartItems = document.querySelector(".cartItemsNumber");
 	cartItems.innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
 	cartItems.style.display = "inline-block";
-	/*
-	retrive cart items (leaves one empty at end): localStorage.getItem("cart").slice(4).split(",").slice(0, -1); 
-	retrive cart length: localStorage.getItem("cart").slice(4).split(",").length - 1
-	*/
+
 	var notification = document.querySelector(".notification");
 	notification.style.opacity = "1";
 	notification.classList.remove("fadeOut");
 	notification.classList.add("fadeIn");
-	setTimeout(function() { 
+
+	try {
+		clearTimeout(timer)
+	} catch {
+		console.log("couldn't clear")
+	}
+
+	const timer = setTimeout(() => {
 		notification.classList.remove("fadeIn");
 		notification.classList.add("fadeOut");
 		notification.style.opacity = "0";
