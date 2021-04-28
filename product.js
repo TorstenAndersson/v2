@@ -3,6 +3,7 @@ var count = 1;
 const initalCount = count; 
 var divCount = count;
 var size;
+var active = false;
 
 function pageLoaded() {
 	try {
@@ -62,10 +63,15 @@ function buy(sender) {
 	notification.style.opacity = "1";
 	notification.classList.remove("fadeOut");
 	notification.classList.add("fadeIn");
-
-	const timeout = setTimeout(() => {
-		notification.classList.remove("fadeIn");
-		notification.classList.add("fadeOut");
-		notification.style.opacity = "0";
+	
+	setTimeout(() => {
+		if (active === false) {
+			active = true;
+			notification.classList.remove("fadeIn");
+			notification.classList.add("fadeOut");
+			notification.style.opacity = "0";
+		} else {
+			active = false;
+		}
 	}, 5000);
 }
