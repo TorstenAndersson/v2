@@ -223,9 +223,7 @@ img.orderButton {
 }
 .hereLink {
 	color: rgb(57, 57, 57);
-	border-color: rgba(57 , 57, 57, .5);
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	border-bottom: 1px solid rgba(57 , 57, 57, .5);
 	transition: border-color .4s;
 	padding-bottom: 1px;
 }

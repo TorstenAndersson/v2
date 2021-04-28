@@ -166,13 +166,14 @@ form {
 	position: absolute;
     width: 100%;
     height: 40px;
-    font-size: 18px;
-    border: none;
-	outline: none;
-	overflow: hidden;
 	color: rgb(25, 25, 25);
+	/* CLEAN IT */
+    border: none;
+    font-size: 18px;
 	font-family: "Raleway";
 	line-height: 20px;
+	outline: none;
+	overflow: hidden;
 }
 .textInput:focus + .textQuery .textLabel, .textInput:valid + .textQuery .textLabel {
     font-size: 14px;
