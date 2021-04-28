@@ -60,13 +60,7 @@ function buy(sender) {
 	cartItems.style.display = "inline-block";
 
 	var notification = document.querySelector(".notification");
-
-	if (timer) {
-		clearTimeout(timer);
-		notification.style.opacity = 0;
-	}
-
-	setTimeout(() => notification.style.opacity = "1", 100);
+	notification.style.opacity = "1";
 	notification.classList.remove("fadeOut");
 	notification.classList.add("fadeIn");
 	
@@ -80,6 +74,7 @@ function buy(sender) {
 		}, 5000);
 	}
 	*/
+	if (timer) clearTimeout(timer);
 	
 	timer = setTimeout(() => {
 		notification.classList.remove("fadeIn");
