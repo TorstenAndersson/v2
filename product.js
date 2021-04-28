@@ -3,7 +3,7 @@ var count = 1;
 const initalCount = count; 
 var divCount = count;
 var size;
-var active = false;
+var timer;
 
 function pageLoaded() {
 	try {
@@ -74,15 +74,11 @@ function buy(sender) {
 		}, 5000);
 	}
 	*/
+	if (timer) clearTimeout(timer);
 	
-	setTimeout(() => {
-		if (active) {
-			notification.classList.remove("fadeIn");
-			notification.classList.add("fadeOut");
-			notification.style.opacity = "0";
-			active = false;
-		}
+	timer = setTimeout(() => {
+		notification.classList.remove("fadeIn");
+		notification.classList.add("fadeOut");
+		notification.style.opacity = "0";
 	}, 5000);
-
-	active = true;
 }
