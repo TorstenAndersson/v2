@@ -68,5 +68,5 @@ function buy(sender) {
 		notification.classList.add("fadeOut");
 		notification.style.opacity = "0";
 	}, 5000);
-	if (notification.classList.includes("fadeOut")) clearTimeout(timeout);
+	if (notification.classList.contains("fadeOut")) clearTimeout(timeout);
 }
