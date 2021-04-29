@@ -239,6 +239,7 @@ a {
 	width: 35px;
 	height: 35px;
 	color: rgb(47, 47, 47);
+	text-align: center;
 	border: 1px solid rgb(200, 200, 200);
 	border-radius: 10px;
 }
