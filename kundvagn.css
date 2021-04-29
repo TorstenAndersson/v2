@@ -229,12 +229,15 @@ a {
 .quantityDiv {
 	position: absolute;
 	right: 35%; /* position is off */
-	width: 35px;
-	height: 35px;
 	font-family: "Open Sans";
 	margin-top: 28px;
 }
+.quantityButton {
+	display: inline-block;
+}
 .quantityInput {
+	width: 35px;
+	height: 35px;
 	color: rgb(47, 47, 47);
 	border: 1px solid rgb(200, 200, 200);
 	border-radius: 10px;
