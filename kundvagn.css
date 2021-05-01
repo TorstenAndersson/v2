@@ -200,9 +200,6 @@ a {
 	left: 10%;
 	padding: 10px;
 }
-.productImg {
-	/* height: 80px; */
-}
 .textDiv {
 	position: absolute;
 	top: 50%;
@@ -231,14 +228,12 @@ a {
 }
 .quantitySelect {
 	position: absolute;
-	right: 35%;
+	right: 34.5%;
 	width: 50px;
 	height: 30px;
 	color: rgb(47, 47, 47);
 	font-family: "Open Sans";
-	text-align: center;
 	border: 1px solid rgb(200, 200, 200);
-	border-radius: 10px;
 	margin-top: 28px;
 }
 .footerLogoText {
