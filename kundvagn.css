@@ -203,10 +203,10 @@ a {
 .textDiv {
 	position: absolute;
 	top: 50%;
+	transform: translateY(-60%);
 	display: inline-block;
 	width: max-content;
 	text-align: left;
-	transform: translateY(-60%);
 	padding-left: 20px;
 }
 .productName {
@@ -218,9 +218,10 @@ a {
 }
 .priceText {
 	position: absolute;
-	left: 49%;
+	right: 50%;
+	transform: translateX(50%);
 	color: rgb(47, 47, 47);
-	transform: translateX(-50%);
+	margin-right: 13px;
 	padding-top: 36px;
 }
 .quantityButton {
@@ -228,13 +229,13 @@ a {
 }
 .quantitySelect {
 	position: absolute;
-	right: 34.4%;
+	right: 35%;
 	width: 50px;
 	height: 30px;
 	color: rgb(47, 47, 47);
 	font-family: "Open Sans";
 	border: 1px solid rgb(200, 200, 200);
-	margin-top: 32px;
+	margin: 32px -6px 0px 0px;
 }
 .footerLogoText {
 	position: absolute;

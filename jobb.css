@@ -132,10 +132,10 @@ a {
 .arguments {
     position: absolute;
     left: 50%;
+	transform: translate(-50%);
     display: block;
     text-align: left;
 	line-height: 24px;
-    transform: translate(-50%);
     padding-top: 25px;
 }
 .paragraph {
