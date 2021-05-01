@@ -207,7 +207,7 @@ a {
 	display: inline-block;
 	width: max-content;
 	text-align: left;
-	padding-left: 20px;
+	margin: 20px;
 }
 .productName {
 	font: 700 16px "Open Sans";
@@ -221,8 +221,7 @@ a {
 	right: 50%;
 	transform: translateX(50%);
 	color: rgb(47, 47, 47);
-	margin-right: 13px;
-	padding-top: 36px;
+	margin: 36px 12px 0px 0px;
 }
 .quantityButton {
 	display: inline-block;
