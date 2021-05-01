@@ -181,13 +181,13 @@ a {
 	margin-left: 20px;
 }
 .prisColumn {
-	right: 50%;
+	right: 45%;
 }
 .antalColumn {
-	right: 35%;
+	right: 30%;
 }
 .totaltColumn {
-	right: 20%;
+	right: 15%;
 }
 .productFrame {
 	width: 80%;
@@ -218,8 +218,8 @@ a {
 }
 .priceText {
 	position: absolute;
-	right: 50%;
-	transform: translateX(50%);
+	right: 45%;
+	transform: translateX(45%);
 	color: rgb(47, 47, 47);
 	margin: 36px 12px 0px 0px;
 }
@@ -228,7 +228,7 @@ a {
 }
 .quantitySelect {
 	position: absolute;
-	right: 35%;
+	right: 30%;
 	width: 50px;
 	height: 30px;
 	color: rgb(47, 47, 47);
