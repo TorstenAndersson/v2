@@ -228,13 +228,13 @@ a {
 }
 .quantitySelect {
 	position: absolute;
-	right: 34.5%;
+	right: 34.45%;
 	width: 50px;
 	height: 30px;
 	color: rgb(47, 47, 47);
 	font-family: "Open Sans";
 	border: 1px solid rgb(200, 200, 200);
-	margin-top: 28px;
+	margin-top: 32px;
 }
 .footerLogoText {
 	position: absolute;
