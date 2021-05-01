@@ -226,22 +226,20 @@ a {
 	transform: translateX(-50%);
 	padding-top: 36px;
 }
-.quantityDiv {
-	position: absolute;
-	right: 35%; /* position is off */
-	font-family: "Open Sans";
-	margin-top: 28px;
-}
 .quantityButton {
 	display: inline-block;
 }
-.quantityInput {
+.quantitySelect {
+	position: absolute;
+	right: 35%;
 	width: 35px;
 	height: 35px;
 	color: rgb(47, 47, 47);
+	font-family: "Open Sans";
 	text-align: center;
 	border: 1px solid rgb(200, 200, 200);
 	border-radius: 10px;
+	margin-top: 28px;
 }
 .footerLogoText {
 	position: absolute;
