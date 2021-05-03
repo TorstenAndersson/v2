@@ -219,9 +219,9 @@ a {
 .priceText {
 	position: absolute;
 	right: 45%;
-	transform: translateX(45%);
+	transform: translateX(50%);
 	color: rgb(47, 47, 47);
-	margin: 36px 12px 0px 0px;
+	margin: 36px 9px 0px 0px;
 }
 .quantityButton {
 	display: inline-block;
@@ -240,7 +240,7 @@ a {
 	position: absolute;
 	right: 15%;
 	transform: translateX(50%);
-	margin: 36px 20px 0px 0px;
+	margin: 36px 19px 0px 0px;
 }
 .footerLogoText {
 	position: absolute;
