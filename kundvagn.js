@@ -38,8 +38,8 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
-			if (items[item] < 50) {
-				for (var i = 1; i < 51; i ++) {
+			if (items[item] < 25) {
+				for (var i = 1; i < 26; i ++) {
 					var option = document.createElement("option");
 					option.innerText = i;
 					quantitySelect.appendChild(option);
