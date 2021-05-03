@@ -40,12 +40,22 @@ function pageLoaded() {
 			quantitySelect.classList.add("quantitySelect");
 			for (var i = parseInt(items[item]) - 25; i < parseInt(items[item]) + 25; i ++) {
 				var option = document.createElement("option");
-				option.innerText = parseInt(items[item]) - i;
+				option.innerText = i;
 				quantitySelect.appendChild(option);
-				if (parseInt(items[item]) - i == parseInt(items[item])) {
+				if (i === parseInt(items[item])) {
 					option.setAttribute("selected", "");
 				}
 			}
+			/*
+			for (var i = parseInt(items[item]) - 25; i < parseInt(items[item]) + 25; i ++) {
+				var option = document.createElement("option");
+				option.innerText = i - parseInt(items[item]);
+				quantitySelect.appendChild(option);
+				if (i - parseInt(items[item]) == parseInt(items[item])) {
+					option.setAttribute("selected", "");
+				}
+			}
+			*/
 			productFrame.appendChild(quantitySelect);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
