@@ -226,6 +226,7 @@ label.textarea {
 	background-color: rgb(40, 40, 40);
 }
 .notification {
+	opacity: 0;
 	z-index: 1;
 	position: absolute;
 	top: 115px;
