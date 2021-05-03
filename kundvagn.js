@@ -38,12 +38,12 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
-			for (var i = 2; i < 102; i ++) {
-				var option = document.createElement("option");
-				if (items[item] < 50) {
+			if (items[item] < 50) {
+				for (var i = -items[item]; i < -items[item] + 50; i ++) {
+					var option = document.createElement("option");
 					option.innerText = items[item] - i;
+					quantitySelect.appendChild(option);
 				}
-				quantitySelect.appendChild(option);
 			}
 			productFrame.appendChild(quantitySelect);
 			document.querySelector(".pageContent").appendChild(productFrame);
