@@ -39,9 +39,9 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			if (items[item] < 50) {
-				for (var i = int(items[item]); i < int(items[item]) + 50; i ++) {
+				for (var i = parseInt(items[item]); i < parseInt(items[item]) + 50; i ++) {
 					var option = document.createElement("option");
-					option.innerText = i - int(items[item]);
+					option.innerText = i - parseInt(items[item]);
 					quantitySelect.appendChild(option);
 				}
 			}
