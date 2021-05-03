@@ -246,11 +246,16 @@ a {
 	position: absolute;
 	right: 10%;
 	display: inline-block;
+	color:rgb(186, 186, 186);
 	border: inherit;
 	background-color: inherit;
 	transform: rotate(45deg);
 	font-size: 25px;
+	cursor: pointer;
 	user-select: none;
+}
+.removeButton:hover {
+	color: rgb(100, 100, 100);
 }
 .footerLogoText {
 	position: absolute;

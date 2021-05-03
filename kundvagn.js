@@ -29,5 +29,5 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 function removeItem(sender) {
-	console.log("trying to remove" + sender.parentElement.firstElementChild.children[1].innerText)
+	console.log("trying to remove " + sender.parentElement.firstElementChild.children[1].innerText)
 }
