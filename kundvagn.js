@@ -34,6 +34,15 @@ function pageLoaded() {
 			var priceText = document.createElement("span");
 			priceText.classList.add("priceText");
 			priceText.innerText = item.split(">")[4];
+			productFrame.appendChild(priceText);
+			var quantitySelect = document.createElement("select");
+			quantitySelect.classList("quantitySelect");
+			for (var i = 1; i < 101; i ++) {
+				var option = document.createElement("option");
+				if (items[item] < 50) {
+					option.innerText = i - items[item];
+				}
+			}
 			productFrame.appendChild(productLink);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
