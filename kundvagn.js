@@ -16,9 +16,9 @@ function pageLoaded() {
 			var productImg = document.createElement("img");
 			productImg.classList.add("productImg");
 			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + item.split(">")[3]).replace(" ", "%20");
-			productImg.width = "80px";
-			productImg.height = "80px";
-			productImg.alt = item.split(">")[3].slice(0, -4).replace("%20", " ");
+			productImg.setAttribute("width", "80px");
+			productImg.setAttribute("height", "80px");
+			productImg.setAttribute("alt", item.split(">")[3].slice(0, -4).replace("%20", " "));
 			productLink.appendChild(productImg);
 			productFrame.appendChild(productLink);
 			document.querySelector(".pageContent").appendChild(productFrame);
