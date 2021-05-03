@@ -39,11 +39,11 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			if (items[item] < 50) {
-				for (var i = parseInt(items[item]) - 25; i < parseInt(items[item]) + 25; i ++) {
+				for (var i = 1; i < 51; i ++) {
 					var option = document.createElement("option");
-					option.innerText = i - parseInt(items[item]);
+					option.innerText = i;
 					quantitySelect.appendChild(option);
-					if (i - parseInt(items[item]) == parseInt(items[item])) {
+					if (i === parseInt(items[item])) {
 						option.setAttribute("selected", "");
 					}
 				}
