@@ -31,6 +31,7 @@ function pageLoaded() {
 			productVariant.innerText = item.split(">")[2];
 			textDiv.appendChild(productVariant);
 			productLink.appendChild(textDiv);
+			roductFrame.appendChild(productLink);
 			var priceText = document.createElement("span");
 			priceText.classList.add("priceText");
 			priceText.innerText = item.split(">")[4];
@@ -42,8 +43,9 @@ function pageLoaded() {
 				if (items[item] < 50) {
 					option.innerText = i - items[item];
 				}
+				quantitySelect.appendChild(option);
 			}
-			productFrame.appendChild(productLink);
+			productFrame.appendChild(quantitySelect);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
 
