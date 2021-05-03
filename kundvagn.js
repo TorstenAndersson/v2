@@ -31,7 +31,7 @@ function pageLoaded() {
 			productVariant.innerText = item.split(">")[2];
 			textDiv.appendChild(productVariant);
 			productLink.appendChild(textDiv);
-			roductFrame.appendChild(productLink);
+			productFrame.appendChild(productLink);
 			var priceText = document.createElement("span");
 			priceText.classList.add("priceText");
 			priceText.innerText = item.split(">")[4];
