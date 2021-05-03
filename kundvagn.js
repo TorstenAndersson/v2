@@ -36,7 +36,7 @@ function pageLoaded() {
 			priceText.innerText = item.split(">")[4];
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
-			quantitySelect.classList("quantitySelect");
+			quantitySelect.classList.add("quantitySelect");
 			for (var i = 1; i < 101; i ++) {
 				var option = document.createElement("option");
 				if (items[item] < 50) {
