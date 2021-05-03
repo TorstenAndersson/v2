@@ -221,7 +221,7 @@ a {
 	right: 45%;
 	transform: translateX(50%);
 	color: rgb(47, 47, 47);
-	margin: 36px 10px 0px 0px;
+	margin: 36px 11px 0px 0px;
 }
 .quantityButton {
 	display: inline-block;
@@ -241,6 +241,16 @@ a {
 	right: 15%;
 	transform: translateX(50%);
 	margin: 36px 19px 0px 0px;
+}
+.removeButton {
+	position: absolute;
+	right: 10%;
+	display: inline-block;
+	border: inherit;
+	background-color: inherit;
+	transform: rotate(45deg);
+	font-size: 25px;
+	user-select: none;
 }
 .footerLogoText {
 	position: absolute;
