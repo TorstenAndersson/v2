@@ -61,8 +61,6 @@ function buy(sender) {
 
 	var notification = document.querySelector(".notification");
 	notification.style.opacity = "1";
-	notification.classList.remove("fadeOut");
-	notification.classList.add("fadeIn");
 	
 	/*
 	if (!active) {
@@ -77,8 +75,6 @@ function buy(sender) {
 	if (timer) clearTimeout(timer);
 	
 	timer = setTimeout(() => {
-		notification.classList.remove("fadeIn");
-		notification.classList.add("fadeOut");
 		notification.style.opacity = "0";
 	}, 5000);
 }

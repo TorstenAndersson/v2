@@ -16,11 +16,7 @@ function pageLoaded() {
     		if (res) {
 				var notification = document.querySelector(".notification");
 				notification.style.opacity = "1";
-				notification.classList.remove("fadeOut");
-				notification.classList.add("fadeIn");
 				setTimeout(function() { 
-					notification.classList.remove("fadeIn");
-					notification.classList.add("fadeOut");
 					notification.style.opacity = "0";
 				}, 5000);
 				document.querySelector(".reasonOther").style.display = "none";
