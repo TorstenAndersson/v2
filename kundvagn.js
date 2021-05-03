@@ -44,7 +44,7 @@ function pageLoaded() {
 					option.innerText = i - parseInt(items[item]);
 					quantitySelect.appendChild(option);
 					if (i - parseInt(items[item]) == parseInt(items[item])) {
-						option.setAttribute("selected");
+						option.setAttribute("selected", "");
 					}
 				}
 			}
