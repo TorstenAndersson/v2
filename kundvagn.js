@@ -25,7 +25,7 @@ function pageLoaded() {
 			var productName = document.createElement("span");
 			productName.classList.add("productName");
 			productName.innerText = item.split(">")[1];
-			textDiv.appendChild("productName");
+			textDiv.appendChild(productName);
 			var productVariant = document.createElement("span");
 			productVariant.classList.add("productVariant");
 			productVariant.innerText = item.split(">")[2];
