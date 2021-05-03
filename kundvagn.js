@@ -16,6 +16,7 @@ function pageLoaded() {
 			var productImg = document.createElement("img");
 			productImg.classList.add("productImg");
 			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + item.split(">")[3]).replace(" ", "%20");
+			
 		}
 
 	} catch (TypeError) {
