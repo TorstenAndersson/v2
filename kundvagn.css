@@ -236,6 +236,12 @@ a {
 	border: 1px solid rgb(200, 200, 200);
 	margin: 32px -6px 0px 0px;
 }
+.totalText {
+	position: absolute;
+	right: 15%;
+	transform: translateX(50%);
+	margin: 36px 20px 0px 0px;
+}
 .footerLogoText {
 	position: absolute;
 	bottom: 8px;
