@@ -41,8 +41,11 @@ function pageLoaded() {
 			if (items[item] < 50) {
 				for (var i = parseInt(items[item]); i < parseInt(items[item]) + 50; i ++) {
 					var option = document.createElement("option");
-					option.innerText = i;
+					option.innerText = i - parseInt(items[item]);
 					quantitySelect.appendChild(option);
+					if (i - parseInt(items[item]) == parseInt(items[item])) {
+						option.setAttribute("selected");
+					}
 				}
 			}
 			productFrame.appendChild(quantitySelect);
