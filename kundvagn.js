@@ -41,7 +41,7 @@ function pageLoaded() {
 			for (var i = 2; i < 102; i ++) {
 				var option = document.createElement("option");
 				if (items[item] < 50) {
-					option.innerText = items[item] - 1;
+					option.innerText = items[item] - i;
 				}
 				quantitySelect.appendChild(option);
 			}
