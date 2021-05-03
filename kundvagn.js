@@ -1,12 +1,18 @@
 function pageLoaded() {
 	try {
-		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
+		const items = JSON.parse(localStorage["cart"]);
+		document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => parseInt(a) + parseInt(b));
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
 		console.log("Current cart!")
-		for (const item of Object.keys(JSON.parse(localStorage["cart"]))) {
+		for (const item of Object.keys(items)) {
 			console.log(item);
+			var productFrame = document.createElement("div");
+			productFrame.classList.add("productFrame");
+			var productLink = document.createElement("a");
+			productLink.classList.add("productLink")
+			productLink.href = "/"
 		}
 
 	} catch (TypeError) {

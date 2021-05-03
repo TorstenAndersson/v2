@@ -44,7 +44,7 @@ function buy(sender) {
 	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
-	const product = sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2);
+	const product = document.URL.split("/")[3] + ">" + sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2);
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
 		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[product].slice(0)) + 1));
