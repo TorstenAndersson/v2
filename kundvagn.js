@@ -20,6 +20,20 @@ function pageLoaded() {
 			productImg.setAttribute("height", "80px");
 			productImg.setAttribute("alt", item.split(">")[3].slice(0, -4).replace("%20", " "));
 			productLink.appendChild(productImg);
+			var textDiv = document.createElement("div");
+			textDiv.classList.add("textDiv");
+			var productName = document.createElement("span");
+			productName.classList.add("productName");
+			productName.innerText = item.split(">")[1];
+			textDiv.appendChild("productName");
+			var productVariant = document.createElement("span");
+			productVariant.classList.add("productVariant");
+			productVariant.innerText = item.split(">")[2];
+			textDiv.appendChild(productVariant);
+			productLink.appendChild("textDiv");
+			var priceText = document.createElement("span");
+			priceText.classList.add(priceText);
+			priceText.innerText = item.split(">")[4];
 			productFrame.appendChild(productLink);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
