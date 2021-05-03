@@ -15,7 +15,7 @@ function pageLoaded() {
 			productLink.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase();
 			var productImg = document.createElement("img");
 			productImg.classList.add("productImg");
-			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + item.split(">")[1] + item.split(">")[3] + ".webp").replace(" ", "%20");
+			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + item.split(">")[3]).replace(" ", "%20");
 		}
 
 	} catch (TypeError) {
