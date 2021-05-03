@@ -38,7 +38,7 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
-			for (var i = 1; i < 101; i ++) {
+			for (var i = 2; i < 102; i ++) {
 				var option = document.createElement("option");
 				if (items[item] < 50) {
 					option.innerText = i - items[item];
