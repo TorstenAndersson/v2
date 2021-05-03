@@ -22,20 +22,6 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.backgroundAnimation {
-	animation: backgroundKeyframe .3s;
-}
-@keyframes backgroundKeyframe {
-	from {background-color: transparent}
-	to {background-color: rgb(47, 47, 47)}
-}
-.backgroundAnimationBack {
-	animation: backgroundBackKeyframe .3s;
-}
-@keyframes backgroundBackKeyframe {
-	from {background-color: rgb(47, 47, 47)}
-	to {background-color: transparent}
-}
 .navigationBar {
 	position: absolute;
 	top: 30px;

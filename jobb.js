@@ -38,9 +38,7 @@ function pageScrolled() {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
 			navigationBar.style.top = "0px";
-			navigationBar.classList.add("backgroundAnimation");
 			navigationBar.style.backgroundColor = "rgb(39, 39, 39)";
-			navigationBar.classList.remove("backgroundAnimationBack");
 			isScrolled = true;
 			document.querySelector(".notification").style.position = "fixed";
 			document.querySelector(".notification").style.top = "90px";
@@ -50,9 +48,7 @@ function pageScrolled() {
 		if (isScrolled) {
 			navigationBar.style.position = "absolute";
 			navigationBar.style.top = "30px";
-			navigationBar.classList.add("backgroundAnimationBack");
 			navigationBar.style.backgroundColor = "transparent";
-			navigationBar.classList.remove("backgroundAnimation");
 			isScrolled = false;
 			document.querySelector(".notification").style.position = "absolute";
 			document.querySelector(".notification").style.top = "120px";
