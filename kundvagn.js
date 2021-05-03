@@ -38,7 +38,7 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
-			for (var i = parseInt(items[item]); i < parseInt(items[item]) + 50; i ++) {
+			for (var i = parseInt(items[item]) - 25; i < parseInt(items[item]) + 25; i ++) {
 				var option = document.createElement("option");
 				option.innerText = i - parseInt(items[item]);
 				quantitySelect.appendChild(option);
