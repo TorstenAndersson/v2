@@ -253,7 +253,7 @@ a {
 	font-size: 25px;
 	cursor: pointer;
 	user-select: none;
-	transition: color 1s;
+	transition: color .5s;
 }
 .removeButton:hover {
 	color: rgb(100, 100, 100);
