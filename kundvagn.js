@@ -40,9 +40,9 @@ function pageLoaded() {
 			quantitySelect.classList.add("quantitySelect");
 			for (var i = parseInt(items[item]) - 25; i < parseInt(items[item]) + 25; i ++) {
 				var option = document.createElement("option");
-				option.innerText = i - parseInt(items[item]);
+				option.innerText = parseInt(items[item]) - 1;
 				quantitySelect.appendChild(option);
-				if (i - parseInt(items[item]) == parseInt(items[item])) {
+				if (parseInt(items[item]) - 1 == parseInt(items[item])) {
 					option.setAttribute("selected", "");
 				}
 			}
