@@ -28,3 +28,6 @@ function pageLoaded() {
 	*/
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
+function removeItem(sender) {
+	print("trying to remove" + sender.parentElement.firstChild.src)
+}
