@@ -161,7 +161,7 @@ a {
 }
 .columnText {
 	position: absolute;
-	color: rgb(100, 100, 100);
+	color: rgb(120, 120, 120);
 }
 .produktColumn {
 	left: 10%;
@@ -207,7 +207,7 @@ a {
 	position: absolute;
 	right: 45%;
 	transform: translateX(50%);
-	color: rgb(47, 47, 47);
+	color: rgb(120, 120, 120);
 	margin: 36px 11px 0px 0px;
 }
 .quantityButton {
@@ -218,7 +218,7 @@ a {
 	right: 30%;
 	width: 50px;
 	height: 30px;
-	color: rgb(47, 47, 47);
+	color: rgb(57, 57, 57);
 	font-family: "Open Sans";
 	border: 1px solid rgb(200, 200, 200);
 	margin: 32px -6px 0px 0px;
@@ -226,6 +226,7 @@ a {
 .totalText {
 	position: absolute;
 	right: 15%;
+	font-weight: 700;
 	transform: translateX(50%);
 	margin: 36px 19px 0px 0px;
 }
