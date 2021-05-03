@@ -30,7 +30,7 @@ function pageLoaded() {
 			productVariant.classList.add("productVariant");
 			productVariant.innerText = item.split(">")[2];
 			textDiv.appendChild(productVariant);
-			productLink.appendChild("textDiv");
+			productLink.appendChild(textDiv);
 			var priceText = document.createElement("span");
 			priceText.classList.add(priceText);
 			priceText.innerText = item.split(">")[4];
