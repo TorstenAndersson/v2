@@ -92,7 +92,7 @@ function selectChanged(sender) {
 		for (var i = 1; i < 25 + +select.value; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
-			select.appendChild(option);
+			sender.appendChild(option);
 			if (i === +select.value) {
 				option.setAttribute("selected", "");
 			}
@@ -101,7 +101,7 @@ function selectChanged(sender) {
 		for (var i = +select.value - 25; i < +select.value + 25; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
-			select.appendChild(option);
+			sender.appendChild(option);
 			if (i === +select.value) {
 				option.setAttribute("selected", "");
 			}
