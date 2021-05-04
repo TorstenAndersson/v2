@@ -68,7 +68,7 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-function selectChanged(sender, value) {
+function selectChanged(sender, value = sender.value) {
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (var i = 1; i < 25 + value; i ++) {
