@@ -1,7 +1,7 @@
 function pageLoaded() {
 	try {
 		const items = JSON.parse(localStorage["cart"]);
-		document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => parseInt(a) + parseInt(b));
+		document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
@@ -39,20 +39,20 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			if (items[item] < 25) {
-				for (var i = 1; i < 26 + items[item]; i ++) {
+				for (var i = 1; i < 26 + +items[item]; i ++) {
 					var option = document.createElement("option");
 					option.innerText = i;
 					quantitySelect.appendChild(option);
-					if (i === parseInt(items[item])) {
+					if (i === +items[item]) {
 						option.setAttribute("selected", "");
 					}
 				}
 			} else {
-				for (var i = parseInt(items[item]) - 25; i < parseInt(items[item]) + 25; i ++) {
+				for (var i = +items[item] - 25; i < +items[item] + 25; i ++) {
 					var option = document.createElement("option");
 					option.innerText = i;
 					quantitySelect.appendChild(option);
-					if (i === parseInt(items[item])) {
+					if (i === +items[item]) {
 						option.setAttribute("selected", "");
 					}
 				}

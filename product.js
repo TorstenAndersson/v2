@@ -4,7 +4,7 @@ localStorage["cart"] = "{ ";
 
 function pageLoaded() {
 	try {
-		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
+		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";
@@ -43,7 +43,7 @@ function buy() {
 	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + document.querySelector(".productImg").src.split("/")[5] + ">" + document.querySelector(".productPriceText").innerText;
 	try {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
-		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(parseInt(JSON.parse(localStorage["cart"])[product].slice(0)) + 1));
+		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(+JSON.parse(localStorage["cart"])[product].slice(0) + 1));
 	} catch {
 		localStorage["cart"] = localStorage["cart"].slice(0, -1);
 		if (localStorage["cart"] !== "{") {
@@ -52,7 +52,7 @@ function buy() {
 		localStorage["cart"] += '"' + product + '":"1"}';
 	}
 	var cartItems = document.querySelector(".cartItemsNumber");
-	cartItems.innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => parseInt(a) + parseInt(b));
+	cartItems.innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	cartItems.style.display = "inline-block";
 
 	var notification = document.querySelector(".notification");

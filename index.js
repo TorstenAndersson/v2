@@ -57,7 +57,7 @@ function slide(where) {
 		divs.push(divs[0]);
 		divs.shift();
 		
-		slider.style.left = parseInt(slider.style.left.slice(0, -2)) + size + "px";
+		slider.style.left = +slider.style.left.slice(0, -2) + size + "px";
 		divCount ++;
 		count ++;
 		slider.style.transform = "translateX(" + (-size * count) + "px)";
@@ -68,7 +68,7 @@ function slide(where) {
 		divs.unshift(divs[divs.length - 1]);
 		divs.pop();
 		
-		slider.style.left = parseInt(slider.style.left.slice(0, -2)) - size + "px";
+		slider.style.left = +slider.style.left.slice(0, -2) - size + "px";
 		divCount ++;
 		count --;
 		slider.style.transform = "translateX(" + (-size * count) + "px)";
