@@ -4,7 +4,6 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
-		console.log("Current cart!")
 		for (const item of Object.keys(items)) {
 			console.log(item);
 			var productFrame = document.createElement("div");
@@ -51,7 +50,7 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
-
+		console.timeEnd("debugTimer");
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
@@ -119,6 +118,8 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	console.time("debugTimer");
+	pageLoaded();
+	/*
 	if (localStorage["cart"] === "{}") {
 		document.querySelector(".columnDiv").style.display = "none";
 		document.querySelector(".cartItemsNumber").style.display = "none";
@@ -127,4 +128,5 @@ function removeItem(sender) {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
 	console.timeEnd("debugTimer");
+	*/
 }
