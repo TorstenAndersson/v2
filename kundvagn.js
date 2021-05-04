@@ -40,11 +40,11 @@ function pageLoaded() {
 			quantitySelect.classList.add("quantitySelect");
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
 			productFrame.appendChild(quantitySelect);
-			selectChanged(quantitySelect, +items[item]);
 			var totalText = document.createElement("span");
-			totalText.classList.add("totalText");
-			totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			productFrame.appendChild(totalText);
+			selectChanged(quantitySelect, +items[item]);
+			totalText.classList.add("totalText");
+			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
 
@@ -74,6 +74,7 @@ function selectChanged(sender) {
 	const items = JSON.parse(localStorage["cart"]);
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
+	sender.parentElement.children[3].innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * value).toString().replace(".", ",") + " kr";
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (var i = 1; i < 25 + value; i ++) {
