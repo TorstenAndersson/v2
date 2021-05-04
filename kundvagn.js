@@ -1,5 +1,5 @@
 function pageLoaded() {
-	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
+	if (localStorage["cart"] !== "{}" || localStorage["cart"] !== undefined) {
 		const items = JSON.parse(localStorage["cart"]);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
@@ -119,5 +119,5 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "")
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "")
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "")
-	
+	document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 }
