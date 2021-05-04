@@ -109,10 +109,10 @@ function selectChanged(sender) {
 				option.setAttribute("selected", "");
 			}
 		}
-		option = document.createElement("option");
-		option.innerText = 10**value.toString().length;
-		sender.appendChild(option);
 	}
+	option = document.createElement("option");
+	option.innerText = 10**value.toString().length;
+	sender.appendChild(option);
 }
 
 function removeItem(sender) {
