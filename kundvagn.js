@@ -77,7 +77,7 @@ function pageScrolled() {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
 			navigationBar.style.top = "0px";
-			navigationBar.style.backgroundColor = "rgb(39, 39, 39)";
+			navigationBar.style.backgroundColor = "rgb(255, 255, 255)";
 			isScrolled = true;
 		}
 	} 
