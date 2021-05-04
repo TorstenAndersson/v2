@@ -44,7 +44,7 @@ function pageLoaded() {
 			productFrame.appendChild(quantitySelect);
 			var totalText = document.createElement("span");
 			totalText.classList.add("totalText");
-			totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString() + " kr";
+			totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			productFrame.appendChild(totalText);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
