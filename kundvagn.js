@@ -96,7 +96,7 @@ function selectChanged(sender) {
 			}
 		}
 	} else {
-		for (var i = +isender.value - 25; i < +isender.value + 25; i ++) {
+		for (var i = +sender.value - 25; i < +sender.value + 25; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
