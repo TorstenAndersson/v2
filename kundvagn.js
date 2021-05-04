@@ -44,6 +44,10 @@ function pageLoaded() {
 			productFrame.appendChild(totalText);
 			selectChanged(quantitySelect, +items[item]);
 			totalText.classList.add("totalText");
+			var removeButton = document.createElement("button");
+			removeButton.classList.add("removeButton");
+			removeButton.setAttribute("onclick", "removeItem(this)");
+			removeButton.innerText("+");
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
