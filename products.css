@@ -139,7 +139,7 @@ a {
     padding: 20px 40px 30px 40px;
 }
 .productFrame:hover {
-    box-shadow: 0 0 6px rgb(150, 150, 150);
+    box-shadow: rgb(150, 150, 150) 0px 0px 6px;
 }
 .productImg {
     padding-bottom: 15px;

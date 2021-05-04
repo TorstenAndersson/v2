@@ -23,6 +23,7 @@ body {
 	background-repeat: no-repeat;
 }
 .navigationBar {
+	z-index: 1;
 	position: absolute;
 	top: 30px;
 	width: 100%;
@@ -179,7 +180,7 @@ a {
 .productFrame {
 	width: 80%;
 	height: 100px;
-	box-shadow: 0 0 15px 8px rgb(235, 235, 235);
+	box-shadow: rgb(235, 235, 235) 0px 0px 15px 8px;
 	margin: auto;
 	margin-bottom: 10px;
 }
