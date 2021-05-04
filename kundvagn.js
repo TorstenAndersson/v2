@@ -74,7 +74,7 @@ function selectChanged(sender) {
 	const items = JSON.parse(localStorage["cart"]);
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
-	sender.parentElement.children[3].innerText = (parseFloat(items[product].split(">")[4].replace(",", ".")) * value).toString().replace(".", ",") + " kr";
+	sender.parentElement.children[3].innerText = (parseFloat(product.split(">")[4].replace(",", ".")) * value).toString().replace(".", ",") + " kr";
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (var i = 1; i < 25 + value; i ++) {
