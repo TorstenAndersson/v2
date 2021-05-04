@@ -97,6 +97,9 @@ function selectChanged(sender) {
 				option.setAttribute("selected", "");
 			}
 		}
+		option = documnet.createElement("option");
+		option.innerText = 50;
+		sender.appendChild(option);
 	} else {
 		var option = document.createElement("option");
 		option.innerText = 1;
@@ -109,10 +112,10 @@ function selectChanged(sender) {
 				option.setAttribute("selected", "");
 			}
 		}
+		option = document.createElement("option");
+		option.innerText = 10**value.toString().length * 1;
+		sender.appendChild(option);
 	}
-	option = document.createElement("option");
-	option.innerText = 10**value.toString().length * 10;
-	sender.appendChild(option);
 }
 
 function removeItem(sender) {
