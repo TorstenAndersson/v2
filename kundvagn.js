@@ -86,21 +86,23 @@ function pageLoaded() {
 }
 
 function selectChanged(sender) {
-	if (+sender.value < 25) {
-		for (var i = 1; i < 25 + +sender.value; i ++) {
+	const value = +sender.value;
+	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
+	if (value < 25) {
+		for (var i = 1; i < 25 + value; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
-			if (i === +sender.value) {
+			if (i === value) {
 				option.setAttribute("selected", "");
 			}
 		}
 	} else {
-		for (var i = +sender.value - 25; i < +sender.value + 25; i ++) {
+		for (var i = value - 25; i < value + 25; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
-			if (i === +sender.value) {
+			if (i === value) {
 				option.setAttribute("selected", "");
 			}
 		}
