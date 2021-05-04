@@ -1,3 +1,4 @@
+console.time("debugTimer");
 function pageLoaded() {
 	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
 		const items = JSON.parse(localStorage["cart"]);
@@ -121,7 +122,7 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "");
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
-	console.time("debugTimer");
+	console.timeLog("debugTimer");
 	pageLoaded();
 	/*
 	if (localStorage["cart"] === "{}") {
