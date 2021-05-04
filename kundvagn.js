@@ -5,7 +5,6 @@ function pageLoaded() {
 		document.querySelector(".columnDiv").style.display = "block";
 
 		for (const item of Object.keys(items)) {
-			console.log(item);
 			var productFrame = document.createElement("div");
 			productFrame.classList.add("productFrame");
 			var productLink = document.createElement("a");
@@ -60,19 +59,6 @@ function pageLoaded() {
 		footer.style.bottom = "initial";
 		footer.style.width = "initial";
 	}
-	/*
-	var cartDiv = document.createElement("div");
-	cartDiv.classList.add("columnDiv");
-	for (const item of ["Produkt", "Pris", "Antal", "Totalt"].values()) {
-		console.log(item);
-		var span = document.createElement("span");
-		span.innerText = item;
-		span.classList.add("columnText", item.toLowerCase() + "Column");
-		cartDiv.appendChild(span);
-	}
-	document.querySelector(".pageContent").appendChild(cartDiv);
-
-	*/
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
@@ -142,7 +128,6 @@ function selectChanged(sender) {
 }
 
 function removeItem(sender) {
-	console.log("trying to remove " + sender.parentElement.firstElementChild.children[1].innerText);
 	document.querySelector(".pageContent").removeChild(sender.parentElement);
 	const product = sender.parentElement.firstElementChild.href.split("/")[3] + ">" + sender.parentElement.firstElementChild.children[1].firstElementChild.innerText + ">" + sender.parentElement.firstElementChild.children[1].children[1].innerText + ">" + sender.parentElement.firstElementChild.firstElementChild.src.split("/")[5] + ">" + sender.parentElement.children[1].innerText;
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "");
