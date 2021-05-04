@@ -109,6 +109,9 @@ function selectChanged(sender) {
 				option.setAttribute("selected", "");
 			}
 		}
+		option = document.createElement("option");
+		option.innerText = Math.round(value * 10)/10;
+		sender.appendChild(option);
 	}
 }
 
