@@ -113,7 +113,7 @@ function selectChanged(sender) {
 			}
 		}
 		option = document.createElement("option");
-		option.innerText = 10**value.toString().length * 1;
+		option.innerText = 10**value.toString().length/2;
 		sender.appendChild(option);
 	}
 }
