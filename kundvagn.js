@@ -38,6 +38,9 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
+			quantitySelect.setAttribute("onchange", "selectChanged(this)");
+			selectChanged(quantitySelect);
+			/*
 			if (items[item] < 25) {
 				for (var i = 1; i < 26 + +items[item]; i ++) {
 					var option = document.createElement("option");
@@ -57,6 +60,7 @@ function pageLoaded() {
 					}
 				}
 			}
+	*/
 			productFrame.appendChild(quantitySelect);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
@@ -80,6 +84,29 @@ function pageLoaded() {
 	*/
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
+
+function selectChanged(sender) {
+	if (+sender.value < 25) {
+		for (var i = 1; i < 26 + +sender.value; i ++) {
+			var option = document.createElement("option");
+			option.innerText = i;
+			quantitySelect.appendChild(option);
+			if (i === +sender.value) {
+				option.setAttribute("selected", "");
+			}
+		}
+	} else {
+		for (var i = +isender.value - 25; i < +isender.value + 25; i ++) {
+			var option = document.createElement("option");
+			option.innerText = i;
+			quantitySelect.appendChild(option);
+			if (i === +sender.value) {
+				option.setAttribute("selected", "");
+			}
+		}
+	}
+}
+
 function removeItem(sender) {
 	console.log("trying to remove " + sender.parentElement.firstElementChild.children[1].innerText)
 }
