@@ -53,8 +53,8 @@ function pageLoaded() {
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
-	
-	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 150) {
+
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 120) {
 		var footer = document.querySelector(".footerLogoText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
