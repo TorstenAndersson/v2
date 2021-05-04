@@ -180,9 +180,9 @@ a {
 .productFrame {
 	width: 80%;
 	height: 100px;
-	box-shadow: rgb(235, 235, 235) 0px 0px 15px 8px;
+	box-shadow: rgb(235, 235, 235) 0px 0px 20px 5px;
 	margin: auto;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 .productLink {
 	position: absolute;
