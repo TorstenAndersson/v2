@@ -50,7 +50,11 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
-		console.timeEnd("debugTimer");
+		try {
+			console.timeEnd("debugTimer");
+		} catch {
+			console.log("timer doesnt exist");
+		}
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
