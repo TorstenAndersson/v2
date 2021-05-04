@@ -323,7 +323,7 @@ files["index"] = ('''<!DOCTYPE html>
 				<span>Vi här på Johanssudd söker alltid arbetskraft. Vi erbjuder massvis med olika jobb inom alla områden du kan tänka dig. Om du tror att du har vad som krävs önskar vi att du skulle fylla i vårt formulär <a class="hereLink" href="jobb">här</a>!</span>
 			</div>
 		</main>
-        <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
 	</body>
 </html>''')
 
@@ -400,7 +400,7 @@ files["om oss"] = '''<!DOCTYPE html>
                 </div>
             </div>
         </main>
-        <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>'''
 
@@ -478,7 +478,7 @@ files["sudd"] = '''<!DOCTYPE html>
             <div class="mainFrame">''' + suddDiv + '''
             </div>
         </main>
-        <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>'''
 
@@ -556,7 +556,7 @@ files["merchandise"] = '''<!DOCTYPE html>
             <div class="mainFrame">''' + merchandiseDiv + '''
             </div>
         </main>
-        <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>'''
 
@@ -674,7 +674,7 @@ files["jobb"] = '''<!DOCTYPE html>
                 <span class="notificationText">Skickat! Vi återkommer snarast.</span>
             </div>
         </main>
-        <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>'''
 
@@ -868,7 +868,7 @@ for product in products["products"]:
                 </div>
             </div>
         </main>
-        <span class="footerLogoText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>''')
 

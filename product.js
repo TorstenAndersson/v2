@@ -9,7 +9,7 @@ function pageLoaded() {
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 	}
-	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
 function smallImgHovered(sender) {

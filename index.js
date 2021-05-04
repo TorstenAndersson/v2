@@ -23,7 +23,7 @@ function pageLoaded() {
 			localCount = 0;
 		}
 	}, 1)
-	document.querySelector(".footerLogoText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	document.querySelector(".footerText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
 var isScrolled = false;

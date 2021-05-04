@@ -55,7 +55,7 @@ function pageLoaded() {
 	}
 
 	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 140) {
-		var footer = document.querySelector(".footerLogoText");
+		var footer = document.querySelector(".footerText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
 		footer.style.width = "100%";
@@ -73,14 +73,14 @@ function pageLoaded() {
 	document.querySelector(".pageContent").appendChild(cartDiv);
 
 	*/
-	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
 var isScrolled = false;
 
 function pageScrolled() {
 	var navigationBar = document.querySelector(".navigationBar");
-	var footer = document.querySelector(".footerLogoText");
+	var footer = document.querySelector(".footerText");
 	if (window.pageYOffset > 30) {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
@@ -156,7 +156,7 @@ function removeItem(sender) {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
 	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 140) {
-		var footer = document.querySelector(".footerLogoText");
+		var footer = document.querySelector(".footerText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
 		footer.style.width = "100%";
