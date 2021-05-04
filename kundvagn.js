@@ -101,9 +101,11 @@ function selectChanged(sender) {
 		var option = document.createElement("option");
 		option.innerText = 1;
 		sender.appendChild(option)
-		option = document.createElement("option");
-		option.innerText = Math.ceil((value - 26)/50) * 50;
-		sender.appendChild(option);
+		if (value > 75) {
+			option = document.createElement("option");
+			option.innerText = Math.ceil((value - 25)/50) * 50;
+			sender.appendChild(option);
+		}
 		for (var i = value - 25; i < value + 25; i ++) {
 			option = document.createElement("option");
 			option.innerText = i;
