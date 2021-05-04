@@ -42,9 +42,9 @@ function pageLoaded() {
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
 			selectChanged(quantitySelect);
 			productFrame.appendChild(quantitySelect);
-			var totalText = document.createElement("spam");
+			var totalText = document.createElement("span");
 			totalText.classList.add("totalText");
-			totalText.innerText = +item.split(">")[4] * +items[item];
+			totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString() + " kr";
 			productFrame.appendChild(totalText);
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
