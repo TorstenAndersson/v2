@@ -86,22 +86,23 @@ function pageLoaded() {
 }
 
 function selectChanged(sender) {
+	const select = sender;
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
-	if (+sender.value < 25) {
-		for (var i = 1; i < 25 + +sender.value; i ++) {
+	if (+select.value < 25) {
+		for (var i = 1; i < 25 + +select.value; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
-			sender.appendChild(option);
-			if (i === +sender.value) {
+			select.appendChild(option);
+			if (i === +select.value) {
 				option.setAttribute("selected", "");
 			}
 		}
 	} else {
-		for (var i = +sender.value - 25; i < +sender.value + 25; i ++) {
+		for (var i = +select.value - 25; i < +select.value + 25; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
-			sender.appendChild(option);
-			if (i === +sender.value) {
+			select.appendChild(option);
+			if (i === +select.value) {
 				option.setAttribute("selected", "");
 			}
 		}
