@@ -1,9 +1,6 @@
-var divs;
-var count = 1;
+var divs, size, timer, count = 1, divCount = count;
 const initalCount = count; 
-var divCount = count;
-var size;
-var timer;
+localStorage["cart"] = "{ ";
 
 function pageLoaded() {
 	try {
@@ -11,7 +8,6 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 	} catch (TypeError) {
 		document.querySelector(".cartItemsNumber").style.display = "none";
-		localStorage["cart"] = "{ ";
 	}
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }

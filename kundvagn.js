@@ -39,7 +39,7 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			if (items[item] < 25) {
-				for (var i = 1; i < 26; i ++) {
+				for (var i = 1; i < 26 + items[item]; i ++) {
 					var option = document.createElement("option");
 					option.innerText = i;
 					quantitySelect.appendChild(option);
