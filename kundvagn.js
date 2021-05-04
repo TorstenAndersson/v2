@@ -87,7 +87,7 @@ function pageLoaded() {
 
 function selectChanged(sender) {
 	if (+sender.value < 25) {
-		for (var i = 1; i < 26 + +sender.value; i ++) {
+		for (var i = 1; i < 25 + +sender.value; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
