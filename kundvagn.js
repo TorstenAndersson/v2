@@ -86,7 +86,7 @@ function pageLoaded() {
 }
 
 function selectChanged(sender) {
-	const select = sender;
+	const select = sender.cloneNode(false);
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (+select.value < 25) {
 		for (var i = 1; i < 25 + +select.value; i ++) {
