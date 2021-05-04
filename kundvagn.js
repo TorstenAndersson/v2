@@ -98,8 +98,11 @@ function selectChanged(sender) {
 			}
 		}
 	} else {
+		var option = document.createElement("option");
+		option.innerText = 1;
+		sender.appendChild(option)
 		for (var i = value - 25; i < value + 25; i ++) {
-			var option = document.createElement("option");
+			option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
 			if (i === value) {
