@@ -38,7 +38,7 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
-			quantitySelect.setAttribute("onchange", "selectChanged(this, this.value)");
+			quantitySelect.setAttribute("onchange", "selectChanged(this)");
 			selectChanged(quantitySelect, +items[item]);
 			productFrame.appendChild(quantitySelect);
 			var totalText = document.createElement("span");
