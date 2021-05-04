@@ -4,13 +4,6 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
-		if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 150) {
-			var footer = document.querySelector(".footerLogoText");
-			footer.style.position = "absolute";
-			footer.style.bottom = "5px";
-			footer.style.width = "100%";
-		}
-
 		for (const item of Object.keys(items)) {
 			console.log(item);
 			var productFrame = document.createElement("div");
@@ -59,6 +52,13 @@ function pageLoaded() {
 		}
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
+	}
+	
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 150) {
+		var footer = document.querySelector(".footerLogoText");
+		footer.style.position = "absolute";
+		footer.style.bottom = "5px";
+		footer.style.width = "100%";
 	}
 	/*
 	var cartDiv = document.createElement("div");
