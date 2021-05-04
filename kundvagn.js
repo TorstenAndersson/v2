@@ -113,7 +113,7 @@ function selectChanged(sender) {
 			}
 		}
 		option = document.createElement("option");
-		option.innerText = Math.ceil((value + 26)/50) * 50;
+		option.innerText = Math.ceil((value + 25)/50) * 50;
 		sender.appendChild(option);
 	}
 }
