@@ -121,7 +121,7 @@ a {
 }
 .pageContent {
 	text-align: center;
-	padding-top: 175px;
+	padding: 175px 0px 20px 0px;
 }
 .pageHeader {
 	display: block;
