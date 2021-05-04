@@ -110,7 +110,7 @@ function selectChanged(sender) {
 			}
 		}
 		option = document.createElement("option");
-		option.innerText = Math.round(value/10) * 100;
+		option.innerText = 10**value.toString().length;
 		sender.appendChild(option);
 	}
 }
