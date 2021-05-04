@@ -86,6 +86,7 @@ function pageLoaded() {
 }
 
 function selectChanged(sender) {
+	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (+sender.value < 25) {
 		for (var i = 1; i < 25 + +sender.value; i ++) {
 			var option = document.createElement("option");
