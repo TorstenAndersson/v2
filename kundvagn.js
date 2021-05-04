@@ -101,7 +101,7 @@ function selectChanged(sender) {
 		var option = document.createElement("option");
 		option.innerText = 1;
 		sender.appendChild(option)
-		if (value > 75) {
+		if (value > 50) {
 			option = document.createElement("option");
 			option.innerText = Math.ceil((value - 25)/50) * 50;
 			sender.appendChild(option);
