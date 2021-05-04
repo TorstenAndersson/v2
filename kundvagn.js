@@ -4,6 +4,13 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
+		if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 150) {
+			var footer = document.querySelector(".footerLogoText");
+			footer.style.position = "absolute";
+			footer.style.bottom = "5px";
+			footer.style.width = "100%";
+		}
+
 		for (const item of Object.keys(items)) {
 			console.log(item);
 			var productFrame = document.createElement("div");
@@ -80,9 +87,6 @@ function pageScrolled() {
 			navigationBar.style.top = "0px";
 			navigationBar.style.backgroundColor = "rgb(255, 255, 255)";
 			navigationBar.style.boxShadow = "rgb(235, 235, 235) 0px 0px 15px 8px";
-			footer.style.width = "100%";
-			footer.style.position = "absolute";
-			footer.style.bottom = "5px";
 			isScrolled = true;
 		}
 	} 
@@ -92,9 +96,6 @@ function pageScrolled() {
 			navigationBar.style.top = "30px";
 			navigationBar.style.backgroundColor = "transparent";
 			navigationBar.style.boxShadow = "none";
-			footer.style.width = "initial";
-			footer.style.position = "initial";
-			footer.style.bottom = "initial";
 			isScrolled = false;
 		}
 	}
@@ -153,5 +154,11 @@ function removeItem(sender) {
 		document.querySelector(".emptyDiv").style.display = "block";
 	} else {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
+	}
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 150) {
+		var footer = document.querySelector(".footerLogoText");
+		footer.style.position = "initial";
+		footer.style.bottom = "initial";
+		footer.style.width = "initial";
 	}
 }
