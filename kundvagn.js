@@ -103,7 +103,7 @@ function selectChanged(sender) {
 		sender.appendChild(option)
 		if (value > 75) {
 			option = document.createElement("option");
-			option.innerText = Math.ceil((value - 25)/50) * 50;
+			option.innerText = Math.floor((value - 25)/50) * 50;
 			sender.appendChild(option);
 		}
 		for (var i = value - 25; i < value + 25; i ++) {
