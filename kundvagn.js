@@ -98,9 +98,6 @@ function selectChanged(sender) {
 			}
 		}
 		option = document.createElement("option");
-		option.innerText = 1;
-		sender.appendChild(option);
-		option = document.createElement("option");
 		option.innerText = Math.ceil((76 - 26)/50) * 50;
 		sender.appendChild(option);
 	} else {
