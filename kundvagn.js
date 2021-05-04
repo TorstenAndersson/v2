@@ -1,4 +1,3 @@
-console.time("debugTimer");
 function pageLoaded() {
 	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
 		const items = JSON.parse(localStorage["cart"]);
@@ -68,7 +67,6 @@ function pageLoaded() {
 
 	*/
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	console.timeLog("debugTimer");
 }
 
 function selectChanged(sender) {
@@ -118,9 +116,6 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "");
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
-	console.timeLog("debugTimer");
-	pageLoaded();
-	/*
 	if (localStorage["cart"] === "{}") {
 		document.querySelector(".columnDiv").style.display = "none";
 		document.querySelector(".cartItemsNumber").style.display = "none";
@@ -128,6 +123,4 @@ function removeItem(sender) {
 	} else {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
-	console.timeEnd("debugTimer");
-	*/
 }
