@@ -1,5 +1,5 @@
 function pageLoaded() {
-	if (localStorage["cart"] != "{}") {
+	if (localStorage["cart"] != ("{}" || undefined)) {
 		const items = JSON.parse(localStorage["cart"]);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
