@@ -51,7 +51,6 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
-		console.timeLog("debugTimer");
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
@@ -69,6 +68,7 @@ function pageLoaded() {
 
 	*/
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	console.timeLog("debugTimer");
 }
 
 function selectChanged(sender) {
