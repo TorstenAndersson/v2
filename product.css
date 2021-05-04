@@ -70,9 +70,6 @@ a {
 .topText:hover {
 	color:rgb(0, 0, 0)
 }
-.current {
-	color: rgb(255, 255, 255);
-}
 .verticalLine {
 	background-color: rgb(110, 110, 110);
 	display: inline;
