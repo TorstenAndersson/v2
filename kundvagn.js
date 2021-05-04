@@ -97,7 +97,7 @@ function selectChanged(sender) {
 				option.setAttribute("selected", "");
 			}
 		}
-		var option = documnet.createElement("option");
+		option = document.createElement("option");
 		option.innerText = 50;
 		sender.appendChild(option);
 	} else {
