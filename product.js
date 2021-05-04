@@ -1,6 +1,6 @@
 var divs, size, timer, count = 1, divCount = count;
 const initalCount = count; 
-localStorage["cart"] = "{ ";
+if (localStorage["cart"] === undefined) localStorage["cart"] = "{ ";
 
 function pageLoaded() {
 	try {
