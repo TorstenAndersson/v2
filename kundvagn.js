@@ -1,5 +1,5 @@
 function pageLoaded() {
-	try {
+	if (localStorage["cart"] != "{}") {
 		const items = JSON.parse(localStorage["cart"]);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
@@ -52,7 +52,7 @@ function pageLoaded() {
 			document.querySelector(".pageContent").appendChild(productFrame);
 		}
 
-	} catch (TypeError) {
+	} else {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
@@ -119,5 +119,5 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "")
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "")
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "")
-	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b)
+	
 }

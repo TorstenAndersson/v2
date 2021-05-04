@@ -1,6 +1,6 @@
 var divs, size, timer, count = 1, divCount = count;
 const initalCount = count; 
-if (localStorage["cart"] === undefined) localStorage["cart"] = "{ ";
+if (localStorage["cart"] === undefined) localStorage["cart"] = "{}";
 
 function pageLoaded() {
 	try {
@@ -45,7 +45,7 @@ function buy() {
 		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
 		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(+JSON.parse(localStorage["cart"])[product].slice(0) + 1));
 	} catch {
-		localStorage["cart"] = localStorage["cart"].slice(0, -1);
+		localStorage["cart"] = localStorage["cart"].slice(0, -1)
 		if (localStorage["cart"] !== "{") {
 			localStorage["cart"] += ",";
 		}
