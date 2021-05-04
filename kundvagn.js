@@ -118,7 +118,7 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "");
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
-	if (localStorage["cart"] !== "{}") {
+	if (localStorage["cart"] === "{}") {
 		document.querySelector(".columnDiv").style.display = "none";
 		document.querySelector(".cartItemsNumber").style.display = "none";
 		document.querySelector(".emptyDiv").style.display = "block";
