@@ -73,12 +73,16 @@ var isScrolled = false;
 
 function pageScrolled() {
 	var navigationBar = document.querySelector(".navigationBar");
+	var footer = document.querySelector(".footerLogoText");
 	if (window.pageYOffset > 30) {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
 			navigationBar.style.top = "0px";
 			navigationBar.style.backgroundColor = "rgb(255, 255, 255)";
 			navigationBar.style.boxShadow = "rgb(235, 235, 235) 0px 0px 15px 8px";
+			footer.style.width = "100%";
+			footer.style.position = "absolute";
+			footer.style.bottom = "5px";
 			isScrolled = true;
 		}
 	} 
@@ -88,6 +92,9 @@ function pageScrolled() {
 			navigationBar.style.top = "30px";
 			navigationBar.style.backgroundColor = "transparent";
 			navigationBar.style.boxShadow = "none";
+			footer.style.width = "initial";
+			footer.style.position = "initial";
+			footer.style.bottom = "initial";
 			isScrolled = false;
 		}
 	}
