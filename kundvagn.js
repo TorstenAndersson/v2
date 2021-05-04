@@ -39,8 +39,8 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
-			selectChanged(quantitySelect, +items[item]);
 			productFrame.appendChild(quantitySelect);
+			selectChanged(quantitySelect, +items[item]);
 			var totalText = document.createElement("span");
 			totalText.classList.add("totalText");
 			totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
