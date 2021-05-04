@@ -113,7 +113,7 @@ function selectChanged(sender) {
 			}
 		}
 		option = document.createElement("option");
-		option.innerText = 10**value.toString().length/2;
+		option.innerText = Math.ceil(value/50) * 50;
 		sender.appendChild(option);
 	}
 }
