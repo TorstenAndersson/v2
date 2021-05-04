@@ -111,7 +111,7 @@ function selectChanged(sender) {
 		}
 	}
 	option = document.createElement("option");
-	option.innerText = 10**value.toString().length;
+	option.innerText = 10**value.toString().length * 10;
 	sender.appendChild(option);
 }
 
