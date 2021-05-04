@@ -38,9 +38,8 @@ function pageLoaded() {
 			productFrame.appendChild(priceText);
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
-			quantitySelect.value = +items[item];
-			quantitySelect.setAttribute("onchange", "selectChanged(this)");
-			selectChanged(quantitySelect);
+			quantitySelect.setAttribute("onchange", "selectChanged(this, this.value)");
+			selectChanged(quantitySelect, +items[item]);
 			productFrame.appendChild(quantitySelect);
 			var totalText = document.createElement("span");
 			totalText.classList.add("totalText");
@@ -69,8 +68,7 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-function selectChanged(sender) {
-	const value = +sender.value;
+function selectChanged(sender, value) {
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (var i = 1; i < 25 + value; i ++) {
