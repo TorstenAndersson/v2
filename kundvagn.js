@@ -68,7 +68,10 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-function selectChanged(sender, value = +sender.value) {
+function selectChanged(sender) {
+	const product = sender.parentElement.firstElementChild.href.split("/")[3] + ">" + sender.parentElement.firstElementChild.children[1].firstElementChild.innerText + ">" + sender.parentElement.firstElementChild.children[1].children[1].innerText + ">" + sender.parentElement.firstElementChild.firstElementChild.src.split("/")[5] + ">" + sender.parentElement.children[1].innerText;
+	const value = +JSON.parse(localStorage["cart"])[product];
+	localStorage["cart"] = localStorage.replace(product + ":" + localStorage[product], product + ":" + value);
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (var i = 1; i < 25 + value; i ++) {
