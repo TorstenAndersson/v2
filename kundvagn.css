@@ -249,7 +249,10 @@ a {
 	color: rgb(100, 100, 100);
 }
 .footerLogoText {
+	position: absolute;
+	bottom: 5px;
 	display: block;
+	width: 100%;
 	text-align: center;
 	color: rgb(110, 110, 110);
 	font-size: 13px;
