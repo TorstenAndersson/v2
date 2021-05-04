@@ -69,6 +69,28 @@ function pageLoaded() {
 	document.querySelector(".footerLogoText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
+var isScrolled = false;
+
+function pageScrolled() {
+	var navigationBar = document.querySelector(".navigationBar");
+	if (window.pageYOffset > 30) {
+		if (!isScrolled) {
+			navigationBar.style.position = "fixed";
+			navigationBar.style.top = "0px";
+			navigationBar.style.backgroundColor = "rgb(39, 39, 39)";
+			isScrolled = true;
+		}
+	} 
+	if (window.pageYOffset < 30) {
+		if (isScrolled) {
+			navigationBar.style.position = "absolute";
+			navigationBar.style.top = "30px";
+			navigationBar.style.backgroundColor = "transparent";
+			isScrolled = false;
+		}
+	}
+}
+
 function selectChanged(sender) {
 	const product = sender.parentElement.firstElementChild.href.split("/")[3] + ">" + sender.parentElement.firstElementChild.children[1].firstElementChild.innerText + ">" + sender.parentElement.firstElementChild.children[1].children[1].innerText + ">" + sender.parentElement.firstElementChild.firstElementChild.src.split("/")[5] + ">" + sender.parentElement.children[1].innerText;
 	if (sender.value !== "") localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + sender.value);
