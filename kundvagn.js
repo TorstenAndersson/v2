@@ -1,7 +1,7 @@
 function pageLoaded() {
 	try {
 		const items = JSON.parse(localStorage["cart"]);
-		document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
+		//document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
@@ -71,6 +71,7 @@ function pageLoaded() {
 function selectChanged(sender) {
 	const product = sender.parentElement.firstElementChild.href.split("/")[3] + ">" + sender.parentElement.firstElementChild.children[1].firstElementChild.innerText + ">" + sender.parentElement.firstElementChild.children[1].children[1].innerText + ">" + sender.parentElement.firstElementChild.firstElementChild.src.split("/")[5] + ">" + sender.parentElement.children[1].innerText;
 	if (sender.value !== "") localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + sender.value);
+	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +JSON.parse(localStorage["cart"])[product];
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
