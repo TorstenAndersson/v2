@@ -112,10 +112,10 @@ function selectChanged(sender) {
 				option.setAttribute("selected", "");
 			}
 		}
-		option = document.createElement("option");
-		option.innerText = Math.ceil((value + 25)/50) * 50;
-		sender.appendChild(option);
 	}
+	option = document.createElement("option");
+	option.innerText = Math.ceil((value + 25)/50) * 50;
+	sender.appendChild(option);
 }
 
 function removeItem(sender) {
