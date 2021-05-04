@@ -114,5 +114,8 @@ function selectChanged(sender) {
 }
 
 function removeItem(sender) {
-	console.log("trying to remove " + sender.parentElement.firstElementChild.children[1].innerText)
+	console.log("trying to remove " + sender.parentElement.firstElementChild.children[1].innerText);
+	document.querySelector(".pageContent").removeChild(sender.parentElement);
+	const product = sender.parentElement.firstElementChild.href.split("/")[3] + ">" + sender.parentElement.firstElementChild.children[1].firstElementChild.innerText + ">" + sender.parentElement.firstElementChild.children[1].children[1].innerText + ">" + sender.parentElement.firstElementChild.firstElementChild.src.split("/")[5] + ">" + sender.parentElement.children[1].innerText;
+	localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "")
 }
