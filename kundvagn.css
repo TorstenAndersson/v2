@@ -248,6 +248,24 @@ a {
 .removeButton:hover {
 	color: rgb(100, 100, 100);
 }
+.finishDiv {
+	width: 80%;
+	margin: auto;
+	padding-top: 20px;
+}
+.sumText {
+	position: absolute;
+	right: 10%;
+	color: rgb(57, 57, 57);
+	text-align: right;
+	font: 700 20px "Open Sans";
+	padding-right: 20px;
+}
+.horizontalLine {
+	height: 1px;
+	background-color: rgb(200, 200, 200);
+	margin-top: 40px;
+}
 .footerText {
 	position: absolute;
 	bottom: 5px;
