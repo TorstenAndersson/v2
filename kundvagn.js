@@ -47,7 +47,7 @@ function pageLoaded() {
 			removeButton.innerText = "+";
 			productFrame.appendChild(removeButton);
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
-			document.querySelector(".pageContent").appendChild(productFrame);
+			document.querySelector(".pageContent").inserBefore(productFrame, document.querySelector(".finishDiv"));
 		}
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
