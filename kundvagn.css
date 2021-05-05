@@ -254,13 +254,10 @@ a {
 	padding-top: 20px;
 }
 .sumText {
-	
+	color: rgb(120, 120, 120);
 }
 .sumNumber {
-	position: absolute;
-	right: 10%;
 	color: rgb(57, 57, 57);
-	text-align: right;
 	font: 700 20px "Open Sans";
 	padding-right: 20px;
 }
