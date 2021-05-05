@@ -253,13 +253,19 @@ a {
 	margin: auto;
 	padding-top: 20px;
 }
+.sumDiv {
+	position: absolute;
+	right: 15%;
+	transform: translateX(50%);
+	margin-right: 52px;
+}
 .sumText {
 	color: rgb(120, 120, 120);
 }
 .sumNumber {
 	color: rgb(57, 57, 57);
 	font: 700 20px "Open Sans";
-	padding-right: 20px;
+	padding: 20px;
 }
 .horizontalLine {
 	height: 1px;
