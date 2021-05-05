@@ -254,6 +254,9 @@ a {
 	padding-top: 20px;
 }
 .sumText {
+	
+}
+.sumNumber {
 	position: absolute;
 	right: 10%;
 	color: rgb(57, 57, 57);
