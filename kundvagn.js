@@ -95,7 +95,7 @@ function selectChanged(sender) {
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
-	document.querySelector(".sumNumber").innerText = Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", "."));
+	if (document.querySelector(".totalText") != undefined) document.querySelector(".sumNumber").innerText = Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", "."));
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (var i = 1; i < 25 + value; i ++) {
