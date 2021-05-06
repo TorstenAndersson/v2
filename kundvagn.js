@@ -45,9 +45,9 @@ function pageLoaded() {
 			removeButton.setAttribute("onclick", "removeItem(this)");
 			removeButton.innerText = "+";
 			productFrame.appendChild(removeButton);
-			selectChanged(quantitySelect, +items[item]);
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
+			selectChanged(quantitySelect, +items[item]);
 		}
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
