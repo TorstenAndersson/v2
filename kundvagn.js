@@ -50,8 +50,8 @@ function pageLoaded() {
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
 		var total;
-		for (const price of document.querySelectorAll(".totalText")) total += +price.innerText.slice(0, -3);
-		document.querySelector(".sumNumber").innerText = total;
+		for (const price of document.querySelectorAll(".totalText")) total += +price.innerText.slice(0, -3).replace(",", ".");
+		document.querySelector(".sumNumber").innerText = total.replace(".", ",") + " kr";
 
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
