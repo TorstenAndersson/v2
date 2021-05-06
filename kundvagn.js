@@ -51,7 +51,7 @@ function pageLoaded() {
 		}
 		var total = 0;
 		for (const price of document.querySelectorAll(".totalText")) total += +price.innerText.slice(0, -3).replace(",", ".");
-		document.querySelector(".sumNumber").innerText = total.toString().replace(".", ",") + " kr";
+		document.querySelector(".sumNumber").innerText = (Math.round(total * 100)/100).toString().replace(".", ",") + " kr";
 
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
