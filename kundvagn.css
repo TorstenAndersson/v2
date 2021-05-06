@@ -276,11 +276,15 @@ a {
 	margin-top: 40px;
 }
 .keepShopping {
-	border-bottom: 1px solid rgb(150, 150, 150);
+	position: absolute;
+	left: 11%;
 	color: rgb(47, 47, 47);
+	border-bottom: 1px solid rgb(150, 150, 150);
+	margin-top: 20px;
 }
 .finishButton {
-
+	position: absolute;
+	right: 11%;
 }
 .footerText {
 	position: absolute;
