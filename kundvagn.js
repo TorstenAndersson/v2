@@ -50,7 +50,7 @@ function pageLoaded() {
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
 		var total;
-		for (const price in document.querySelectorAll(".totalText")) total += +price;
+		for (const price in document.querySelectorAll(".totalText")) total += +price.innerText.slice(0, -3);
 		document.querySelector(".sumNumber").innerText = total;
 
 	} else {
