@@ -38,8 +38,9 @@ function pageLoaded() {
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
 			productFrame.appendChild(quantitySelect);
 			var totalText = document.createElement("span");
-			totalText.classList.add("totalText");
 			productFrame.appendChild(totalText);
+			selectChanged(quantitySelect, +items[item]);
+			totalText.classList.add("totalText");
 			var removeButton = document.createElement("button");
 			removeButton.classList.add("removeButton");
 			removeButton.setAttribute("onclick", "removeItem(this)");
@@ -47,8 +48,11 @@ function pageLoaded() {
 			productFrame.appendChild(removeButton);
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
-			selectChanged(quantitySelect, +items[item]);
 		}
+		var total;
+		for (const price in document.querySelectorAll(".totalText")) total += +price;
+		document.querySelector(".sumNumner").innerText = total;
+		
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
@@ -91,9 +95,6 @@ function selectChanged(sender) {
 	if (sender.value !== "") localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + sender.value);
 	const items = JSON.parse(localStorage["cart"]);
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
-	var total;
-	for (const price in document.querySelectorAll(".totalText")) total += +price.innerText;
-	console.log(total);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
