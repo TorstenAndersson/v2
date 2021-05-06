@@ -36,16 +36,16 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
-			productFrame.appendChild(quantitySelect);
 			var totalText = document.createElement("span");
-			productFrame.appendChild(totalText);
-			selectChanged(quantitySelect, +items[item]);
 			totalText.classList.add("totalText");
+			productFrame.appendChild(totalText);
 			var removeButton = document.createElement("button");
 			removeButton.classList.add("removeButton");
 			removeButton.setAttribute("onclick", "removeItem(this)");
 			removeButton.innerText = "+";
 			productFrame.appendChild(removeButton);
+			selectChanged(quantitySelect, +items[item]);
+			productFrame.appendChild(quantitySelect);
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
