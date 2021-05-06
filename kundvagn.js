@@ -93,7 +93,7 @@ function selectChanged(sender) {
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	var total;
 	for (const price in document.querySelectorAll(".totalText")) total += +price;
-	print(total);
+	console.log(total);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
