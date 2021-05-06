@@ -49,7 +49,7 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
-		var total;
+		var total = 0;
 		for (const price of document.querySelectorAll(".totalText")) total += +price.innerText.slice(0, -3).replace(",", ".");
 		document.querySelector(".sumNumber").innerText = total.toString().replace(".", ",") + " kr";
 
