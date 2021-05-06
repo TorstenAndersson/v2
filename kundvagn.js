@@ -51,8 +51,8 @@ function pageLoaded() {
 		}
 		var total;
 		for (const price in document.querySelectorAll(".totalText")) total += +price;
-		document.querySelector(".sumNumner").innerText = total;
-		
+		document.querySelector(".sumNumber").innerText = total;
+
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
