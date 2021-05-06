@@ -36,6 +36,7 @@ function pageLoaded() {
 			var quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
+			productFrame.appendChild(quantitySelect);
 			var totalText = document.createElement("span");
 			totalText.classList.add("totalText");
 			productFrame.appendChild(totalText);
@@ -45,7 +46,6 @@ function pageLoaded() {
 			removeButton.innerText = "+";
 			productFrame.appendChild(removeButton);
 			selectChanged(quantitySelect, +items[item]);
-			productFrame.appendChild(quantitySelect);
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
