@@ -50,8 +50,8 @@ function pageLoaded() {
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
 		var sum = 0;
-		Array(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
-		console.log(sum)
+		Array.form(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
+		document.querySelector(".sumNumber").innerText = Math.round(sum * 100)/100;
 		//document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
 
 	} else {
