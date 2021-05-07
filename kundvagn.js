@@ -148,10 +148,10 @@ function removeItem(sender) {
 	} else {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
-	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 140) {
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 240) {
 		var footer = document.querySelector(".footerText");
-		footer.style.position = "initial";
-		footer.style.bottom = "initial";
-		footer.style.width = "initial";
+		footer.style.position = "absolute";
+		footer.style.bottom = "5px";
+		footer.style.width = "100%";
 	}
 }

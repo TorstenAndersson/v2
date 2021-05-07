@@ -288,10 +288,10 @@ a {
 	right: 11%;
 }
 .footerText {
-	position: absolute;
-	bottom: 5px;
+	/* position: absolute;
+	bottom: 5px; */
 	display: block;
-	width: 100%;
+	/* width: 100%; */
 	text-align: center;
 	color: rgb(110, 110, 110);
 	font-size: 13px;
