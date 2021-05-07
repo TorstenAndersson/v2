@@ -57,11 +57,11 @@ function pageLoaded() {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
 
-	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 140) {
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 240) {
 		var footer = document.querySelector(".footerText");
-		footer.style.position = "initial";
-		footer.style.bottom = "initial";
-		footer.style.width = "initial";
+		footer.style.position = "absolute";
+		footer.style.bottom = "5px";
+		footer.style.width = "100%";
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
