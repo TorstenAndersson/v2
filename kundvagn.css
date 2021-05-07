@@ -273,6 +273,7 @@ a {
 	margin-top: 45px;
 }
 .finalDiv {
+	display: none;
 	margin-top: 40px;
 	padding-bottom: 140px;
 }

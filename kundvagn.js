@@ -3,6 +3,7 @@ function pageLoaded() {
 		const items = JSON.parse(localStorage["cart"]);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
+		document.querySelector(".finalDiv").style.display = "block";
 
 		for (item of Object.keys(items)) {
 			var productFrame = document.createElement("div");
