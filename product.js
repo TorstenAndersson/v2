@@ -3,10 +3,10 @@ const initalCount = count;
 if (localStorage["cart"] === undefined) localStorage["cart"] = "{}";
 
 function pageLoaded() {
-	try {
+	if (localStorage["cart"] !== "{}") {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
-	} catch (TypeError) {
+	} else {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";

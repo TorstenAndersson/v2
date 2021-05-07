@@ -6,6 +6,7 @@ var divCount = count;
 var size;
 
 function pageLoaded() {
+	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) document.querySelector(".cartItemsNumber").style.display = "inline-block";
 	var slideshowDiv = document.querySelector("div.slideshow");
 	divs = document.querySelectorAll(".productDiv");
 	divs = [...divs];

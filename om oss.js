@@ -1,4 +1,5 @@
 function pageLoaded() {
+	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) document.querySelector(".cartItemsNumber").style.display = "inline-block";
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
