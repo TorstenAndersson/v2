@@ -61,7 +61,7 @@ a {
 }
 .topText {
 	z-index: 2;
-	color: rgba(255, 255, 255, .8);
+	color: rgb(230, 230, 230);
 	font: 14px "Raleway";
 	letter-spacing: .75px;
 	text-align: left;

@@ -60,7 +60,7 @@ a {
 }
 .topText {
 	z-index: 2;
-	color: rgba(255, 255, 255, .8);
+	color: rgb(230, 230, 230);
 	font-size: 14px;
 	font-family: "Raleway";
 	letter-spacing: .75px;
