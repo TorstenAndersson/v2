@@ -50,7 +50,7 @@ function pageLoaded() {
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
 		var sum = 0;
-		Array(document.querySelectorAll(".totalText")).forEach((x) => sum += x[0].innerText.slice(0, -3).replace(",", "."));
+		Array(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
 		console.log(sum)
 		//document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
 
