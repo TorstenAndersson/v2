@@ -13,7 +13,7 @@ function pageLoaded() {
 }
 
 function smallImgHovered(sender) {
-	for (const i2 in Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))) {
+	for (i2 in Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))) {
 		Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"))[i2].classList.remove("selected");
 	}
 	sender.classList.add("selected");
@@ -24,7 +24,7 @@ function smallImgHovered(sender) {
 function variantChanged(sender) {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length !== 0) {
-		for (const i2 in smallImgs) {
+		for (i2 in smallImgs) {
 			if (smallImgs[i2].src.split("%20").length > 4 && sender.innerText.includes(decodeURI(smallImgs[i2].src.split("%20").slice(3, -1))))
 				smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value); //.join("%20") if color is multiple words
 		}
@@ -37,7 +37,7 @@ function variantChanged(sender) {
 
 function buy() {
 	var variant = "";
-	for (const variantSelect of document.querySelectorAll(".variantSelect")) {
+	for (variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
 	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + document.querySelector(".productImg").src.split("/")[5] + ">" + document.querySelector(".productPriceText").innerText;

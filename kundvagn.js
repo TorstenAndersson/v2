@@ -4,7 +4,7 @@ function pageLoaded() {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 
-		for (const item of Object.keys(items)) {
+		for (item of Object.keys(items)) {
 			var productFrame = document.createElement("div");
 			productFrame.classList.add("productFrame");
 			var productLink = document.createElement("a");
@@ -49,7 +49,10 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 		}
-		document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
+		var sum = 0;
+		document.querySelector(".sumNumber").forEach((x) => sum += x.innerText.slice(0, -3).replace(",", "."));
+		console.log(sum)
+		//document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
 
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
@@ -98,7 +101,7 @@ function selectChanged(sender) {
 	if (document.querySelectorAll(".totalText").length === items.length) document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
-		for (var i = 1; i < 25 + value; i ++) {
+		for (i = 1; i < 25 + value; i ++) {
 			var option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
@@ -115,7 +118,7 @@ function selectChanged(sender) {
 			option.innerText = Math.floor((value - 26)/50) * 50;
 			sender.appendChild(option);
 		}
-		for (var i = value - 25; i < value + 25; i ++) {
+		for (i = value - 25; i < value + 25; i ++) {
 			option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
