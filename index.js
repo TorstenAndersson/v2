@@ -6,7 +6,10 @@ var divCount = count;
 var size;
 
 function pageLoaded() {
-	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) document.querySelector(".cartItemsNumber").style.display = "inline-block";
+	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
+		document.querySelector(".cartItemsNumber").style.display = "inline-block";
+		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
+	}
 	var slideshowDiv = document.querySelector("div.slideshow");
 	divs = document.querySelectorAll(".productDiv");
 	divs = [...divs];

@@ -3,9 +3,9 @@ const initalCount = count;
 if (localStorage["cart"] === undefined) localStorage["cart"] = "{}";
 
 function pageLoaded() {
-	if (localStorage["cart"] !== "{}") {
-		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
+	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
+		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	} else {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 	}

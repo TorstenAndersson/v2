@@ -1,5 +1,8 @@
 function pageLoaded() {
-    if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) document.querySelector(".cartItemsNumber").style.display = "inline-block";
+    if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
+		document.querySelector(".cartItemsNumber").style.display = "inline-block";
+		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
+	}
     document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
