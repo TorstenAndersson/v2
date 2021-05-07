@@ -145,7 +145,7 @@ function removeItem(sender) {
 	if (localStorage["cart"] === "{}") {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 		document.querySelector(".columnDiv").style.display = "none";
-		document.querySelector(".finishDiv").style.visibility = "visible";
+		document.querySelector(".finishDiv").style.visibility = "hidden";
 		document.querySelector(".emptyDiv").style.display = "block";
 	} else {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
