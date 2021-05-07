@@ -51,7 +51,7 @@ function pageLoaded() {
 		}
 		var sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
-		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(",", ".") + " kr";
+		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
 
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
@@ -100,7 +100,7 @@ function selectChanged(sender) {
 	if (document.querySelectorAll(".totalText").length === Object.keys(items).length) {
 		var sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
-		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(",", ".") + " kr";
+		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
 	}
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
