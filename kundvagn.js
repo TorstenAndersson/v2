@@ -51,8 +51,7 @@ function pageLoaded() {
 		}
 		var sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
-		document.querySelector(".sumNumber").innerText = Math.round(sum * 100)/100;
-		//document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
+		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(",", ".") + " kr";
 
 	} else {
 		document.querySelector(".emptyDiv").style.display = "block";
@@ -98,7 +97,11 @@ function selectChanged(sender) {
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
-	if (document.querySelectorAll(".totalText").length === items.length) document.querySelector(".sumNumber").innerText = (Math.round(Array.from(document.querySelectorAll(".totalText")).reduce((x, y) => +x.innerText.slice(0, -3).replace(",", ".") + +y.innerText.slice(0, -3).replace(",", ".")) * 100)/100).toString().replace(".", ",") + " kr";
+	if (document.querySelectorAll(".totalText").length === items.length) {
+		var sum = 0;
+		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
+		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(",", ".") + " kr";
+	}
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (i = 1; i < 25 + value; i ++) {
