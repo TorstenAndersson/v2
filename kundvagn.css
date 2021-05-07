@@ -249,7 +249,7 @@ a {
 	color: rgb(100, 100, 100);
 }
 .finishDiv {
-	display: none;
+	visibility: hidden;
 	width: 80%;
 	margin: auto;
 	padding-top: 20px;
