@@ -97,7 +97,7 @@ function selectChanged(sender) {
 	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
-	if (document.querySelectorAll(".totalText").length === items.length) {
+	if (document.querySelectorAll(".totalText").length === Object.keys(items).length) {
 		var sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
 		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(",", ".") + " kr";
