@@ -3,7 +3,7 @@ function pageLoaded() {
 		const items = JSON.parse(localStorage["cart"]);
 		document.querySelector(".cartItemsNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
-		document.querySelector(".finalDiv").style.display = "block";
+		document.querySelector(".finishDiv").style.display = "block";
 
 		for (item of Object.keys(items)) {
 			var productFrame = document.createElement("div");
@@ -145,7 +145,7 @@ function removeItem(sender) {
 	if (localStorage["cart"] === "{}") {
 		document.querySelector(".cartItemsNumber").style.display = "none";
 		document.querySelector(".columnDiv").style.display = "none";
-		document.querySelector(".finalDiv").style.display = "none";
+		document.querySelector(".finishDiv").style.display = "none";
 		document.querySelector(".emptyDiv").style.display = "block";
 	} else {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);

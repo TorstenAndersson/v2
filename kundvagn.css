@@ -249,6 +249,7 @@ a {
 	color: rgb(100, 100, 100);
 }
 .finishDiv {
+	display: none;
 	width: 80%;
 	margin: auto;
 	padding-top: 20px;
@@ -273,7 +274,6 @@ a {
 	margin-top: 45px;
 }
 .finalDiv {
-	display: none;
 	margin-top: 40px;
 	padding-bottom: 140px;
 }
