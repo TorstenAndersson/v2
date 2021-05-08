@@ -58,7 +58,7 @@ function pageLoaded() {
 		document.querySelector(".emptyDiv").style.display = "block";
 	}
 
-	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 360) {
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 360) {
 		var footer = document.querySelector(".footerText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
@@ -150,7 +150,7 @@ function removeItem(sender) {
 	} else {
 		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
-	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop < 360) {
+	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 360) {
 		var footer = document.querySelector(".footerText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
