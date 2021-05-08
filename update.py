@@ -291,7 +291,7 @@ files["index"] = ('''<!DOCTYPE html>
 					<div class="verticalLine"></div>
 					<a href="kundvagn">
 						<span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartItemsNumber"></span>
 					</a>
 				</div>
@@ -369,7 +369,7 @@ files["om oss"] = '''<!DOCTYPE html>
                     <div class="verticalLine"></div>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartItemsNumber"></span>
                     </a>
                 </div>
@@ -471,7 +471,7 @@ files["sudd"] = '''<!DOCTYPE html>
                     <div class="verticalLine"></div>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartItemsNumber"></span>
                     </a>
                 </div>
@@ -551,7 +551,7 @@ files["merchandise"] = '''<!DOCTYPE html>
                     <div class="verticalLine"></div>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartItemsNumber"></span>
                     </a>
                 </div>
@@ -608,7 +608,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     <div class="verticalLine"></div>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartItemsNumber"></span>
                     </a>
                 </div>
@@ -854,7 +854,7 @@ for product in products["products"]:
                 <div class="verticalLine"></div>
                 <a href="/kundvagn">
                     <span class="topText cartText">KUNDVAGN</span>
-                    <img class="cartIcon" src="/imgs/Website/Shopping Bag.webp" height="25px">
+                    <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                     <span class="cartItemsNumber"></span>
                 </a>
             </div>
