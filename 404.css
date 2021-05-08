@@ -126,12 +126,13 @@ a {
 }
 .big {
 	font-size: 55px;
-	padding-bottom: 20px !important;
+	padding-bottom: 20px;
 }
 .paragraphHeader {
 	display: block;
     color: rgb(57, 57, 57);
-	font: 700 sans-serif;
+	font-weight: 700;
+	font-family: sans-serif;
 	padding-bottom: 10px;
 }
 .lost {
