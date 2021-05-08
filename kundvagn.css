@@ -87,12 +87,12 @@ a {
 	padding-right: 18px;
 }
 .cartText {
-	padding-right: 0px;
+	padding-right: 5px;
 	padding-left: 25px;
 }
 .cartIcon {
 	position: absolute;
-	margin-top: -6px;
+	margin-top: -5px;
 }
 .cartItemsNumber {
 	position: absolute;
@@ -223,7 +223,7 @@ a {
 	color: rgb(100, 100, 100);
 	font-family: "Open Sans";
 	border: 1px solid rgb(200, 200, 200);
-	margin: 32px -6px 0px 0px;
+	margin: 32px -5px 0px 0px;
 }
 .totalText {
 	position: absolute;

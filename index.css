@@ -87,11 +87,12 @@ a {
 	padding-right: 18px;
 }
 .cartText {
+	padding-right: 5px;
 	padding-left: 25px;
 }
 .cartIcon {
 	position: absolute;
-	margin-top: -6px;
+	margin-top: -5px;
 }
 .cartItemsNumber {
 	position: absolute;
