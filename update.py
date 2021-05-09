@@ -221,7 +221,7 @@ files = {
     "sudd": "",
     "merchandise": "",
     "jobb": "",
-    "kundvagn": ""
+    #"kundvagn": ""
 }
 
 prefetches = ""
