@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Raleway";
-	font-display: swap;
+	font-display: block;;
 	src: url(/fonts/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff);
 }
 @font-face {
 	font-family: "Open Sans";
-	font-display: swap;
+	font-display: block;;
 	src: url(/fonts/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2);
 }
 body {
