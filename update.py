@@ -234,10 +234,8 @@ files = {}
 onDisplayDiv = ""
 i = 0
 for product in onDisplay:
-    if product["price"]["discount"]["reason"] == "":
-        visibility = "hidden"
-    else:
-        visibility = "visible"
+    visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
+    
     onDisplayDiv += '''
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
                         <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
@@ -413,12 +411,16 @@ files["om oss"] = '''<!DOCTYPE html>
 suddDiv = ""
 i = 0
 for product in sudd:
+    """
     if product["price"]["discount"]["reason"] == "":
         visibility = "hidden"
         display = "none"
     else:
         visibility = "visible"
         display = "initial"
+    """
+    (visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
+
     suddDiv += '''
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower() + '''">
@@ -493,12 +495,8 @@ files["sudd"] = '''<!DOCTYPE html>
 merchandiseDiv = ""
 i = 0
 for product in merchandise:
-    if product["price"]["discount"]["reason"] == "":
-        visibility = "hidden"
-        display = "none"
-    else:
-        visibility = "visible"
-        display = "initial"
+    (visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
+
     merchandiseDiv += '''
                 <div class="paddingDiv">
                     <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower() + '''">
