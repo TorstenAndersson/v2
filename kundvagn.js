@@ -10,7 +10,7 @@ function pageLoaded() {
 			productFrame.classList.add("productFrame");
 			var productLink = document.createElement("a");
 			productLink.classList.add("productLink");
-			productLink.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase();
+			productLink.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase().replace(" ", "%20");
 			var productImg = document.createElement("img");
 			productImg.classList.add("productImg");
 			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + item.split(">")[3]).replace(" ", "%20");
@@ -52,7 +52,7 @@ function pageLoaded() {
 			
 			var prefetch = document.createElement("link");
 			prefetch.rel = "prefetch";
-			prefetch.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase();
+			prefetch.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase().replace(" ", "%20");
 			document.querySelector("head").insertBefore(prefetch, document.querySelector('link[rel="prefetch"]'));
 		}
 		var sum = 0;
