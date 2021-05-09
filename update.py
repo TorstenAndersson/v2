@@ -187,18 +187,6 @@ merchandise = []
 onDisplay = []
 imgs = {}
 
-"""
-for product in products["products"]:
-    imgs[product["name"]] = (product["name"] + "/" + product["name"]).replace(" ", "%20")
-    if product["variants"]["imgAffecting"] is not None:
-        if product["perspectives"] is not None:
-            imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0] + "%20" + product["perspectives"][0]).replace(" ", "%20")
-        else:
-            imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["variants"]["imgAffecting"][0][0]).replace(" ", "%20")
-    if product["perspectives"] is not None:
-        imgs[product["name"]] = (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20")
-"""
-
 for product in products["products"]:
     imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"]).replace(" ", "%20") + ".webp"
     try:
@@ -227,11 +215,24 @@ for product in products["products"]:
 
 # Creating basic files
 
-files = {}
+files = {
+    "index": "", 
+    "om oss": "",
+    "sudd": "",
+    "merchandise": "",
+    "jobb": "",
+    "kundvagn": ""
+}
+
+prefetches = ""
+for file in files:
+    prefetches += '''
+        <link rel="prefetch" href="/''' + file + '"'
 
 # index.html
 
 onDisplayDiv = ""
+prefetch = ""
 i = 0
 for product in onDisplay:
     visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
@@ -249,9 +250,13 @@ for product in onDisplay:
                             </div>
                         </a>
                     </div>'''
+
+    prefetch += '''
+        <link rel="prefetch" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+
     i += 1
 
-files["index"] = ('''<!DOCTYPE html>
+files["index"] = '''<!DOCTYPE html>
 <html lang="sv">
 	<head>
 		<title>Johanssudd</title>
@@ -260,7 +265,7 @@ files["index"] = ('''<!DOCTYPE html>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="index.css">''' + prefetch + prefetches + '''
 		<script src="index.js"></script>
 	</head>
 
@@ -325,7 +330,7 @@ files["index"] = ('''<!DOCTYPE html>
 		</main>
         <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
 	</body>
-</html>''')
+</html>'''
 
 # om oss.html
 
@@ -338,7 +343,7 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
-        <link rel="stylesheet" href="om oss.css">
+        <link rel="stylesheet" href="om oss.css">''' + prefetches + '''
         <script src="om oss.js"></script>
     </head>
 
@@ -449,8 +454,8 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
-        <link rel="stylesheet" href="products.css">
-        <script src="products.js"></script>''' + prefetch + '''
+        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches + '''
+        <script src="products.js"></script>
     </head>
 
     <body onload="pageLoaded()" onscroll="pageScrolled()">
@@ -530,8 +535,8 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
-        <link rel="stylesheet" href="products.css">
-        <script src="products.js"></script>''' + prefetch + '''
+        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches + '''
+        <script src="products.js"></script>
     </head>
 
     <body onload="pageLoaded()" onscroll="pageScrolled()">
@@ -587,7 +592,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
-        <link rel="stylesheet" href="jobb.css">
+        <link rel="stylesheet" href="jobb.css">''' + prefetches + '''
         <script src="jobb.js"></script>
     </head>
 
@@ -834,7 +839,8 @@ for product in products["products"]:
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
         <link rel="preload" href="/product.css" as="style">
         <link rel="preload" href="/product.js" as="script">
-        <link rel="stylesheet" href="/product.css">''' + preloadImgs + '''
+        <link rel="stylesheet" href="/product.css">
+        <link rel="prefetch" href="/kundvagn">''' + preloadImgs + '''
         <script src="/product.js"></script>
     </head>
 
