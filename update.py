@@ -264,7 +264,7 @@ files["index"] = '''<!DOCTYPE html>
 		<meta name="description" content="Johanssud. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
+		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
 		<link rel="stylesheet" href="index.css">''' + prefetch + prefetches + '''
 		<script src="index.js"></script>
 	</head>
@@ -342,7 +342,7 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
         <link rel="stylesheet" href="om oss.css">''' + prefetches + '''
         <script src="om oss.js"></script>
     </head>
@@ -453,7 +453,7 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av sudd här på Johanssudd. Vi erbjuder en stor variation med ett alternativ för alla!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
         <link rel="stylesheet" href="products.css">''' + prefetch + prefetches + '''
         <script src="products.js"></script>
     </head>
@@ -534,7 +534,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta name="description" content="Vårt sortiment av merchandise. Vi erbjuder många olika produkter för alla olika.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
         <link rel="stylesheet" href="products.css">''' + prefetch + prefetches + '''
         <script src="products.js"></script>
     </head>
@@ -591,7 +591,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
         <link rel="stylesheet" href="jobb.css">''' + prefetches + '''
         <script src="jobb.js"></script>
     </head>
@@ -711,7 +711,7 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta name="description" content="Beställ dina produkter från Johanssudd!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
         <link rel="stylesheet" href="/kundvagn.css">''' + prefetches + '''
         <script src="/kundvagn.js"></script>
     </head>
@@ -917,7 +917,7 @@ for product in products["products"]:
         <meta name="description" content="Köp ''' + product["name"] + ". " + product["description"] + '''">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
         <link rel="preload" href="/product.css" as="style">
         <link rel="preload" href="/product.js" as="script">
         <link rel="stylesheet" href="/product.css">
