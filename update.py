@@ -225,8 +225,6 @@ for product in products["products"]:
     if eval(product["onDisplay"]):
         onDisplay.append(product)
 
-print(merchandise)
-
 # Creating basic files
 
 files = {}
@@ -495,6 +493,7 @@ files["sudd"] = '''<!DOCTYPE html>
 # merchandise.html
 
 merchandiseDiv = ""
+prefetch = ""
 i = 0
 for product in merchandise:
     (visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
@@ -511,6 +510,10 @@ for product in merchandise:
                         </div>
                     </a>
                 </div>'''
+
+    prefetch += '''
+        <link rel="prefetch" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+
     i += 1
 
 files["merchandise"] = '''<!DOCTYPE html>
@@ -523,7 +526,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
         <link rel="stylesheet" href="products.css">
-        <script src="products.js"></script>
+        <script src="products.js"></script>''' + prefetch + '''
     </head>
 
     <body onload="pageLoaded()" onscroll="pageScrolled()">
