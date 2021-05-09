@@ -225,6 +225,8 @@ for product in products["products"]:
     if eval(product["onDisplay"]):
         onDisplay.append(product)
 
+print(merchandise)
+
 # Creating basic files
 
 files = {}
