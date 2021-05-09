@@ -279,20 +279,20 @@ files["index"] = '''<!DOCTYPE html>
 					<a href="/">
 						<span class="topText current">HEM</span>
 					</a>
-					<a href="om%20oss">
+					<a href="/om%20oss">
 						<span class="topText">OM OSS</span>
 					</a>
-					<a href="sudd">
+					<a href="/sudd">
 						<span class="topText">SUDD</span>
 					</a>
-					<a href="merchandise">
+					<a href="/merchandise">
 						<span class="topText">MERCHANDISE</span>
 					</a>
-					<a href="jobb">
+					<a href="/jobb">
 						<span class="topText jobbText">JOBB</span>
 					</a>
 					<div class="verticalLine"></div>
-					<a href="kundvagn">
+					<a href="/kundvagn">
 						<span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartNumber"></span>
@@ -357,20 +357,20 @@ files["om oss"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om%20oss">
+                    <a href="/om%20oss">
                         <span class="topText current">OM OSS</span>
                     </a>
-                    <a href="sudd">
+                    <a href="/sudd">
                         <span class="topText">SUDD</span>
                     </a>
-                    <a href="merchandise">
+                    <a href="/merchandise">
                         <span class="topText">MERCHANDISE</span>
                     </a>
-                    <a href="jobb">
+                    <a href="/jobb">
                         <span class="topText jobbText">JOBB</span>
                     </a>
                     <div class="verticalLine"></div>
-                    <a href="kundvagn">
+                    <a href="/kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartNumber"></span>
@@ -468,20 +468,20 @@ files["sudd"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om%20oss">
+                    <a href="/om%20oss">
                         <span class="topText">OM OSS</span>
                     </a>
-                    <a href="sudd">
+                    <a href="/sudd">
                         <span class="topText current">SUDD</span>
                     </a>
-                    <a href="merchandise">
+                    <a href="/merchandise">
                         <span class="topText">MERCHANDISE</span>
                     </a>
-                    <a href="jobb">
+                    <a href="/jobb">
                         <span class="topText jobbText">JOBB</span>
                     </a>
                     <div class="verticalLine"></div>
-                    <a href="kundvagn">
+                    <a href="/kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartNumber"></span>
@@ -549,20 +549,20 @@ files["merchandise"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om%20oss">
+                    <a href="/om%20oss">
                         <span class="topText">OM OSS</span>
                     </a>
-                    <a href="sudd">
+                    <a href="/sudd">
                         <span class="topText">SUDD</span>
                     </a>
-                    <a href="merchandise">
+                    <a href="/merchandise">
                         <span class="topText current">MERCHANDISE</span>
                     </a>
-                    <a href="jobb">
+                    <a href="/jobb">
                         <span class="topText jobbText">JOBB</span>
                     </a>
                     <div class="verticalLine"></div>
-                    <a href="kundvagn">
+                    <a href="/kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartNumber"></span>
@@ -606,20 +606,20 @@ files["jobb"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om%20oss">
+                    <a href="/om%20oss">
                         <span class="topText">OM OSS</span>
                     </a>
-                    <a href="sudd">
+                    <a href="/sudd">
                         <span class="topText">SUDD</span>
                     </a>
-                    <a href="merchandise">
+                    <a href="/merchandise">
                         <span class="topText">MERCHANDISE</span>
                     </a>
-                    <a href="jobb">
+                    <a href="/jobb">
                         <span class="topText jobbText current">JOBB</span>
                     </a>
                     <div class="verticalLine"></div>
-                    <a href="kundvagn">
+                    <a href="/kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
                         <span class="cartNumber"></span>
