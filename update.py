@@ -265,7 +265,8 @@ files["index"] = '''<!DOCTYPE html>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-		<link rel="stylesheet" href="index.css">''' + prefetch + prefetches + '''
+		<link rel="stylesheet" href="index.css">''' + prefetch + prefetches.replace('''
+        <link rel="prefetch" href="/index">''', "") + '''
 		<script src="index.js"></script>
 	</head>
 
