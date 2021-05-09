@@ -295,7 +295,7 @@ files["index"] = '''<!DOCTYPE html>
 					<a href="kundvagn">
 						<span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
-                        <span class="cartItemsNumber"></span>
+                        <span class="cartNumber"></span>
 					</a>
 				</div>
 			</div>
@@ -373,7 +373,7 @@ files["om oss"] = '''<!DOCTYPE html>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
-                        <span class="cartItemsNumber"></span>
+                        <span class="cartNumber"></span>
                     </a>
                 </div>
             </div>
@@ -484,7 +484,7 @@ files["sudd"] = '''<!DOCTYPE html>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
-                        <span class="cartItemsNumber"></span>
+                        <span class="cartNumber"></span>
                     </a>
                 </div>
             </div>
@@ -565,7 +565,7 @@ files["merchandise"] = '''<!DOCTYPE html>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
-                        <span class="cartItemsNumber"></span>
+                        <span class="cartNumber"></span>
                     </a>
                 </div>
             </div>
@@ -622,7 +622,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     <a href="kundvagn">
                         <span class="topText cartText">KUNDVAGN</span>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px">
-                        <span class="cartItemsNumber"></span>
+                        <span class="cartNumber"></span>
                     </a>
                 </div>
             </nav>
@@ -700,6 +700,87 @@ files["jobb"] = '''<!DOCTYPE html>
         <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>'''
+
+# kundvagn.html
+
+files["kundvagn"] = '''<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Kundvagn - Johanssudd</title>
+        <meta name="keywords" content="köp sudd, köp sud, johanssudd, johansudd">
+        <meta name="description" content="Beställ dina produkter från Johanssudd!">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
+        <link rel="stylesheet" href="/kundvagn.css">''' + prefetch + prefetches + '''
+        <script src="/kundvagn.js"></script>
+    </head>
+
+    <body onload="pageLoaded()" onscroll="pageScrolled()">
+        <nav class="navigationBar">
+            <a class="topLogoTextDiv" href="/">
+                <span class="topLogoText">Johanssudd</span>
+            </a>
+            <div class="topTextDiv">
+                <a href="/">
+                    <span class="topText">HEM</span>
+                </a>
+                <a href="/om oss">
+                    <span class="topText">OM OSS</span>
+                </a>
+                <a href="/sudd">
+                    <span class="topText">SUDD</span>
+                </a>
+                <a href="/merchandise">
+                    <span class="topText">MERCHANDISE</span>
+                </a>
+                <a href="/jobb">
+                    <span class="topText jobbText">JOBB</span>
+                </a>
+                <div class="verticalLine"></div>
+                <a href="/kundvagn">
+                    <span class="topText cartText current">KUNDVAGN</span>
+                    <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Dark.webp" height="25px">
+                    <span class="cartNumber"></span>
+                </a>
+            </div>
+        </nav>
+        <main class="pageContent">
+            <span class="pageHeader">Vad Hittar Vi I Kundvagnen Idag?</span>
+            <div class="emptyDiv">
+                <span class="emptyHeader">Din kundvagn är ju tom!</span>
+                <span class="emptyText">Vad sägs om att göra något åt det?</span>
+                <div class="buttonDiv">
+                    <a href="/">
+                        <button class="button">Fortsätt shoppa!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="columnDiv">
+                <span class="columnText produktColumn">Produkt</span>
+                <span class="columnText prisColumn">Pris</span>
+                <span class="columnText antalColumn">Antal</span>
+                <span class="columnText totaltColumn">Totalt</span>
+            </div>
+            <div class="finishDiv">
+                <div class="sumDiv">
+                    <span class="sumText">Summa:</span>
+                    <span class="sumNumber"></span>
+                </div>
+                <div class="horizontalLine"></div>
+                <div class="finalDiv">
+                    <a href="/">
+                        <span class="keepShopping">Fortsätt shoppa</span>
+                    </a>
+                    <button class="button finishButton">Fortsätt till kassan</button>
+                </div>
+            </div>
+        </main>
+        <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
+    </body>
+</html>'''
+
+# Create the files
 
 for file in files:
     path = "./" + file + ".html"
@@ -869,7 +950,7 @@ for product in products["products"]:
                 <a href="/kundvagn">
                     <span class="topText cartText">KUNDVAGN</span>
                     <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Dark.webp" height="25px">
-                    <span class="cartItemsNumber"></span>
+                    <span class="cartNumber"></span>
                 </a>
             </div>
         </nav>

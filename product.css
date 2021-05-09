@@ -89,7 +89,7 @@ a {
 	position: absolute;
 	margin-top: -5px;
 }
-.cartItemsNumber {
+.cartNumber {
 	position: absolute;
 	display: none;
 	font-size: 11px;

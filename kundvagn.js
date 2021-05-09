@@ -1,7 +1,7 @@
 function pageLoaded() {
 	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
 		const items = JSON.parse(localStorage["cart"]);
-		document.querySelector(".cartItemsNumber").style.display = "inline-block";
+		document.querySelector(".cartNumber").style.display = "inline-block";
 		document.querySelector(".columnDiv").style.display = "block";
 		document.querySelector(".finishDiv").style.visibility = "visible";
 
@@ -95,7 +95,7 @@ function selectChanged(sender) {
 	const product = sender.parentElement.firstElementChild.href.split("/")[3] + ">" + sender.parentElement.firstElementChild.children[1].firstElementChild.innerText + ">" + sender.parentElement.firstElementChild.children[1].children[1].innerText + ">" + sender.parentElement.firstElementChild.firstElementChild.src.split("/")[5] + ">" + sender.parentElement.children[1].innerText;
 	if (sender.value !== "") localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + sender.value);
 	const items = JSON.parse(localStorage["cart"]);
-	document.querySelector(".cartItemsNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
+	document.querySelector(".cartNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
 	if (document.querySelectorAll(".totalText").length === Object.keys(items).length) {
@@ -143,12 +143,12 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	if (localStorage["cart"] === "{}") {
-		document.querySelector(".cartItemsNumber").style.display = "none";
+		document.querySelector(".cartNumber").style.display = "none";
 		document.querySelector(".columnDiv").style.display = "none";
 		document.querySelector(".finishDiv").style.visibility = "hidden";
 		document.querySelector(".emptyDiv").style.display = "block";
 	} else {
-		document.querySelector(".cartItemsNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
+		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
 	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 300) {
 		var footer = document.querySelector(".footerText");
