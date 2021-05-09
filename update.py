@@ -252,7 +252,7 @@ for product in onDisplay:
                     </div>'''
 
     prefetch += '''
-        <link rel="prefetch" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+        <link rel="prefetch" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '">'
 
     i += 1
 
@@ -441,7 +441,7 @@ for product in sudd:
                 </div>'''
 
     prefetch += '''
-        <link rel="prefetch" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+        <link rel="prefetch" href="/sudd/''' + product["name"].lower().replace(" ", "%20") + '">'
 
     i += 1
 
