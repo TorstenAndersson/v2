@@ -279,7 +279,7 @@ files["index"] = '''<!DOCTYPE html>
 					<a href="/">
 						<span class="topText current">HEM</span>
 					</a>
-					<a href="om oss">
+					<a href="om%20oss">
 						<span class="topText">OM OSS</span>
 					</a>
 					<a href="sudd">
@@ -357,7 +357,7 @@ files["om oss"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om oss">
+                    <a href="om%20oss">
                         <span class="topText current">OM OSS</span>
                     </a>
                     <a href="sudd">
@@ -468,7 +468,7 @@ files["sudd"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om oss">
+                    <a href="om%20oss">
                         <span class="topText">OM OSS</span>
                     </a>
                     <a href="sudd">
@@ -549,7 +549,7 @@ files["merchandise"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om oss">
+                    <a href="om%20oss">
                         <span class="topText">OM OSS</span>
                     </a>
                     <a href="sudd">
@@ -606,7 +606,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="topText">HEM</span>
                     </a>
-                    <a href="om oss">
+                    <a href="om%20oss">
                         <span class="topText">OM OSS</span>
                     </a>
                     <a href="sudd">
