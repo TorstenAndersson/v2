@@ -178,13 +178,13 @@ a {
     font-size: 18px;
 }
 .line {
-	color: rgb(150, 150, 150);
+	color: rgb(140, 140, 140);
 	text-decoration: line-through;
 	text-decoration-thickness: 1px;
 	font-family: "Open Sans";;
 }
 .discountedPrice {
-	color: rgb(150, 150, 150);
+	color: rgb(140, 140, 140);
 	font-family: "Open Sans";;
 	padding-right: 10px;
 	padding-left: 10px;
