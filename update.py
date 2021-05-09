@@ -990,5 +990,5 @@ os.system("git push")
 # NOTES
 
 """
-1050px- big screen
+>1050px = big screen
 """

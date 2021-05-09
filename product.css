@@ -190,13 +190,6 @@ a {
 	width: 98px;
 	height: 98px;
 }
-/*
-.smallProductImg:past { /* not(:hover):not(.first) {
-	border: none;
-	width: 100px;
-	height: 100px;
-}
-*/
 .first {
 	border: 1px solid rgb(65, 65, 65);
 }
@@ -246,6 +239,7 @@ a {
 }
 .variantName {
 	display: block;
+	color: rgb(80, 80, 80);
 	font-family: "Raleway";
 	text-align: left;
 	padding-bottom: 10px;
@@ -253,6 +247,7 @@ a {
 .variantSelect {
 	width: 160px;
 	height: 40px;
+	color: rgb(80, 80, 80);
 	font-family: "Raleway";
 }
 .placeholderVariantOption {
