@@ -924,8 +924,6 @@ for product in products["products"]:
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="preload" href="/product.css" as="style">
-        <link rel="preload" href="/product.js" as="script">
         <link rel="stylesheet" href="/product.css">
         <link rel="prefetch" href="/kundvagn">''' + preloadImgs + prefetches + '''
         <script src="/product.js"></script>
