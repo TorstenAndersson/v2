@@ -429,7 +429,7 @@ for product in sudd:
 
     suddDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower() + '''">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
@@ -510,7 +510,7 @@ for product in merchandise:
 
     merchandiseDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower() + '''">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
