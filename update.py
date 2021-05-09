@@ -409,6 +409,7 @@ files["om oss"] = '''<!DOCTYPE html>
 # sudd.html
 
 suddDiv = ""
+prefetch = ""
 i = 0
 for product in sudd:
     """
@@ -433,6 +434,10 @@ for product in sudd:
                         </div>
                     </a>
                 </div>'''
+
+    prefetch += '''
+        <link rel="prefetch" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+
     i += 1
 
 files["sudd"] = '''<!DOCTYPE html>
@@ -445,7 +450,7 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp">
         <link rel="stylesheet" href="products.css">
-        <script src="products.js"></script>
+        <script src="products.js"></script>''' + prefetch + '''
     </head>
 
     <body onload="pageLoaded()" onscroll="pageScrolled()">
