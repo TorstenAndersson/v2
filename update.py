@@ -712,7 +712,7 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/kundvagn.css">''' + prefetch + prefetches + '''
+        <link rel="stylesheet" href="/kundvagn.css">''' + prefetches + '''
         <script src="/kundvagn.js"></script>
     </head>
 
