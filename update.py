@@ -2,27 +2,6 @@ import os
 import json
 import datetime
 import requests
-from PIL import Image
-  
-def convertImage():
-    img = Image.open("./image.jpg")
-    img = img.convert("RGBA")
-  
-    datas = img.getdata()
-  
-    newData = []
-  
-    for item in datas:
-        if item[0] > 200 and item[1] > 200 and item[2] > 200:
-            newData.append((255, 255, 255, 0))
-        else:
-            newData.append(item)
-  
-    img.putdata(newData)
-    img.save("./New.png", "PNG")
-    print("Successful")
-  
-convertImage()
 from bs4 import BeautifulSoup
 
 # Sorting phones by release dates!
