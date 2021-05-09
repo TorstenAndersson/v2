@@ -49,6 +49,10 @@ function pageLoaded() {
 			productFrame.appendChild(removeButton);
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
+			
+			var prefetch = document.createElement("link");
+			prefetch.rel = "prefetch";
+			prefetch.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase();
 		}
 		var sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
