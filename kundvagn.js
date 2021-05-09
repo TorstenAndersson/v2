@@ -51,7 +51,7 @@ function pageLoaded() {
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 			
 			var prefetch = document.createElement("link");
-			prefetch.rel = "prefetch";
+			prefetch.rel = "preconnect";
 			prefetch.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase().replace(" ", "%20");
 			document.querySelector("head").insertBefore(prefetch, document.querySelector('link[rel="prefetch"]'));
 		}
