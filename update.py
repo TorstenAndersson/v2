@@ -13,7 +13,7 @@ def convertImage():
     newData = []
   
     for item in datas:
-        if item[0] == 255 and item[1] == 255 and item[2] == 255:
+        if item[0] > 250 and item[1] > 250 and item[2] > 250:
             newData.append((255, 255, 255, 0))
         else:
             newData.append(item)
