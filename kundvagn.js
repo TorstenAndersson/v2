@@ -53,6 +53,7 @@ function pageLoaded() {
 			var prefetch = document.createElement("link");
 			prefetch.rel = "prefetch";
 			prefetch.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase();
+			document.querySelector("head").insertBefore(prefetch, document.querySelector('link[rel="prefetch"]'));
 		}
 		var sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
