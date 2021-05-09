@@ -5,7 +5,7 @@ import requests
 from PIL import Image
   
 def convertImage():
-    img = Image.open("./image.png")
+    img = Image.open("./image.jpg")
     img = img.convert("RGBA")
   
     datas = img.getdata()
