@@ -326,7 +326,7 @@ files["index"] = '''<!DOCTYPE html>
 			</div>
 			<div class="paragraph">
 				<span class="paragraphHeader big">Vill du arbeta med oss?</span>
-				<span>Vi här på Johanssudd söker alltid arbetskraft. Vi erbjuder massvis med olika jobb inom alla områden du kan tänka dig. Om du tror att du har vad som krävs önskar vi att du skulle fylla i <a class="hereLink" href="jobb">vårat formulär</a> och ansöka!</span>
+				<span>Vi här på Johanssudd söker alltid arbetskraft. Vi erbjuder massvis med olika jobb inom alla områden du kan tänka dig. Om du tror att du har vad som krävs önskar vi att du skulle fylla i vårat formulär du kan hitta <a class="hereLink" href="jobb">här</a>!</span>
 			</div>
 		</main>
         <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
