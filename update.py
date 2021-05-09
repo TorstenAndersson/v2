@@ -224,15 +224,15 @@ files = {
     "kundvagn": ""
 }
 
-prefetches = ""
+preconnects = ""
 for file in files:
-    prefetches += '''
-        <link rel="prefetch" href="/''' + file.replace(" ", "%20") + '">'
+    preconnects += '''
+        <link rel="preconnect" href="/''' + file.replace(" ", "%20") + '">'
 
 # index.html
 
 onDisplayDiv = ""
-prefetch = ""
+preconnect = ""
 i = 0
 for product in onDisplay:
     visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
@@ -251,8 +251,8 @@ for product in onDisplay:
                         </a>
                     </div>'''
 
-    prefetch += '''
-        <link rel="prefetch" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '">'
+    preconnect += '''
+        <link rel="preconnect" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '">'
 
     i += 1
 
@@ -265,8 +265,8 @@ files["index"] = '''<!DOCTYPE html>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-		<link rel="stylesheet" href="index.css">''' + prefetch + prefetches.replace('''
-        <link rel="prefetch" href="/index">''', "") + '''
+		<link rel="stylesheet" href="index.css">''' + preconnect + preconnects.replace('''
+        <link rel="preconnect" href="/index">''', "") + '''
 		<script src="index.js"></script>
 	</head>
 
@@ -344,8 +344,8 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="om oss.css">''' + prefetches.replace('''
-        <link rel="prefetch" href="/om%20oss">''', "") + '''
+        <link rel="stylesheet" href="om oss.css">''' + preconnects.replace('''
+        <link rel="preconnect" href="/om%20oss">''', "") + '''
         <script src="om oss.js"></script>
     </head>
 
@@ -416,7 +416,7 @@ files["om oss"] = '''<!DOCTYPE html>
 # sudd.html
 
 suddDiv = ""
-prefetch = ""
+preconnect = ""
 i = 0
 for product in sudd:
     """
@@ -442,8 +442,8 @@ for product in sudd:
                     </a>
                 </div>'''
 
-    prefetch += '''
-        <link rel="prefetch" href="/sudd/''' + product["name"].lower().replace(" ", "%20") + '">'
+    preconnect += '''
+        <link rel="preconnect" href="/sudd/''' + product["name"].lower().replace(" ", "%20") + '">'
 
     i += 1
 
@@ -456,8 +456,8 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches.replace('''
-        <link rel="prefetch" href="/sudd">''', "") + '''
+        <link rel="stylesheet" href="products.css">''' + preconnect + preconnects.replace('''
+        <link rel="preconnect" href="/sudd">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -506,7 +506,7 @@ files["sudd"] = '''<!DOCTYPE html>
 # merchandise.html
 
 merchandiseDiv = ""
-prefetch = ""
+preconnect = ""
 i = 0
 for product in merchandise:
     (visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
@@ -524,8 +524,8 @@ for product in merchandise:
                     </a>
                 </div>'''
 
-    prefetch += '''
-        <link rel="prefetch" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+    preconnect += '''
+        <link rel="preconnect" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
 
     i += 1
 
@@ -538,8 +538,8 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches.replace('''
-        <link rel="prefetch" href="/merchandise">''', "") + '''
+        <link rel="stylesheet" href="products.css">''' + preconnect + preconnects.replace('''
+        <link rel="preconnect" href="/merchandise">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -596,8 +596,8 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="jobb.css">''' + prefetches.replace('''
-        <link rel="prefetch" href="/jobb">''', "") + '''
+        <link rel="stylesheet" href="jobb.css">''' + preconnects.replace('''
+        <link rel="preconnect" href="/jobb">''', "") + '''
         <script src="jobb.js"></script>
     </head>
 
@@ -717,8 +717,8 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/kundvagn.css">''' + prefetches.replace('''
-        <link rel="prefetch" href="/kundvagn">''', "") + '''
+        <link rel="stylesheet" href="/kundvagn.css">''' + preconnects.replace('''
+        <link rel="preconnect" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
     </head>
 
@@ -809,7 +809,7 @@ for product in products["products"]:
     if not os.path.exists(path):
         open(path, "x")
 
-    preloadImgs = ""
+    prefetchImgs = ""
     variantDiv = ""
     try:
         product["variants"]
@@ -850,8 +850,8 @@ for product in products["products"]:
                 exec(result)
 
                 for variant in variantCombination.split(";")[:-1]:
-                    preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+                    prefetchImgs += '''
+        <link rel="prefetch" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -859,8 +859,8 @@ for product in products["products"]:
     except KeyError:
         try:
             for perspective in product["perspectives"]:
-                    preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+                    prefetchImgs += '''
+        <link rel="prefetch" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -910,8 +910,8 @@ for product in products["products"]:
             exec(result)
 
             for variant in variantCombination.split(";")[:-1]:
-                preloadImgs += '''
-        <link rel="preload" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+                prefetchImgs += '''
+        <link rel="prefetch" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant).replace(" ", "%20") + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -925,7 +925,7 @@ for product in products["products"]:
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
         <link rel="stylesheet" href="/product.css">
-        <link rel="prefetch" href="/kundvagn">''' + preloadImgs + prefetches + '''
+        <link rel="preconnect" href="/kundvagn">''' + prefetchImgs + preconnects + '''
         <script src="/product.js"></script>
     </head>
 
