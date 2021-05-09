@@ -227,7 +227,7 @@ files = {
 prefetches = ""
 for file in files:
     prefetches += '''
-        <link rel="prefetch" href="/''' + file + '">'
+        <link rel="prefetch" href="/''' + file.replace(" ", "%20") + '">'
 
 # index.html
 
@@ -344,7 +344,8 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="om oss.css">''' + prefetches + '''
+        <link rel="stylesheet" href="om oss.css">''' + prefetches.replace('''
+        <link rel="prefetch" href="/om%20oss">''', "") + '''
         <script src="om oss.js"></script>
     </head>
 
@@ -455,7 +456,8 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches + '''
+        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches.replace('''
+        <link rel="prefetch" href="/sudd">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -536,7 +538,8 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches + '''
+        <link rel="stylesheet" href="products.css">''' + prefetch + prefetches.replace('''
+        <link rel="prefetch" href="/merchandise">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -593,7 +596,8 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="jobb.css">''' + prefetches + '''
+        <link rel="stylesheet" href="jobb.css">''' + prefetches.replace('''
+        <link rel="prefetch" href="/jobb">''', "") + '''
         <script src="jobb.js"></script>
     </head>
 
@@ -713,7 +717,8 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/kundvagn.css">''' + prefetches + '''
+        <link rel="stylesheet" href="/kundvagn.css">''' + prefetches.replace('''
+        <link rel="prefetch" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
     </head>
 
@@ -922,7 +927,7 @@ for product in products["products"]:
         <link rel="preload" href="/product.css" as="style">
         <link rel="preload" href="/product.js" as="script">
         <link rel="stylesheet" href="/product.css">
-        <link rel="prefetch" href="/kundvagn">''' + preloadImgs + '''
+        <link rel="prefetch" href="/kundvagn">''' + preloadImgs + prefetches + '''
         <script src="/product.js"></script>
     </head>
 
