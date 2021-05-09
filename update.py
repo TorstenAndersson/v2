@@ -227,7 +227,7 @@ files = {
 prefetches = ""
 for file in files:
     prefetches += '''
-        <link rel="prefetch" href="/''' + file + '"'
+        <link rel="prefetch" href="/''' + file + '">'
 
 # index.html
 
