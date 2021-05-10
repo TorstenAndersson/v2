@@ -162,7 +162,7 @@ a {
 }
 .columnText {
 	position: absolute;
-	color: rgb(120, 120, 120);
+	color: rgb(115, 115, 115);
 }
 .produktColumn {
 	left: 10%;
@@ -203,13 +203,13 @@ a {
 	display: block;
 }
 .productVariant {
-	color: rgb(120, 120, 120);
+	color: rgb(115, 115, 115);
 }
 .priceText {
 	position: absolute;
 	right: 45%;
 	transform: translateX(50%);
-	color: rgb(120, 120, 120);
+	color: rgb(115, 115, 115);
 	margin: 36px 11px 0px 0px;
 }
 .quantityButton {
@@ -261,7 +261,7 @@ a {
 	margin-right: 54px;
 }
 .sumText {
-	color: rgb(120, 120, 120);
+	color: rgb(115, 115, 115);
 }
 .sumNumber {
 	color: rgb(57, 57, 57);
