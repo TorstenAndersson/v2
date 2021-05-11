@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import requests
+import urllib.parse
 from bs4 import BeautifulSoup
 
 # Sorting phones by release dates!
@@ -188,7 +189,7 @@ onDisplay = []
 imgs = {}
 
 for product in products["products"]:
-    imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"]).replace(" ", "%20") + ".webp"
+    imgs[product["name"]] = "/imgs/" + urllib.parse.quote((product["name"] + "/" + product["name"])) + ".webp"
     try:
         variants = ""
         for variant in product["variants"]["imgAffecting"]:
@@ -198,13 +199,13 @@ for product in products["products"]:
                     break
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants + "%20" + urllib.parse.quote(product["perspectives"][0])) + ".webp"
         except:
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + variants) + ".webp"
     except:
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]).replace(" ", "%20") + ".webp"
+            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]) + ".webp"
         except KeyError:
             pass
 
@@ -227,7 +228,7 @@ files = {
 preconnects = ""
 for file in files:
     preconnects += '''
-        <link rel="preconnect" href="/''' + file.replace(" ", "%20") + '">'
+        <link rel="preconnect" href="/''' + urllib.parse.quote(file) + '">'
 
 # index.html
 
@@ -239,7 +240,7 @@ for product in onDisplay:
     
     onDisplayDiv += '''
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
-                        <a href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
+                        <a href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '''">
                             <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                             <img src="''' + imgs[product["name"]] +  '''" width="430px" height="430px" alt="''' + product["name"] + '''">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
@@ -252,7 +253,7 @@ for product in onDisplay:
                     </div>'''
 
     preconnect += '''
-        <link rel="preconnect" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '">'
+        <link rel="preconnect" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -431,7 +432,7 @@ for product in sudd:
 
     suddDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
+                    <a class="productFrame" href="/''' + urllib.parse.quote(product["type"] + "/" + product["name"].lower()) + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
@@ -443,7 +444,7 @@ for product in sudd:
                 </div>'''
 
     preconnect += '''
-        <link rel="preconnect" href="/sudd/''' + product["name"].lower().replace(" ", "%20") + '">'
+        <link rel="preconnect" href="/sudd/''' + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -513,7 +514,7 @@ for product in merchandise:
 
     merchandiseDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + product["name"].lower().replace(" ", "%20") + '''">
+                    <a class="productFrame" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '''">
                         <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
@@ -525,7 +526,7 @@ for product in merchandise:
                 </div>'''
 
     preconnect += '''
-        <link rel="preconnect" href="/merchandise/''' + product["name"].lower().replace(" ", "%20") + '">'
+        <link rel="preconnect" href="/merchandise/''' + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -851,7 +852,7 @@ for product in products["products"]:
 
                 for variant in variantCombination.split(";")[:-1]:
                     prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + "%20" + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -860,7 +861,7 @@ for product in products["products"]:
         try:
             for perspective in product["perspectives"]:
                     prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + perspective).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -879,12 +880,12 @@ for product in products["products"]:
                     variants += product["variants"]["imgAffecting"][variant][0] + "%20"
                 perspectiveDiv += '''
                         <div class="smallProductFrame">
-                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + variants + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + variants + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
             except KeyError:
                 perspectiveDiv += '''
                         <div class="smallProductFrame">
-                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + (product["name"] + "/" + product["name"] + "%20" + product["perspectives"][i]).replace(" ", "%20") + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
 
         perspectiveDiv += '''
@@ -911,7 +912,7 @@ for product in products["products"]:
 
             for variant in variantCombination.split(";")[:-1]:
                 prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + (product["name"] + "/" + product["name"] + variant).replace(" ", "%20") + '.webp"' + ''' as="image">'''
+        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 

@@ -10,10 +10,10 @@ function pageLoaded() {
 			productFrame.classList.add("productFrame");
 			var productLink = document.createElement("a");
 			productLink.classList.add("productLink");
-			productLink.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase().replace(" ", "%20");
+			productLink.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
 			var productImg = document.createElement("img");
 			productImg.classList.add("productImg");
-			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + item.split(">")[3]).replace(" ", "%20");
+			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + encodeURI(item.split(">")[3]));
 			productImg.setAttribute("width", "80px");
 			productImg.setAttribute("height", "80px");
 			productImg.setAttribute("alt", item.split(">")[3].slice(0, -4).replace("%20", " "));
@@ -52,7 +52,7 @@ function pageLoaded() {
 			
 			var prefetch = document.createElement("link");
 			prefetch.rel = "preconnect";
-			prefetch.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase().replace(" ", "%20");
+			prefetch.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
 			document.querySelector("head").insertBefore(prefetch, document.querySelector('link[rel="prefetch"]'));
 		}
 		var sum = 0;
