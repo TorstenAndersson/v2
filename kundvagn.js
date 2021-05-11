@@ -10,13 +10,13 @@ function pageLoaded() {
 			productFrame.classList.add("productFrame");
 			let productLink = document.createElement("a");
 			productLink.classList.add("productLink");
-			productLink.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
+			productLink.href = "/" + encodeURI(item.split(">")[0] + "/" + item.split(">")[1].toLowerCase());
 			let productImg = document.createElement("img");
 			productImg.classList.add("productImg");
 			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + encodeURI(item.split(">")[3]));
 			productImg.setAttribute("width", "80px");
 			productImg.setAttribute("height", "80px");
-			productImg.setAttribute("alt", item.split(">")[3].slice(0, -4).replace("%20", " "));
+			productImg.setAttribute("alt", item.split(">")[3].slice(0, -5).replaceAll("%20", " "));
 			productLink.appendChild(productImg);
 			let textDiv = document.createElement("div");
 			textDiv.classList.add("textDiv");
