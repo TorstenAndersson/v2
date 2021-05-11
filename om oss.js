@@ -6,10 +6,10 @@ function pageLoaded() {
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-var isScrolled = false;
+let isScrolled = false;
 
 function pageScrolled() {
-	var navigationBar = document.querySelector(".navigationBar");
+	let navigationBar = document.querySelector(".navigationBar");
 	if (window.pageYOffset > 30) {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";

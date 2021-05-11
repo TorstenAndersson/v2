@@ -6,43 +6,43 @@ function pageLoaded() {
 		document.querySelector(".finishDiv").style.visibility = "visible";
 
 		for (item of Object.keys(items)) {
-			var productFrame = document.createElement("div");
+			let productFrame = document.createElement("div");
 			productFrame.classList.add("productFrame");
-			var productLink = document.createElement("a");
+			let productLink = document.createElement("a");
 			productLink.classList.add("productLink");
 			productLink.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
-			var productImg = document.createElement("img");
+			let productImg = document.createElement("img");
 			productImg.classList.add("productImg");
 			productImg.src = ("/imgs/" + item.split(">")[1] + "/" + encodeURI(item.split(">")[3]));
 			productImg.setAttribute("width", "80px");
 			productImg.setAttribute("height", "80px");
 			productImg.setAttribute("alt", item.split(">")[3].slice(0, -4).replace("%20", " "));
 			productLink.appendChild(productImg);
-			var textDiv = document.createElement("div");
+			let textDiv = document.createElement("div");
 			textDiv.classList.add("textDiv");
-			var productName = document.createElement("span");
+			let productName = document.createElement("span");
 			productName.classList.add("productName");
 			productName.innerText = item.split(">")[1];
 			textDiv.appendChild(productName);
-			var productVariant = document.createElement("span");
+			let productVariant = document.createElement("span");
 			productVariant.classList.add("productVariant");
 			productVariant.innerText = item.split(">")[2];
 			textDiv.appendChild(productVariant);
 			productLink.appendChild(textDiv);
 			productFrame.appendChild(productLink);
-			var priceText = document.createElement("span");
+			let priceText = document.createElement("span");
 			priceText.classList.add("priceText");
 			priceText.innerText = item.split(">")[4];
 			productFrame.appendChild(priceText);
-			var quantitySelect = document.createElement("select");
+			let quantitySelect = document.createElement("select");
 			quantitySelect.classList.add("quantitySelect");
 			quantitySelect.setAttribute("onchange", "selectChanged(this)");
 			productFrame.appendChild(quantitySelect);
-			var totalText = document.createElement("span");
+			let totalText = document.createElement("span");
 			productFrame.appendChild(totalText);
 			selectChanged(quantitySelect, +items[item]);
 			totalText.classList.add("totalText");
-			var removeButton = document.createElement("button");
+			let removeButton = document.createElement("button");
 			removeButton.classList.add("removeButton");
 			removeButton.setAttribute("onclick", "removeItem(this)");
 			removeButton.innerText = "+";
@@ -50,12 +50,12 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 			
-			var prefetch = document.createElement("link");
+			let prefetch = document.createElement("link");
 			prefetch.rel = "preconnect";
 			prefetch.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
 			document.querySelector("head").insertBefore(prefetch, document.querySelector('link[rel="prefetch"]'));
 		}
-		var sum = 0;
+		let sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
 		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
 
@@ -64,7 +64,7 @@ function pageLoaded() {
 	}
 
 	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 300) {
-		var footer = document.querySelector(".footerText");
+		let footer = document.querySelector(".footerText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
 		footer.style.width = "100%";
@@ -72,10 +72,10 @@ function pageLoaded() {
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-var isScrolled = false;
+let isScrolled = false;
 
 function pageScrolled() {
-	var navigationBar = document.querySelector(".navigationBar");
+	let navigationBar = document.querySelector(".navigationBar");
 	if (window.pageYOffset > 30) {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
@@ -104,14 +104,14 @@ function selectChanged(sender) {
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
 	if (document.querySelectorAll(".totalText").length === Object.keys(items).length) {
-		var sum = 0;
+		let sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
 		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
 	}
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (i = 1; i < 25 + value; i ++) {
-			var option = document.createElement("option");
+			let option = document.createElement("option");
 			option.innerText = i;
 			sender.appendChild(option);
 			if (i === value) {
@@ -119,7 +119,7 @@ function selectChanged(sender) {
 			}
 		}
 	} else {
-		var option = document.createElement("option");
+		let option = document.createElement("option");
 		option.innerText = 1;
 		sender.appendChild(option)
 		if (value > 75) {
@@ -156,7 +156,7 @@ function removeItem(sender) {
 		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
 	if (window.innerHeight - document.querySelector(".pageContent").lastElementChild.offsetTop > 300) {
-		var footer = document.querySelector(".footerText");
+		let footer = document.querySelector(".footerText");
 		footer.style.position = "absolute";
 		footer.style.bottom = "5px";
 		footer.style.width = "100%";

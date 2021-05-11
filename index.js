@@ -1,22 +1,22 @@
-var divs;
-var active = true;
-var count = 1;
+let divs;
+let active = true;
+let count = 1;
 const initalCount = count; 
-var divCount = count;
-var size;
+let divCount = count;
+let size;
 
 function pageLoaded() {
 	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
 		document.querySelector(".cartNumber").style.display = "inline-block";
 		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
-	var slideshowDiv = document.querySelector("div.slideshow");
+	let slideshowDiv = document.querySelector("div.slideshow");
 	divs = document.querySelectorAll(".productDiv");
 	divs = [...divs];
 	size = divs[0].clientWidth;
 	slideshowDiv.style.transform = "translateX(" + (-size * count) + "px)";
 	setTimeout(function() { slideshowDiv.style.transition = "transform 0.3s ease-in-out"; }, 0); 
-	var localCount = 0;
+	let localCount = 0;
 	setInterval(function() { 
 		localCount ++;
 		if (localCount === 1400) {
@@ -30,10 +30,10 @@ function pageLoaded() {
 	document.querySelector(".footerText").innerHTML = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-var isScrolled = false;
+let isScrolled = false;
 
 function pageScrolled() {
-	var navigationBar = document.querySelector(".navigationBar");
+	let navigationBar = document.querySelector(".navigationBar");
 	if (window.pageYOffset > 30) {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";

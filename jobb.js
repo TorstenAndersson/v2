@@ -4,7 +4,7 @@ function pageLoaded() {
 		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	var form = document.querySelector("form");
+	let form = document.querySelector("form");
 
 	form.addEventListener("submit", e => {
   		e.preventDefault();
@@ -18,7 +18,7 @@ function pageLoaded() {
     		body: new URLSearchParams(new FormData(form)).toString()
   		}).then(res => {
     		if (res) {
-				var notification = document.querySelector(".notification");
+				let notification = document.querySelector(".notification");
 				notification.style.opacity = "1";
 				setTimeout(function() { 
 					notification.style.opacity = "0";
@@ -30,10 +30,10 @@ function pageLoaded() {
 	});
 }
 
-var isScrolled = false;
+let isScrolled = false;
 
 function pageScrolled() {
-	var navigationBar = document.querySelector(".navigationBar");
+	let navigationBar = document.querySelector(".navigationBar");
 	if (window.pageYOffset > 30) {
 		if (!isScrolled) {
 			navigationBar.style.position = "fixed";
@@ -67,7 +67,7 @@ function radioChanged() {
 }
 
 function textareaChanged() {
-	var area = document.querySelector("textarea.textarea");
+	let area = document.querySelector("textarea.textarea");
   	area.style.height = 'auto';	
     area.style.height = area.scrollHeight - 8 + 'px';
 }

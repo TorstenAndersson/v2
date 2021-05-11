@@ -1,4 +1,4 @@
-var divs, size, timer, count = 1, divCount = count;
+let divs, size, timer, count = 1, divCount = count;
 const initalCount = count; 
 if (localStorage["cart"] === undefined) localStorage["cart"] = "{}";
 
@@ -36,7 +36,7 @@ function variantChanged(sender) {
 }
 
 function buy() {
-	var variant = "";
+	let variant = "";
 	for (variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
@@ -51,11 +51,11 @@ function buy() {
 		}
 		localStorage["cart"] += '"' + product + '":"1"}';
 	}
-	var cartItems = document.querySelector(".cartNumber");
+	let cartItems = document.querySelector(".cartNumber");
 	cartItems.innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	cartItems.style.display = "inline-block";
 
-	var notification = document.querySelector(".notification");
+	let notification = document.querySelector(".notification");
 	notification.style.opacity = "1";
 	
 	/*
