@@ -103,11 +103,10 @@ function selectChanged(sender) {
 	document.querySelector(".cartNumber").innerText = Object.values(items).reduce((a, b) => +a + +b);
 	const value = +items[product];
 	sender.parentElement.children[3].innerText = (Math.round(parseFloat(product.split(">")[4].replace(",", ".")) * value * 100)/100).toString().replace(".", ",") + " kr";
-	if (document.querySelectorAll(".totalText").length === Object.keys(items).length) {
-		let sum = 0;
-		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
-		document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
-	}
+	let sum = 0;
+	Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
+	document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
+
 	while (sender.firstElementChild) sender.removeChild(sender.firstElementChild);
 	if (value < 25) {
 		for (i = 1; i < 25 + value; i ++) {
@@ -147,6 +146,8 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "");
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
+	let sum = 0;
+	Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
 	document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
 	if (localStorage["cart"] === "{}") {
 		document.querySelector(".cartNumber").style.display = "none";
