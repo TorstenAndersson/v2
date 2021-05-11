@@ -13,7 +13,7 @@ function pageLoaded() {
 			productLink.href = "/" + encodeURI(item.split(">")[0] + "/" + item.split(">")[1].toLowerCase());
 			let productImg = document.createElement("img");
 			productImg.classList.add("productImg");
-			productImg.src = "/imgs/" + encodeURI(item.split(">")[1] + "/" + item.split(">")[3]);
+			productImg.src = "/imgs/" + encodeURI(item.split(">")[1]) + "/" + item.split(">")[3];
 			productImg.setAttribute("width", "80px");
 			productImg.setAttribute("height", "80px");
 			productImg.setAttribute("alt", item.split(">")[3].slice(0, -5).replaceAll("%20", " "));
