@@ -877,7 +877,7 @@ for product in products["products"]:
             try:
                 variants = ""
                 for variant in product["variants"]["imgAffecting"]:
-                    variants += product["variants"]["imgAffecting"][variant][0] + "%20"
+                    variants += product["variants"]["imgAffecting"][variant][0] + " "
                 perspectiveDiv += '''
                         <div class="smallProductFrame">
                             <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + variants + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
