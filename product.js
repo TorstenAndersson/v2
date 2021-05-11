@@ -26,12 +26,12 @@ function variantChanged(sender) {
 	if (smallImgs.length !== 0) {
 		for (i2 in smallImgs) {
 			if (smallImgs[i2].src.split("%20").length > 4 && sender.innerText.includes(decodeURI(smallImgs[i2].src.split("%20").slice(3, -1))))
-				smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value); //.join("%20") if color is multiple words
+				smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value);
 		}
 		smallImgHovered(document.querySelector(".selected"));
 	} else {
 		const productImg = document.querySelector(".productImg");
-		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), "Johans%20Skal%20" + encodeURI(sender.value)+ ".webp");
+		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
 	}
 }
 
@@ -42,7 +42,6 @@ function buy() {
 	}
 	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + document.querySelector(".productImg").src.split("/")[5] + ">" + document.querySelector(".productPriceText").innerText;
 	try {
-		//JSON.parse(localStorage.getItem("cart"))[sender.parentElement.parentElement.firstElementChild.innerText + ">" + variant.slice(0, -2)] + 1
 		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(+JSON.parse(localStorage["cart"])[product].slice(0) + 1));
 	} catch {
 		localStorage["cart"] = localStorage["cart"].slice(0, -1)
