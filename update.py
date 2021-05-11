@@ -194,18 +194,18 @@ for product in products["products"]:
         variants = ""
         for variant in product["variants"]["imgAffecting"]:
             for i in range(len(product["variants"]["imgAffecting"][variant])):
-                variants += "%20" + product["variants"]["imgAffecting"][variant][0]
+                variants += " " + product["variants"]["imgAffecting"][variant][0]
                 if i == 0:
                     break
         try:
-            product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + variants + "%20" + product["perspectives"][0]) + ".webp"
+            product["perspectives"] 
+            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + variants + " " + product["perspectives"][0]) + ".webp"
         except:
             imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + variants) + ".webp"
     except:
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + product["perspectives"][0]) + ".webp"
+            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + product["perspectives"][0]) + ".webp"
         except KeyError:
             pass
 
@@ -841,7 +841,7 @@ for product in products["products"]:
                         last = "\t" * (i + 1) + "variantCombination += "
                         options = ""
                         for i2 in range(i + 1):
-                            options += "'%20' + option" + str(i2) + " + "
+                            options += "' ' + option" + str(i2) + " + "
                         last += options + "';'"
 
                     result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
@@ -852,7 +852,7 @@ for product in products["products"]:
 
                 for variant in variantCombination.split(";")[:-1]:
                     prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + "%20" + perspective) + '.webp"' + ''' as="image">'''
+        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + " " + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -861,7 +861,7 @@ for product in products["products"]:
         try:
             for perspective in product["perspectives"]:
                     prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + perspective) + '.webp"' + ''' as="image">'''
+        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -880,12 +880,12 @@ for product in products["products"]:
                     variants += product["variants"]["imgAffecting"][variant][0] + "%20"
                 perspectiveDiv += '''
                         <div class="smallProductFrame">
-                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + variants + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + variants + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
             except KeyError:
                 perspectiveDiv += '''
                         <div class="smallProductFrame">
-                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + "%20" + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
+                            <img class="smallProductImg''' + first + '''" src="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + product["perspectives"][i]) + '.webp" width="100px" height="100px" alt="' + product["name"] + ''' Perspective: ''' + product["perspectives"][i] + '''" onmouseover="smallImgHovered(this)">
                         </div>'''
 
         perspectiveDiv += '''
@@ -901,7 +901,7 @@ for product in products["products"]:
                     last = "\t" * (i + 1) + "variantCombination += "
                     options = ""
                     for i2 in range(i + 1):
-                        options += "'%20' + option" + str(i2) + " + "
+                        options += "' ' + option" + str(i2) + " + "
                     last += options + "';'"
 
                 result += "\t" * i + "for option" + str(i) + " in " + str(product["variants"]["imgAffecting"][variant]) + ":\n" + last
