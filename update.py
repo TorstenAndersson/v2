@@ -199,7 +199,7 @@ for product in products["products"]:
                     break
         try:
             product["perspectives"]
-            imgs[product["name"]] = "/imgs/" + (product["name"] + "/" + product["name"] + variants + "%20" + urllib.parse.quote(product["perspectives"][0])) + ".webp"
+            imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + variants + "%20" + product["perspectives"][0]) + ".webp"
         except:
             imgs[product["name"]] = "/imgs/" + urllib.parse.quote(product["name"] + "/" + product["name"] + variants) + ".webp"
     except:
