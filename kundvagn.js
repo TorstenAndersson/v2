@@ -10,7 +10,7 @@ function pageLoaded() {
 			productFrame.classList.add("productFrame");
 			let productLink = document.createElement("a");
 			productLink.classList.add("productLink");
-			productLink.href = "/" + encodeURI(item.split(">")[0] + "/" + item.split(">")[1].toLowerCase());
+			productLink.href = "/" + item.split(">")[0] + "/" + item.split(">")[1].toLowerCase();
 			let productImg = document.createElement("img");
 			productImg.classList.add("productImg");
 			productImg.src = "/imgs/" + encodeURI(item.split(">")[1]) + "/" + item.split(">")[3];
@@ -147,6 +147,7 @@ function removeItem(sender) {
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '",', "");
 	localStorage["cart"] = localStorage["cart"].replace(',"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
 	localStorage["cart"] = localStorage["cart"].replace('"' + product + '":"' + JSON.parse(localStorage["cart"])[product] + '"', "");
+	document.querySelector(".sumNumber").innerText = (Math.round(sum * 100)/100).toString().replace(".", ",") + " kr";
 	if (localStorage["cart"] === "{}") {
 		document.querySelector(".cartNumber").style.display = "none";
 		document.querySelector(".columnDiv").style.display = "none";
