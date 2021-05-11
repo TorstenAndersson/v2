@@ -11,17 +11,6 @@
 body {
 	margin: 0px;
 }
-.background {
-	z-index: 0;
-	width: 100%;
-	height: 85vh;
-	background-attachment: scroll;
-	background-image: url("/imgs/website/Johan%20Background.webp");
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
 .navigationBar {
 	position: absolute;
 	top: 30px;
@@ -69,9 +58,6 @@ a {
 .topText:hover {
 	color: rgb(0, 0, 0);
 }
-.current {
-	color: rgb(255, 255, 255);
-}
 .verticalLine {
 	background-color: rgb(110, 110, 110);
 	display: inline;
@@ -106,16 +92,6 @@ a {
 	margin-top: 6px;
 	margin-left: 12px;
 }
-.cover {
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
-	z-index: 1;
-	background-color: rgba(0, 0, 0, .3);
-	height: 85%;
-}
 .pageContent {
 	text-align: center;
 	padding-top: 50px;
@@ -140,63 +116,6 @@ a {
     position: absolute;
     top: 35%;
     width: 100%
-}
-.infoHeader {
-    display: block;
-    color: rgb(57, 57, 57);
-	font: 700 55px sans-serif;
-    padding-bottom: 15px;
-}
-.infoMainText {
-    font-style: italic;
-}
-.mainFrame {
-    padding-left: 30px;
-    padding-top: 50px;
-}
-.paddingDiv {
-    display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.productFrame {
-	position: absolute;
-	left: 25%;
-	top: 30%;
-	width: 50%;
-}
-.imgFrame {
-	position: absolute;
-	left: 0px;
-	display: inline;
-}
-.textFrame {
-	position: absolute;
-	right: 0px;
-	display: inline;
-}
-.productImg {
-	width: 350px;
-	height: 300px;
-	padding-top: 60px;
-}
-.productHeader {
-	display: block;
-	color: rgb(57, 57, 57);
-	font: 700 55px sans-serif;
-	padding-bottom: 20px;
-}
-.productDescription {
-	display: block;
-	color: rgb(47, 47, 47);
-	font: 18px sans-serif;
-	padding-bottom: 15px;
-}
-.productPriceText {
-	display: block;
-	color: rgb(57, 57, 57);
-	font: 700 35px sans-serif;
-	padding-bottom: 20px;
 }
 .footerText {
 	position: absolute;
