@@ -102,7 +102,6 @@ products = json.loads('''
                 },
                 "original":"499,99 kr"
             },
-            "img":"/imgs/Johans%20Hoodie/Johans%20Hoodie%20Vit%20Front.webp",
             "variants":{
                 "imgAffecting":{
                     "Färg":[
@@ -143,7 +142,6 @@ products = json.loads('''
                 },
                 "original":"349,99 kr"
             },
-            "img":"/imgs/Johans%20Crocs/Johans%20Crocs%20S%20Above.webp",
             "variants":{
                 "notImgAffecting":{
                     "Storlek":[
@@ -161,6 +159,33 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
+            "name":"Johans Tröja",
+            "description":"Stiligt värre",
+            "price":{
+                "discount":{
+                    "price":"99 kr",
+                    "reason":"IDK FELT LIKE IT"
+                },
+                "original":"149,99 kr"
+            },
+            "variants":{
+                "notImgAffecting":{
+                    "Färg":[
+                        "Vit",
+                        "Blå",
+                        "Grön",
+                        "Gul",
+                        "Ljusblå",
+                        "Mörkblå",
+                        "Rosa",
+                        "Röd",
+                        "Svart"
+                    ]
+                }
+            },
+            "type":"merchandise",
+            "onDisplay":"False"
+        },{
             "name":"Johans Skal",
             "description":"Skydda din mobil!",
             "price":{
@@ -170,7 +195,6 @@ products = json.loads('''
                 },
                 "original":"149,99 kr"
             },
-            "img":"/imgs/Johans%20Skal/Johans%20Skal%20iPhone%2012%20Pro%20Max.webp",
             "variants":{
                 "imgAffecting":{
                     "Modell": [''' + phoneVariants[1:-1] + '''
