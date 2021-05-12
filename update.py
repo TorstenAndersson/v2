@@ -169,7 +169,7 @@ products = json.loads('''
                 "original":"149,99 kr"
             },
             "variants":{
-                "notImgAffecting":{
+                "imgAffecting":{
                     "Färg":[
                         "Vit",
                         "Blå",
