@@ -180,10 +180,8 @@ a {
 }
 .productHeader {
 	display: block;
-	width: 150%;
 	color: rgb(57, 57, 57);
 	font: 700 55px "Open Sans";
-	text-align: left;
 	padding-bottom: 20px;
 }
 .productDescription {
