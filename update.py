@@ -93,6 +93,30 @@ products = json.loads('''
             "type":"sudd",
             "onDisplay":"True"
         },{
+            "name":"Vans x Johanssudd",
+            "description":"Collab",
+            "price":{
+                "discount":{
+                    "price":"",
+                    "reason":""
+                },
+                "original":"1249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Variant":[
+                        "Klassisk",
+                        "Slip-On"
+                    ]
+                }
+            },
+            "perspectives":[
+                "AboveSide",
+                "Side"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Hoodie",
             "description":"fyfan va varmt",
             "price":{
