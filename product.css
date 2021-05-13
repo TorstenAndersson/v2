@@ -180,10 +180,10 @@ a {
 }
 .productHeader {
 	display: block;
+	width: 150%;
 	color: rgb(57, 57, 57);
-	font-family: "Open Sans";
-	font-size: 55px;
-	font-weight: 700;
+	font: 700 55px "Open Sans";
+	text-align: left;
 	padding-bottom: 20px;
 }
 .productDescription {
@@ -199,8 +199,7 @@ a {
 }
 .productPriceText {
 	color: rgb(57, 57, 57);
-	font-family: "Open Sans";
-	font-size: 35px;
+	font: 35px "Open Sans";
 }
 .line {
 	color: rgb(140, 140, 140);
@@ -239,8 +238,7 @@ a {
 	border: none;
 	color: rgb(255, 255, 255);
 	background-color: rgb(57, 57, 57);
-	font-family: "Raleway";
-	font-size: 20px;
+	font: 20px "Raleway";
 	padding: 20px 50px 20px 50px;
 	cursor: pointer;
 }
