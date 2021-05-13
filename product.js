@@ -25,8 +25,8 @@ function variantChanged(sender) {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length !== 0) {
 		for (i2 in smallImgs) {
-			if (smallImgs[i2].src.split("%20").length > 4 && sender.innerText.includes(decodeURI(smallImgs[i2].src.split("%20").slice(3, -1))))
-				smallImgs[i2].src = smallImgs[i2].src.replace(smallImgs[i2].src.split("%20").slice(3, -1), sender.value);
+			if (decodeURI(smallImgs[i2].src.split("%20")).split(",").some((element) => sender.innerText.includes(element)))
+				smallImgs[i2].src = smallImgs[i2].src.replace(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element))[0], sender.value);
 		}
 		smallImgHovered(document.querySelector(".selected"));
 	} else {
