@@ -626,7 +626,7 @@ files["merchandise"] = '''<!DOCTYPE html>
         </nav>
         <main class="pageContent">
             <span class="infoHeader">Vår Merchandise</span>
-            <span class="infoMainText">Märkeskläderna för alla.</span>
+            <span class="infoMainText">Tillbehör till alla våra fans.</span>
             <div class="mainFrame">''' + merchandiseDiv + '''
             </div>
         </main>
