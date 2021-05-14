@@ -149,6 +149,9 @@ a {
 .newsImg {
 	padding-bottom: 40px;
 }
+.productImg {
+	margin-bottom: 90px;
+}
 .newsText {
 	width: 80%;
 	color: rgb(102, 102, 102);
