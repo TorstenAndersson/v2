@@ -125,7 +125,7 @@ a {
 	padding-bottom: 600px;
 }
 .logoAndMotto {
-	padding-bottom: 60px;
+	padding-bottom: 80px;
 }
 .logoText {
 	display: block;
@@ -162,7 +162,7 @@ a {
 */
 .newsText {
 	width: 80%;
-	color: rgb(102, 102, 102);
+	color: rgb(100, 100, 100);
 	margin: auto;
 }
 div.slideshowDiv {
@@ -227,7 +227,7 @@ img.orderButton {
 	position: relative;
 	left: 50%;
 	width: 30%;
-	color: rgb(102, 102, 102);
+	color: rgb(100, 100, 100);
 	text-align: left;
 }
 .parOne {
