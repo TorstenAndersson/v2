@@ -1031,7 +1031,7 @@ for product in products["products"]:
     </body>
 </html>''')
 
-    fileNames[product["name"] + ".html"] = product["type"]
+    fileNames[product["name"].lower() + ".html"] = product["type"]
 
 print(fileNames)
 for fileName in fileNames:
