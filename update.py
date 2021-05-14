@@ -1031,12 +1031,12 @@ for product in products["products"]:
     </body>
 </html>''')
 
-    fileNames[product["name"]] = product["type"]
+    fileNames[product["name"] + ".html"] = product["type"]
 
 print(fileNames)
 for fileName in fileNames:
     print(os.listdir("./" + fileNames[fileName]))
-    print(filter(lambda x: fileNames in x, os.listdir("./" + fileNames[fileName])))
+    print(filter(lambda x: fileNames in x, ['johans vans®.html', 'vans x johanssudd.html', 'johans crocs.html', 'johans skal.html', 'johans tröja.html', 'johans hoodie.html']))
 
 # Update git with new changes
  
