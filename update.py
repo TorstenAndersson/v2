@@ -852,13 +852,7 @@ for file in files:
 
 # Creating product files
 
-
-"""
-for option in variant:
-    for option2 in variant2:
-        for option3 in variant3:
-            pass
-"""
+fileNames = {}
 
 for product in products["products"]:
     path = "./" + product["type"] + "/" + product["name"].lower() + ".html"
@@ -1036,6 +1030,12 @@ for product in products["products"]:
         <span class="footerText">Copyright © ''' + str(datetime.datetime.now().year) + ''' Johanssudd. All Rights Reserved</span>
     </body>
 </html>''')
+
+    fileNames[product["name"]] = product["type"]
+
+print(fileNames)
+for fileName in fileNames:
+    print(fileName + fileNames[fileName])
 
 # Update git with new changes
  
