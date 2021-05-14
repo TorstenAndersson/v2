@@ -1035,7 +1035,10 @@ for product in products["products"]:
 
 print(fileNames)
 for fileName in fileNames:
-    print(list(filter(lambda x: x not in list(fileNames.keys()), os.listdir("./" + fileNames[fileName]))))
+    try:
+        os.remove("./" + fileNames[fileName] + "/" + list(filter(lambda x: x not in list(fileNames.keys()), os.listdir("./" + fileNames[fileName])))[0])
+    except IndexError:
+        pass
 
 # Update git with new changes
  
