@@ -157,7 +157,7 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
-            "name":"Johans Crocs",
+            "name":"Johans Fossingar",
             "description":"LFIPÅPT FLOP",
             "price":{
                 "discount":{
