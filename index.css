@@ -138,6 +138,22 @@ a {
 	color: rgb(85, 85, 85);
 	font: italic 16px;
 }
+.newsDiv {
+	padding-bottom: 150px;
+}
+.newsHeader {
+	display: block;
+	font: 700 55px "Raleway";
+	padding-bottom: 20px;
+}
+.newsImg {
+	padding-bottom: 40px;
+}
+.newsText {
+	width: 80%;
+	color: rgb(102, 102, 102);
+	margin: auto;
+}
 div.slideshowDiv {
 	position: relative;
 	right: 25%;
