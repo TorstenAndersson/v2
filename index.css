@@ -125,7 +125,7 @@ a {
 	padding-bottom: 600px;
 }
 .logoAndMotto {
-	padding-bottom: 80px;
+	padding-bottom: 150px;
 }
 .logoText {
 	display: block;
@@ -137,37 +137,6 @@ a {
 .motto {
 	color: rgb(85, 85, 85);
 	font: italic 16px "Open Sans";
-}
-.newsDiv {
-	padding-bottom: 150px;
-}
-.newsHeader {
-	display: block;
-	font: 700 55px "Raleway";
-	padding-bottom: 20px;
-}
-.newsImgDiv {
-	padding-bottom: 50px;
-}
-.productImg {
-	margin-bottom: 50px;
-}
-/*
-.productHeader {
-	display: block;
-	font: 45px "Open Sans";
-	margin: -100px 0px 0px 300px;
-	padding-bottom: 50px;
-}
-*/
-.newsText {
-	display: block;
-	width: 80%;
-	color: rgb(100, 100, 100);
-	margin: auto;
-}
-.bold {
-	font-weight: 700;
 }
 div.slideshowDiv {
 	position: relative;
