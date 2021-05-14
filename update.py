@@ -117,7 +117,7 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
-            "name":"Johans varmis",
+            "name":"Johans Hoodie",
             "description":"fyfan va varmt",
             "price":{
                 "discount":{
@@ -157,7 +157,7 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
-            "name":"Johans dojor",
+            "name":"Johans Crocs",
             "description":"LFIPÅPT FLOP",
             "price":{
                 "discount":{
@@ -183,7 +183,7 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
-            "name":"Johans tröjis",
+            "name":"Johans Tröja",
             "description":"Stiligt värre",
             "price":{
                 "discount":{
