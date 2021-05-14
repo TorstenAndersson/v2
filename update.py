@@ -1036,7 +1036,7 @@ for product in products["products"]:
 print(fileNames)
 for fileName in fileNames:
     print(os.listdir("./" + fileNames[fileName]))
-    print(filter(lambda x: fileNames in x, ['johans vans®.html', 'vans x johanssudd.html', 'johans crocs.html', 'johans skal.html', 'johans tröja.html', 'johans hoodie.html']))
+    dict(filter(lambda x: fileName in x, ['johans vans®.html', 'vans x johanssudd.html', 'johans crocs.html', 'johans skal.html', 'johans tröja.html', 'johans hoodie.html']))
 
 # Update git with new changes
  
