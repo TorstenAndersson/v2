@@ -358,11 +358,11 @@ files["index"] = '''<!DOCTYPE html>
 			</div>
             <div class="newsDiv">
                 <span class="newsHeader">Vans x Johanssudd</span>
-                <div class="newsImgDiv>
+                <div class="newsImgDiv">
                     <a href="/merchandise/johans%20vans®">
                         <img class="newsImg" src="/imgs/website/LETS%20TRY.webp" height="400px" alt="Vans x Johanssudd Promo">
-                        <img class="productImgOne" src="/imgs/Johans Vans®/Johans Vans® Klassisk AboveSide.webp">
-                        <img class="productImgTwo" src="/imgs/Johans Vans®/Johans Vans® Slip-On AboveSide.webp">
+                        <img class="productImgOne" src="/imgs/Johans Vans®/Johans Vans® Klassisk AboveSide.webp" width="300px">
+                        <img class="productImgTwo" src="/imgs/Johans Vans®/Johans Vans® Slip-On AboveSide.webp" width="300px">
                     </a>
                 </div>
                 <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor vi tror kommer passa våra fans</span>
