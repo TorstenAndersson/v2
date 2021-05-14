@@ -93,7 +93,7 @@ products = json.loads('''
             "type":"sudd",
             "onDisplay":"True"
         },{
-            "name":"Vans x Johanssudd",
+            "name":"Johans Vans®",
             "description":"Collab",
             "price":{
                 "discount":{
