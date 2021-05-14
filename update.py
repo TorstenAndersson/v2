@@ -358,8 +358,10 @@ files["index"] = '''<!DOCTYPE html>
 			</div>
             <div class="newsDiv">
                 <span class="newsHeader">Vans x Johanssudd</span>
-                <img class="newsImg" src="/imgs/website/LETS%20TRY.webp" width="800px" alt="Vans x Johanssudd Promo">
-                <span class="newsText">Köp då</span>
+                <a href="/merchandise/vans%20x%20johanssudd">
+                    <img class="newsImg" src="/imgs/website/LETS%20TRY.webp" width="800px" alt="Vans x Johanssudd Promo">
+                </a>
+                <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor vi tror kommer passa våra fans./span>
             </div>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
