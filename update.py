@@ -363,10 +363,9 @@ files["index"] = '''<!DOCTYPE html>
                         <img class="newsImg" src="/imgs/website/LETS%20TRY.webp" height="400px" alt="Vans x Johanssudd Promo">
                         <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Classic AboveSide.webp" width="300px" alt="Johans Vans® Classic AboveSide">
                         <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Slip-On AboveSide.webp" width="300px" alt="Johans Vans® Slip-On AboveSide">
-                        <!-- <span class="productHeader">Johans Vans®</span> -->
                     </a>
                 </div>
-                <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor i helt olika stilar. Välj mellan våra Johans Vans® Classic eller Slip-On, eller varför inte båda medan du ändå är igång! Tillgänglig för en begränsat tid endast!</span>
+                <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor i helt olika stilar. Välj mellan våra Johans Vans® Classic eller Slip-On, eller varför inte båda medan du ändå är igång! <span class="bold">Tillgänglig för en begränsat tid endast!</span></span>
             </div>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
