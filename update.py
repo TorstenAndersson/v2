@@ -366,7 +366,7 @@ files["index"] = '''<!DOCTYPE html>
                         <!-- <span class="productHeader">Johans Vans®</span> -->
                     </a>
                 </div>
-                <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor i helt olika stilar. Välj mellan våra Johans Vans® Classic eller Slip-On, eller varför inte båda medan du ändå är igång!</span>
+                <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor i helt olika stilar. Välj mellan våra Johans Vans® Classic eller Slip-On, eller varför inte båda medan du ändå är igång! Tillgänglig för en begränsat tid endast!</span>
             </div>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
