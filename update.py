@@ -361,8 +361,8 @@ files["index"] = '''<!DOCTYPE html>
                 <div class="newsImgDiv">
                     <a href="/merchandise/johans%20vans®">
                         <img class="newsImg" src="/imgs/website/LETS%20TRY.webp" height="400px" alt="Vans x Johanssudd Promo">
-                        <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Klassisk AboveSide.webp" width="300px">
-                        <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Slip-On AboveSide.webp" width="300px">
+                        <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Klassisk AboveSide.webp" width="300px" alt="Johans Vans® Klassisk AboveSide>
+                        <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Slip-On AboveSide.webp" width="300px" alt="Johans Vans® Slip-On AboveSide">
                         <!-- <span class="productHeader">Johans Vans®</span> -->
                     </a>
                 </div>
