@@ -1035,7 +1035,7 @@ for product in products["products"]:
 
 print(fileNames)
 for fileName in fileNames:
-    print(fileName.lower())
+    print(fileNames.keys())
     print(list(filter(lambda x: x not in fileNames.keys(), os.listdir("./" + fileNames[fileName]))))
 
 # Update git with new changes
