@@ -356,6 +356,11 @@ files["index"] = '''<!DOCTYPE html>
 				<span class="logoText">Johanssudd</span>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
+            <div class="news">
+                <span>Vans x Johanssudd</span>
+                <img src="/imgs/website/LETS%20TRY.webp" class="newsImage">
+                <span>Köp då</span>
+            </div>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
 				<img class="orderButton" src="/imgs/website/Forward.webp" onclick="slide('forward')" style="right: 0px;" width="10%" alt="Previous Slide">
