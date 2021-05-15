@@ -26,6 +26,8 @@ for phone in os.listdir("imgs/Johans Skal/"):
         response = BeautifulSoup(open(companyPath, "r").read(), features="html.parser")
     else: 
         response = BeautifulSoup(requests.get("https://gsmarena.com/" + company).text, features="html.parser")
+        if not os.path.exists("phoneInfo"):
+            os.mkdir("phoneInfo")
         open(companyPath, "x")
         open(companyPath, "w").write(str(response))
 
