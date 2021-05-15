@@ -281,7 +281,7 @@ for product in onDisplay:
     #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
     
     onDisplayDiv += '''
-                    <div class="productDiv" style="order: ''' + str(i) + '''";>
+                    <div class="productDiv" style="order: ''' + str(i) + ''';">
                         <a href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">' + discount[0] + '''
                             <img src="''' + imgs[product["name"]] +  '''" width="430px" height="430px" alt="''' + product["name"] + '''">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
