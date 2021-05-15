@@ -274,8 +274,8 @@ for product in onDisplay:
     try:
         product["price"]["discount"]
         discount = ('''
-        <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', '''
-        <span class="price line">''' + product["price"]["discount"]["price"] + '</span>')
+                            <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', '''
+                            <span class="price line">''' + product["price"]["discount"]["price"] + '</span>')
     except KeyError:
         discount = ("", "")
     #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
@@ -472,8 +472,8 @@ for product in sudd:
     try:
         product["price"]["discount"]
         discount = ('''
-        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
-        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
+                        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
     except KeyError:
         discount = ("", "")
 
@@ -559,8 +559,8 @@ for product in merchandise:
     try:
         product["price"]["discount"]
         discount = ('''
-        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
-        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
+                        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
     except KeyError:
         discount = ("", "")
 
@@ -961,7 +961,7 @@ for product in products["products"]:
             pass
 
     try:
-        product["discount"]
+        product["price"]["discount"]
         price = '''
         <span class="productPriceText line">''' + product["price"]["discount"]["price"] + "</span>"
     except KeyError:
