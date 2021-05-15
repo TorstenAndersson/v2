@@ -268,7 +268,7 @@ products = json.loads('''
             "onDisplay":"False"
         },{
             "name":"Johans Skal",
-            "description":"Till alla som vill se eleganta ut men fortfarande skydda sin mobil!",
+            "description":"Se elegant ut när du skyddar din mobil!",
             "price":{
                 "discount":{
                     "price":"199,99 kr",
