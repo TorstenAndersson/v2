@@ -85,15 +85,14 @@ products = json.loads('''
             "name":"Sudd Glans",
             "description":"Glansigt värre!",
             "price":{
-                "discount":{
+                 "discount":{
                     "price":"10,99 kr",
-                    "reason":"Fick vibbarna"
+                    "reason":"JOHANSSUDD SEASON 2 REA"
                 },
                 "original":"14,99 kr"
             },
-            "img":"/imgs/Sudd/Sudd%20Johan.webp",
             "type":"sudd",
-            "onDisplay":"True"
+            "onDisplay":"False"
         },{
             "name":"Sudd Johan",
             "description":"Bara gamla goda Johan.",
@@ -104,7 +103,6 @@ products = json.loads('''
                 },
                 "original":"14,99 kr"
             },
-            "img":"/imgs/Sudd/Sudd%20Johan.webp",
             "type":"sudd",
             "onDisplay":"True"
         },{
