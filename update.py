@@ -82,6 +82,19 @@ products = json.loads('''
 {
     "products":[
         {
+            "name":"Sudd Glans",
+            "description":"Glansigt värre!",
+            "price":{
+                "discount":{
+                    "price":"10,99 kr",
+                    "reason":"Fick vibbarna"
+                },
+                "original":"14,99 kr"
+            },
+            "img":"/imgs/Sudd/Sudd%20Johan.webp",
+            "type":"sudd",
+            "onDisplay":"True"
+        },{
             "name":"Sudd Johan",
             "description":"Bara gamla goda Johan.",
             "price":{
@@ -262,18 +275,23 @@ onDisplayDiv = ""
 preconnect = ""
 i = 0
 for product in onDisplay:
-    visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
+    try:
+        product["price"]["discount"]
+        discount = "hidden"
+    except KeyError:
+        discount = ('''
+        <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', '''
+        <span class="price line">''' + product["price"]["discount"]["price"] + '</span>')
+    #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
     
     onDisplayDiv += '''
                     <div class="productDiv" style="order: ''' + str(i) + '''";>
-                        <a href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '''">
-                            <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
+                        <a href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">' + discount[0] + '''
                             <img src="''' + imgs[product["name"]] +  '''" width="430px" height="430px" alt="''' + product["name"] + '''">
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
-                                <span class="price">''' + product["price"]["original"] + '''</span>
-                                <span class="price line">''' + product["price"]["discount"]["price"] + '''</span>
+                                <span class="price">''' + product["price"]["original"] + '</span>' + discount[1] + '''
                             </div>
                         </a>
                     </div>'''
