@@ -285,6 +285,7 @@ for product in products["products"]:
 
 onDisplay.insert(0, onDisplay[-1])
 onDisplay.pop()
+print(onDisplay)
 
 # Creating basic files
 
