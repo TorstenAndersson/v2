@@ -83,25 +83,61 @@ products = json.loads('''
     "products":[
         {
             "name":"Sudd Glans",
-            "description":"Glansigt värre!",
+            "description":"Extravagantiskt glansigt!",
             "price":{
                  "discount":{
-                    "price":"10,99 kr",
-                    "reason":"JOHANSSUDD SEASON 2 REA"
+                    "price":"4,99 kr",
+                    "reason":"Sommarrea"
                 },
-                "original":"14,99 kr"
+                "original":"9,99 kr"
             },
             "type":"sudd",
             "onDisplay":"False"
         },{
             "name":"Sudd Johan",
-            "description":"Bara gamla goda Johan.",
+            "description":"Bara gamla goda Johan på ett sudd.",
             "price":{
                 "discount":{
                     "price":"10,99 kr",
-                    "reason":"Fick vibbarna"
+                    "reason":"Sommarrea"
                 },
                 "original":"14,99 kr"
+            },
+            "type":"sudd",
+            "onDisplay":"True"
+        },{
+            "name":"Sudd Björkeby",
+            "description":"En ackurat skildring av dagens skolmat!",
+            "price":{
+                "discount":{
+                    "price":"499,99 kr",
+                    "reason":"Sommarrea"
+                },
+                "original":"749,99 kr"
+            },
+            "type":"sudd",
+            "onDisplay":"False"
+        },{
+            "name":"Sudd Hood",
+            "description":"Hoodie runt ett soodie.",
+            "price":{
+                "discount":{
+                    "price":"749,99 kr",
+                    "reason":"Sommarrea"
+                },
+                "original":"999,99 kr"
+            },
+            "type":"sudd",
+            "onDisplay":"False"
+        },{
+            "name":"Sudd Guld",
+            "description":"Glamorösitetklubbens ordförande.",
+            "price":{
+                "discount":{
+                    "price":"999,99 kr",
+                    "reason":"Sommarrea"
+                },
+                "original":"1499,99 kr"
             },
             "type":"sudd",
             "onDisplay":"True"
@@ -246,6 +282,9 @@ for product in products["products"]:
     eval(product["type"]).append(product)
     if eval(product["onDisplay"]):
         onDisplay.append(product)
+
+onDisplay.insert(0, onDisplay[-1])
+onDisplay.pop()
 
 # Creating basic files
 
