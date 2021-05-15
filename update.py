@@ -108,30 +108,6 @@ products = json.loads('''
             "type":"sudd",
             "onDisplay":"True"
         },{
-            "name":"Johans Vans®",
-            "description":"Bekväma, hållbara skor som passar alla! I samarbete med Vans®.",
-            "price":{
-                "discount":{
-                    "price":"",
-                    "reason":""
-                },
-                "original":"1249,99 kr"
-            },
-            "variants":{
-                "imgAffecting":{
-                    "Variant":[
-                        "Classic",
-                        "Slip-On"
-                    ]
-                }
-            },
-            "perspectives":[
-                "AboveSide",
-                "Side"
-            ],
-            "type":"merchandise",
-            "onDisplay":"True"
-        },{
             "name":"Johans Hoodie",
             "description":"fyfan va varmt",
             "price":{
@@ -236,6 +212,30 @@ products = json.loads('''
                     ]
                 }
             },
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Vans®",
+            "description":"Bekväma, hållbara skor som passar alla! I samarbete med Vans®.",
+            "price":{
+                "discount":{
+                    "price":"999,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"1249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Variant":[
+                        "Classic",
+                        "Slip-On"
+                    ]
+                }
+            },
+            "perspectives":[
+                "AboveSide",
+                "Side"
+            ],
             "type":"merchandise",
             "onDisplay":"True"
         }
