@@ -192,17 +192,17 @@ products = json.loads('''
                 "original":"399,99 kr"
             },
             "variants":{
+                "imgAffecting":{
+                    "Variant":[
+                        "Bikini",
+                        "Baddräkt"
+                    ]
+                },
                 "notImgAffecting":{
                     "Storlek":[
                         "S",
                         "M",
                         "L"
-                    ]
-                },
-                "imgAffecting":{
-                    "Variant":[
-                        "Bikini",
-                        "Baddräkt"
                     ]
                 }
             },
