@@ -108,6 +108,30 @@ products = json.loads('''
             "type":"sudd",
             "onDisplay":"True"
         },{
+            "name":"Johans Vans®",
+            "description":"Collab",
+            "price":{
+                "discount":{
+                    "price":"",
+                    "reason":""
+                },
+                "original":"1249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Variant":[
+                        "Classic",
+                        "Slip-On"
+                    ]
+                }
+            },
+            "perspectives":[
+                "AboveSide",
+                "Side"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Hoodie",
             "description":"fyfan va varmt",
             "price":{
@@ -348,6 +372,17 @@ files["index"] = '''<!DOCTYPE html>
 				<span class="logoText">Johanssudd</span>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
+            <div class="newsDiv">
+                <span class="newsHeader">Vans x Johanssudd</span>
+                <div class="newsImgDiv">
+                    <a href="/merchandise/johans%20vans®">
+                        <img class="newsImg" src="/imgs/website/LETS%20TRY.webp" height="400px" alt="Vans x Johanssudd Promo">
+                        <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Classic AboveSide.webp" width="300px" alt="Johans Vans® Classic AboveSide">
+                        <img class="productImg" src="/imgs/Johans Vans®/Johans Vans® Slip-On AboveSide.webp" width="300px" alt="Johans Vans® Slip-On AboveSide">
+                    </a>
+                </div>
+                <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor i helt olika stilar. Välj mellan våra Johans Vans® Classic eller Slip-On, eller varför inte båda medan du ändå är igång! <span class="bold">Tillgänglig för en begränsat tid endast!</span></span>
+            </div>
 			<div class="slideshowDiv">
 				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
 				<img class="orderButton" src="/imgs/website/Forward.webp" onclick="slide('forward')" style="right: 0px;" width="10%" alt="Previous Slide">
