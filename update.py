@@ -109,7 +109,7 @@ products = json.loads('''
             "onDisplay":"True"
         },{
             "name":"Johans Vans®",
-            "description":"Collab",
+            "description":"Bekväma, hållbara skor som passar alla! I samarbete med Vans®.",
             "price":{
                 "discount":{
                     "price":"",
