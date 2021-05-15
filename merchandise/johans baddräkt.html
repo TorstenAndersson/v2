@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Johans Baddräkt - Johanssudd</title>
+        <meta name="keywords" content="johans baddräkt, johan sudd, johanssudd, johansudd">
+        <meta name="description" content="Köp Johans Baddräkt. Bada då">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
+        <link rel="stylesheet" href="/product.css">
+        <link rel="preconnect" href="/kundvagn">
+        <link rel="prefetch" href="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Front.webp" as="image">
+        <link rel="prefetch" href="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Baddr%C3%A4kt%20Front.webp" as="image">
+        <link rel="prefetch" href="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Side.webp" as="image">
+        <link rel="prefetch" href="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Baddr%C3%A4kt%20Side.webp" as="image">
+        <link rel="prefetch" href="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Back.webp" as="image">
+        <link rel="prefetch" href="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Baddr%C3%A4kt%20Back.webp" as="image">
+        <link rel="preconnect" href="/index">
+        <link rel="preconnect" href="/om%20oss">
+        <link rel="preconnect" href="/sudd">
+        <link rel="preconnect" href="/merchandise">
+        <link rel="preconnect" href="/jobb">
+        <link rel="preconnect" href="/kundvagn">
+        <script src="/product.js"></script>
+    </head>
+
+    <body onload="pageLoaded()">
+        <nav class="navigationBar">
+            <a class="topLogoTextDiv" href="/">
+                <span class="topLogoText">Johanssudd</span>
+            </a>
+            <div class="topTextDiv">
+                <a href="/">
+                    <span class="topText">HEM</span>
+                </a>
+                <a href="/om oss">
+                    <span class="topText">OM OSS</span>
+                </a>
+                <a href="/sudd">
+                    <span class="topText">SUDD</span>
+                </a>
+                <a href="/merchandise">
+                    <span class="topText">MERCHANDISE</span>
+                </a>
+                <a href="/jobb">
+                    <span class="topText jobbText">JOBB</span>
+                </a>
+                <div class="verticalLine"></div>
+                <a href="/kundvagn">
+                    <span class="topText cartText">KUNDVAGN</span>
+                    <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Dark.webp" height="25px" alt="Cart Icon">
+                    <span class="cartNumber"></span>
+                </a>
+            </div>
+        </nav>
+        <main class="pageContent">
+            <div class="notification">
+                <span class="notificationText">Tillagd i kundvagnen!</span>
+            </div>
+            <div class="productFrame">
+                <div class="imgFrame">
+                    <img class="productImg" src="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Front.webp" width="350px" height="350px" alt="Johans Baddräkt">
+                    <div class="smallProductDiv">
+                        <div class="smallProductFrame">
+                            <img class="smallProductImg selected" src="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Front.webp" width="100px" height="100px" alt="Johans Baddräkt Perspective: Front" onmouseover="smallImgHovered(this)">
+                        </div>
+                        <div class="smallProductFrame">
+                            <img class="smallProductImg" src="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Side.webp" width="100px" height="100px" alt="Johans Baddräkt Perspective: Side" onmouseover="smallImgHovered(this)">
+                        </div>
+                        <div class="smallProductFrame">
+                            <img class="smallProductImg" src="/imgs/Johans%20Baddr%C3%A4kt/Johans%20Baddr%C3%A4kt%20Bikini%20Back.webp" width="100px" height="100px" alt="Johans Baddräkt Perspective: Back" onmouseover="smallImgHovered(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="textFrame">
+                    <span class="productHeader">Johans Baddräkt</span>
+                    <span class="productDescription">Bada då</span>
+                    <span class="productPriceText discountedPrice">349,99</span>
+        <span class="productPriceText line">399,99 kr</span>    
+                    <div class="variants">
+                        <div class="variant">
+                            <label class="variantName">Storlek</label>
+                            <select class="variantSelect" onchange="variantChanged(this)">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </div>
+                        <div class="variant">
+                            <label class="variantName">Variant</label>
+                            <select class="variantSelect" onchange="variantChanged(this)">
+                                <option>Bikini</option>
+                                <option>Baddräkt</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="buttonDiv">
+                        <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <span class="footerText">Copyright © 2021 Johanssudd. All Rights Reserved</span>
+    </body>
+</html>

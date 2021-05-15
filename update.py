@@ -143,11 +143,11 @@ products = json.loads('''
             "onDisplay":"True"
         },{
             "name":"Johans Hoodie",
-            "description":"fyfan va varmt",
+            "description":"Ett plagg för alla som någonsin känt kyla.",
             "price":{
                 "discount":{
                     "price":"149,99 kr",
-                    "reason":"2020 REA"
+                    "reason":"SOMMARREA!"
                 },
                 "original":"499,99 kr"
             },
@@ -177,6 +177,38 @@ products = json.loads('''
             },
             "perspectives":[
                 "Front",
+                "Back"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Baddräkt",
+            "description":"Bada då",
+            "price":{
+                "discount":{
+                    "price":"349,99",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"399,99 kr"
+            },
+            "variants":{
+                "notImgAffecting":{
+                    "Storlek":[
+                        "S",
+                        "M",
+                        "L"
+                    ]
+                },
+                "imgAffecting":{
+                    "Variant":[
+                        "Bikini",
+                        "Baddräkt"
+                    ]
+                }
+            },
+            "perspectives":[
+                "Front",
+                "Side",
                 "Back"
             ],
             "type":"merchandise",
