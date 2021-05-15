@@ -285,7 +285,6 @@ for product in products["products"]:
 
 onDisplay.insert(0, onDisplay[-1])
 onDisplay.pop()
-print(onDisplay)
 
 # Creating basic files
 
@@ -312,10 +311,10 @@ for product in onDisplay:
     try:
         product["price"]["discount"]
         discount = ('''
-                            <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', '''
-                            <span class="price line">''' + product["price"]["discount"]["price"] + '</span>')
+                            <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', product["price"]["discount"]["price"], '''
+                            <span class="price line">''' + product["price"]["original"] + '</span>')
     except KeyError:
-        discount = ("", "")
+        discount = ("", product["price"]["original"], "")
     #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
     
     onDisplayDiv += '''
@@ -325,7 +324,7 @@ for product in onDisplay:
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
-                                <span class="price">''' + product["price"]["original"] + "</span>" + discount[1] + '''
+                                <span class="price">''' + discount[1] + "</span>" + discount[2] + '''
                             </div>
                         </a>
                     </div>'''
