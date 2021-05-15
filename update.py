@@ -509,10 +509,10 @@ for product in sudd:
     try:
         product["price"]["discount"]
         discount = ('''
-                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
-                        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>", product["price"]["discount"]["price"], '''
+                        <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + "</span>")
     except KeyError:
-        discount = ("", "")
+        discount = ("", product["price"]["original"], "")
 
     suddDiv += '''
                 <div class="paddingDiv">
@@ -520,7 +520,7 @@ for product in sudd:
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["original"] + "</span>" + discount[1] + '''
+                            <span class="productPriceText">''' + discount[1] + "</span>" + discount[2] + '''
                         </div>
                     </a>
                 </div>'''
@@ -596,10 +596,10 @@ for product in merchandise:
     try:
         product["price"]["discount"]
         discount = ('''
-                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
-                        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>", product["price"]["discount"]["price"], '''
+                        <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + "</span>")
     except KeyError:
-        discount = ("", "")
+        discount = ("", product["price"]["original"], "")
 
     merchandiseDiv += '''
                 <div class="paddingDiv">
@@ -607,7 +607,7 @@ for product in merchandise:
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["original"] + "</span>" + discount[1] + '''
+                            <span class="productPriceText">''' + discount[1] + "</span>" + discount[2] + '''
                         </div>
                     </a>
                 </div>'''
@@ -999,10 +999,10 @@ for product in products["products"]:
 
     try:
         product["price"]["discount"]
-        price = '''
-        <span class="productPriceText line">''' + product["price"]["discount"]["price"] + "</span>"
+        price = (product["price"]["discount"]["price"], '''
+        <span class="productPriceText line">''' + product["price"]["original"] + "</span>")
     except KeyError:
-        price = ""
+        price = (product["price"]["original"], "")
 
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
@@ -1058,7 +1058,7 @@ for product in products["products"]:
                 <div class="textFrame">
                     <span class="productHeader">''' + product["name"] + '''</span>
                     <span class="productDescription">''' + product["description"] + '''</span>
-                    <span class="productPriceText discountedPrice">''' + product["price"]["original"] + "</span>" + price + variantDiv + '''
+                    <span class="productPriceText discountedPrice">''' + price[0] + "</span>" + price[1] + variantDiv + '''
                     <div class="buttonDiv">
                         <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
                     </div>
