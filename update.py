@@ -87,7 +87,7 @@ products = json.loads('''
             "price":{
                  "discount":{
                     "price":"4,99 kr",
-                    "reason":"Sommarrea"
+                    "reason":"Sommarrea!"
                 },
                 "original":"9,99 kr"
             },
@@ -99,7 +99,7 @@ products = json.loads('''
             "price":{
                 "discount":{
                     "price":"10,99 kr",
-                    "reason":"Sommarrea"
+                    "reason":"Sommarrea!"
                 },
                 "original":"14,99 kr"
             },
@@ -111,7 +111,7 @@ products = json.loads('''
             "price":{
                 "discount":{
                     "price":"499,99 kr",
-                    "reason":"Sommarrea"
+                    "reason":"Sommarrea!"
                 },
                 "original":"749,99 kr"
             },
@@ -123,7 +123,7 @@ products = json.loads('''
             "price":{
                 "discount":{
                     "price":"749,99 kr",
-                    "reason":"Sommarrea"
+                    "reason":"Sommarrea!"
                 },
                 "original":"999,99 kr"
             },
@@ -135,7 +135,7 @@ products = json.loads('''
             "price":{
                 "discount":{
                     "price":"999,99 kr",
-                    "reason":"Sommarrea"
+                    "reason":"Sommarrea!"
                 },
                 "original":"1499,99 kr"
             },
