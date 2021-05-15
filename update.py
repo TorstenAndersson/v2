@@ -146,10 +146,10 @@ products = json.loads('''
             "description":"Ett plagg för alla som någonsin känt kyla.",
             "price":{
                 "discount":{
-                    "price":"149,99 kr",
+                    "price":"349,99 kr",
                     "reason":"SOMMARREA!"
                 },
-                "original":"499,99 kr"
+                "original":"399,99 kr"
             },
             "variants":{
                 "imgAffecting":{
@@ -215,13 +215,13 @@ products = json.loads('''
             "onDisplay":"True"
         },{
             "name":"Johans Crocs",
-            "description":"LFIPÅPT FLOP",
+            "description":"Flippo floppo!",
             "price":{
                 "discount":{
-                    "price":"1000,99 kr",
-                    "reason":"PÅSKREA"
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
                 },
-                "original":"349,99 kr"
+                "original":"249,99 kr"
             },
             "variants":{
                 "notImgAffecting":{
@@ -241,13 +241,13 @@ products = json.loads('''
             "onDisplay":"True"
         },{
             "name":"Johans Tröja",
-            "description":"Stiligt värre",
+            "description":"Ett mysigt plagg med extrem elegans.",
             "price":{
                 "discount":{
-                    "price":"99 kr",
-                    "reason":"IDK FELT LIKE IT"
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
                 },
-                "original":"149,99 kr"
+                "original":"249,99 kr"
             },
             "variants":{
                 "imgAffecting":{
@@ -268,9 +268,13 @@ products = json.loads('''
             "onDisplay":"False"
         },{
             "name":"Johans Skal",
-            "description":"Skydda din mobil!",
+            "description":"Till alla som vill se eleganta ut men fortfarande skydda sin mobil!",
             "price":{
-                "original":"199,99 kr"
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
             },
             "variants":{
                 "imgAffecting":{
@@ -279,7 +283,7 @@ products = json.loads('''
                 }
             },
             "type":"merchandise",
-            "onDisplay":"True"
+            "onDisplay":"False"
         }
     ]
 }''')
