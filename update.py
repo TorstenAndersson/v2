@@ -204,10 +204,6 @@ products = json.loads('''
             "name":"Johans Skal",
             "description":"Skydda din mobil!",
             "price":{
-                "discount":{
-                    "price":"",
-                    "reason":""
-                },
                 "original":"199,99 kr"
             },
             "variants":{
@@ -277,11 +273,11 @@ i = 0
 for product in onDisplay:
     try:
         product["price"]["discount"]
-        discount = "hidden"
-    except KeyError:
         discount = ('''
         <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', '''
         <span class="price line">''' + product["price"]["discount"]["price"] + '</span>')
+    except KeyError:
+        discount = ("", "")
     #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
     
     onDisplayDiv += '''
@@ -291,7 +287,7 @@ for product in onDisplay:
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
-                                <span class="price">''' + product["price"]["original"] + '</span>' + discount[1] + '''
+                                <span class="price">''' + product["price"]["original"] + "</span>" + discount[1] + '''
                             </div>
                         </a>
                     </div>'''
@@ -472,17 +468,22 @@ for product in sudd:
         visibility = "visible"
         display = "initial"
     """
-    (visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
+    #(visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
+    try:
+        product["price"]["discount"]
+        discount = ('''
+        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
+        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+    except KeyError:
+        discount = ("", "")
 
     suddDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + urllib.parse.quote(product["type"] + "/" + product["name"].lower()) + '''">
-                        <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
+                    <a class="productFrame" href="/''' + urllib.parse.quote(product["type"] + "/" + product["name"].lower()) + '">' + discount[0] + '''
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["original"] + '''</span>
-                            <span class="productPriceText discountedPrice line" style="display: ''' + display + ''';">''' + product["price"]["discount"]["price"] + '''</span>
+                            <span class="productPriceText">''' + product["price"]["original"] + "</span>" + discount[1] + '''
                         </div>
                     </a>
                 </div>'''
@@ -554,17 +555,22 @@ merchandiseDiv = ""
 preconnect = ""
 i = 0
 for product in merchandise:
-    (visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
+    #(visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
+    try:
+        product["price"]["discount"]
+        discount = ('''
+        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
+        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+    except KeyError:
+        discount = ("", "")
 
     merchandiseDiv += '''
                 <div class="paddingDiv">
-                    <a class="productFrame" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '''">
-                        <span class="discountReason" style="visibility: ''' + visibility + ''';">''' + product["price"]["discount"]["reason"] + '''</span>
+                    <a class="productFrame" href="/''' + urllib.parse.quote(product["type"] + "/" + product["name"].lower()) + '">' + discount[0] + '''
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["original"] + '''</span>
-                            <span class="productPriceText discountedPrice line" style="display: ''' + display + ''';">''' + product["price"]["discount"]["price"] + '''</span>
+                            <span class="productPriceText">''' + product["price"]["original"] + "</span>" + discount[1] + '''
                         </div>
                     </a>
                 </div>'''
@@ -954,6 +960,13 @@ for product in products["products"]:
         except KeyError:
             pass
 
+    try:
+        product["discount"]
+        price = '''
+        <span class="productPriceText line">''' + product["price"]["discount"]["price"] + "</span>"
+    except KeyError:
+        price = ""
+
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
     <head>
@@ -1008,8 +1021,7 @@ for product in products["products"]:
                 <div class="textFrame">
                     <span class="productHeader">''' + product["name"] + '''</span>
                     <span class="productDescription">''' + product["description"] + '''</span>
-                    <span class="productPriceText discountedPrice">''' + product["price"]["original"] + '''</span>
-                    <span class="productPriceText line">''' + product["price"]["discount"]["price"] + '''</span>''' + variantDiv + '''
+                    <span class="productPriceText discountedPrice">''' + product["price"]["original"] + "</span>" + price + variantDiv + '''
                     <div class="buttonDiv">
                         <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
                     </div>
