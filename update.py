@@ -142,6 +142,38 @@ products = json.loads('''
             "type":"sudd",
             "onDisplay":"True"
         },{
+            "name":"Johans Baddräkt",
+            "description":"Bada då",
+            "price":{
+                "discount":{
+                    "price":"149,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"199,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Variant":[
+                        "Bikini",
+                        "Baddräkt"
+                    ]
+                },
+                "notImgAffecting":{
+                    "Storlek":[
+                        "S",
+                        "M",
+                        "L"
+                    ]
+                }
+            },
+            "perspectives":[
+                "Front",
+                "Side",
+                "Back"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Crocs",
             "description":"Flippo floppo!",
             "price":{
@@ -248,38 +280,6 @@ products = json.loads('''
             },
             "perspectives":[
                 "Front",
-                "Back"
-            ],
-            "type":"merchandise",
-            "onDisplay":"True"
-        },{
-            "name":"Johans Baddräkt",
-            "description":"Bada då",
-            "price":{
-                "discount":{
-                    "price":"349,99",
-                    "reason":"SOMMARREA!"
-                },
-                "original":"399,99 kr"
-            },
-            "variants":{
-                "imgAffecting":{
-                    "Variant":[
-                        "Bikini",
-                        "Baddräkt"
-                    ]
-                },
-                "notImgAffecting":{
-                    "Storlek":[
-                        "S",
-                        "M",
-                        "L"
-                    ]
-                }
-            },
-            "perspectives":[
-                "Front",
-                "Side",
                 "Back"
             ],
             "type":"merchandise",
