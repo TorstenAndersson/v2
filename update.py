@@ -283,7 +283,7 @@ products = json.loads('''
                 }
             },
             "type":"merchandise",
-            "onDisplay":"False"
+            "onDisplay":"True"
         }
     ]
 }''')
