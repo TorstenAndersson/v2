@@ -240,7 +240,7 @@ label.textarea {
 	border-radius: 6px;
 	cursor: pointer;
 	transition: all 0.3s;
-	padding: 20px 40px 20px 40px;
+	padding: 20px 40px;
 }
 .submitButton:hover {
 	background-color: rgb(40, 40, 40);
