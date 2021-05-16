@@ -158,9 +158,12 @@ products = json.loads('''
                         "Baddräkt"
                     ],
                     "Färg":[
+                        "Vit",
+                        "Gul",
+                        "Ljusblå",
+                        "Rosa",
                         "Röd",
-                        "Svart",
-                        "Blå"
+                        "Svart"
                     ]
                 },
                 "notImgAffecting":{
