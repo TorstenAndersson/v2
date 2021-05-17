@@ -10,7 +10,7 @@ function pageLoaded() {
 		document.querySelector(".cartNumber").style.display = "none";
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	for (let i = 0; i < 50; i++) variantChanged(document.querySelectorAll(".variantSelect")[Math.floor(Math.random * document.querySelectorAll(".variantSelect").length + 1)])
+	for (let i = 0; i < 50; i++) variantChanged(document.querySelectorAll(".variantSelect")[Math.floor(Math.random * document.querySelectorAll(".variantSelect").length)])
 }
 
 function smallImgHovered(sender) {
