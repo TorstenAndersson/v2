@@ -157,7 +157,7 @@ products = json.loads('''
                         "Bikini",
                         "Baddräkt"
                     ],
-                    "Färg":[
+                    "Färg":['
                         "Vit",
                         "Gul",
                         "Ljusblå",
