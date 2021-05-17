@@ -22,7 +22,7 @@ function smallImgHovered(sender) {
 }
 
 function variantChanged(sender) {
-	console.time();
+	const startTime = window.performance.now();
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length !== 0) {
 		for (i2 in smallImgs) {
@@ -35,7 +35,7 @@ function variantChanged(sender) {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
 	}
-	time += +console.timeEnd().slice(0, -3)
+	time += window.performance.now() - startTime;
 	timeCount += 1;
 	console.log("AVERAGE: " + time/timeCount)
 }
