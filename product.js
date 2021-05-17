@@ -1,4 +1,4 @@
-let divs, size, timer, count = 1, divCount = count;
+let divs, size, timer, count = 1, divCount = count, time = 0, timeCount = 0;
 const initalCount = count; 
 if (localStorage["cart"] === undefined) localStorage["cart"] = "{}";
 
@@ -22,6 +22,7 @@ function smallImgHovered(sender) {
 }
 
 function variantChanged(sender) {
+	console.time();
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length !== 0) {
 		for (i2 in smallImgs) {
@@ -34,6 +35,9 @@ function variantChanged(sender) {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
 	}
+	time += console.timeEnd()
+	timeCount += 1;
+	console.log("AVERAGE: " + time/timeCount)
 }
 
 function buy() {
