@@ -35,7 +35,7 @@ function variantChanged(sender) {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
 	}
-	time += console.timeEnd()
+	time += +console.timeEnd().slice(0, -3)
 	timeCount += 1;
 	console.log("AVERAGE: " + time/timeCount)
 }
