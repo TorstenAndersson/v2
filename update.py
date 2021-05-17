@@ -182,6 +182,26 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
+            "name":"Johans Keps",
+            "description":"Skydda dig lite mot solen vet jag!",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Färg":[
+                        "Vit",
+                        "Grå"
+                    ]
+                }
+            },
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Crocs",
             "description":"Flippo floppo!",
             "price":{
