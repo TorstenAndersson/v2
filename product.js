@@ -19,6 +19,7 @@ function smallImgHovered(sender) {
 	sender.classList.add("selected");
 
 	document.querySelector(".productImg").src = sender.src.slice(51);
+	for (let i; i < 50; i++) variantChanged(document.querySelectorAll(".variantSelect")[Math.floor(Math.random * document.querySelectorAll(".variantSelect").length + 1)])
 }
 
 function variantChanged(sender) {
