@@ -28,7 +28,7 @@ function variantChanged(sender) {
 		for (i2 in smallImgs) {
 			if (decodeURI(smallImgs[i2].src.split("%20")).split(",").some((element) => sender.innerText.includes(element)))
 				//smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element)).slice(-1)), encodeURI(sender.value));
-				smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI("t " + decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element)).slice(-1)), encodeURI("t " + sender.value));
+				smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element))[0]), encodeURI(sender.value));
 			}
 		smallImgHovered(document.querySelector(".selected"));
 	} else {
