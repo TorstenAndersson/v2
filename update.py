@@ -286,16 +286,16 @@ products = json.loads('''
                 "imgAffecting":{
                     "Färg":[
                         "Vit",
-                        "Blå",
+                        "Svart",
                         "Grå",
-                        "Grön",
-                        "Ljusblå",
-                        "Marinblå",
                         "Mörkgrå",
                         "Rosa",
+                        "Ljusblå",
+                        "Blå",
+                        "Marinblå",
+                        "Grön",
                         "Röd",
-                        "Rödbrun",
-                        "Svart"
+                        "Rödbrun"
                     ]
                 },
                 "notImgAffecting":{
