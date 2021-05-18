@@ -33,8 +33,8 @@ function variantChanged(sender) {
 				smallImgs[i2].src = splitSource.join("%20");
 			}
 		}
-		//smallImgHovered(document.querySelector(".selected"));
-		document.querySelector(".productImg").src = document.querySelector(".selected").src.slice(51);
+		smallImgHovered(document.querySelector(".selected"));
+		//document.querySelector(".productImg").src = document.querySelector(".selected").src.slice(51);
 	} else {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
