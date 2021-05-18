@@ -34,7 +34,7 @@ function variantChanged(sender) {
 			}
 		}
 		//smallImgHovered(document.querySelector(".selected"));
-		document.querySelector(".productImg").src = documennt.querySelector(".selected").slice(51);
+		document.querySelector(".productImg").src = document.querySelector(".selected").slice(51);
 	} else {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
