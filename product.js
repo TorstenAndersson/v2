@@ -29,7 +29,7 @@ function variantChanged(sender) {
 			if (decodeURI(smallImgs[i2].src.split("%20")).split(",").some((element) => sender.innerText.includes(element))) {
 				//smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element)).slice(-1)), encodeURI(sender.value));
 				var splitSource = smallImgs[i2].src.split("%20");
-				splitSource.splice(splitSource.lastIndexOf(splitSource.filter((element) => sender.innerText.includes(decodeURI(element)))[0]), 1, encodeURI(sender.value));
+				splitSource.splice(splitSource.lastIndexOf(splitSource.filter((element) => sender.innerText.includes(decodeURI(element))).slice(-1)), 1, encodeURI(sender.value));
 				smallImgs[i2].src = splitSource.join("%20");
 			}
 		}
