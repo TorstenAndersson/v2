@@ -28,7 +28,7 @@ function variantChanged(sender) {
 		for (i2 in smallImgs) {
 			if (decodeURI(smallImgs[i2].src.split("%20")).split(",").some((element) => sender.innerText.includes(element)))
 				//smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element)).slice(-1)), encodeURI(sender.value));
-				let src = smallImgs[i2].src.split("%20");
+				var src = smallImgs[i2].src.split("%20");
 				src.splice(x.lastIndexOf(smallImgs[i2].src.split("%20").filter((element) => sender.innerText.includes(element))[0]), 1, sender.value);
 				smallImgs[i2].src = src.join("%20");
 		}
