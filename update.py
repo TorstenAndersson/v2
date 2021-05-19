@@ -134,7 +134,7 @@ products = json.loads('''
             "description":"Glamorösitetklubbens ordförande.",
             "price":{
                 "discount":{
-                    "price":"749,99 kr",
+                    "price":"499,99 kr",
                     "reason":"SOMMARREA!"
                 },
                 "original":"999,99 kr"
