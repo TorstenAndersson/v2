@@ -82,6 +82,55 @@ products = json.loads('''
 {
     "products":[
         {
+            "name":"Johans Vans®",
+            "description":"Bekväma, hållbara skor som passar alla! I samarbete med Vans®.",
+            "price":{
+                "discount":{
+                    "price":"1049,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"1249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Variant":[
+                        "Classic",
+                        "Slip-On"
+                    ]
+                },
+                "notImgAffecting":{
+                    "Storlek":[
+                        "34,5",
+                        "35",
+                        "36",
+                        "36,5",
+                        "37",
+                        "38",
+                        "38,5",
+                        "39",
+                        "40",
+                        "40,5",
+                        "41",
+                        "42",
+                        "42,5",
+                        "43",
+                        "44",
+                        "44,5",
+                        "45",
+                        "46",
+                        "47",
+                        "48",
+                        "49"
+                    ]
+                }
+            },
+            "perspectives":[
+                "AboveSide",
+                "Side"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Sudd Glans",
             "description":"Glansigt värre!",
             "price":{
@@ -212,55 +261,6 @@ products = json.loads('''
                     ]
                 }
             },
-            "type":"merchandise",
-            "onDisplay":"True"
-        },{
-            "name":"Johans Vans®",
-            "description":"Bekväma, hållbara skor som passar alla! I samarbete med Vans®.",
-            "price":{
-                "discount":{
-                    "price":"1049,99 kr",
-                    "reason":"SOMMARREA!"
-                },
-                "original":"1249,99 kr"
-            },
-            "variants":{
-                "imgAffecting":{
-                    "Variant":[
-                        "Classic",
-                        "Slip-On"
-                    ]
-                },
-                "notImgAffecting":{
-                    "Storlek":[
-                        "34,5",
-                        "35",
-                        "36",
-                        "36,5",
-                        "37",
-                        "38",
-                        "38,5",
-                        "39",
-                        "40",
-                        "40,5",
-                        "41",
-                        "42",
-                        "42,5",
-                        "43",
-                        "44",
-                        "44,5",
-                        "45",
-                        "46",
-                        "47",
-                        "48",
-                        "49"
-                    ]
-                }
-            },
-            "perspectives":[
-                "AboveSide",
-                "Side"
-            ],
             "type":"merchandise",
             "onDisplay":"True"
         }
