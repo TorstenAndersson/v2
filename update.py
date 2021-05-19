@@ -195,7 +195,6 @@ products = json.loads('''
                 "imgAffecting":{
                     "Färg":[
                         "Vit",
-                        "Svart",
                         "Grå"
                     ]
                 }
@@ -404,7 +403,7 @@ files["index"] = '''<!DOCTYPE html>
 	<head>
 		<title>Johanssudd</title>
 		<meta name="keywords" content="johan, sudd, johanssudd, johansudd">
-		<meta name="description" content="Johanssud. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
+		<meta name="description" content="Johanssudd. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
@@ -789,7 +788,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <main class="pageContent">
             <div class="paragraph">
                 <span class="paragraphHeader big">Är du arbetslös?</span>
-                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
+                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssudd tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
             </div>
             <div class="paragraph">
                 <span class="paragraphHeader big">Inte övertygad än?</span>
