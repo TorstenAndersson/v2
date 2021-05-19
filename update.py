@@ -110,10 +110,10 @@ products = json.loads('''
             "description":"En ackurat skildring av dagens skolmat!",
             "price":{
                 "discount":{
-                    "price":"499,99 kr",
+                    "price":"249,99 kr",
                     "reason":"SOMMARREA!"
                 },
-                "original":"749,99 kr"
+                "original":"499,99 kr"
             },
             "type":"sudd",
             "onDisplay":"False"
@@ -122,10 +122,10 @@ products = json.loads('''
             "description":"Hoodie runt ett soodie.",
             "price":{
                 "discount":{
-                    "price":"749,99 kr",
+                    "price":"499,99 kr",
                     "reason":"SOMMARREA!"
                 },
-                "original":"999,99 kr"
+                "original":"749,99 kr"
             },
             "type":"sudd",
             "onDisplay":"False"
@@ -134,10 +134,10 @@ products = json.loads('''
             "description":"Glamorösitetklubbens ordförande.",
             "price":{
                 "discount":{
-                    "price":"999,99 kr",
+                    "price":"749,99 kr",
                     "reason":"SOMMARREA!"
                 },
-                "original":"1499,99 kr"
+                "original":"999,99 kr"
             },
             "type":"sudd",
             "onDisplay":"True"
