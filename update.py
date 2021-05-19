@@ -182,6 +182,24 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
+            "name":"Johans Skal",
+            "description":"Se elegant ut när du skyddar din mobil!",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Modell": [''' + phoneVariants[1:-1] + '''
+                    ]
+                }
+            },
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Keps",
             "description":"Skydda dig lite mot solen vet jag!",
             "price":{
@@ -225,24 +243,6 @@ products = json.loads('''
                 "AboveBelow",
                 "Close"
             ],
-            "type":"merchandise",
-            "onDisplay":"True"
-        },{
-            "name":"Johans Skal",
-            "description":"Se elegant ut när du skyddar din mobil!",
-            "price":{
-                "discount":{
-                    "price":"199,99 kr",
-                    "reason":"SOMMARREA!"
-                },
-                "original":"249,99 kr"
-            },
-            "variants":{
-                "imgAffecting":{
-                    "Modell": [''' + phoneVariants[1:-1] + '''
-                    ]
-                }
-            },
             "type":"merchandise",
             "onDisplay":"True"
         },{
