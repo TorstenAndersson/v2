@@ -226,6 +226,30 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
+            "name":"Johans Hatt",
+            "description":"För alla våra fiskarvänner!",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Färg":[
+                        "Black",
+                        "Beige"
+                    ]
+                }
+            },
+            "perspectives":[
+                "Front",
+                "Back"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Keps",
             "description":"Skydda dig lite mot solen vet jag!",
             "price":{
