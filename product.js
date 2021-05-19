@@ -22,7 +22,6 @@ function smallImgHovered(sender) {
 }
 
 function variantChanged(sender) {
-	const startTime = window.performance.now();
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length !== 0) {
 		for (i2 in smallImgs) {
@@ -39,9 +38,6 @@ function variantChanged(sender) {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
 	}
-	time += window.performance.now() - startTime;
-	timeCount += 1;
-	console.log("AVERAGE: " + time/timeCount)
 }
 
 function buy() {
@@ -49,7 +45,9 @@ function buy() {
 	for (variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
-	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + document.querySelector(".smallProductImg").src.split("/")[5] + ">" + document.querySelector(".productPriceText").innerText;
+	let perspective = "";
+	if (document.querySelector(".smallProductImg")) perspective = document.querySelector(".smallProductImg").src.split("/")[5] + ">";
+	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + perspective + document.querySelector(".productPriceText").innerText;
 	try {
 		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(+JSON.parse(localStorage["cart"])[product].slice(0) + 1));
 	} catch {
