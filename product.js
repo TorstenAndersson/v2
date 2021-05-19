@@ -45,8 +45,7 @@ function buy() {
 	for (variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
-	let perspective = "";
-	if (document.querySelector(".smallProductImg")) perspective = document.querySelector(".smallProductImg").src.split("/")[5] + ">";
+	const perspective = document.querySelector(".smallProductImg") ? document.querySelector(".smallProductImg").src.split("/")[5] + ">" : " >";
 	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + perspective + document.querySelector(".productPriceText").innerText;
 	try {
 		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(+JSON.parse(localStorage["cart"])[product].slice(0) + 1));
