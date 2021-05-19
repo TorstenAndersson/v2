@@ -195,6 +195,7 @@ products = json.loads('''
                 "imgAffecting":{
                     "Färg":[
                         "Vit",
+                        "Svart",
                         "Grå"
                     ]
                 }
