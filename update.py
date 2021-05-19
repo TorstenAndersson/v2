@@ -228,6 +228,24 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
+            "name":"Johans Skal",
+            "description":"Se elegant ut när du skyddar din mobil!",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Modell": [''' + phoneVariants[1:-1] + '''
+                    ]
+                }
+            },
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
             "name":"Johans Tröja",
             "description":"Ett mysigt plagg med extrem elegans.",
             "price":{
@@ -254,24 +272,6 @@ products = json.loads('''
             },
             "type":"merchandise",
             "onDisplay":"False"
-        },{
-            "name":"Johans Skal",
-            "description":"Se elegant ut när du skyddar din mobil!",
-            "price":{
-                "discount":{
-                    "price":"199,99 kr",
-                    "reason":"SOMMARREA!"
-                },
-                "original":"249,99 kr"
-            },
-            "variants":{
-                "imgAffecting":{
-                    "Modell": [''' + phoneVariants[1:-1] + '''
-                    ]
-                }
-            },
-            "type":"merchandise",
-            "onDisplay":"True"
         },{
             "name":"Johans Hoodie",
             "description":"Ett plagg för alla som någonsin känt kyla.",
