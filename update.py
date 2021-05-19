@@ -219,7 +219,7 @@ products = json.loads('''
             "description":"Bekväma, hållbara skor som passar alla! I samarbete med Vans®.",
             "price":{
                 "discount":{
-                    "price":"999,99 kr",
+                    "price":"1049,99 kr",
                     "reason":"SOMMARREA!"
                 },
                 "original":"1249,99 kr"
