@@ -1139,17 +1139,15 @@ for product in products["products"]:
             <div class="notification">
                 <span class="notificationText">Tillagd i kundvagnen!</span>
             </div>
-            <div class="productFrame">
-                <div class="imgFrame">
-                    <img class="productImg" src="''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
-                </div>
-                <div class="textFrame">
-                    <span class="productHeader">''' + product["name"] + '''</span>
-                    <span class="productDescription">''' + product["description"] + '''</span>
-                    <span class="productPriceText discountedPrice">''' + price[0] + "</span>" + price[1] + variantDiv + '''
-                    <div class="buttonDiv">
-                        <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
-                    </div>
+            <div class="imgFrame">
+                <img class="productImg" src="''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
+            </div>
+            <div class="textFrame">
+                <span class="productHeader">''' + product["name"] + '''</span>
+                <span class="productDescription">''' + product["description"] + '''</span>
+                <span class="productPriceText discountedPrice">''' + price[0] + "</span>" + price[1] + variantDiv + '''
+                <div class="buttonDiv">
+                    <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
                 </div>
             </div>
         </main>
