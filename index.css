@@ -285,7 +285,10 @@ img.orderButton {
 	}
 	.slideshowDiv {
 		right: inherit;
-		width: 95%;
+		width: 100%;
+	}
+	.productDiv {
+		width: 100%;
 	}
 	.productImg {
 		width: 100%
