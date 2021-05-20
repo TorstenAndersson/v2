@@ -140,7 +140,7 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	top: calc(35% - 70px);
+	top: calc(55% - 215px);
 	left: calc(20% - 200px);
 }
 .productImg {
