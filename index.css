@@ -116,8 +116,8 @@ a {
 	right: 0px;
 	left: 0px;
 	z-index: 1;
+	height: 85vh;
 	background-color: rgba(0, 0, 0, .3);
-	height: 85%;
 }
 .pageContent {
 	text-align: center;
