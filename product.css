@@ -140,7 +140,7 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	top: 51%;
+	top: calc(35% - 70px);
 	left: calc(20% - 200px);
 	display: inline;
 	width: 45%;
@@ -176,7 +176,7 @@ a {
 }
 .textFrame {
 	position: absolute;
-	top: 51%;
+	top: calc(55% - 30px);
 	right: calc(40% - 300px);
 	display: inline;
 	width: 430px;
