@@ -253,7 +253,6 @@ img.orderButton {
 @media screen and (max-width: 1050px) {
 	.topLogoTextDiv {
 		left: 15px;
-		padding-top: inherit;
 	}
 	.topLogoText {
 		font-size: 30px;
@@ -263,5 +262,8 @@ img.orderButton {
 	}
 	.cartText {
 		display: none;
+	}
+	.logoText {
+		font: italic 700 40px sans-serif;
 	}
 }
