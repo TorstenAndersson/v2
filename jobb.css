@@ -179,9 +179,7 @@ form {
 	color: rgb(25, 25, 25);
 	/* CLEAN IT */
     border: none;
-    font-size: 18px;
-	font-family: "Raleway";
-	line-height: 20px;
+	font: 18px/20px "Raleway";
 	outline: none;
 	overflow: hidden;
 }
