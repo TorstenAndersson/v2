@@ -194,7 +194,7 @@ form {
     border-bottom: 1px solid black;
 	pointer-events: none;
 }
-form label span {
+.textLabel {
     position: absolute;
     bottom: 5px;
     left: 0px;
@@ -224,13 +224,13 @@ form input[type="radio"] {
 .otherDesire {
 	display: none;
 }
-textarea.textarea {
+.textarea {
 	height: 28px;
 	border-bottom: 1px solid black;
 	padding-top: 11px;
 	resize: none;
 }
-label.textarea {
+.large {
 	border-bottom: none;
 }
 .submitButton {
@@ -239,7 +239,7 @@ label.textarea {
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: background-color 0.3s;
 	padding: 20px 40px;
 }
 .submitButton:hover {
