@@ -247,12 +247,15 @@ a {
 	padding-bottom: 10px;
 }
 @media screen and (max-width: 1050px) {
+	span {
+		font-family: "Raleway";
+	}
 	.topLogoTextDiv {
 		left: 15px;
 		padding-top: 15px;
 	}
 	.topLogoText {
-		font-size: 30px;
+		font: 700 35px "Raleway";
 	}
 	.topTextDiv {
 		right: 15px;
