@@ -703,7 +703,7 @@ files["jobb"] = '''<!DOCTYPE html>
     <head>
         <title>Jobb - Johanssudd</title>
         <meta name="keywords" content="jobb, job, johanssudd, johansudd">
-        <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade">
+        <meta name="description" content="Information om tillgängliga jobb här på Johanssudd samt ett formulär för alla intresserade!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
