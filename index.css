@@ -280,4 +280,10 @@ img.orderButton {
 	.logoText {
 		font: italic 700 40px sans-serif;
 	}
+	.smallParagraph {
+		position: inherit;
+	}
+	.parOne {
+		margin-top: inherit;
+	}
 }
