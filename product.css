@@ -177,7 +177,7 @@ a {
 	right: calc(40% - 300px);
 	display: inline;
 	width: 430px;
-	transform: translateY(-50%);
+	transform: translateY(-51%);
 }
 .productHeader {
 	display: block;
