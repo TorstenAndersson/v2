@@ -43,7 +43,7 @@ span {
 .topLogoText {
 	color: rgba(255, 255, 255, .9);
 	font: 700 35px "Open Sans";
-	text-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+	text-shadow: 0 1px 15px rgba(0, 0, 0, .3);
 }
 .topTextDiv {
 	z-index: 2;
