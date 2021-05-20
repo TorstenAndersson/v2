@@ -478,6 +478,9 @@ files["index"] = '''<!DOCTYPE html>
                         <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px" alt="Cart Icon">
                         <span class="cartNumber"></span>
 					</a>
+                    <a>
+                        <img src="https://johanssudd.se/johan.png" width="40px">
+                    </a>
 				</div>
 			</div>
 			<div class="cover"></div>
