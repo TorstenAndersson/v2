@@ -474,8 +474,8 @@ files["index"] = '''<!DOCTYPE html>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
 			<div class="slideshowDiv">
-				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
-				<img class="orderButton" src="/imgs/website/Forward.webp" onclick="slide('forward')" style="right: 0px;" width="10%" alt="Previous Slide">
+				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" width="10%" alt="Next Slide">
+				<img class="orderButton" src="/imgs/website/Forward.webp" onclick="slide('forward')" width="10%" alt="Previous Slide">
 				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>
