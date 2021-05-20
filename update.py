@@ -834,13 +834,13 @@ files["jobb"] = '''<!DOCTYPE html>
             </div>
             <form name="jobbformulär" method="POST" autocomplete="off" data-netlify="true"> 
                 <div class="field">
-                    <input class="textInput" type="text" id="name" required>
+                    <input name="name" class="textInput" type="text" id="name" required>
                     <label class="textQuery" for="name">
                         <span class="textLabel">Namn</span>
                     </label>
                 </div>
                 <div class="field">
-                    <input class="textInput" type="text" id="email" required>
+                    <input name="email" class="textInput" type="text" id="email" required>
                     <label class="textQuery" for="email">
                         <span class="textLabel">E-post</span>
                     </label>
@@ -867,7 +867,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     </label>
                 </div>
                 <div class="field">
-                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" rows="1" data-autoresize required></textarea>
+                    <textarea name="why" class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" rows="1" data-autoresize required></textarea>
                     <label class="textQuery textarea" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
