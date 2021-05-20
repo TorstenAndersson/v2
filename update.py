@@ -505,7 +505,7 @@ files["om oss"] = '''<!DOCTYPE html>
 <html lang="sv">
     <head>
         <title>Om Oss - Johanssudd</title>
-        <meta name="keywordsd" content="om oss, om oss, johanssudd, johansudd">
+        <meta name="keywords" content="om oss, om oss, johanssudd, johansudd">
         <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -834,13 +834,13 @@ files["jobb"] = '''<!DOCTYPE html>
             </div>
             <form autocomplete="off" name="jobbformulär" method="POST" data-netlify="true"> 
                 <div class="field">
-                    <input class="textInput" type="text" name="name" required>
+                    <input class="textInput" type="text" id="name" required>
                     <label class="textQuery" for="name">
                         <span class="textLabel">Namn</span>
                     </label>
                 </div>
                 <div class="field">
-                    <input class="textInput" type="text" name="email" required>
+                    <input class="textInput" type="text" id="email" required>
                     <label class="textQuery" for="email">
                         <span class="textLabel">E-post</span>
                     </label>
@@ -848,26 +848,26 @@ files["jobb"] = '''<!DOCTYPE html>
                 <div class="radio" onchange="radioChanged()">
                     <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="designer">
+                        <input type="radio" id="designer" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="försäljare">
-                        <label class="radioQuery" for="försäljare">Försäljare</label>
+                        <input type="radio" id="salesman" value="försäljare">
+                        <label class="radioQuery" for="salesman">Försäljare</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="annat">
-                        <label class="radioQuery" for="annat">Annat</label>
+                        <input type="radio" id="other" value="annat">
+                        <label class="radioQuery" for="other">Annat</label>
                     </div>
                 </div>
                 <div class="field reasonOther">
-                    <input class="textInput" type="text" name="desireOther">
-                    <label class="textQuery" for="desireOther">
+                    <input class="textInput" type="text" id="otherDesire">
+                    <label class="textQuery" for="otherDesire">
                         <span class="textLabel labelThree">Vad vill du bli?</span>
                     </label>
                 </div>
                 <div class="field">
-                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" name="reason" rows="1" data-autoresize required></textarea>
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" rows="1" data-autoresize required></textarea>
                     <label class="textQuery textarea" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
