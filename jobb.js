@@ -57,6 +57,7 @@ function pageScrolled() {
 }
 
 function radioChanged() {
+	/*
 	if (document.querySelectorAll("input[type='radio'")[2].checked) {
 		document.querySelector(".reasonOther").style.display = "block";
 		document.querySelector(".reasonOther").firstElementChild.required = true;
@@ -64,6 +65,8 @@ function radioChanged() {
 		document.querySelector(".reasonOther").style.display = "none";
 		document.querySelector(".reasonOther").firstElementChild.required = false;
 	}
+	*/
+	(document.querySelector(".reasonOther").style.display = "block", document.querySelector(".reasonOther").firstElementChild.required) = document.querySelectorAll("input[type='radio'")[2].checked ? ("block", true) : ("none", false);
 }
 
 function textareaChanged() {

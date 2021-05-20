@@ -191,8 +191,8 @@ a {
 }
 .textDiv {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-60%);
+	top: 48%;
+	transform: translateY(-50%);
 	display: inline-block;
 	width: max-content;
 	text-align: left;
