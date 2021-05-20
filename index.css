@@ -257,8 +257,14 @@ img.orderButton {
 	.topLogoText {
 		font-size: 30px;
 	}
-	.topTextDiv > a:not(:last-child) {
+	.topTextDiv {
+		margin-right: 40px;
+	}
+	.topTextDiv > a:not(:last-child:nth-last-child(1)) {
 		display: none;
+	}
+	.verticalLine {
+		margin-left: 40px;
 	}
 	.cartText {
 		display: none;
