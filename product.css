@@ -177,7 +177,7 @@ a {
 .textFrame {
 	position: absolute;
 	top: 52%;
-	right: calc(50px + 10%);
+	right: calc(10% * 10%);
 	display: inline;
 	width: 430px;
 	transform: translateY(-50%);
