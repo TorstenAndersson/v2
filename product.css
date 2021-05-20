@@ -212,6 +212,9 @@ a {
 	display: inline-block;
 	padding: 0px 20px 15px;
 }
+.variant:last-child {
+	padding-bottom: 0px;
+}
 .variantName {
 	display: block;
 	color: rgb(80, 80, 80);
