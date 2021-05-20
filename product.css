@@ -140,8 +140,8 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	top: 52%;
-	left: calc(20px + 2%);
+	top: 51%;
+	left: calc(20% - 200px);
 	display: inline;
 	width: 45%;
 	transform: translateY(-50%);
