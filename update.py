@@ -867,7 +867,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     </label>
                 </div>
                 <div class="field">
-                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="reason" rows="1" data-autoresize required></textarea>
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="reason" data-autoresize required></textarea>
                     <label class="textQuery large" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
