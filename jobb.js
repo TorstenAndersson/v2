@@ -72,5 +72,5 @@ function radioChanged() {
 function textareaChanged() {
 	let area = document.querySelector("textarea.textarea");
   	area.style.height = 'auto';	
-    area.style.height = area.scrollHeight - 8 + 'px';
+    area.style.height = area.scrollHeight - 5 + 'px';
 }
