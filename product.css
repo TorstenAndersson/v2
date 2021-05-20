@@ -140,6 +140,7 @@ a {
 }
 .imgFrame {
 	position: absolute;
+	top: 50%;
 	right: 50%;
 	display: inline;
 	width: 45%;
