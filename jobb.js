@@ -73,5 +73,5 @@ function textareaChanged() {
 	let area = document.querySelector(".textarea");
   	area.style.height = "auto";	
     area.style.height = area.scrollHeight - 5 + "px";
-	area.parentElement.style.height = area.scrollHeight - 5 + "px";
+	area.parentElement.style.height = area.scrollHeight - 41 + "px";
 }
