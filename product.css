@@ -140,7 +140,7 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	top: calc(55% - 215px);
+	top: calc(60% - 280px);
 	left: calc(30% - 270px);
 }
 .productImg {
@@ -173,7 +173,7 @@ a {
 }
 .textFrame {
 	position: absolute;
-	top: calc(55% - 30px);
+	top: calc(60% - 95px);
 	right: calc(40% - 300px);
 	display: inline;
 	width: 430px;
