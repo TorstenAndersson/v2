@@ -142,8 +142,6 @@ a {
 	position: absolute;
 	top: calc(35% - 70px);
 	left: calc(20% - 200px);
-	display: inline;
-	width: 45%;
 }
 .productImg {
 	padding-top: 30px;
