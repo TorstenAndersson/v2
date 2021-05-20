@@ -260,7 +260,7 @@ img.orderButton {
 	.topTextDiv {
 		margin-right: 40px;
 	}
-	.topTextDiv > a:not(:last-child:nth-last-child(1)) {
+	.topTextDiv > a:not(:nth-last-child(n + 1)) {
 		display: none;
 	}
 	.verticalLine {
