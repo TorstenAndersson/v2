@@ -10,7 +10,7 @@ function pageLoaded() {
 		document.querySelector(".cartNumber").style.display = "inline-block";
 		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
-	let slideshowDiv = document.querySelector("slideshow");
+	let slideshowDiv = document.querySelector(".slideshow");
 	divs = document.querySelectorAll(".productDiv");
 	divs = [...divs];
 	size = divs[0].clientWidth;

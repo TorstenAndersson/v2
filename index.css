@@ -171,9 +171,6 @@ img.orderButton {
 	font-size: 14px;
     padding: 8px 15px 7px;
 }
-.productDiv {
-	width: 100%;
-}
 .slideshowHeader {
 	position: relative;
 	top: 50px;
@@ -289,5 +286,8 @@ img.orderButton {
 	.slideshowDiv {
 		right: inherit;
 		width: 95%;
+	}
+	.productDiv {
+		width: 100%
 	}
 }
