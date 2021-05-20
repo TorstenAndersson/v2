@@ -153,6 +153,12 @@ img.orderButton {
     top: 37%;
 	cursor: pointer;
 }
+.left {
+	left: 0px;
+}
+.right {
+	right: 0px;
+}
 .slideshow {
 	position: relative;
 	display: flex;
