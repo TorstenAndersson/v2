@@ -258,7 +258,7 @@ img.orderButton {
 	.topLogoText {
 		font-size: 30px;
 	}
-	.topTextDiv > a:not(last-child) {
+	.topTextDiv > a:not(last-child):after {
 		display: none;
 	}
 	.cartText {
