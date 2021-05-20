@@ -11,6 +11,21 @@
 body {
 	margin: 0px;
 }
+@media screen and (max-width: 1050px) {
+	.topLogoTextDiv {
+		left: 15px;
+		padding-top: inherit;
+	}
+	.topLogoText v{
+		font-size: 30px;
+	}
+	.topTextDiv:not(last-child) {
+		display: none;
+	}
+	.cartText {
+		display: none;
+	}
+}
 .background {
 	z-index: 0;
 	width: 100%;

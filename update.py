@@ -170,7 +170,10 @@ products = json.loads('''
                     "Storlek":[
                         "S",
                         "M",
-                        "L"
+                        "L",
+                        "XL",
+                        "2XL",
+                        "3XL"
                     ]
                 }
             },
@@ -292,6 +295,15 @@ products = json.loads('''
                         "Röd",
                         "Svart"
                     ]
+                },
+                "notImgAffecting":{
+                    "Färg":[
+                        "S",
+                        "M",
+                        "L",
+                        "XL",
+                        "2XL"
+                    ]
                 }
             },
             "type":"merchandise",
@@ -326,7 +338,9 @@ products = json.loads('''
                     "Storlek":[
                         "S",
                         "M",
-                        "L"
+                        "L",
+                        "XL",
+                        "2XL"
                     ]
                 } 
             },
