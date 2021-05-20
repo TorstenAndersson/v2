@@ -846,7 +846,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     </label>
                 </div>
                 <div class="radio" onchange="radioChanged()">
-                    <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
+                    <label class="textLabel radioFieldQuery">Vad vill du bli?</label>
                     <div class="radioField">
                         <input type="radio" id="designer" name="desire" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
@@ -861,7 +861,7 @@ files["jobb"] = '''<!DOCTYPE html>
                     </div>
                 </div>
                 <div class="field otherDesire">
-                    <input class="textInput" type="text" id="otherDesire" name="otherDesire">
+                    <input class="textInput" type="text" id="otherDesire" name="desire">
                     <label class="textQuery" for="otherDesire">
                         <span class="textLabel labelThree">Vad vill du bli?</span>
                     </label>
