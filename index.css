@@ -147,10 +147,10 @@ a {
 	margin: auto;
 	overflow: hidden;
 }
-img.orderButton {
+.orderButton {
 	z-index: 1;
 	position: absolute;
-    top: 37%;
+    top: 35%;
 	cursor: pointer;
 }
 .left {
