@@ -492,7 +492,9 @@ files["index"] = '''<!DOCTYPE html>
 			</div>
 			<div class="slideshowDiv">
 				<img class="orderButton left" src="/imgs/website/Backward.webp" onclick="slide('backward')" width="10%" alt="Next Slide">
-				<img class="orderButton right" src="/imgs/website/Forward.webp" onclick="slide('forward')" width="10%" alt="Previous Slide">
+				<button>
+                    <img class="orderButton right" src="/imgs/website/Forward.webp" onclick="slide('forward')" width="10%" alt="Previous Slide">
+                </button>
 				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>
