@@ -23,7 +23,7 @@ function pageLoaded() {
 				setTimeout(function() { 
 					notification.style.opacity = "0";
 				}, 5000);
-				document.querySelector(".reasonOther").style.display = "none";
+				document.querySelector(".otherDesire").style.display = "none";
 				form.reset();
     		}
   		});
@@ -57,17 +57,21 @@ function pageScrolled() {
 }
 
 function radioChanged() {
+	/*
 	if (document.querySelectorAll("input[type='radio'")[2].checked) {
-		document.querySelector(".reasonOther").style.display = "block";
-		document.querySelector(".reasonOther").firstElementChild.required = true;
+		document.querySelector(".otherDesire").style.display = "block";
+		document.querySelector(".otherDesire").firstElementChild.required = true;
 	} else {
-		document.querySelector(".reasonOther").style.display = "none";
-		document.querySelector(".reasonOther").firstElementChild.required = false;
+		document.querySelector(".otherDesire").style.display = "none";
+		document.querySelector(".otherDesire").firstElementChild.required = false;
 	}
+	*/
+	[document.querySelector(".otherDesire").style.display = "block", document.querySelector(".otherDesire").firstElementChild.required] = document.querySelectorAll('input[type="radio"')[2].checked ? ["block", true] : ["none", false];
 }
 
 function textareaChanged() {
-	let area = document.querySelector("textarea.textarea");
-  	area.style.height = 'auto';	
-    area.style.height = area.scrollHeight - 8 + 'px';
+	let area = document.querySelector(".textarea");
+  	area.style.height = "auto";	
+    area.style.height = area.scrollHeight - 5 + "px";
+	area.parentElement.style.height = area.scrollHeight - 41 + "px";
 }

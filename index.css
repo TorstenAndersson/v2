@@ -184,6 +184,12 @@ img.orderButton {
     top: 37%;
 	cursor: pointer;
 }
+.left {
+	left: 0px;
+}
+.right {
+	right: 0px;
+}
 .slideshow {
 	position: relative;
 	display: flex;
@@ -194,7 +200,7 @@ img.orderButton {
 	color: rgb(255, 255, 255);
 	background-color: rgb(57, 57, 57);
 	font-size: 14px;
-    	padding: 8px 15px 7px 15px;
+    padding: 8px 15px 7px;
 }
 .productDiv {
 	width: 100%;

@@ -51,7 +51,7 @@
         <main class="pageContent">
             <div class="paragraph">
                 <span class="paragraphHeader big">Är du arbetslös?</span>
-                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
+                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssudd tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
             </div>
             <div class="paragraph">
                 <span class="paragraphHeader big">Inte övertygad än?</span>
@@ -71,43 +71,43 @@
             <div class="paragraph parThree">
                 <span class="paragraphHeader big">Skaffa dig ett jobb</span>
             </div>
-            <form autocomplete="off" name="jobbformulär" method="POST" data-netlify="true"> 
+            <form name="jobbformulär" method="POST" autocomplete="off" data-netlify="true"> 
                 <div class="field">
-                    <input class="textInput" type="text" name="name" required>
+                    <input class="textInput" type="text" id="name" name="name" required>
                     <label class="textQuery" for="name">
                         <span class="textLabel">Namn</span>
                     </label>
                 </div>
                 <div class="field">
-                    <input class="textInput" type="text" name="email" required>
+                    <input class="textInput" type="text" id="email" name="email" required>
                     <label class="textQuery" for="email">
                         <span class="textLabel">E-post</span>
                     </label>
                 </div>
                 <div class="radio" onchange="radioChanged()">
-                    <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
+                    <span class="radioFieldQuery">Vad vill du bli?</span>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="designer">
+                        <input type="radio" id="designer" name="desire" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="försäljare">
-                        <label class="radioQuery" for="försäljare">Försäljare</label>
+                        <input type="radio" id="salesman" name="desire" value="försäljare">
+                        <label class="radioQuery" for="salesman">Försäljare</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="annat">
-                        <label class="radioQuery" for="annat">Annat</label>
+                        <input type="radio" id="other" name="desire" value="annat">
+                        <label class="radioQuery" for="other">Annat</label>
                     </div>
                 </div>
-                <div class="field reasonOther">
-                    <input class="textInput" type="text" name="desireOther">
-                    <label class="textQuery" for="desireOther">
+                <div class="field otherDesire">
+                    <input class="textInput" type="text" id="otherDesire" name="desire">
+                    <label class="textQuery" for="otherDesire">
                         <span class="textLabel labelThree">Vad vill du bli?</span>
                     </label>
                 </div>
                 <div class="field">
-                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" name="reason" rows="1" data-autoresize required></textarea>
-                    <label class="textQuery textarea" for="reason">
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="reason" rows="1" data-autoresize required></textarea>
+                    <label class="textQuery large" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
                 </div>

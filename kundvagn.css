@@ -121,7 +121,7 @@ a {
 }
 .pageContent {
 	text-align: center;
-	padding: 175px 0px 20px 0px;
+	padding: 175px 0px 20px;
 }
 .pageHeader {
 	display: block;
@@ -148,7 +148,7 @@ a {
 	background-color: rgb(57, 57, 57);
 	font-family: "Raleway";
 	font-size: 20px;
-	padding: 20px 50px 20px 50px;
+	padding: 20px 50px;
 	cursor: pointer;
 }
 .buttonDiv {
@@ -191,8 +191,8 @@ a {
 }
 .textDiv {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-60%);
+	top: 48%;
+	transform: translateY(-50%);
 	display: inline-block;
 	width: max-content;
 	text-align: left;

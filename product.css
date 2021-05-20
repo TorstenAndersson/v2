@@ -140,9 +140,8 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	right: 45%;
-	display: inline;
-	width: 45%;
+	top: calc(35% - 55px);
+	left: calc(30% - 270px);
 }
 .productImg {
 	padding-top: 30px;
@@ -150,7 +149,7 @@ a {
 }
 .smallProductDiv {
 	position: absolute;
-	margin-top: -355px;
+	margin: -335px 0px 0px -40px;
 }
 .smallProductDiv:first-child {
 	border: 1px solid rgb(80, 80, 80);
@@ -174,9 +173,11 @@ a {
 }
 .textFrame {
 	position: absolute;
-	right: 15%;
+	top: calc(35% + 140px);
+	right: calc(40% - 300px);
 	display: inline;
-	width: 405px;
+	width: 430px;
+	transform: translateY(-51%);
 }
 .productHeader {
 	display: block;
@@ -206,12 +207,13 @@ a {
 }
 .variants {
 	padding-top: 20px;
-	padding-bottom: 10px;
 }
 .variant {
 	display: inline-block;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding: 0px 20px 15px;
+}
+.variant:last-child {
+	padding-bottom: 0px;
 }
 .variantName {
 	display: block;
@@ -230,14 +232,14 @@ a {
 	display: none;
 }
 .buttonDiv {
-	padding-top: 30px;
+	padding-top: 40px;
 }
 .button {
 	border: none;
 	color: rgb(255, 255, 255);
 	background-color: rgb(57, 57, 57);
 	font: 20px "Raleway";
-	padding: 20px 50px 20px 50px;
+	padding: 20px 50px;
 	cursor: pointer;
 }
 .footerText {

@@ -1,4 +1,4 @@
-let divs, size, timer, count = 1, divCount = count;
+let divs, size, timer, count = 1, divCount = count, time = 0, timeCount = 0;
 const initalCount = count; 
 if (localStorage["cart"] === undefined) localStorage["cart"] = "{}";
 
@@ -25,10 +25,15 @@ function variantChanged(sender) {
 	let smallImgs = Array.prototype.slice.call(document.querySelectorAll(".smallProductImg"));
 	if (smallImgs.length !== 0) {
 		for (i2 in smallImgs) {
-			if (decodeURI(smallImgs[i2].src.split("%20")).split(",").some((element) => sender.innerText.includes(element)))
-			smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element))[0]), encodeURI(sender.value));
+			if (decodeURI(smallImgs[i2].src.split("%20")).split(",").some((element) => sender.innerText.includes(element))) {
+				//smallImgs[i2].src = smallImgs[i2].src.replace(encodeURI(decodeURI(smallImgs[i2].src.split("%20")).split(",").filter((element) => sender.innerText.includes(element)).slice(-1)), encodeURI(sender.value));
+				var splitSource = smallImgs[i2].src.split("%20");
+				splitSource.splice(splitSource.lastIndexOf(splitSource.filter((element) => sender.innerText.includes(decodeURI(element))).slice(-1)[0]), 1, encodeURI(sender.value));
+				smallImgs[i2].src = splitSource.join("%20");
+			}
 		}
-		smallImgHovered(document.querySelector(".selected"));
+		//smallImgHovered(document.querySelector(".selected"));
+		document.querySelector(".productImg").src = document.querySelector(".selected").src.slice(51);
 	} else {
 		const productImg = document.querySelector(".productImg");
 		productImg.src = productImg.src.replace(productImg.src.split("/").slice(productImg.src.split("/").length - 1), encodeURI(sender.parentElement.parentElement.parentElement.firstElementChild.innerText + " " + sender.value)+ ".webp");
@@ -40,7 +45,8 @@ function buy() {
 	for (variantSelect of document.querySelectorAll(".variantSelect")) {
 		variant += variantSelect.parentElement.firstElementChild.innerText + ": " + variantSelect.value + ", ";
 	}
-	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + document.querySelector(".productImg").src.split("/")[5] + ">" + document.querySelector(".productPriceText").innerText;
+	//const perspective = document.querySelector(".smallProductImg") ? document.querySelector(".smallProductImg").src.split("/")[5] : document.querySelector(".productImg").src.split("/")[5];
+	const product = document.URL.split("/")[3] + ">" + document.querySelector(".productHeader").innerText + ">" + variant.slice(0, -2) + ">" + (document.querySelector(".smallProductImg") ? document.querySelector(".smallProductImg").src.split("/")[5] : document.querySelector(".productImg").src.split("/")[5]) + ">" + document.querySelector(".productPriceText").innerText;
 	try {
 		localStorage["cart"] = localStorage["cart"].replace(product + '":"' + JSON.parse(localStorage["cart"])[product], product + '":"' + JSON.stringify(+JSON.parse(localStorage["cart"])[product].slice(0) + 1));
 	} catch {

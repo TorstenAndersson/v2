@@ -169,6 +169,9 @@ form {
 .field {
 	padding-bottom: 100px;
 }
+.field:last-child {
+	height: 28px;
+}
 .textInput {
 	position: absolute;
     width: 100%;
@@ -176,9 +179,7 @@ form {
 	color: rgb(25, 25, 25);
 	/* CLEAN IT */
     border: none;
-    font-size: 18px;
-	font-family: "Raleway";
-	line-height: 20px;
+	font: 18px/20px "Raleway";
 	outline: none;
 	overflow: hidden;
 }
@@ -194,7 +195,7 @@ form {
     border-bottom: 1px solid black;
 	pointer-events: none;
 }
-form label span {
+.textLabel {
     position: absolute;
     bottom: 5px;
     left: 0px;
@@ -221,16 +222,16 @@ form label span {
 form input[type="radio"] {
 	margin: 0px;
 }
-.reasonOther {
+.otherDesire {
 	display: none;
 }
-textarea.textarea {
+.textarea {
 	height: 28px;
 	border-bottom: 1px solid black;
 	padding-top: 11px;
 	resize: none;
 }
-label.textarea {
+.large {
 	border-bottom: none;
 }
 .submitButton {
@@ -239,8 +240,8 @@ label.textarea {
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
-	transition: all 0.3s;
-	padding: 20px 40px 20px 40px;
+	transition: background-color 0.3s;
+	padding: 20px 40px;
 }
 .submitButton:hover {
 	background-color: rgb(40, 40, 40);

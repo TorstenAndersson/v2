@@ -132,53 +132,86 @@ products = json.loads('''
             "onDisplay":"True"
         },{
             "name":"Sudd Glans",
-            "description":"Glansigt värre!",
+            "description":"Extravagantiskt glansigt!",
             "price":{
-                "discount":{
-                    "price":"10,99 kr",
-                    "reason":"Fick vibbarna"
+                 "discount":{
+                    "price":"4,99 kr",
+                    "reason":"SOMMARREA!"
                 },
-                "original":"14,99 kr"
+                "original":"9,99 kr"
             },
-            "img":"/imgs/Sudd/Sudd%20Johan.webp",
             "type":"sudd",
-            "onDisplay":"True"
+            "onDisplay":"False"
         },{
             "name":"Sudd Johan",
-            "description":"Bara gamla goda Johan.",
+            "description":"Bara gamla goda Johan på ett sudd.",
             "price":{
                 "discount":{
                     "price":"10,99 kr",
-                    "reason":"Fick vibbarna"
+                    "reason":"SOMMARREA!"
                 },
                 "original":"14,99 kr"
             },
-            "img":"/imgs/Sudd/Sudd%20Johan.webp",
             "type":"sudd",
             "onDisplay":"True"
         },{
-            "name":"Johans Hoodie",
-            "description":"fyfan va varmt",
+            "name":"Sudd Björkeby",
+            "description":"En ackurat skildring av dagens skolmat!",
             "price":{
                 "discount":{
-                    "price":"149,99 kr",
-                    "reason":"2020 REA"
+                    "price":"99,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
+            },
+            "type":"sudd",
+            "onDisplay":"False"
+        },{
+            "name":"Sudd Hood",
+            "description":"Hoodie runt ett soodie.",
+            "price":{
+                "discount":{
+                    "price":"249,99 kr",
+                    "reason":"SOMMARREA!"
                 },
                 "original":"499,99 kr"
             },
+            "type":"sudd",
+            "onDisplay":"False"
+        },{
+            "name":"Sudd Guld",
+            "description":"Glamorösitetklubbens ordförande.",
+            "price":{
+                "discount":{
+                    "price":"499,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"999,99 kr"
+            },
+            "type":"sudd",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Baddräkt",
+            "description":"Bada då",
+            "price":{
+                "discount":{
+                    "price":"149,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"199,99 kr"
+            },
             "variants":{
                 "imgAffecting":{
+                    "Variant":[
+                        "Bikini",
+                        "Baddräkt"
+                    ],
                     "Färg":[
                         "Vit",
-                        "Blå",
-                        "Grå",
-                        "Grön",
+                        "Gul",
                         "Ljusblå",
-                        "Marinblå",
-                        "Mörkgrå",
                         "Rosa",
                         "Röd",
-                        "Rödbrun",
                         "Svart"
                     ]
                 },
@@ -188,23 +221,42 @@ products = json.loads('''
                         "M",
                         "L"
                     ]
-                } 
+                }
             },
             "perspectives":[
                 "Front",
+                "Side",
                 "Back"
             ],
             "type":"merchandise",
             "onDisplay":"True"
         },{
-            "name":"Johans Crocs",
-            "description":"LFIPÅPT FLOP",
+            "name":"Johans Skal",
+            "description":"Se elegant ut när du skyddar din mobil!",
             "price":{
                 "discount":{
-                    "price":"1000,99 kr",
-                    "reason":"PÅSKREA"
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
                 },
-                "original":"349,99 kr"
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Modell": [''' + phoneVariants[1:-1] + '''
+                    ]
+                }
+            },
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Crocs",
+            "description":"Flippo floppo!",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
             },
             "variants":{
                 "notImgAffecting":{
@@ -223,14 +275,58 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"True"
         },{
-            "name":"Johans Tröja",
-            "description":"Stiligt värre",
+            "name":"Johans Hatt",
+            "description":"För alla våra fiskarvänner!",
             "price":{
                 "discount":{
-                    "price":"99 kr",
-                    "reason":"IDK FELT LIKE IT"
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
                 },
-                "original":"149,99 kr"
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Färg":[
+                        "Black",
+                        "Beige"
+                    ]
+                }
+            },
+            "perspectives":[
+                "Front",
+                "Back"
+            ],
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Keps",
+            "description":"Skydda dig lite mot solen vet jag!",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
+            },
+            "variants":{
+                "imgAffecting":{
+                    "Färg":[
+                        "Vit",
+                        "Grå"
+                    ]
+                }
+            },
+            "type":"merchandise",
+            "onDisplay":"True"
+        },{
+            "name":"Johans Tröja",
+            "description":"Ett mysigt plagg med extrem elegans.",
+            "price":{
+                "discount":{
+                    "price":"199,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"249,99 kr"
             },
             "variants":{
                 "imgAffecting":{
@@ -250,17 +346,43 @@ products = json.loads('''
             "type":"merchandise",
             "onDisplay":"False"
         },{
-            "name":"Johans Skal",
-            "description":"Skydda din mobil!",
+            "name":"Johans Hoodie",
+            "description":"Ett plagg för alla som någonsin känt kyla.",
             "price":{
-                "original":"199,99 kr"
+                "discount":{
+                    "price":"349,99 kr",
+                    "reason":"SOMMARREA!"
+                },
+                "original":"399,99 kr"
             },
             "variants":{
                 "imgAffecting":{
-                    "Modell": [''' + phoneVariants[1:-1] + '''
+                    "Färg":[
+                        "Vit",
+                        "Svart",
+                        "Grå",
+                        "Mörkgrå",
+                        "Rosa",
+                        "Ljusblå",
+                        "Blå",
+                        "Marinblå",
+                        "Grön",
+                        "Röd",
+                        "Rödbrun"
                     ]
-                }
+                },
+                "notImgAffecting":{
+                    "Storlek":[
+                        "S",
+                        "M",
+                        "L"
+                    ]
+                } 
             },
+            "perspectives":[
+                "Front",
+                "Back"
+            ],
             "type":"merchandise",
             "onDisplay":"True"
         }
@@ -298,6 +420,9 @@ for product in products["products"]:
     if eval(product["onDisplay"]):
         onDisplay.append(product)
 
+onDisplay.insert(0, onDisplay[-1])
+onDisplay.pop()
+
 # Creating basic files
 
 files = {
@@ -323,10 +448,10 @@ for product in onDisplay:
     try:
         product["price"]["discount"]
         discount = ('''
-                            <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', '''
-                            <span class="price line">''' + product["price"]["discount"]["price"] + '</span>')
+                            <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', product["price"]["discount"]["price"], '''
+                            <span class="price line">''' + product["price"]["original"] + '</span>')
     except KeyError:
-        discount = ("", "")
+        discount = ("", product["price"]["original"], "")
     #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
     
     onDisplayDiv += '''
@@ -336,7 +461,7 @@ for product in onDisplay:
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
-                                <span class="price">''' + product["price"]["original"] + "</span>" + discount[1] + '''
+                                <span class="price">''' + discount[1] + "</span>" + discount[2] + '''
                             </div>
                         </a>
                     </div>'''
@@ -351,7 +476,7 @@ files["index"] = '''<!DOCTYPE html>
 	<head>
 		<title>Johanssudd</title>
 		<meta name="keywords" content="johan, sudd, johanssudd, johansudd">
-		<meta name="description" content="Johanssud. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
+		<meta name="description" content="Johanssudd. Sudda bort dina pengar. På vår hemsida kan du köpa högkvalitativa sudd och merchandise.">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
@@ -409,8 +534,8 @@ files["index"] = '''<!DOCTYPE html>
                 <span class="newsText">Vår största collab hittills! Vi har jobbat med Vans för att skapa TVÅ par dojor i helt olika stilar. Välj mellan våra Johans Vans® Classic eller Slip-On, eller varför inte båda medan du ändå är igång! <span class="bold">Tillgänglig för en begränsat tid endast!</span></span>
             </div>
 			<div class="slideshowDiv">
-				<img class="orderButton" src="/imgs/website/Backward.webp" onclick="slide('backward')" style="left: 0px;" width="10%" alt="Next Slide">
-				<img class="orderButton" src="/imgs/website/Forward.webp" onclick="slide('forward')" style="right: 0px;" width="10%" alt="Previous Slide">
+				<img class="orderButton left" src="/imgs/website/Backward.webp" onclick="slide('backward')" width="10%" alt="Next Slide">
+				<img class="orderButton right" src="/imgs/website/Forward.webp" onclick="slide('forward')" width="10%" alt="Previous Slide">
 				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>
@@ -440,7 +565,7 @@ files["om oss"] = '''<!DOCTYPE html>
 <html lang="sv">
     <head>
         <title>Om Oss - Johanssudd</title>
-        <meta name="keywordsd" content="om oss, om oss, johanssudd, johansudd">
+        <meta name="keywords" content="om oss, om oss, johanssudd, johansudd">
         <meta name="description" content="Information om oss här på Johanssudd. Du kan även hitta information om du skulle vilja kontakta oss.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -532,10 +657,10 @@ for product in sudd:
     try:
         product["price"]["discount"]
         discount = ('''
-                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
-                        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>", product["price"]["discount"]["price"], '''
+                        <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + "</span>")
     except KeyError:
-        discount = ("", "")
+        discount = ("", product["price"]["original"], "")
 
     suddDiv += '''
                 <div class="paddingDiv">
@@ -543,7 +668,7 @@ for product in sudd:
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["original"] + "</span>" + discount[1] + '''
+                            <span class="productPriceText">''' + discount[1] + "</span>" + discount[2] + '''
                         </div>
                     </a>
                 </div>'''
@@ -619,10 +744,10 @@ for product in merchandise:
     try:
         product["price"]["discount"]
         discount = ('''
-                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>",'''
-                        <span class="productPriceText discountedPrice line">''' + product["price"]["discount"]["price"] + "</span>")
+                        <span class="discountReason">''' + product["price"]["discount"]["reason"] + "</span>", product["price"]["discount"]["price"], '''
+                        <span class="productPriceText discountedPrice line">''' + product["price"]["original"] + "</span>")
     except KeyError:
-        discount = ("", "")
+        discount = ("", product["price"]["original"], "")
 
     merchandiseDiv += '''
                 <div class="paddingDiv">
@@ -630,7 +755,7 @@ for product in merchandise:
                         <img class="productImg" src="''' + imgs[product["name"]] + '''" width="300px" height="300px" alt="''' + product["name"] + '''">
                         <span class="productHeader">''' + product["name"] + '''</span>
                         <div>
-                            <span class="productPriceText">''' + product["price"]["original"] + "</span>" + discount[1] + '''
+                            <span class="productPriceText">''' + discount[1] + "</span>" + discount[2] + '''
                         </div>
                     </a>
                 </div>'''
@@ -747,7 +872,7 @@ files["jobb"] = '''<!DOCTYPE html>
         <main class="pageContent">
             <div class="paragraph">
                 <span class="paragraphHeader big">Är du arbetslös?</span>
-                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
+                <span>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssudd tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</span>
             </div>
             <div class="paragraph">
                 <span class="paragraphHeader big">Inte övertygad än?</span>
@@ -767,43 +892,43 @@ files["jobb"] = '''<!DOCTYPE html>
             <div class="paragraph parThree">
                 <span class="paragraphHeader big">Skaffa dig ett jobb</span>
             </div>
-            <form autocomplete="off" name="jobbformulär" method="POST" data-netlify="true"> 
+            <form name="jobbformulär" method="POST" autocomplete="off" data-netlify="true"> 
                 <div class="field">
-                    <input class="textInput" type="text" name="name" required>
+                    <input class="textInput" type="text" id="name" name="name" required>
                     <label class="textQuery" for="name">
                         <span class="textLabel">Namn</span>
                     </label>
                 </div>
                 <div class="field">
-                    <input class="textInput" type="text" name="email" required>
+                    <input class="textInput" type="text" id="email" name="email" required>
                     <label class="textQuery" for="email">
                         <span class="textLabel">E-post</span>
                     </label>
                 </div>
                 <div class="radio" onchange="radioChanged()">
-                    <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
+                    <span class="radioFieldQuery">Vad vill du bli?</span>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="designer">
+                        <input type="radio" id="designer" name="desire" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="försäljare">
-                        <label class="radioQuery" for="försäljare">Försäljare</label>
+                        <input type="radio" id="salesman" name="desire" value="försäljare">
+                        <label class="radioQuery" for="salesman">Försäljare</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" name="desire" value="annat">
-                        <label class="radioQuery" for="annat">Annat</label>
+                        <input type="radio" id="other" name="desire" value="annat">
+                        <label class="radioQuery" for="other">Annat</label>
                     </div>
                 </div>
-                <div class="field reasonOther">
-                    <input class="textInput" type="text" name="desireOther">
-                    <label class="textQuery" for="desireOther">
+                <div class="field otherDesire">
+                    <input class="textInput" type="text" id="otherDesire" name="desire">
+                    <label class="textQuery" for="otherDesire">
                         <span class="textLabel labelThree">Vad vill du bli?</span>
                     </label>
                 </div>
                 <div class="field">
-                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" name="reason" rows="1" data-autoresize required></textarea>
-                    <label class="textQuery textarea" for="reason">
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="reason" rows="1" data-autoresize required></textarea>
+                    <label class="textQuery large" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
                 </div>
@@ -1022,10 +1147,10 @@ for product in products["products"]:
 
     try:
         product["price"]["discount"]
-        price = '''
-        <span class="productPriceText line">''' + product["price"]["discount"]["price"] + "</span>"
+        price = (product["price"]["discount"]["price"], '''
+        <span class="productPriceText line">''' + product["price"]["original"] + "</span>")
     except KeyError:
-        price = ""
+        price = (product["price"]["original"], "")
 
     open(path, "w").write('''<!DOCTYPE html>
 <html lang="sv">
@@ -1074,17 +1199,15 @@ for product in products["products"]:
             <div class="notification">
                 <span class="notificationText">Tillagd i kundvagnen!</span>
             </div>
-            <div class="productFrame">
-                <div class="imgFrame">
-                    <img class="productImg" src="''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
-                </div>
-                <div class="textFrame">
-                    <span class="productHeader">''' + product["name"] + '''</span>
-                    <span class="productDescription">''' + product["description"] + '''</span>
-                    <span class="productPriceText discountedPrice">''' + product["price"]["original"] + "</span>" + price + variantDiv + '''
-                    <div class="buttonDiv">
-                        <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
-                    </div>
+            <div class="imgFrame">
+                <img class="productImg" src="''' + imgs[product["name"]] + '''" width="350px" height="350px" alt="''' + product["name"] + '''">''' + perspectiveDiv + '''
+            </div>
+            <div class="textFrame">
+                <span class="productHeader">''' + product["name"] + '''</span>
+                <span class="productDescription">''' + product["description"] + '''</span>
+                <span class="productPriceText discountedPrice">''' + price[0] + "</span>" + price[1] + variantDiv + '''
+                <div class="buttonDiv">
+                    <button class="button" onclick="buy()" readonly>Lägg I Kundvagn</button>
                 </div>
             </div>
         </main>
