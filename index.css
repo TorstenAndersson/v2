@@ -16,7 +16,7 @@ body {
 		left: 15px;
 		padding-top: inherit;
 	}
-	.topLogoText v{
+	.topLogoText {
 		font-size: 30px;
 	}
 	.topTextDiv:not(last-child) {
