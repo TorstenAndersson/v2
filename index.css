@@ -11,21 +11,6 @@
 body {
 	margin: 0px;
 }
-@media screen and (max-width: 1050px) {
-	.topLogoTextDiv {
-		left: 15px;
-		padding-top: inherit;
-	}
-	.topLogoText {
-		font-size: 30px;
-	}
-	.topTextDiv:not(last-child) {
-		display: none;
-	}
-	.cartText {
-		display: none;
-	}
-}
 .background {
 	z-index: 0;
 	width: 100%;
@@ -264,4 +249,19 @@ img.orderButton {
 	color: rgb(110, 110, 110);
 	font-size: 13px;
 	padding-bottom: 10px;
+}
+@media screen and (max-width: 1050px) {
+	.topLogoTextDiv {
+		left: 15px;
+		padding-top: inherit;
+	}
+	.topLogoText {
+		font-size: 30px;
+	}
+	.topTextDiv:not(last-child) {
+		display: none;
+	}
+	.cartText {
+		display: none;
+	}
 }
