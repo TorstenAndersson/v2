@@ -834,13 +834,13 @@ files["jobb"] = '''<!DOCTYPE html>
             </div>
             <form name="jobbformulär" method="POST" autocomplete="off" data-netlify="true"> 
                 <div class="field">
-                    <input name="name" class="textInput" type="text" id="name" required>
+                    <input class="textInput" type="text" id="name" name="name" required>
                     <label class="textQuery" for="name">
                         <span class="textLabel">Namn</span>
                     </label>
                 </div>
                 <div class="field">
-                    <input name="email" class="textInput" type="text" id="email" required>
+                    <input class="textInput" type="text" id="email" name="email" required>
                     <label class="textQuery" for="email">
                         <span class="textLabel">E-post</span>
                     </label>
@@ -848,26 +848,26 @@ files["jobb"] = '''<!DOCTYPE html>
                 <div class="radio" onchange="radioChanged()">
                     <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
                     <div class="radioField">
-                        <input name="desire" type="radio" id="designer" value="designer">
+                        <input type="radio" id="designer" name="desire" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
                     </div>
                     <div class="radioField">
-                        <input name="desire"type="radio" id="salesman" value="försäljare">
+                        <input type="radio" id="salesman" name="desire" value="försäljare">
                         <label class="radioQuery" for="salesman">Försäljare</label>
                     </div>
                     <div class="radioField">
-                        <input name="desire" type="radio" id="other" value="annat">
+                        <input type="radio" id="other" name="desire" value="annat">
                         <label class="radioQuery" for="other">Annat</label>
                     </div>
                 </div>
                 <div class="field reasonOther">
-                    <input name="desire" class="textInput" type="text" id="otherDesire">
+                    <input class="textInput" type="text" id="otherDesire" name="desire">
                     <label class="textQuery" for="otherDesire">
                         <span class="textLabel labelThree">Vad vill du bli?</span>
                     </label>
                 </div>
                 <div class="field">
-                    <textarea name="why" class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" rows="1" data-autoresize required></textarea>
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="why" rows="1" data-autoresize required></textarea>
                     <label class="textQuery textarea" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
