@@ -174,9 +174,11 @@ a {
 }
 .textFrame {
 	position: absolute;
+	top: 54%;
 	right: 12%;
 	display: inline;
 	width: 430px;
+	transform: translateY(-50%);
 }
 .productHeader {
 	display: block;
