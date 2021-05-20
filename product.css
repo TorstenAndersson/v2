@@ -140,10 +140,11 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	top: 28%;
+	top: 51%;
 	left: calc(20% - 200px);
 	display: inline;
 	width: 45%;
+	transform: translateY(-50%);
 }
 .productImg {
 	padding-top: 30px;
