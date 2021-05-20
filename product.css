@@ -26,12 +26,11 @@ span {
 	position: absolute;
 	top: 5%;
 	left: 10%;
-	color: rgb(47, 47, 47);
-	font-weight: 700;
 	padding-top: 10px;
 }
 .topLogoText {
-	font-size: 35px;
+	color: rgba(255, 255, 255, .9);
+	font: 700 35px "Open Sans";
 }
 .topTextDiv {
 	z-index: 2;
