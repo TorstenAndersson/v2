@@ -475,11 +475,11 @@ files["index"] = '''<!DOCTYPE html>
 					<div class="verticalLine"></div>
 					<a href="/kundvagn">
 						<span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px" height="25px" alt="Cart Icon">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="30px" height="30px" alt="Cart Icon">
                         <span class="cartNumber"></span>
 					</a>
                     <a>
-                        <img class="menuIcon" src="/imgs/website/idk.webp" width="40px" height="40px">
+                        <img class="menuIcon" src="/imgs/website/idk.webp" width="30px" height="30px">
                     </a>
 				</div>
 			</div>
