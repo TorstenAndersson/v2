@@ -475,11 +475,11 @@ files["index"] = '''<!DOCTYPE html>
 					<div class="verticalLine"></div>
 					<a href="/kundvagn">
 						<span class="topText cartText">KUNDVAGN</span>
-                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px" alt="Cart Icon">
+                        <img class="cartIcon" src="/imgs/Website/Shopping%20Bag%20Light.webp" height="25px" height="25px" alt="Cart Icon">
                         <span class="cartNumber"></span>
 					</a>
                     <a>
-                        <img class="menuIcon" src="https://johanssudd.se/johan.png" width="40px">
+                        <img class="menuIcon" src="https://johanssudd.se/johan.png" width="40px" height="40px">
                     </a>
 				</div>
 			</div>
@@ -491,8 +491,8 @@ files["index"] = '''<!DOCTYPE html>
 				<span class="motto">Sudda bort dina pengar</span>
 			</div>
 			<div class="slideshowDiv">
-				<img class="orderButton left" src="/imgs/website/Backward.webp" onclick="slide('backward')" width="10%" alt="Next Slide">
-				<img class="orderButton right" src="/imgs/website/Forward.webp" onclick="slide('forward')" width="10%" alt="Previous Slide">
+				<img class="orderButton left" src="/imgs/website/Backward.webp" onclick="slide('backward')" width="10%" height="10%" alt="Next Slide">
+				<img class="orderButton right" src="/imgs/website/Forward.webp" onclick="slide('forward')" width="10%" height="10%" alt="Previous Slide">
 				<div class="slideshow" style="left: 0px; width:''' + str(len(onDisplay) * 100) + "%" + '''";>''' + onDisplayDiv + '''
                 </div>
 			</div>
