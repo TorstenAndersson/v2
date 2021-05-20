@@ -140,9 +140,10 @@ a {
 }
 .imgFrame {
 	position: absolute;
-	right: 45%;
+	right: 50%;
 	display: inline;
 	width: 45%;
+	transform: translateY(-50%);
 }
 .productImg {
 	padding-top: 30px;
@@ -174,8 +175,8 @@ a {
 }
 .textFrame {
 	position: absolute;
-	top: 54%;
-	right: 12%;
+	top: 50%;
+	right: 20%;
 	display: inline;
 	width: 430px;
 	transform: translateY(-50%);
