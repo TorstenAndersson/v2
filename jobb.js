@@ -66,11 +66,12 @@ function radioChanged() {
 		document.querySelector(".otherDesire").firstElementChild.required = false;
 	}
 	*/
-	[document.querySelector(".otherDesire").style.display = "block", document.querySelector(".otherDesire").firstElementChild.required] = document.querySelectorAll("input[type='radio'")[2].checked ? ["block", true] : ["none", false];
+	[document.querySelector(".otherDesire").style.display = "block", document.querySelector(".otherDesire").firstElementChild.required] = document.querySelectorAll('input[type="radio"')[2].checked ? ["block", true] : ["none", false];
 }
 
 function textareaChanged() {
-	let area = document.querySelector("textarea.textarea");
-  	area.style.height = 'auto';	
-    area.style.height = area.scrollHeight - 5 + 'px';
+	let area = document.querySelector(".textarea");
+  	area.style.height = "auto";	
+    area.style.height = area.scrollHeight - 5 + "px";
+	area.parentElement.height = area.scrollHeight - 5 + "px";
 }
