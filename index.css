@@ -253,6 +253,7 @@ a {
 	}
 	.topLogoText {
 		font-size: 30px;
+		text-shadow: none;
 	}
 	.topTextDiv {
 		right: 15px;
