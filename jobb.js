@@ -66,7 +66,7 @@ function radioChanged() {
 		document.querySelector(".reasonOther").firstElementChild.required = false;
 	}
 	*/
-	(document.querySelector(".reasonOther").style.display = "block", document.querySelector(".reasonOther").firstElementChild.required) = document.querySelectorAll("input[type='radio'")[2].checked ? ("block", true) : ("none", false);
+	[document.querySelector(".reasonOther").style.display = "block", document.querySelector(".reasonOther").firstElementChild.required] = document.querySelectorAll("input[type='radio'")[2].checked ? ["block", true] : ["none", false];
 }
 
 function textareaChanged() {
