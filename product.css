@@ -173,7 +173,7 @@ a {
 }
 .textFrame {
 	position: absolute;
-	top: calc(35% + 120px);
+	top: calc(35% + 130px);
 	right: calc(40% - 300px);
 	display: inline;
 	width: 430px;
