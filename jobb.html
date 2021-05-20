@@ -85,7 +85,9 @@
                     </label>
                 </div>
                 <div class="radio" onchange="radioChanged()">
-                    <label class="textLabel radioFieldQuery" for="desire">Vad vill du bli?</label>
+                    <label class="textLabel radioFieldQuery" for="desire">
+                        <span>Vad vill du bli?</span>
+                    </label>
                     <div class="radioField">
                         <input type="radio" id="designer" name="desire" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
@@ -106,7 +108,7 @@
                     </label>
                 </div>
                 <div class="field">
-                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="why" rows="1" data-autoresize required></textarea>
+                    <textarea class="textInput textarea" oninput="textareaChanged()" type="text" id="reason" name="reason" rows="1" data-autoresize required></textarea>
                     <label class="textQuery textarea" for="reason">
                         <span class="textLabel">Varför skulle vi välja dig?</span>
                     </label>
