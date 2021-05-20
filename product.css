@@ -149,7 +149,7 @@ a {
 }
 .smallProductDiv {
 	position: absolute;
-	margin-top: -355px;
+	margin: -335px 0px 0px 40px;
 }
 .smallProductDiv:first-child {
 	border: 1px solid rgb(80, 80, 80);
