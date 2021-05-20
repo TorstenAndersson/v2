@@ -264,10 +264,13 @@ img.orderButton {
 		display: none;
 	}
 	.verticalLine {
-		margin-left: 40px;
+		margin-left: -15px;
 	}
 	.cartText {
 		display: none;
+	}
+	.menuIcon {
+		margin-top: -10px;
 	}
 	.logoText {
 		font: italic 700 40px sans-serif;

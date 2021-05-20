@@ -479,7 +479,7 @@ files["index"] = '''<!DOCTYPE html>
                         <span class="cartNumber"></span>
 					</a>
                     <a>
-                        <img src="https://johanssudd.se/johan.png" width="40px">
+                        <img class="menuIcon" src="https://johanssudd.se/johan.png" width="40px">
                     </a>
 				</div>
 			</div>
