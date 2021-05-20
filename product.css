@@ -176,7 +176,7 @@ a {
 }
 .textFrame {
 	position: absolute;
-	top: 52%;
+	top: 51%;
 	right: calc(40% - 300px);
 	display: inline;
 	width: 430px;
