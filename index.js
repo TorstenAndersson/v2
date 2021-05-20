@@ -10,7 +10,7 @@ function pageLoaded() {
 		document.querySelector(".cartNumber").style.display = "inline-block";
 		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 	}
-	let slideshowDiv = document.querySelector("div.slideshow");
+	let slideshowDiv = document.querySelector("slideshow");
 	divs = document.querySelectorAll(".productDiv");
 	divs = [...divs];
 	size = divs[0].clientWidth;
@@ -54,7 +54,7 @@ function pageScrolled() {
 
 function slide(where) {
 	active = false;
-	const slider = document.querySelector("div.slideshow");
+	const slider = document.querySelector(".slideshow");
 
 	if (where === "forward") {
 		divs[0].style.order = divs.length - initalCount + count;
