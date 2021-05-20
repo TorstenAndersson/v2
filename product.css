@@ -174,10 +174,9 @@ a {
 }
 .textFrame {
 	position: absolute;
-	right: 10%;
+	right: 12%;
 	display: inline;
 	width: 430px;
-	transform: translateY(-9%);
 }
 .productHeader {
 	display: block;
