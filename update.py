@@ -832,7 +832,7 @@ files["jobb"] = '''<!DOCTYPE html>
             <div class="paragraph parThree">
                 <span class="paragraphHeader big">Skaffa dig ett jobb</span>
             </div>
-            <form autocomplete="off" name="jobbformulär" method="POST" data-netlify="true"> 
+            <form name="jobbformulär" method="POST" autocomplete="off" data-netlify="true"> 
                 <div class="field">
                     <input class="textInput" type="text" id="name" required>
                     <label class="textQuery" for="name">
@@ -848,20 +848,20 @@ files["jobb"] = '''<!DOCTYPE html>
                 <div class="radio" onchange="radioChanged()">
                     <span class="textLabel radioFieldQuery">Vad vill du bli?</span>
                     <div class="radioField">
-                        <input type="radio" id="designer" value="designer">
+                        <input name="desire" type="radio" id="designer" value="designer">
                         <label class="radioQuery" for="designer">Designer</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" id="salesman" value="försäljare">
+                        <input name="desire"type="radio" id="salesman" value="försäljare">
                         <label class="radioQuery" for="salesman">Försäljare</label>
                     </div>
                     <div class="radioField">
-                        <input type="radio" id="other" value="annat">
+                        <input name="desire" type="radio" id="other" value="annat">
                         <label class="radioQuery" for="other">Annat</label>
                     </div>
                 </div>
                 <div class="field reasonOther">
-                    <input class="textInput" type="text" id="otherDesire">
+                    <input name="desire" class="textInput" type="text" id="otherDesire">
                     <label class="textQuery" for="otherDesire">
                         <span class="textLabel labelThree">Vad vill du bli?</span>
                     </label>
