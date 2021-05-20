@@ -141,7 +141,7 @@ a {
 .imgFrame {
 	position: absolute;
 	top: calc(55% - 215px);
-	left: calc(25% - 175px);
+	left: calc(20% - 140px);
 }
 .productImg {
 	padding-top: 30px;
