@@ -273,12 +273,6 @@ a {
 	.logoText {
 		font: italic 700 40px sans-serif;
 	}
-	.smallParagraph {
-		position: inherit;
-	}
-	.parOne {
-		margin-top: inherit;
-	}
 	.slideshowDiv{
 		right: inherit;
 		width: 95%;
@@ -288,5 +282,25 @@ a {
 	}
 	.productImg {
 		width: 100%
+	}
+	.smallParagraph {
+		position: inherit;
+		width: 90%;
+		text-align: center;
+		margin: auto;
+	}
+	.parOne {
+		margin-top: inherit;
+	}
+	.parTwo {
+		padding-bottom: 300px;
+	}
+	.paragraph {
+		width: 90%;
+		font-size: 15px;
+	}
+	.big {
+		font: 700 30px sans-serif;
+		padding-bottom: 20px;
 	}
 }
