@@ -289,6 +289,9 @@ a {
 		text-align: center;
 		margin: auto;
 	}
+	.paragraphHeader {
+		font: 700 30px sans-serif;
+	}
 	.parOne {
 		margin-top: inherit;
 	}
@@ -300,7 +303,6 @@ a {
 		font-size: 15px;
 	}
 	.big {
-		font: 700 30px sans-serif;
 		padding-bottom: 20px;
 	}
 }
