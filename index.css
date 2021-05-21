@@ -244,6 +244,9 @@ a {
 	padding-bottom: 10px;
 }
 @media screen and (max-width: 1050px) {
+	span {
+		font-weight: 700;
+	}
 	.topLogoTextDiv {
 		left: 15px;
 		padding-top: 15px;
@@ -303,6 +306,6 @@ a {
 		font-size: 15px;
 	}
 	.big {
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 	}
 }

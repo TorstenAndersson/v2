@@ -310,7 +310,7 @@ products = json.loads('''
             "onDisplay":"False"
         },{
             "name":"Johans Hoodie",
-            "description":"Ett plagg för alla som någonsin känt kyla.",
+            "description":"Ett plagg för alla väder.",
             "price":{
                 "discount":{
                     "price":"349,99 kr",
