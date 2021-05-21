@@ -285,21 +285,21 @@ a {
 	}
 	.smallParagraph {
 		position: inherit;
-		width: 90%;
+		width: 95%;
 		text-align: center;
 		margin: auto;
 	}
 	.paragraphHeader {
-		font: 700 30px sans-serif;
+		font: 700 30px Helvetica;
 	}
 	.parOne {
-		margin-top: inherit;
+		margin-top: 50px;
 	}
 	.parTwo {
 		padding-bottom: 300px;
 	}
 	.paragraph {
-		width: 90%;
+		width: 95%;
 		font-size: 15px;
 	}
 	.big {
