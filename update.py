@@ -414,7 +414,7 @@ for product in onDisplay:
         product["price"]["discount"]
         discount = ('''
                             <span class="discountReason">''' + product["price"]["discount"]["reason"] + '</span>', product["price"]["discount"]["price"], '''
-                            <span class="price line">''' + product["price"]["original"] + '</span>')
+                            <span class="line">''' + product["price"]["original"] + '</span>')
     except KeyError:
         discount = ("", product["price"]["original"], "")
     #visibility = "hidden" if product["price"]["discount"]["reason"] == "" else "visible"
@@ -426,7 +426,7 @@ for product in onDisplay:
                             <span class="slideshowHeader">''' + product["name"] + '''</span>
                             <span class="slideshowMainText">''' + product["description"] + '''</span>
                             <div class="slideshowPriceText">
-                                <span class="price">''' + discount[1] + "</span>" + discount[2] + '''
+                                <span>''' + discount[1] + "</span>" + discount[2] + '''
                             </div>
                         </a>
                     </div>'''
@@ -446,7 +446,7 @@ files["index"] = '''<!DOCTYPE html>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="index.css">''' + preconnect + preconnects.replace('''
         <link rel="preconnect" href="/index">''', "") + '''
 		<script src="index.js"></script>
