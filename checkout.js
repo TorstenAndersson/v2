@@ -38,7 +38,7 @@ function pageLoaded() {
             }
         });
 
-        card.mount("main");
+        card.mount(".pageContent");
     })
     .then(function(result) {
         if (result.error) {
