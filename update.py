@@ -972,7 +972,7 @@ files["kundvagn"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="keepShopping">Fortsätt shoppa</span>
                     </a>
-                    <button class="button finishButton" onclick="buy()">Fortsätt till kassan</button>
+                    <!--- <button class="button finishButton" onclick="buy()">Fortsätt till kassan</button> -->
                 </div>
             </div>
         </main>
