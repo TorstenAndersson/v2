@@ -914,6 +914,7 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <link rel="preconnect" href="/checkout.html">''' + preconnects.replace('''
         <link rel="preconnect" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
     </head>
 
     <body onload="pageLoaded()" onscroll="pageScrolled()">
