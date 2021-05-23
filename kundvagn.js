@@ -172,8 +172,7 @@ function buy() {
         // Create a new Checkout Session using the server-side endpoint you
         // created in step 3.
 		fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
-			method: "POST",
-			mode: "no-cors"
+			method: "POST"
 		})
 		.then(function(response) {
 			return response.json();
