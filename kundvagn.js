@@ -70,6 +70,7 @@ function pageLoaded() {
 		footer.style.width = "100%";
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	buy();
 }
 
 let isScrolled = false;
@@ -182,7 +183,7 @@ function buy() {
 		.then(function(response) {
 			return response.json();
 		})
-		.then(function(session) {
+		.then(function(data) {
 			var elements = stripe.elements();
 
 			var card = elements.create("card", {
