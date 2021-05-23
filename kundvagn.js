@@ -166,14 +166,15 @@ function removeItem(sender) {
 }
 
 function buy() {
-	var stripe = Stripe('pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T');
+	var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
     var checkoutButton = document.querySelector(".finishButton");
 
     checkoutButton.addEventListener('click', function() {
         // Create a new Checkout Session using the server-side endpoint you
         // created in step 3.
-		fetch('https://johanssudd-checkout.herokuapp.com/create-checkout-session', {
-			method: 'POST',
+		fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
+			method: "POST",
+			mode: "no-cors",
 		})
 		.then(function(response) {
 			return response.json();
@@ -190,7 +191,7 @@ function buy() {
 			}
 		})
 		.catch(function(error) {
-			console.error('Error:', error);
+			console.error("Error:", error);
 		});
     });
 }
