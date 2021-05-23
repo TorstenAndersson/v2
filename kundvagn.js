@@ -166,8 +166,7 @@ function removeItem(sender) {
 }
 
 function buy() {
-	var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
-
+	/*
     fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
         method: "POST",
     })
@@ -175,7 +174,7 @@ function buy() {
         return response.json();
     })
     .then(function (session) {
-        return stripe.redirectToCheckout({ sessionId: session.id });
+        return Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T").redirectToCheckout({ sessionId: session.id });
     })
     .then(function (result) {
         if (result.error) {
@@ -185,4 +184,6 @@ function buy() {
     .catch(function (error) {
         console.error("Error:", error);
     });
+	*/
+	window.location.href = "/checkout.html"
 }
