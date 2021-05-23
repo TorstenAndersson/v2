@@ -70,6 +70,7 @@ function pageLoaded() {
 		footer.style.width = "100%";
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+	buy();
 }
 
 let isScrolled = false;
@@ -166,30 +167,5 @@ function removeItem(sender) {
 }
 
 function buy() {
-    var checkoutButton = document.querySelector(".finishButton");
-
-    checkoutButton.addEventListener('click', function() {
-        // Create a new Checkout Session using the server-side endpoint you
-        // created in step 3.
-		fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
-			method: "POST",
-		})
-		.then(function(response) {
-			return response.json();
-		})
-		.then(function(session) {
-			return Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T").redirectToCheckout({ sessionId: session.id });
-		})
-		.then(function(result) {
-			// If `redirectToCheckout` fails due to a browser or network
-			// error, you should display the localized error message to your
-			// customer using `error.message`.
-			if (result.error) {
-				alert(result.error.message);
-			}
-		})
-		.catch(function(error) {
-			console.error("Error:", error);
-		});
-    });
+	window.location.href = "/checkout.html"
 }

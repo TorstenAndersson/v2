@@ -1,0 +1,103 @@
+@font-face {
+	font-family: "Raleway";
+	font-display: block;;
+	src: url(/fonts/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff);
+}
+@font-face {
+	font-family: "Open Sans";
+	font-display: block;;
+	src: url(/fonts/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2);
+}
+body {
+	margin: 0px;
+}
+.navigationBar {
+	position: absolute;
+	top: 30px;
+	width: 100%;
+	height: 80px;
+}
+span {
+	font-family: "Open Sans", serif;
+}
+.topLogoTextDiv {
+	z-index: 2;
+	display: inline;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	padding-top: 10px;
+}
+.topLogoText {
+	color: rgba(255, 255, 255, .9);
+	font: 700 35px "Open Sans";
+}
+.topTextDiv {
+	z-index: 2;
+	display: inline;
+	position: absolute;
+	top: 6.5%;
+	right: 10%;
+	padding-top: 25px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.topText {
+	z-index: 2;
+	color: rgb(110, 110, 110);
+	font-size: 14px;
+	font-family: "Raleway";
+	letter-spacing: .75px;
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	transition: color .3s ease;
+}
+.topText:hover {
+	color:rgb(0, 0, 0)
+}
+.verticalLine {
+	background-color: rgb(110, 110, 110);
+	display: inline;
+	height: 30px;
+	position: absolute;
+	margin-top: -5px;
+	width: 1px;
+}
+.jobbText {
+	padding-right: 18px;
+}
+.cartText {
+	padding-right: 5px;
+	padding-left: 25px;
+}
+.cartIcon {
+	position: absolute;
+	margin-top: -5px;
+}
+.cartNumber {
+	position: absolute;
+	display: none;
+	font-size: 11px;
+	font-family: "Open Sans";
+	line-height: 16px;
+	margin-left: 12px;
+	background-color: rgb(70, 70, 70);
+	color: rgb(255, 255, 255);
+	border-radius: 100%;
+	padding: 2px 5px;
+	min-width: 10px;
+	text-align: center;
+	margin-top: 6px;
+}
+.footerText {
+	position: absolute;
+	bottom: 8px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: rgb(110, 110, 110);
+	font-size: 13px;
+}
