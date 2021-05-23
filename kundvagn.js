@@ -70,7 +70,6 @@ function pageLoaded() {
 		footer.style.width = "100%";
 	}
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
-	buy();
 }
 
 let isScrolled = false;
