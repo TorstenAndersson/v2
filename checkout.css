@@ -92,6 +92,10 @@ a {
 	text-align: center;
 	margin-top: 6px;
 }
+.pageContent {
+	text-align: center;
+	padding-top: 50px;
+}
 .footerText {
 	position: absolute;
 	bottom: 8px;
