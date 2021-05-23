@@ -913,6 +913,7 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <link rel="stylesheet" href="/kundvagn.css">''' + preconnects.replace('''
         <link rel="preconnect" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
     </head>
 
     <body onload="pageLoaded()" onscroll="pageScrolled()">
@@ -971,7 +972,7 @@ files["kundvagn"] = '''<!DOCTYPE html>
                     <a href="/">
                         <span class="keepShopping">Fortsätt shoppa</span>
                     </a>
-                    <button class="button finishButton">Fortsätt till kassan</button>
+                    <button class="button finishButton" onclick="buy()">Fortsätt till kassan</button>
                 </div>
             </div>
         </main>
