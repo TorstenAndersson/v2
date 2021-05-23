@@ -13,12 +13,12 @@ function pageLoaded() {
         headers: {
             "Content-Type": "application/json"
         },
-            body: localStorage["cart"]
+        body: localStorage["cart"]
     })
-    .then(function(response) {
+    .then((response) => {
         return response.json();
     })
-    .then(function(data) {
+    .then((data) => {
         var elements = stripe.elements();
 
             var card = elements.create("card", {
@@ -40,12 +40,12 @@ function pageLoaded() {
 
         card.mount(".paymentDiv");
     })
-    .then(function(result) {
+    .then((result) => {
         if (result.error) {
             alert(result.error.message);
         }
     })
-    .catch(function(error) {
+    .catch((error) => {
         console.error("Error:", error);
     });
 
