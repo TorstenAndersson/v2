@@ -166,7 +166,6 @@ function removeItem(sender) {
 }
 
 function buy() {
-	var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
     var checkoutButton = document.querySelector(".finishButton");
 
     checkoutButton.addEventListener('click', function() {
@@ -174,13 +173,13 @@ function buy() {
         // created in step 3.
 		fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
 			method: "POST",
-			mode: "no-cors",
+			mode: "no-cors"
 		})
 		.then(function(response) {
 			return response.json();
 		})
 		.then(function(session) {
-			return stripe.redirectToCheckout({ sessionId: session.id });
+			return Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T").redirectToCheckout({ sessionId: session.id });
 		})
 		.then(function(result) {
 			// If `redirectToCheckout` fails due to a browser or network
