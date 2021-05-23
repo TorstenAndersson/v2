@@ -910,7 +910,8 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/kundvagn.css">''' + preconnects.replace('''
+        <link rel="stylesheet" href="/kundvagn.css">
+        <link rel="preconnect" href="/checkout.html">''' + preconnects.replace('''
         <link rel="preconnect" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
@@ -1119,8 +1120,7 @@ for product in products["products"]:
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/product.css">
-        <link rel="preconnect" href="/kundvagn">''' + prefetchImgs + preconnects + '''
+        <link rel="stylesheet" href="/product.css">''' + prefetchImgs + preconnects + '''
         <script src="/product.js"></script>
     </head>
 
