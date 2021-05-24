@@ -10,7 +10,6 @@ function pageLoaded() {
 
     fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
         method: "POST",
-        mode: "cors",
         headers: {
             "Content-Type": "application/json"
         },
