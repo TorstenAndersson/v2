@@ -133,6 +133,10 @@ form {
 	right: 7%;
 	width: 30%;
 }
+.orderOverview {
+	display: block;
+	font: 700 25px "Open Sans";
+}
 .footerText {
 	position: absolute;
 	bottom: 8px;
