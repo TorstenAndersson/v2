@@ -140,6 +140,11 @@ form {
 	font: 700 25px "Open Sans";
 	padding-top: 10px;
 }
+.productCost {
+	position: absolute;
+	right: 15px;
+	margin-top: 25px;
+}
 .footerText {
 	position: absolute;
 	bottom: 8px;
