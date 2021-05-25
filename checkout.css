@@ -128,6 +128,11 @@ form {
 	box-sizing: content-box;
 	font-family: "Open Sans";
 }
+.rightSide {
+	position: absolute;
+	right: 7%;
+	width: 30%;
+}
 .footerText {
 	position: absolute;
 	bottom: 8px;
