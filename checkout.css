@@ -132,8 +132,6 @@ form {
 	position: absolute;
 	right: 7%;
 	width: 30%;
-	background-color: rgb(250, 250, 250);
-	border: 1px solid rgb(235, 235, 235);
 }
 .orderOverview {
 	display: block;
