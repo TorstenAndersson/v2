@@ -104,6 +104,14 @@ form {
     text-align: left;
 	margin-top: 100px;
 }
+.field {
+	padding-bottom: 35px;
+}
+.textQuery {
+	display: block;
+	font-family: "Open Sans";
+	padding-bottom: 5px;
+}
 .footerText {
 	position: absolute;
 	bottom: 8px;
