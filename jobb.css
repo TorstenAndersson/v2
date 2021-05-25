@@ -223,7 +223,8 @@ form input[type="radio"] {
 	display: none;
 }
 .textarea {
-	height: 28px;
+	box-sizing: content-box;
+	height: 42px;
 	border-bottom: 1px solid black;
 	padding-top: 11px;
 	resize: none;
