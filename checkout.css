@@ -120,8 +120,9 @@ form {
 	padding: 8px 16px;
 }
 .countrySelect {
+	box-sizing: border-box;
 	width: calc(100% + 36px);
-	height: 40px;
+	height: 20px;
 	font-family: "Open Sans";
 	padding: 8px;
 }
