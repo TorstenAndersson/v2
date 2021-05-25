@@ -1,10 +1,5 @@
 function pageLoaded() {
-	if (localStorage["cart"] !== "{}" && localStorage["cart"] !== undefined) {
-		document.querySelector(".cartNumber").style.display = "inline-block";
-		document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
-	} else {
-		document.querySelector(".cartNumber").style.display = "none";
-	}
+	document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
 
     var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
 
