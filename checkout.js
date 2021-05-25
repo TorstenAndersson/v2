@@ -33,7 +33,7 @@ function pageLoaded() {
             }
         });
 
-        card.mount(".paymentDiv");
+        card.mount(".cardInput");
     })
     .then((result) => {
         if (result.error) {
