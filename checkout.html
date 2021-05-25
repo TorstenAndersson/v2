@@ -50,7 +50,7 @@
         </nav>
         <main class="pageContent">
             <span class="infoText">Leveransinfomation</span>
-            <form>
+            <form id="shippingForm">
                 <div class="field">
                     <label class="textQuery" for="name">Namn</label>
                     <input class="textInput" type="text" id="name" name="name" required>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="field">
                     <label class="textQuery" for="country">Land</label>
-                    <select class="countrySelect">
+                    <select class="countrySelect" name="country" id="country" form="shippingForm">
                         <option>Afghanistan</option>
                         <option>Åland Islands</option>
                         <option>Albania</option>
@@ -73,7 +73,7 @@
                         <option>American Samoa</option>
                         <option>Andorra</option>
                         <option>Angola</option>
-                         <option>Anguilla</option>
+                        <option>Anguilla</option>
                         <option>Antarctica</option>
                         <option>Antigua and Barbuda</option>
                         <option>Argentina</option>

@@ -121,6 +121,9 @@ form {
 }
 .countrySelect {
 	width: calc(100% + 36px);
+	height: 40px;
+	font-family: "Open Sans";
+	padding: 8px;
 }
 .footerText {
 	position: absolute;
