@@ -92,17 +92,19 @@ a {
 	text-align: center;
 	margin-top: 130px;
 }
-.infoText {
+.leftSide {
 	position: absolute;
 	left: 10%;
+	width: 30%;
+}
+.infoText {
+	position: absolute;
 	font: 700 25px "Open Sans";
 	color: rgb(47, 47, 47);
 }
 form {
-	position: relative;
-	right: 25%;
 	display: inline-block;
-    width: 30%;
+    width: 100%;
     text-align: left;
 	margin-top: 60px;
 }
