@@ -42,9 +42,11 @@ function pageLoaded() {
             alert(result.error.message);
         }
     })
+    /*
     .catch((error) => {
         console.error("Error:", error);
     });
+    */
 
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
