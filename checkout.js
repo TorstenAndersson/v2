@@ -38,8 +38,12 @@ function pageLoaded() {
         card.mount(".cardInput");
     })
     .then((result) => {
+        try {
         if (result.error) {
             alert(result.error.message);
+            }
+        } catch {
+            console.log("error här");
         }
     })
     /*
