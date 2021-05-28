@@ -57,6 +57,7 @@ function pageLoaded() {
 
 function swish() {
     fetch("https://johanssudd-checkout.herokuapp.com/swish", {
-        method: "POST"
+        method: "POST",
+        mode: "no-cors"
     }).then(data => data.json()).then(response => console.log(response));
 }
