@@ -48,5 +48,7 @@ function pageLoaded() {
 }
 
 function swish() {
-    fetch("https://mss.cpc.getswish.net/swish-cpcapi/api/v1/paymentrequests/11A86BE70EA346E4B1C39C874173F088")
+    fetch("https://johanssudd-checkout.herokuapp.com/swish", {
+        method: "POST"
+    }).then(json => json.json).then(response => console.log(response))
 }
