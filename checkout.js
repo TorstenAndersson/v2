@@ -33,6 +33,8 @@ function pageLoaded() {
             }
         });
 
+        console.log(data)
+
         card.mount(".cardInput");
     })
     .then((result) => {
@@ -50,5 +52,5 @@ function pageLoaded() {
 function swish() {
     fetch("https://johanssudd-checkout.herokuapp.com/swish", {
         method: "POST"
-    }).then(json => json.json).then(response => console.log(response))
+    }).then(json => json.json).then(response => console.log(response));
 }
