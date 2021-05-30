@@ -148,7 +148,7 @@ form {
 	padding: 5px;
 }
 .cardInput {
-	display: none;
+	/* display: none; */
 }
 .footerText {
 	position: absolute;
