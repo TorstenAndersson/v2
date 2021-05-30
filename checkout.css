@@ -144,6 +144,9 @@ form {
 .or {
 	padding: 10px;
 }
+.swishImg {
+	padding: 5px;
+}
 .cardInput {
 	display: none;
 }
