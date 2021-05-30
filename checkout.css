@@ -143,6 +143,9 @@ form {
 	right: 15px;
 	margin-top: 25px;
 }
+.or {
+	display: block;
+}
 .footerText {
 	position: absolute;
 	bottom: 8px;
