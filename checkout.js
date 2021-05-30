@@ -1,9 +1,26 @@
 var stripe = Stripe("pk_test_51I8YS7FmFajbaU3guxyTwpwjK9375H8qLBZkJ5UzO3sPJ6T2vTs2DnrwL1MN7x34wl5xwSWQ1mTO01TxYMMA9icx003KqkJtcC");
 var secret;
-var card;
+var card = stripe.elements().create("card", {
+    base: {
+        color: "#32325d",
+        fontFamily: 'Arial, sans-serif',
+        fontSmoothing: "antialiased",
+        fontSize: "16px",
+        "::placeholder": {
+            color: "#32325d"
+        }
+    },
+    invalid: {
+    fontFamily: 'Arial, sans-serif',
+    color: "#fa755a",
+    iconColor: "#fa755a"
+    }
+});
 
 function pageLoaded() {
 	document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
+
+    card.mount(".cardInput");
 
     fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
         method: "POST",
@@ -18,28 +35,7 @@ function pageLoaded() {
     .then((data) => {
         secret = data.clientSecret;
 
-        var elements = stripe.elements();
-
-        card = elements.create("card", {
-            base: {
-                color: "#32325d",
-                fontFamily: 'Arial, sans-serif',
-                fontSmoothing: "antialiased",
-                fontSize: "16px",
-                "::placeholder": {
-                    color: "#32325d"
-                }
-            },
-            invalid: {
-            fontFamily: 'Arial, sans-serif',
-            color: "#fa755a",
-            iconColor: "#fa755a"
-            }
-        });
-
-    console.log(data)
-
-    card.mount(".cardInput");
+        console.log(data)
     })
     .then((result) => {
         try {
