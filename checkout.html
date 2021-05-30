@@ -329,9 +329,12 @@
                 <span>299,98 kr</span>
                 <div class="paymentDiv">
                     <div class="paymentMethod">
-                        <button onclick="payWithCard()">Betala med kort</button>
+                        <span class="choose">Välj betalsätt</span>
+                        <button onclick="payWithCard()">Kort</button>
                         <span class="or">Eller</span>
-                        <button onclick='pay("swish")'>Swisha</button>
+                        <button onclick='pay("swish")'>
+                            <img src="/imgs/Website/Swish Icon.webp" width="400px">
+                        </button>
                     </div>
                     <div class="cardInput">
                         <button onclick='pay("card")'>Slutför order</button>

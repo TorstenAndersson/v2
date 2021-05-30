@@ -138,6 +138,9 @@ form {
 	font: 700 25px "Open Sans";
 	padding-top: 10px;
 }
+.choose {
+	display: block;
+}
 .or {
 	padding: 10px;
 }

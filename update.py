@@ -479,7 +479,7 @@ files["index"] = '''<!DOCTYPE html>
                         <span class="cartNumber"></span>
 					</a>
                     <a>
-                        <img class="menuIcon" src="/imgs/website/idk.webp" width="30px" height="30px">
+                        <img class="menuIcon" src="/imgs/website/menu.webp" width="30px" height="30px">
                     </a>
 				</div>
 			</div>
