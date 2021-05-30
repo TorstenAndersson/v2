@@ -399,15 +399,15 @@ files = {
     "kundvagn": ""
 }
 
-preconnects = ""
+prefetchs = ""
 for file in files:
-    preconnects += '''
-        <link rel="preconnect" href="/''' + urllib.parse.quote(file) + '">'
+    prefetchs += '''
+        <link rel="prefetch" href="/''' + urllib.parse.quote(file) + '">'
 
 # index.html
 
 onDisplayDiv = ""
-preconnect = ""
+prefetch = ""
 i = 0
 for product in onDisplay:
     try:
@@ -431,8 +431,8 @@ for product in onDisplay:
                         </a>
                     </div>'''
 
-    preconnect += '''
-        <link rel="preconnect" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">'
+    prefetch += '''
+        <link rel="prefetch" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -445,8 +445,8 @@ files["index"] = '''<!DOCTYPE html>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-		<link rel="stylesheet" href="index.css">''' + preconnect + preconnects.replace('''
-        <link rel="preconnect" href="/index">''', "") + '''
+		<link rel="stylesheet" href="index.css">''' + prefetch + prefetchs.replace('''
+        <link rel="prefetch" href="/index">''', "") + '''
 		<script src="index.js"></script>
 	</head>
 
@@ -527,8 +527,8 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="om oss.css">''' + preconnects.replace('''
-        <link rel="preconnect" href="/om%20oss">''', "") + '''
+        <link rel="stylesheet" href="om oss.css">''' + prefetchs.replace('''
+        <link rel="prefetch" href="/om%20oss">''', "") + '''
         <script src="om oss.js"></script>
     </head>
 
@@ -599,7 +599,7 @@ files["om oss"] = '''<!DOCTYPE html>
 # sudd.html
 
 suddDiv = ""
-preconnect = ""
+prefetch = ""
 i = 0
 for product in sudd:
     """
@@ -630,8 +630,8 @@ for product in sudd:
                     </a>
                 </div>'''
 
-    preconnect += '''
-        <link rel="preconnect" href="/sudd/''' + urllib.parse.quote(product["name"].lower()) + '">'
+    prefetch += '''
+        <link rel="prefetch" href="/sudd/''' + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -644,8 +644,8 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + preconnect + preconnects.replace('''
-        <link rel="preconnect" href="/sudd">''', "") + '''
+        <link rel="stylesheet" href="products.css">''' + prefetch + prefetchs.replace('''
+        <link rel="prefetch" href="/sudd">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -694,7 +694,7 @@ files["sudd"] = '''<!DOCTYPE html>
 # merchandise.html
 
 merchandiseDiv = ""
-preconnect = ""
+prefetch = ""
 i = 0
 for product in merchandise:
     #(visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
@@ -717,8 +717,8 @@ for product in merchandise:
                     </a>
                 </div>'''
 
-    preconnect += '''
-        <link rel="preconnect" href="/merchandise/''' + urllib.parse.quote(product["name"].lower()) + '">'
+    prefetch += '''
+        <link rel="prefetch" href="/merchandise/''' + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -731,8 +731,8 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + preconnect + preconnects.replace('''
-        <link rel="preconnect" href="/merchandise">''', "") + '''
+        <link rel="stylesheet" href="products.css">''' + prefetch + prefetchs.replace('''
+        <link rel="prefetch" href="/merchandise">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -789,8 +789,8 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="jobb.css">''' + preconnects.replace('''
-        <link rel="preconnect" href="/jobb">''', "") + '''
+        <link rel="stylesheet" href="jobb.css">''' + prefetchs.replace('''
+        <link rel="prefetch" href="/jobb">''', "") + '''
         <script src="jobb.js"></script>
     </head>
 
@@ -911,8 +911,8 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
         <link rel="stylesheet" href="/kundvagn.css">
-        <link rel="preconnect" href="/checkout.html">''' + preconnects.replace('''
-        <link rel="preconnect" href="/kundvagn">''', "") + '''
+        <link rel="prefetch" href="/checkout.html">''' + prefetchs.replace('''
+        <link rel="prefetch" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
     </head>
 
@@ -1119,7 +1119,7 @@ for product in products["products"]:
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/product.css">''' + prefetchImgs + preconnects + '''
+        <link rel="stylesheet" href="/product.css">''' + prefetchImgs + prefetchs + '''
         <script src="/product.js"></script>
     </head>
 
