@@ -68,6 +68,9 @@ function pay(method) {
                 card: card
             }
         })
+        .then((result) => {
+            console.log(result)
+        })
     } else {
         fetch("https://johanssudd-checkout.herokuapp.com/swish", {
             method: "POST",
