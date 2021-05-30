@@ -59,17 +59,19 @@ function pageLoaded() {
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
-function pay() {
-    stripe.confirmCardPayment(secret, {
-        payment_method: {
-            card: card
-        }
-    })
-}
+function pay(method) {
+    document.querySelector("form").submit();
 
-function swish() {
-    fetch("https://johanssudd-checkout.herokuapp.com/swish", {
-        method: "POST",
-        mode: "no-cors"
-    }).then(data => data.json()).then(response => console.log(response));
+    if (method === "card") {
+        stripe.confirmCardPayment(secret, {
+            payment_method: {
+                card: card
+            }
+        })
+    } else {
+        fetch("https://johanssudd-checkout.herokuapp.com/swish", {
+            method: "POST",
+            mode: "no-cors"
+        }).then(data => data.json()).then(response => console.log(response));
+    }
 }
