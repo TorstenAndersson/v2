@@ -328,11 +328,14 @@
                 <span>GRATIS FRAKT</span>
                 <span>299,98 kr</span>
                 <div class="paymentDiv">
-                    <img src="">
-                    <div class="cardInput"></div>
-                    <button onclick='pay("card")'>Betala nu</button>
-                    <span class="or">Eller</span>
-                    <button onclick='pay("swish")'>Swisha</button>
+                    <div class="paymentMethod">
+                        <button onclick="payWithCard()">Betala med kort</button>
+                        <span class="or">Eller</span>
+                        <button onclick='pay("swish")'>Swisha</button>
+                    </div>
+                    <div class="cardInput">
+                        <button onclick='pay("card")'>Slutför order</button>
+                    </div>
                 </div>
             </div>
         </main>

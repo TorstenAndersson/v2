@@ -59,6 +59,10 @@ function pageLoaded() {
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
 }
 
+function payWithCard() {
+    document.querySelector(".cardInput").style.display = "block";
+}
+
 function pay(method) {
     document.querySelector("form").submit();
 
