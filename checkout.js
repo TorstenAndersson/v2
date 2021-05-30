@@ -1,4 +1,4 @@
-var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
+var stripe = Stripe("pk_test_51I8YS7FmFajbaU3guxyTwpwjK9375H8qLBZkJ5UzO3sPJ6T2vTs2DnrwL1MN7x34wl5xwSWQ1mTO01TxYMMA9icx003KqkJtcC");
 var secret;
 var card;
 
