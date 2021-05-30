@@ -1,7 +1,9 @@
+var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
+var secret;
+var card;
+
 function pageLoaded() {
 	document.querySelector(".cartNumber").innerText = Object.values(JSON.parse(localStorage["cart"])).reduce((a, b) => +a + +b);
-
-    var stripe = Stripe("pk_live_51I8YS7FmFajbaU3gjKHq59q1DNr1jGYHOAmfYfNNfWqY9gIP8NxqQQDYSRN4xYK3fSDe64KuGF07l7DKEDj9fU4x00GlOzB59T");
 
     fetch("https://johanssudd-checkout.herokuapp.com/create-checkout-session", {
         method: "POST",
@@ -14,9 +16,11 @@ function pageLoaded() {
         return response.json();
     })
     .then((data) => {
+        secret = data.clientSecret;
+
         var elements = stripe.elements();
 
-            var card = elements.create("card", {
+        card = elements.create("card", {
             base: {
                 color: "#32325d",
                 fontFamily: 'Arial, sans-serif',
@@ -33,9 +37,9 @@ function pageLoaded() {
             }
         });
 
-        console.log(data)
+    console.log(data)
 
-        card.mount(".cardInput");
+    card.mount(".cardInput");
     })
     .then((result) => {
         try {
@@ -45,7 +49,7 @@ function pageLoaded() {
         } catch {
             console.log("error här");
         }
-    })
+    });
     /*
     .catch((error) => {
         console.error("Error:", error);
@@ -53,6 +57,14 @@ function pageLoaded() {
     */
 
 	document.querySelector(".footerText").innerText = "Copyright © " + new Date().getFullYear().toString() + " Johanssudd. All Rights Reserved";
+}
+
+function pay() {
+    stripe.confirmCardPayment(secret, {
+        payment_method: {
+            card: card
+        }
+    })
 }
 
 function swish() {
