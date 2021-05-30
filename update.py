@@ -399,15 +399,15 @@ files = {
     "kundvagn": ""
 }
 
-prefetchs = ""
+prerenders = ""
 for file in files:
-    prefetchs += '''
-        <link rel="prefetch" href="/''' + urllib.parse.quote(file) + '">'
+    prerenders += '''
+        <link rel="prerender" href="/''' + urllib.parse.quote(file) + '">'
 
 # index.html
 
 onDisplayDiv = ""
-prefetch = ""
+prerender = ""
 i = 0
 for product in onDisplay:
     try:
@@ -431,8 +431,8 @@ for product in onDisplay:
                         </a>
                     </div>'''
 
-    prefetch += '''
-        <link rel="prefetch" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">'
+    prerender += '''
+        <link rel="prerender" href="/''' + product["type"] + "/" + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -445,8 +445,8 @@ files["index"] = '''<!DOCTYPE html>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-		<link rel="stylesheet" href="index.css">''' + prefetch + prefetchs.replace('''
-        <link rel="prefetch" href="/index">''', "") + '''
+		<link rel="stylesheet" href="index.css">''' + prerender + prerenders.replace('''
+        <link rel="prerender" href="/index">''', "") + '''
 		<script src="index.js"></script>
 	</head>
 
@@ -527,8 +527,8 @@ files["om oss"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="om oss.css">''' + prefetchs.replace('''
-        <link rel="prefetch" href="/om%20oss">''', "") + '''
+        <link rel="stylesheet" href="om oss.css">''' + prerenders.replace('''
+        <link rel="prerender" href="/om%20oss">''', "") + '''
         <script src="om oss.js"></script>
     </head>
 
@@ -599,7 +599,7 @@ files["om oss"] = '''<!DOCTYPE html>
 # sudd.html
 
 suddDiv = ""
-prefetch = ""
+prerender = ""
 i = 0
 for product in sudd:
     """
@@ -630,8 +630,8 @@ for product in sudd:
                     </a>
                 </div>'''
 
-    prefetch += '''
-        <link rel="prefetch" href="/sudd/''' + urllib.parse.quote(product["name"].lower()) + '">'
+    prerender += '''
+        <link rel="prerender" href="/sudd/''' + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -644,8 +644,8 @@ files["sudd"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + prefetch + prefetchs.replace('''
-        <link rel="prefetch" href="/sudd">''', "") + '''
+        <link rel="stylesheet" href="products.css">''' + prerender + prerenders.replace('''
+        <link rel="prerender" href="/sudd">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -694,7 +694,7 @@ files["sudd"] = '''<!DOCTYPE html>
 # merchandise.html
 
 merchandiseDiv = ""
-prefetch = ""
+prerender = ""
 i = 0
 for product in merchandise:
     #(visibility, display) = ("hidden", "none") if product["price"]["discount"]["reason"] == "" else ("visible", "initial")
@@ -717,8 +717,8 @@ for product in merchandise:
                     </a>
                 </div>'''
 
-    prefetch += '''
-        <link rel="prefetch" href="/merchandise/''' + urllib.parse.quote(product["name"].lower()) + '">'
+    prerender += '''
+        <link rel="prerender" href="/merchandise/''' + urllib.parse.quote(product["name"].lower()) + '">'
 
     i += 1
 
@@ -731,8 +731,8 @@ files["merchandise"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="products.css">''' + prefetch + prefetchs.replace('''
-        <link rel="prefetch" href="/merchandise">''', "") + '''
+        <link rel="stylesheet" href="products.css">''' + prerender + prerenders.replace('''
+        <link rel="prerender" href="/merchandise">''', "") + '''
         <script src="products.js"></script>
     </head>
 
@@ -789,8 +789,8 @@ files["jobb"] = '''<!DOCTYPE html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp">
-        <link rel="stylesheet" href="jobb.css">''' + prefetchs.replace('''
-        <link rel="prefetch" href="/jobb">''', "") + '''
+        <link rel="stylesheet" href="jobb.css">''' + prerenders.replace('''
+        <link rel="prerender" href="/jobb">''', "") + '''
         <script src="jobb.js"></script>
     </head>
 
@@ -911,8 +911,8 @@ files["kundvagn"] = '''<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
         <link rel="stylesheet" href="/kundvagn.css">
-        <link rel="prefetch" href="/checkout.html">''' + prefetchs.replace('''
-        <link rel="prefetch" href="/kundvagn">''', "") + '''
+        <link rel="prerender" href="/checkout.html">''' + prerenders.replace('''
+        <link rel="prerender" href="/kundvagn">''', "") + '''
         <script src="/kundvagn.js"></script>
     </head>
 
@@ -997,7 +997,7 @@ for product in products["products"]:
     if not os.path.exists(path):
         open(path, "x")
 
-    prefetchImgs = ""
+    prerenderImgs = ""
     variantDiv = ""
     try:
         product["variants"]
@@ -1038,8 +1038,8 @@ for product in products["products"]:
                 exec(result)
 
                 for variant in variantCombination.split(";")[:-1]:
-                    prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + " " + perspective) + '.webp"' + ''' as="image">'''
+                    prerenderImgs += '''
+        <link rel="prerender" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + " " + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -1047,8 +1047,8 @@ for product in products["products"]:
     except KeyError:
         try:
             for perspective in product["perspectives"]:
-                    prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + perspective) + '.webp"' + ''' as="image">'''
+                    prerenderImgs += '''
+        <link rel="prerender" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -1098,8 +1098,8 @@ for product in products["products"]:
             exec(result)
 
             for variant in variantCombination.split(";")[:-1]:
-                prefetchImgs += '''
-        <link rel="prefetch" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant) + '.webp"' + ''' as="image">'''
+                prerenderImgs += '''
+        <link rel="prerender" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -1119,7 +1119,7 @@ for product in products["products"]:
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/imgs/website/Johan%20Favicon.webp" type="icon/gif">
-        <link rel="stylesheet" href="/product.css">''' + prefetchImgs + prefetchs + '''
+        <link rel="stylesheet" href="/product.css">''' + prerenderImgs + prerenders + '''
         <script src="/product.js"></script>
     </head>
 

@@ -50,10 +50,10 @@ function pageLoaded() {
 			//totalText.innerText = (parseFloat(item.split(">")[4].replace(",", ".")) * +items[item]).toString().replace(".", ",") + " kr";
 			document.querySelector(".pageContent").insertBefore(productFrame, document.querySelector(".finishDiv"));
 			
-			let prefetch = document.createElement("link");
-			prefetch.rel = "prefetch";
-			prefetch.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
-			document.querySelector("head").insertBefore(prefetch, document.querySelector('link[rel="prefetch"]'));
+			let prerender = document.createElement("link");
+			prerender.rel = "prerender";
+			prerender.href = "/" + item.split(">")[0] + "/" + encodeURI(item.split(">")[1].toLowerCase());
+			document.querySelector("head").insertBefore(prerender, document.querySelector('link[rel="prerender"]'));
 		}
 		let sum = 0;
 		Array.from(document.querySelectorAll(".totalText")).forEach(element => sum += +element.innerText.slice(0, -3).replace(",", "."));
