@@ -147,9 +147,11 @@ form {
 .swishImg {
 	padding: 5px;
 }
+/*
 .cardInput {
-	/* display: none; */
+	display: none;
 }
+*/
 .footerText {
 	position: absolute;
 	bottom: 8px;
