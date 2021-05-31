@@ -274,6 +274,7 @@ a {
 	.slideshowDiv{
 		right: inherit;
 		width: 95%;
+		max-width: 500px;
 	}
 	.productDiv {
 		width: 100%;
