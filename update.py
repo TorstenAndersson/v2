@@ -1039,7 +1039,7 @@ for product in products["products"]:
 
                 for variant in variantCombination.split(";")[:-1]:
                     prerenderImgs += '''
-        <link rel="prerender" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + " " + perspective) + '.webp"' + ''' as="image">'''
+        <link rel="preload" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant + " " + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
         
@@ -1048,7 +1048,7 @@ for product in products["products"]:
         try:
             for perspective in product["perspectives"]:
                     prerenderImgs += '''
-        <link rel="prerender" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + perspective) + '.webp"' + ''' as="image">'''
+        <link rel="preload" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + " " + perspective) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
@@ -1099,7 +1099,7 @@ for product in products["products"]:
 
             for variant in variantCombination.split(";")[:-1]:
                 prerenderImgs += '''
-        <link rel="prerender" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant) + '.webp"' + ''' as="image">'''
+        <link rel="preload" href="/imgs/''' + urllib.parse.quote(product["name"] + "/" + product["name"] + variant) + '.webp"' + ''' as="image">'''
         except KeyError:
             pass
 
