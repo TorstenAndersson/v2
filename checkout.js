@@ -40,7 +40,7 @@ function pageLoaded() {
     .then((result) => {
         try {
         if (result.error) {
-            alert(result.error.message);
+                alert(result.error.message);
             }
         } catch {
             console.log("error här");
